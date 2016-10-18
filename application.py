@@ -60,6 +60,16 @@ def democratic():
 def republican():
 	return render_template('parties_republican.html')
 
+# Route to ABOUT page
+@application.route('/about')
+def about():
+	return render_template('about.html')
+
+# Route to MODELS page
+@application.route('/data_summary')
+def data_summary():
+	return render_template('data_summary.html')
+
 # Run the application.
 if __name__ == "__main__":
     # Setting debug to True enables debug output. This line should be
