@@ -60,6 +60,20 @@ def democratic():
 def republican():
 	return render_template('parties_republican.html')
 
+# Routes to MODEL pages
+@application.route('/states')
+def states():
+	return render_template('states_model.html')
+@application.route('/elections')
+def elections():
+	return render_template('elections_model.html')
+@application.route('/candidates')
+def candidates():
+	return render_template('candidates_model.html')
+@application.route('/parties')
+def parties():
+	return render_template('parties_model.html')
+
 # Route to ABOUT page
 @application.route('/about')
 def about():
