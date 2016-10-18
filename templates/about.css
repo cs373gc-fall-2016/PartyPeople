@@ -1,0 +1,50 @@
+.circle {
+	background: #D8D8D8;
+	border: 1px solid #979797;
+	-webkit-border-radius: 50em;
+    -moz-border-radius: 50em;
+    border-radius: 50em;
+    height: 200px;
+    width: 200px;
+}
+
+/* from TexasBoomerangs.org */
+.circle:hover {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    opacity: .5;
+}
+
+.mem {
+    margin: auto;
+    display: block;
+}
+
+.name{
+    text-align: center;
+    padding-top: 10px;
+	font: 2.2em/1.0em 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif;
+}
+
+.position{
+    text-align: center;
+    font: 1.5em/1.0em 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', Arial, sans-serif; 
+}
+
+.members-sect {
+    background-color: #115E67;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 50px;
+}
+
+.mem-row {
+    padding-top: 30px;
+}
+
+.cut-out {
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+    -moz-box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+    box-shadow: 0 1px 0 rgba(255,255,255,.2), inset 0 4px 5px rgba(0,0,0,.6), inset 0 1px 0 rgba(0,0,0,.6);
+}
