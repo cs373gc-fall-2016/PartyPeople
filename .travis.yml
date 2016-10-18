@@ -1,31 +1,25 @@
 language: python
-
 python:
 - '3.4'
-
 before-install:
 - pip install --upgrade pip
-
 install:
 - pip install -r requirements.txt
-
 before_script:
 - uname -a
 - printenv | sort
-
 script:
 - date
 - ls -al
-
 deploy:
-  - provider: elasticbeanstalk
-    app: partypeople
-    env: partypeople-dev
-    bucket_name: partypeople-us-west-2-656991372336
-    region: us-west-2
-    access_key_id:
-      secure: PBE9JxGOH8/n+HqY1DctaJjgxufeqFIGom65IfZGrBUg3kDzUP+vxVYxr4vZsXxrMvtBaL76k9XT+hezPBhWIPLT4ImXpnU/8pEKinU9LBAt2xhNjHb8jOi0R1YWRRGk74CHgdwPl4ZOU5HMeKcFheXIBZeDEx633i67G1B/Mf/gcCgzbBAO0ntPrwWk79HEl7OH7+pZ/u4CLkoKGG51B0Sm7eteyjrZYqw+hdK+inoZwbfPtGfkXBnnBZC1zBRnIv4paYuoi6sqzkAL+cWIGrtcvNS4OOcPv3SqmdibqTD+IoFOd1KcO2WJrKuZ2G7jR1Sy1Gnns9sWqBc5k4aFjv0LC/jYykDyPvY6yEKObpS8hErRLqH5ytYd/lak3dNeBTeI7GYP+OlIhiLG3AlHnRQ8j7Vhpb1IZt7AZk2PXMcZfzJOW0I9lb73bZ2gB1rjrwS+zL2lb771Rcne5S3bsy1TkSbXU7offGoGQgBH9VnJNVKQxD5dxV8gerpExgIAGKLrWhSPaCVl3A748Qj1DFEdciVguzYQqYtPVv3aoLLNUSRcUMUslKOTs7hCTrPsM3ztNCQZ8RiyOpwnTSjY6L2bi0Px7TYoQb7RG2bSNnJiOsz9BOb6oKwxTBBQ5DuzKlIChbj9WfswhSwpTtu9ooueLa0gkU8yMpTMoyroRgU=
-    secret_access_key:
-      secure: lnpK8iEbRQup4z7IKZ7psUke9vnQfb2Ff952UUDtvB0VSAvWFTg1XO+wy2AlJGSjq5dGj1sP2cueFo0ZV40gpSWziI6FZXHoGM7UyjhhA4CNHQ0Ozd+MzS7e18rvpTV31hIrAjW5JAgz6dCw2Q8Pi4iEKfrcGTXO5po3/Fdcsfp+y0srXSRGA1BTrwXgJRqY5Ear0tRfS8ZptcZFCcJGJOcYPLVrnzu3IxjNFDprX3PNnQhSK06gttzbhiCu5Zu+2SQZoQbVLrCri9l0kMz/9iE9oBAuRxJZmKJ/4tpoxMjQiccQBQl68G9c1zQz0Kf2ygZyi+SeirdRLB5QMGla9KvX8cWsl9ijniI9wYizoFiQK5FKDqmdnCzSJ9xwFkGJtYjSUTHtLCcrFw2WFNRDxUiprrojGPktmKZqDY6vtoLF+mP764+9KvaoaOEZ76vLf63xzUXu3gPwwVHI1f/0vfifKBT6qAajOkj9dNruQOHsU2Ft9W6ud6O2gOr+74tlNmUttRWlx1OTnu9lnf6SGpnnVOWhTeoEVX86uu3rXPIJ5izsHUklqbTDHwRrky/xpoFLNg9L57QWczpBLN0eOuSfCB2a4KXv7ac/LaQI5VlncwGsiPTOS/kI/0qp4Lx+NFWRT909FbrQ0HDOgbi8lxJ7mPLNEvWZGof9q2FfBl8=
-    on:
-      all_branches: true
+- provider: elasticbeanstalk
+  app: partypeople
+  env: partypeople-dev
+  bucket_name: partypeople-us-west-2-656991372336
+  region: us-west-2
+  access_key_id:
+    secure: K+K5+H4AdVIAQ3J8tn1rwocQFRJXG3+f4tAbhweZy1agC0TFbGns6jBfW4nilrKatZKwvkEwfQTnesxYSEhJOhXE9/u3NcPjY9edni2mZGd/DbRIO6fJukgPh/Ne3Oio2mDo8J+igBgIfDRhstvR411Kzsa+9q/d8ZXTZG1U14+84C3eBbFU+QmvfqDzGccw0U18LcHFUT0rY9p64LaAvfltdam8/p/YQOdpdpO3zuW5P1fi+7oJnSGAqDD8+9cAdOdqVN5MdQzHrj/KoqwWzRDkV1tlgRonLYJvgUIPjtPelo4pbrKXjCmuSAltQWXSqPDhazxE2+QpT/oBWwxt4fl/UlluLBkwQo96wAN1YrZAC4n5PTVMr1cUNyv3W+ub1slDylUxJBpUZdXuBUIwwy9ZwMp2gtg6sEZxSCdma6yI8ZxOiFH/vx9ZqCoEXos+BQuRwWoBV2jVQeLY5f58wNaOfCUQyzI/iL5NjbvyNCYK0OtA0ZlSvOZOUqOvFI/fMftX8F0g/vvkcG35fwyzbiC3X5x1eeNSN/U4I9Aef8FHCtf06WN84BN2s0HX/SD5zD1aKCs4Gug8LcaBTNTYK4/P3CxKPFZwO+awybyy0XiZ0WBnzv1CuVHyQCaFPKkbbFBgfb/ie/M56KJSr/kkC7sIb4uvIzTSfFhGtr3UrMY=
+  secret_access_key:
+    secure: TH+K6GglcSKklFQuApINotldQbZ0Dm61ByeqWKMyWvQqi69xIT1UdKtkUyDjYy31Sjl6BYhxngdDi+ztGuIQ+ElJwt8nxoFMPlnJkyu/Tb5kJtm0oN1GVXp7bT8E5yVUGtuFf7GfD7vExK3BXvTUzgdj2q0YNWWdx5+SXdmdBcvWOsz+QZeGX6Th9R64ZwECH4guaMYE4qnkq0ooMQ2EKx4iokynY9bxAZdMq3t1NPbyw46eDWWdKxwaYJGEuoKzNEXC+aj3fjaxmiqqSHVyNVEhxcBpewZbH0g+eJilmT6CscJRHBUcveAzcp7TVullgbAWftcC0Y/8od047Rug4VETpuiIL3kuZa9wVPEngR5Zy1K0rU0QM2Pt1FMw77S6DxmQKDWhSAXlIV3GDi6WIYZPZm2kzuokTQnUmIIWcCvq7FVfcbm1ruYnnfGoT31oqJdOnuydjG/8OsN4LYRleYQPaJdiaGzH5GZWhsEoZCUVxAFe5xePaAOlNpR62NV3bwWtjsYRNl1+lUfhgvzkniRHi58ISe8daz7cMggaqzAt3UDX+Mo0QBAZq4E8lQEwO3NN7iut6Z4rfTMmwM4jKjuhOHbWFq/epMUGj3MBd1JQsGo8S9wyRwC08yYKNQbEpdwU4TlEygE+kZ5bhMfKdeNoNrD2TxMQ+Ok5QziH6co=
+  on:
+    all_branches: true
