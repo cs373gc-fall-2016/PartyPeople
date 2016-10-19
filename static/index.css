@@ -1,0 +1,43 @@
+.navbar{
+	background-color: #0052A5;
+}
+
+.navbar-brand{
+	font-size: 30px;
+}
+
+.navbar-brand:hover{
+	color: 	#B0C4DE;
+}
+
+.navbar-text{
+	color:white;
+	font-family: Palatino;
+}
+body { 
+    padding-top: 65px; 
+}
+
+.page-links{
+	padding-top: 20px;
+}
+
+.carousel{
+	margin-top: 70px;
+}
+
+.carousel-image{
+	height: 500px !important;
+	width: auto;
+	margin: auto;
+}
+
+.link-div{
+	text-align: center;
+	padding: 10px;
+}
+
+.page-link{
+	font-size: 40px;
+	font-family: helvetica;
+}
