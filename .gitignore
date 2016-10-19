@@ -3,9 +3,8 @@
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 
-#PyCharm IDE Files
+# PyCharm IDE Files
 .idea/*
-
 
 # macOS Files
 .DS_Store
