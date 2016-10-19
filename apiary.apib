@@ -3,78 +3,303 @@ HOST: http://polls.apiblueprint.org/
 
 # PartyPeople
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+PartyPeople is a simple API allowing consumers to view information relating to current 
+political information. Users can get a list of current elections, candidates in those
+elections and details about each candidate, information about political parties and
+candidates associated with those parties, and political information about the States
+in the US.
 
-## Questions Collection [/questions]
+# Group Candidates
 
-### List All Questions [GET]
+## Candidate Collection [/candidates]
+
+### List All Candidates [GET /candidates]
 
 + Response 200 (application/json)
 
         [
             {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 2048
-                    }, {
-                        "choice": "Python",
-                        "votes": 1024
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 512
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 256
-                    }
-                ]
+                "id": "239394",
+                "name": "Ted Cruz",
+                "dob": "1970-12-22",
+                "current_job": "United States Senator for Texas",
+                "party_affiliation": "2",
+                "current_elections": [
+                    "2016 Presidential Election - Republican Nomination",
+                ],
+                "poll_numbers": "23% favorable",
+                "contact_info": {
+                    "Email": "www.cruz.senate.gov/contact.cfm",
+                    "Website": "http://www.tedcruz.org/home/",
+                    "Twitter": "http://twitter.com/SenTedCruz",
+                    "Facebook": "https://www.facebook.com/tedcruzpage",
+                    "Phone": "202-224-5922"
+                },
+                "_links": {
+                    "thumbnail": {
+                        "href": "https://www.tedcruz.org/wp-content/uploads/2015/06/Portrait.jpg"
+                }
             }
         ]
 
-### Create a New Question [POST]
+### View Candidate Details [GET /candidates/{candidate_id}]
++ Parameters
+    + candidate_id (number, required) - the unique id of the candidate as an integer
 
-You may create your own question using this action. It takes a JSON
-object containing a question and a collection of answers in the
-form of choices.
-
-+ Request (application/json)
++ Response 200 (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
-        }
-
-+ Response 201 (application/json)
-
-    + Headers
-
-            Location: /questions/2
-
-    + Body
-
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
-                    {
-                        "choice": "Swift",
-                        "votes": 0
-                    }, {
-                        "choice": "Python",
-                        "votes": 0
-                    }, {
-                        "choice": "Objective-C",
-                        "votes": 0
-                    }, {
-                        "choice": "Ruby",
-                        "votes": 0
-                    }
-                ]
+            "id": "239394",
+            "name": "Ted Cruz",
+            "dob": "1970-12-22",
+            "current_job": "United States Senator for Texas",
+            "party_affiliation": "2",
+            "current_elections": [
+                "2016 Presidential Election - Republican Nomination",
+            ],
+            "poll_numbers": "23% favorable",
+            "contact_info": {
+                "Email": "www.cruz.senate.gov/contact.cfm",
+                "Website": "http://www.tedcruz.org/home/",
+                "Twitter": "http://twitter.com/SenTedCruz",
+                "Facebook": "https://www.facebook.com/tedcruzpage",
+                "Phone": "202-224-5922"
+            },
+            "_links": {
+                "thumbnail": {
+                    "href": "https://www.tedcruz.org/wp-content/uploads/2015/06/Portrait.jpg"
+                }
             }
+        }
+        
++ Response 404 (text/plain)
+       
+        Sorry, we do not have information for a candidate with that id.
+        
++ Response 410 (text/plain)
+       
+        The candidate you are searching for not longer exists in our records.
+        
+
+# Group Parties
+
+## Party Collection [/parties]
+
+### List All Parties [GET /parties]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "1",
+                "name": "Democratic",
+                "description": "One of the two major contemporary political parties in the US, rival to the Republican Party. The party's philosophy of modern liberalism advocates social and economic equality, along with the welfare state. It seeds to provide government intervention and regulation in the economy. These interventions, such as the introduction of social programs, support for labor unions, moves toward universal health care and equal opportunity, consumer protection, and environmental protection form the core of the party's economic policy.",
+                "politicans_affiliated": [
+                    "1234",
+                    "8259",
+                    "14031"
+                ],
+                "states_controlled": [
+                    "1",
+                    "3",
+                    "6",
+                    "23",
+                    "37",
+                    "45",
+                    "46",
+                    "50"
+                ],
+                "hq_address": "420 South Capitol Street SE; Washington, DC 20003",
+                "chairsperson": "Donna Brazile",
+                "_links": {
+                    "thumbnail": {
+                        "href": "http://d3n8a8pro7vhmx.cloudfront.net/dplac/sites/1/meta_images/original/dem-donkey-right-copy.png?1413244000"
+                    }
+                }
+            }
+        ]
+
+### View Party Details [GET /parties/{party_id}]
++ Parameters
+    + party_id (number, required) - the unique id of the party as an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": "1",
+            "name": "Democratic",
+            "description": "One of the two major contemporary political parties in the US, rival to the Republican Party. The party's philosophy of modern liberalism advocates social and economic equality, along with the welfare state. It seeds to provide government intervention and regulation in the economy. These interventions, such as the introduction of social programs, support for labor unions, moves toward universal health care and equal opportunity, consumer protection, and environmental protection form the core of the party's economic policy.",
+            "politicans_affiliated": [
+                "1234",
+                "8259",
+                "14031"
+            ],
+            "states_controlled": [
+                "1",
+                "3",
+                "6",
+                "23",
+                "37",
+                "45",
+                "46",
+                "50"
+            ],
+            "hq_address": "420 South Capitol Street SE; Washington, DC 20003",
+            "chairsperson": "Donna Brazile",
+            "_links": {
+                "thumbnail": {
+                    "href": "http://d3n8a8pro7vhmx.cloudfront.net/dplac/sites/1/meta_images/original/dem-donkey-right-copy.png?1413244000"
+                }
+            }
+        }
+        
++ Response 404 (text/plain)
+       
+        Sorry, we do not have information for a political party with that id.
+        
++ Response 410 (text/plain)
+       
+        The political party you are searching for not longer exists in our records.
+        
+        
+# Group Elections
+
+## Election Collection [/elections]
+
+### List All Elections [GET /elections]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "145",
+                "election_name": "US 2016 General Election"
+                "election_date": "2016-11-08",
+                "election_type": "federal",
+                "location": [
+                    "1",
+                    "2",
+                    "50"
+                ],
+                "candidates": [
+                    "3",
+                    "6",
+                    "125",
+                    "3567",
+                    "294717",
+                    "39847"
+                ],
+                "_links": {
+                    "thumbnail": {
+                        "href": "http://www.theclause.org/wp-content/uploads/2015/03/electionjpg.png"
+                    }
+                }
+            }
+        ]
+
+### View Election Details [GET /elections/{election_id}]
++ Parameters
+    + election_id (number, required) - the unique id of the election as an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": "145",
+            "election_name": "US 2016 General Election"
+            "election_date": "2016-11-08",
+            "election_type": "federal",
+            "location": [
+                "1",
+                "2",
+                "50"
+            ],
+            "candidates": [
+                "3",
+                "6",
+                "125",
+                "3567",
+                "294717",
+                "39847"
+            ],
+            "_links": {
+                "thumbnail": {
+                    "href": "http://www.theclause.org/wp-content/uploads/2015/03/electionjpg.png"
+                }
+            }
+        }
+        
++ Response 404 (text/plain)
+       
+        Sorry, we do not have information for an election with that id.
+        
++ Response 410 (text/plain)
+       
+        The election you are searching for not longer exists in our records.
+        
+
+        
+# Group States
+
+## State Collection [/states]
+
+### List All States [GET /states]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "id": "37",
+                "capital": "Austin",
+                "population": "26448193",
+                "governor": "Greg Abbott",
+                "party_affiliation": "1",
+                "politicians": [
+                    "25",
+                    "1572",
+                    "1579",
+                    "1729",
+                    "1934",
+                    "3076"
+                ],
+                "_links": {
+                    "thumbnail": {
+                        "href": "http://www.50states.com/images/redesign/maps/tx-largemap.png"
+                    }
+                }
+            }
+        ]
+
+### View State Details [GET /states/{state_id}]
++ Parameters
+    + state_id (number, required) - the unique id of the state as an integer
+
++ Response 200 (application/json)
+
+        {
+            "id": "37",
+            "capital": "Austin",
+            "population": "26448193",
+            "governor": "Greg Abbott",
+            "party_affiliation": "1",
+            "politicians": [
+                "25",
+                "1572",
+                "1579",
+                "1729",
+                "1934",
+                "3076"
+            ],
+            "_links": {
+                "thumbnail": {
+                    "href": "http://www.50states.com/images/redesign/maps/tx-largemap.png"
+                }
+            }
+        }
+        
++ Response 404 (text/plain)
+       
+        Sorry, we do not have information for a state with that id.
+        
++ Response 410 (text/plain)
+       
+        The state you are searching for not longer exists in our records.
