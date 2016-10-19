@@ -19,4 +19,4 @@ class Party(db.Model):
     leader = db.Column(db.String)
 
     def __repr__(self):
-        return '<State %r>' % self.name
+        return '<Party %r>' % self.name
