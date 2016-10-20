@@ -1,5 +1,151 @@
-<html>
-    <body>
-        <h2>Party People Did this change???</h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Party People</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='index.css')}}">
+
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+<div class="container">
+	<div class="page-title row">
+  	<nav class="navbar navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand navbar-text" href="/">Party People</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="navbar-text dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Pages<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/elections">Elections</a></li>
+            <li><a href="/parties">Parties</a></li>
+            <li><a href="/states">States</a></li>
+            <li><a href="/candidates">Candidates</a></li>
+            <li><a href="/about">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+  </div>
+  <div class="row">
+  <div id="carousel" class="carousel slide col-xs-12" data-ride="carousel" >
+  		<ol class="carousel-indicators">
+    		<li data-target="#carousel" data-slide-to="0" class="active"></li>
+    		<li data-target="#carousel" data-slide-to="1"></li>
+    		<li data-target="#carousel" data-slide-to="2"></li>
+    		<li data-target="#carousel" data-slide-to="3"></li>
+  		</ol>
+	<div class="carousel-inner" role="listbox">
+	    <div class="item active" id="slide0">
+	    	<a href="/elections">
+	      		<img class="carousel-image" src="http://www.snd.org/wp-content/uploads/2012/07/ELX-election-ballot.jpg" alt="First slide">
+	      		<div class="carousel-caption">
+    				<h3>Elections</h3>
+  				</div>
+	 	 	</a>
+	    </div>
+	    <div class="item" id="slide1">
+			<a href="/parties">
+	      		<img class="carousel-image" src="http://www.brandingstrategyinsider.com/images/old/6a00d83451b74a69e20167659bac90970b-pi.jpg" alt="Fourth slide">
+	    	</a>
+	    	<div class="carousel-caption">
+    				<h3>Parties</h3>
+  			</div>
+		</div>
+		<div class="item" id="slide2">
+		    	<a href="/states">
+		      		<img class="carousel-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Red_and_Blue_States_Map_(Average_Margins_of_Presidential_Victory).svg/2000px-Red_and_Blue_States_Map_(Average_Margins_of_Presidential_Victory).svg.png" alt="Second slide">
+		  		</a>
+		  		<div class="carousel-caption">
+    				<h3>States</h3>
+  				</div>
+		</div>
+		<div class="item" id="slide3">
+			<a href="/candidates">
+		    	<img class="carousel-image" src="http://d279m997dpfwgl.cloudfront.net/wp/2016/10/deb.jpg" alt="Third slide">
+			</a>
+			<div class="carousel-caption">
+    				<h3>Candidates</h3>
+  			</div>
+		</div>
+	</div>
+	  	<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+    		<span class="icon-prev" aria-hidden="true"></span>
+    		<span class="sr-only">Previous</span>
+  		</a>
+  		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+    		<span class="icon-next" aria-hidden="true"></span>
+    		<span class="sr-only">Next</span>
+  		</a>
+	</div>
+
+<script type="text/javascript">
+	$('#carousel').carousel({
+  	interval: 3000
+	})</script>
+</div>
+<div class="page-links">
+<div class="row">
+	<div class="link-div col-sm-6">
+		<a class="page-link" href="/elections">
+			Elections
+		</a>
+	</div>
+	<div class="link-div col-sm-6">
+		<a class="page-link" href="/parties">
+				Parties
+		</a>
+	</div>
+</div>
+<div class="row">
+	<div class="link-div col-sm-6">
+		<a class="page-link" href="/states">
+				States
+		</a>
+	</div>
+	<div class="link-div col-sm-6">
+		<a class="page-link" href="/candidates">
+				Candidates
+		</a>
+	</div>
+</div>
+<div class="row">
+	<div class="link-div col-sm-12">
+		<a class="page-link" href="/about">
+				About
+		</a>
+	</div>
+</div>
+</div>
     </body>
 </html>

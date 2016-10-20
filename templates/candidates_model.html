@@ -1,0 +1,75 @@
+<html>
+    <head>
+      <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='sortTables.js') }}"></script>
+    </head>
+    <body>
+        <h1 id="title" align="center">Candidates</h1>
+        <div class="container">
+          <table id="candidates" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date of Birth</th>
+                <th>Current Position</th>
+                <th>Party</th>
+                <th>Elections In</th>
+                <th>Poll Numbers</th>
+                <th>Contact Info</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="candidates/gary_johnson">Gary Earl Johnson</a></td>
+                <td>January 1, 1953</td>
+                <td>Politician</td>
+                <td><a href="parties/libertarian">Libertarian</a></td>
+                <td><a href="elections/general_election_2016">2016 Presidential Election</a></td>
+                <td>6% favorable</td>
+                <td>
+                  <li>Mail:Johnson Weld Campaign PO Box 4422, Salt Lake City, UT  84110-4422</li>
+                  <li>Email: info@johnsonweld.com</li>
+                  <li>Phone: 801-303-7922</li>
+                  <li>Website: <a href="https://www.johnsonweld.com/">https://www.johnsonweld.com/</a></li>
+                  <li>Twitter: <a href="https://twitter.com/GovGaryJohnson">https://twitter.com/GovGaryJohnson</a></li>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="candidates/nancy_pelosi">Nancy Pelosi</a></td>
+                <td>March 26, 1940</td>
+                <td>Minority Leader of the United States House of Representative</td>
+                <td><a href="parties/democratic">Democrat</a></td>
+                <td><a href="elections/california_12_district_2016">California's 12th congressional district</a></td>
+                <td>26% favorable</td>
+                <td>
+                  <li>Mail: 233 Cannon H.O.B Washington, DC   20515</li>
+                  <li>Email: americanvoices@mail.house.gov</li>
+                  <li>Phone: 801-303-7922</li>
+                  <li>Website: <a href="https://pelosi.house.gov/">https://pelosi.house.gov/</a></li>
+                  <li>Twitter: <a href="https://twitter.com/nancypelosi">https://twitter.com/nancypelosi</a></li>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="candidates/ted_cruz">Ted Cruz</a></td>
+                <td>December 22, 1970</td>
+                <td>United States Senator for Texas</td>
+                <td><a href="parties/republican">Republican</a></td>
+                <td><a href="elections/general_election_2016">2016 Presidential Election</a></td>
+                <td>23% favorable</td>
+                <td>
+                  <li>Mail:Johnson Weld Campaign PO Box 4422, Salt Lake City, UT  84110-4422</li>
+                  <li>Email: www.cruz.senate.gov/contact.cfm</li>
+                  <li>Phone: 202-224-5922</li>
+                  <li>Website: <a href="http://www.tedcruz.org/home/">http://www.tedcruz.org/home/</a></li>
+                  <li>Twitter: <a href="http://twitter.com/SenTedCruz">http://twitter.com/SenTedCruz</a></li>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </body>
+</html>
