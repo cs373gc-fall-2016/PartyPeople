@@ -1,11 +1,8 @@
-""" Phase 1 Test Bed """
-# pylint: disable=unused-import
-# pylint: disable=duplicate-code
-import os
+"""
+Module for testing the main application
+"""
 import unittest
-import tempfile
 from application import application
-
 
 class ApplicationTest(unittest.TestCase):
     """ Tests for application """

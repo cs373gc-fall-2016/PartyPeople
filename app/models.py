@@ -1,66 +1,69 @@
 """ Models """
-# pylint: disable=invalid-name
+# pylint: disable=invalid-name,line-too-long
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
+application = Flask(__name__)
+application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
 
-db = SQLAlchemy(app)
+database = SQLAlchemy(application)
 
 
-class Candidate(db.Model):
+class Candidate(database.Model):
     """ Candidate Model class """
     __tablename__ = "candidate"
-    name = db.Column(db.String, primary_key=True)
-    dob = db.Column(db.String)
-    job = db.Column(db.Integer)
-    party = db.Column(db.String)
-    elections = db.Column(db.String)
-    poll = db.Column(db.Float)
-    contact = db.Column(db.String)
+    name = database.Column(database.String, primary_key=True)
+    dob = database.Column(database.DateTime)
+    job = database.Column(database.String)
+    party = database.Column(database.String)
+    elections = database.Column(database.PickleType)
+    poll = database.Column(database.Float)
+    contact = database.Column(database.String)
 
     def __repr__(self):
-        return '<Candidate %r>' % self.name
+        return '<Candidate %r %r %r %r %r %r %r>' %\
+               (self.name, self.dob, self.job, self.party, self.elections, self.poll, self.contact)
 
 
-class Election(db.Model):
+class Election(database.Model):
     """ Election Model class """
     __tablename__ = "election"
-    name = db.Column(db.String, primary_key=True)
-    date = db.Column(db.String)
-    level = db.Column(db.Integer)
-    location = db.Column(db.String)
-    politicians = db.Column(db.String)
+    name = database.Column(database.String, primary_key=True)
+    date = database.Column(database.DateTime)
+    level = database.Column(database.String)
+    location = database.Column(database.String)
+    politicians = database.Column(database.PickleType)
 
     def __repr__(self):
-        return '<Candidate %r>' % self.name
+        return '<Election %r %r %r %r %r>' % (self.name, self.date, self.level, self.location, self.politicians)
 
 
-class Party(db.Model):
+class Party(database.Model):
     """ Party Model class """
     __tablename__ = "party"
-    name = db.Column(db.String, primary_key=True)
-    description = db.Column(db.String)
-    politicians = db.Column(db.Integer)
-    states = db.Column(db.String)
-    hq = db.Column(db.String)
-    leader = db.Column(db.String)
+    name = database.Column(database.String, primary_key=True)
+    description = database.Column(database.String)
+    politicians = database.Column(database.Integer)
+    states = database.Column(database.String)
+    hq = database.Column(database.String)
+    leader = database.Column(database.String)
 
     def __repr__(self):
-        return '<Party %r>' % self.name
+        return '<Party %r %r %r %r %r %r>' % (self.name, self.description, self.politicians, self.states, self.hq, self.leader)
 
 
-class State(db.Model):
+class State(database.Model):
     """ State Model class """
     __tablename__ = "states"
-    state_name = db.Column(db.String, primary_key=True)
-    capital = db.Column(db.String)
-    population = db.Column(db.Integer)
-    governor = db.Column(db.String)
-    party_affiliation = db.Column(db.String)
-    elections = db.Column(db.PickleType)
-    reps = db.Column(db.PickleType)
+    state_name = database.Column(database.String, primary_key=True)
+    capital = database.Column(database.String)
+    population = database.Column(database.Integer)
+    governor = database.Column(database.String)
+    party_affiliation = database.Column(database.String)
+    elections = database.Column(database.PickleType)
+    reps = database.Column(database.PickleType)
 
     def __repr__(self):
-        return '<State %r>' % self.state_name
+        return '<State %r %r %r %r %r %r %r>' %\
+               (self.state_name, self.capital, self.population,
+                self.governor, self.party_affiliation, self.elections, self.reps)
