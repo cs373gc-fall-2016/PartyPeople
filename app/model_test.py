@@ -1,15 +1,20 @@
+"""
+Module for testing models
+"""
 import unittest
-from app.state import State, db
+from models import State, database
 
 
 class ModelTest(unittest.TestCase):
+    """ Class for testing models """
 
     def test_state(self):
-        db.drop_all()
-        db.create_all()
+        """ Test state model """
+        database.drop_all()
+        database.create_all()
         state = State(state_name='alaska', capital='juneau', population=123456)
-        db.session.add(state)
-        db.session.commit()
+        database.session.add(state)
+        database.session.commit()
         query = State.query.all()
-        #Assert that the value in the database is the same as the value that was just passed in
-        pass
+        # Assert that the value in the database is the same as the value that
+        # was just passed in

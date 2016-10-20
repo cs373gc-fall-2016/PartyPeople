@@ -7,12 +7,14 @@
             "viewport">
         <meta content="ie=edge" http-equiv="x-ua-compatible">
         <!-- Bootstrap CSS -->
-        <link crossorigin="anonymous" href=
-            "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css"
-            integrity=
-            "sha384-AysaV+vQoT3kOAXZkl02PThvDr8HYKPZhNT5h/CXfBThSRXQ6jW5DO2ekP5ViFdi"
-            rel="stylesheet">
-        <title></title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        
+        <title>Party People</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+        <script type="text/javascript">$(function(){
+        $("#header").load("{{url_for('static', filename='header.html')}}");}) </script>
     </head>
     <body>
         <!-- Bootstrap -->
@@ -24,6 +26,7 @@
             "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
         <!-- main html -->
         <div class="container">
+            <div id="header"></div>
             <div class="row">
                 <div class="col-lg-3">
                     <h2 id="title" style="text-align: center;">Libertarian</h2>
