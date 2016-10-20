@@ -14,6 +14,7 @@ in the US.
 ## Candidate Collection [/candidates]
 
 ### List All Candidates [GET /candidates]
+Retrieve a list of all the candidates and their data in PartyPeople's database.
 
 + Response 200 (application/json)
 
@@ -43,6 +44,12 @@ in the US.
         ]
 
 ### View Candidate Details [GET /candidates/{candidate_id}]
+Retrieve the data related to a candidate, using the candidate's unique id.
+
+Returns an object containing a candidate's id, name, date of birth, their current
+job, their party affliation, the elections that candidate is currently running in,
+their poll numbers, their contact information, and an image url.
+
 + Parameters
     + candidate_id (number, required) - the unique id of the candidate as an integer
 
@@ -86,6 +93,7 @@ in the US.
 ## Party Collection [/parties]
 
 ### List All Parties [GET /parties]
+Retrieve a list of all the parties and their data in PartyPeople's database.
 
 + Response 200 (application/json)
 
@@ -120,6 +128,13 @@ in the US.
         ]
 
 ### View Party Details [GET /parties/{party_id}]
+Retrieve the data related to a political party, using the party's unique id.
+
+Returns an object containing a party's id, name, a short description, a list of ids of
+politicians associated with this party, the states controlled by this party, the mailing
+address of the party's headquarters, the chairsperson of the party, and a url to an image
+of the party's logo.
+
 + Parameters
     + party_id (number, required) - the unique id of the party as an integer
 
@@ -167,6 +182,7 @@ in the US.
 ## Election Collection [/elections]
 
 ### List All Elections [GET /elections]
+Retrieve a list of all the elections and their data in PartyPeople's database.
 
 + Response 200 (application/json)
 
@@ -198,6 +214,13 @@ in the US.
         ]
 
 ### View Election Details [GET /elections/{election_id}]
+Retrieve the data related to an election, using the election's unique id.
+
+Returns an object containing an elections's id, name, date of occurance, the election type
+(local, state, or federal), a list of ids of states in which this election is held, a list
+of ids of the candidates running in this election, and a link to an image relating to the
+election.
+
 + Parameters
     + election_id (number, required) - the unique id of the election as an integer
 
@@ -243,6 +266,7 @@ in the US.
 ## State Collection [/states]
 
 ### List All States [GET /states]
+Retrieve a list of all the states and their data in PartyPeople's database.
 
 + Response 200 (application/json)
 
@@ -270,6 +294,12 @@ in the US.
         ]
 
 ### View State Details [GET /states/{state_id}]
+Retrieve the data related to a state, using the state's unique id.
+
+Returns an object containing a state's id, the state's name, captital, population,
+governor, the id of the party who controls this state, a list of ids of candidates
+running in this state, and a url to an image relating to this state.
+
 + Parameters
     + state_id (number, required) - the unique id of the state as an integer
 
@@ -277,6 +307,7 @@ in the US.
 
         {
             "id": "37",
+            "name": "Texas",
             "capital": "Austin",
             "population": "26448193",
             "governor": "Greg Abbott",
