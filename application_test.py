@@ -4,6 +4,7 @@ Module for testing the main application
 import unittest
 from application import application
 
+
 class ApplicationTest(unittest.TestCase):
     """ Tests for application """
 

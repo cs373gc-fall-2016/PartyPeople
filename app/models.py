@@ -22,7 +22,8 @@ class Candidate(database.Model):
 
     def __repr__(self):
         return '<Candidate %r %r %r %r %r %r %r>' %\
-               (self.name, self.dob, self.job, self.party, self.elections, self.poll, self.contact)
+               (self.name, self.dob, self.job, self.party,
+                self.elections, self.poll, self.contact)
 
 
 class Election(database.Model):
