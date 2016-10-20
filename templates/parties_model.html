@@ -6,10 +6,16 @@
       <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
       <script src="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
       <script type="text/javascript" src="{{ url_for('static', filename='sortTables.js') }}"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+      <script type="text/javascript">$(function(){
+      $("#header").load("{{url_for('static', filename='header.html')}}");}) </script>
     </head>
     <body>
         <h1 id="title" align="center">Parties</h1>
         <div class="container">
+          <div id="header"></div>
           <table id="parties" class="table table-striped table-bordered" cellspacing="0" width="100%">
             <thead>
               <tr>
