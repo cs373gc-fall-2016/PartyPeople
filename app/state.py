@@ -18,4 +18,6 @@ class State(db.Model):
     reps = db.Column(db.PickleType)
 
     def __repr__(self):
-        return '<State %r>' % self.state_name
+        return '<State %r %r %r %r %r %r %r>' %\
+               (self.state_name, self.capital, self.population,
+                self.governor, self.party_affiliation, self.elections, self.reps)

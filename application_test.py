@@ -1,7 +1,9 @@
-import os
+"""
+Module for testing the main application
+"""
+
 from application import application
 import unittest
-import tempfile
 
 
 class ApplicationTest(unittest.TestCase):

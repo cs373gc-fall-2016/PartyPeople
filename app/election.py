@@ -1,19 +1,19 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
+application = Flask(__name__)
+application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
 
-db = SQLAlchemy(app)
+database = SQLAlchemy(application)
 
 
-class Election(db.Model):
+class Election(database.Model):
     __tablename__ = "election"
-    name = db.Column(db.String, primary_key=True)
-    date = db.Column(db.String)
-    level = db.Column(db.Integer)
-    location = db.Column(db.String)
-    politicians = db.Column(db.String)
+    name = database.Column(database.String, primary_key=True)
+    date = database.Column(database.DateTime)
+    level = database.Column(database.String)
+    location = database.Column(database.String)
+    politicians = database.Column(database.PickleType)
 
     def __repr__(self):
-        return '<Candidate %r>' % self.name
+        return '<Election %r %r %r %r %r>' % (self.name, self.date, self.level, self.location, self.politicians)
