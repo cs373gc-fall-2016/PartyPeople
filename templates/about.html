@@ -17,9 +17,15 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+   <script type="text/javascript">$(function(){
+  $("#header").load("{{url_for('static', filename='header.html')}}");}) </script>
   </head>
   <body>
-  	<div class="container" align="center">
+  <div class="container" align="center">
+	<div id="header"></div>
   		<h1>Welcome to PartyPeople!</h1>
   		<p>Though we might have a silly name, we have a mighty goal. There are enough barriers to voting as it is, so to make the process a little bit easier, PartyPeople provides information about current elections and candidates, as well as information about the political parties and political information about the states in the US.</p>
   		<p>While this site is intended for eligible voters to increase their knowledge about current elections in their area, at both a local, state, and federal level, anyone is welcome to browse for political information. You can go from one page to another, seeing how elections, candidates, parties, and states relate, and increasing your knowledge about the current political arena.</p>
