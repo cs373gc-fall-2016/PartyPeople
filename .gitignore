@@ -8,3 +8,6 @@
 
 # macOS Files
 .DS_Store
+
+# __pycache__ Pre-compiled Byte Code
+**/__pycache__/
