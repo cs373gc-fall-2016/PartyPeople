@@ -1,6 +1,8 @@
 """
 Module for testing models
 """
+# pylint: disable=invalid-name,line-too-long,no-member,locally-disabled
+
 import unittest
 from models import State, Candidate, Election, Party, database
 from datetime import datetime
@@ -14,7 +16,8 @@ class ModelTest(unittest.TestCase):
         database.create_all()
         self.candidate = Candidate(name="Bill", dob=datetime(1900, 2, 3, 4, 12, 30, 00), job="candidate",
                                    party="Democratic", poll=50.0, contact="bill@bill.org")
-        self.election = Election(ename="general", date=datetime(2016, 11, 8, 12, 0, 0), level='state')
+        self.election = Election(ename="general", date=datetime(
+            2016, 11, 8, 12, 0, 0), level='state')
         self.election2 = Election(name="local", date=datetime(2016, 11, 8, 12, 0, 0), level='state',
                                   location="texas", politicians=["nobody", "anybody"])
         self.state = State(sname='alaska', capital='juneau', population=123456,
@@ -36,7 +39,7 @@ class ModelTest(unittest.TestCase):
         print(query)
 
         self.assertEqual(query[0].sname, state.sname)
-        self.assertEqual(query[0].state_name,  state.state_name)
+        self.assertEqual(query[0].state_name, state.state_name)
 
     def test_Candidate(self):
         """Test the Candidate model"""
@@ -65,8 +68,8 @@ class ModelTest(unittest.TestCase):
         self.assertEqual(query[0], party)
 
     def test_relation(self):
+        """Test the relationship between two models"""
         self.candidate.elections = [self.election, self.election2]
-
 
 
 # if __name__ == '__main__':
