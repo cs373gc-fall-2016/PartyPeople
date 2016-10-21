@@ -65,7 +65,13 @@ class ApplicationTest(unittest.TestCase):
             route = BeautifulSoup(fetched_page.data.decode(), 'html.parser')
             html_file = open('templates/' + self.html_docs[index])
             page = BeautifulSoup(html_file, 'html.parser')
-        self.assertEqual(route.title.string, page.find('title').string)
+        self.assertEqual(route.title.string, page.title.string)
+
+    def test_empty_page(self):
+        """ Ensure route does not return an empty page """
+        for route in self.routes:
+            page = self.app.get(route)
+            self.assertNotEqual(page.data, '')
 
     def tearDown(self):
         pass

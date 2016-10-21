@@ -23,7 +23,7 @@ else                                   # UTCS
     AUTOPEP8 := autopep8
 endif
 
-COVERAGE_FILES := application.py,models.py
+COVERAGE_FILES := application.py
 
 .pylintrc:
 	$(PYLINT) --disable=locally-disabled,no-member,too-few-public-methods --reports=no --generate-rcfile > $@
@@ -40,7 +40,7 @@ format:
 pylint: .pylintrc 
 	find . -type f \( -name "*.py" \) | xargs $(PYLINT)
 
-application_test.tmp: application.py application_test.py pylint
+application_test.tmp: application.py application_test.py
 	$(COVERAGE) run    --branch --source=$(COVERAGE_FILES) application_test.py >  application_test.tmp 2>&1
 	$(COVERAGE) report -m                      >> application_test.tmp
 	cat application_test.tmp
