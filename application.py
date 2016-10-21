@@ -118,15 +118,8 @@ def about():
     return render_template('about.html')
 
 
-
-@application.route('/data_summary')
-def data_summary():
-    """ Returns the data summary page """
-    return render_template('data_summary.html')
-
-
 # Run the application.
 if __name__ == "__main__":
     # Setting debug to True enables debug output. This line should be
     # removed before deploying a production app.
-    application.run(debug=True)
+    application.run(debug=False)
