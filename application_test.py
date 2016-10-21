@@ -11,7 +11,7 @@ class ApplicationTest(unittest.TestCase):
 
     def setUp(self):
         self.routes = [
-            '/', 
+            '/',
             '/states/texas',
             '/states/alaska',
             '/states/california',
