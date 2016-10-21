@@ -1,0 +1,94 @@
+<html>
+    <head>
+      <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='sortTables.js') }}"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+      <script type="text/javascript">$(function(){
+     $("#header").load("{{url_for('static', filename='header.html')}}");}) </script>
+     <title>Party People</title>
+    </head>
+    <body>
+        <h1 id="title" align="center">States</h1>
+        <div class="container">
+          <div id="header"></div>
+          <table id="states" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Capital</th>
+                <th>Population</th>
+                <th>Governor</th>
+                <th>Majority Party</th>
+                <th>Elections</th>
+                <th>Representatives</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="states/alaska">Alaska</a></td>
+                <td>Juneau</td>
+                <td>735132</td>
+                <td>Bill Walker</td>
+                <td><a href="parties/republican">Republican</a></td>
+                <td>
+                  <ul>
+                    <li>US 2016 General Election</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Les Gara</li>
+                    <li>Lora Reinbold</li>
+                    <li>Jim Colver</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="states/california">California</a></td>
+                <td>Sacramento</td>
+                <td>38332521</td>
+                <td>Jerry Brown</td>
+                <td><a href="parties/democratic">Democratic</a></td>
+                <td>
+                  <ul>
+                    <li>US 2016 General Election</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Toni Atkins</li>
+                    <li>Mike A. Gipson</li>
+                    <li>Rob Bonta</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="states/texas">Texas</a></td>
+                <td>Austin</td>
+                <td>26448193</td>
+                <td>Greg Abbott</td>
+                <td><a href="parties/republican">Republican</a></td>
+                <td>
+                  <ul>
+                    <li>US 2016 General Election</li>
+                  </ul>
+                </td>
+                <td>
+                  <ul>
+                    <li>Ted Cruz</li>
+                    <li>Elliott Naishtat</li>
+                    <li>Ron Simmons</li>
+                  </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </body>
+</html>

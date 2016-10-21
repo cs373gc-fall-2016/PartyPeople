@@ -1,0 +1,77 @@
+<html>
+    <head>
+      <link href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" />
+      <link href="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet" />
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/plug-ins/1.10.7/integration/bootstrap/3/dataTables.bootstrap.js"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='sortTables.js') }}"></script>
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+
+      <script type="text/javascript">$(function(){
+      $("#header").load("{{url_for('static', filename='header.html')}}");}) </script>
+      <title>Party People</title>
+    </head>
+    <body>
+        <h1 id="title" align="center">Elections</h1>
+        <div class="container">
+          <div id="header"></div>
+          <table id="elections" class="table table-striped table-bordered" cellspacing="0" width="100%">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Date</th>
+                <th>Type</th>
+                <th>Location</th>
+                <th>Candidates</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="elections/general_election_2016">US 2016 General Election</a></td>
+                <td>November 8, 2016</td>
+                <td>Federal</td>
+                <td>US</td>
+                <td>
+                    <ul>
+                        <li>Donald Trump (Republican)</li>
+                        <li>Hillary Clinton (Democratic)</li>
+                        <li>Gary Johnson (Libertarian)</li>
+                        <li>Jill Stein (Green)</li>
+                        <li>Evan McMullin (Independent)</li>
+                        <li>Darrell Castle (Constitution)</li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="elections/california_12_district_2016">California's 12th Congressional District election, 2016</a></td>
+                <td>November 8, 2016</td>
+                <td>State</td>
+                <td>12, California, US</td>
+                <td>
+                    <ul>
+                        <li>Nancy Pelosi (Democratic)</li>
+                        <li>Preston Picus (Independent)</li>
+                    </ul>
+                </td>
+              </tr>
+              <tr>
+                <td><a href="elections/texas_23_district_2016">Texas' 23rd Congressional District election, 2016</a></td>
+                <td>November 8, 2016</td>
+                <td>State</td>
+                <td>23, Texas, US</td>
+                <td>
+                    <ul>
+                        <li>Will Hurd (Republic)</li>
+                        <li>Pete Gallego (Democratic)</li>
+                        <li>Ruben Corvalan (Libertarian)</li>
+                    </ul>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </body>
+</html>
