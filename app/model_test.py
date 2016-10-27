@@ -2,9 +2,9 @@
 Module for testing models
 """
 # pylint: disable=invalid-name,line-too-long,no-member,locally-disabled
-# todo : test multi relationships [State(Many), Party(One)], [State(One), Politician(Many)]
-# todo : [Election(One), Party(Many)], [Election(One), Politician(Many)]
-# todo : [Politician(Many), Party(One)]
+# todo : test multi relationships [State(Many), Party(One), ElectoralCollege], [State(One), Politician(Many), Candidate]
+# todo : [Election(One), Party(Many), PartiesInvolved], [Election(One), Politician(Many), Candidate]
+# todo : [Politician(Many), Party(One), Candidate]
 import unittest
 from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved
 from datetime import datetime
@@ -54,6 +54,30 @@ class ModelTest(unittest.TestCase):
         print(query)
         self.assertEqual(query[0].name, state.name)
 
+    def test_state_2(self):
+        state_1 = self.state_1
+        state_2 = self.state_2
+        database.session.add(state_1)
+        database.session.add(state_2)
+        database.session.commit()
+        query = State.query.all()
+        print(State.query.all())
+        self.assertIn(state_1, query)
+        self.assertIn(state_2, query)
+
+    def test_state_3(self):
+        state_1 = self.state_1
+        state_2 = self.state_2
+        state_3 = self.state_3
+        database.session.add(state_1)
+        database.session.add(state_2)
+        database.session.add(state_3)
+        database.session.commit()
+        query = State.query.filter_by(population=1000).all()
+        print(query)
+        self.assertIn(state_1, query)
+        self.assertIn(state_3, query)
+
     def test_candidate(self):
         """Test the Candidate model"""
         print('Running Candidate Model Test')
@@ -63,6 +87,20 @@ class ModelTest(unittest.TestCase):
         query = Candidate.query.all()
         print(query)
         self.assertEqual(query[0].name, candidate.name)
+
+    def test_candidate_2(self):
+        """
+        Test having all the different relations in the candidates
+        :return:
+        """
+        candidate_1 = self.candidate_1
+        candidate_1.elections = self.election_1
+        candidate_1.states = self.state_1
+        candidate_1.party = self.party_1
+        database.session.add(candidate_1)
+        database.session.commit()
+        query = Candidate.query.all()
+        self.assertIn(candidate_1, query)
 
     def test_election(self):
         """Test the Election Model"""
