@@ -11,12 +11,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var TableComponent = (function () {
     function TableComponent() {
+        this.title = "fun fun fun";
+        this.columns = ["NAME", "AGE", "COLOR"];
+        this.data = [
+            { "NAME": "julie", "AGE": "1", "COLOR": "blue" },
+            { "NAME": "jack", "AGE": "2", "COLOR": "red" },
+            { "NAME": "jane", "AGE": "3", "COLOR": "yellow" }
+        ];
     }
     TableComponent = __decorate([
         core_1.Component({
-            selector: 'table',
-            templateUrl: 'app/components/table/table.html',
-            styleUrls: ['app/components/table/table.css']
+            selector: 'pp-table',
+            templateUrl: 'app/components/table/table.html'
         }), 
         __metadata('design:paramtypes', [])
     ], TableComponent);

@@ -15,7 +15,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "<header></header>\n  \t\t\t<h1>My First Angular App</h1>\n  \t\t\t\n  \t\t\t<!-- Routed views go here -->\n\t\t\t<router-outlet></router-outlet>"
+            template: "<pp-header></pp-header>\n  \t\t\t\n  \t\t\t<!-- Routed views go here -->\n\t\t\t<router-outlet></router-outlet>",
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
