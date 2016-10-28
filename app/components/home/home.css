@@ -1,0 +1,23 @@
+.page-links{
+	padding-top: 20px;
+}
+
+.carousel{
+	margin-top: 70px;
+}
+
+.carousel-image{
+	height: 500px !important;
+	width: auto;
+	margin: auto;
+}
+
+.link-div{
+	text-align: center;
+	padding: 10px;
+}
+
+.page-link{
+	font-size: 40px;
+	font-family: helvetica;
+}
