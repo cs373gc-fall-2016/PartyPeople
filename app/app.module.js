@@ -15,7 +15,9 @@ var app_component_1 = require('./app.component');
 var header_component_1 = require('./components/header/header.component');
 var about_component_1 = require('./components/about/about.component');
 var home_component_1 = require('./components/home/home.component');
-var table_component_1 = require('./components/table/table.component');
+var states_table_component_1 = require('./components/states_table/states_table.component');
+var state_details_component_1 = require('./components/state_details/state_details.component');
+var not_found_component_1 = require('./components/page_not_found/not_found.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,9 +26,26 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 router_1.RouterModule.forRoot([
-                    { path: 'about', component: about_component_1.AboutComponent },
-                    { path: 'table', component: table_component_1.TableComponent },
-                    { path: '', component: home_component_1.HomeComponent }
+                    {
+                        path: 'about',
+                        component: about_component_1.AboutComponent
+                    },
+                    {
+                        path: 'state/:id',
+                        component: state_details_component_1.StateDetailsComponent
+                    },
+                    {
+                        path: 'states',
+                        component: states_table_component_1.StatesTableComponent
+                    },
+                    {
+                        path: '',
+                        component: home_component_1.HomeComponent
+                    },
+                    {
+                        path: '**',
+                        component: not_found_component_1.PageNotFoundComponent
+                    }
                 ])
             ],
             declarations: [
@@ -34,7 +53,9 @@ var AppModule = (function () {
                 header_component_1.HeaderComponent,
                 about_component_1.AboutComponent,
                 home_component_1.HomeComponent,
-                table_component_1.TableComponent
+                states_table_component_1.StatesTableComponent,
+                state_details_component_1.StateDetailsComponent,
+                not_found_component_1.PageNotFoundComponent
             ],
             bootstrap: [app_component_1.AppComponent]
         }), 

@@ -9,24 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var TableComponent = (function () {
-    function TableComponent() {
-        this.title = "fun fun fun";
-        this.columns = ["NAME", "AGE", "COLOR"];
-        this.data = [
-            { "NAME": "julie", "AGE": "1", "COLOR": "blue" },
-            { "NAME": "jack", "AGE": "2", "COLOR": "red" },
-            { "NAME": "jane", "AGE": "3", "COLOR": "yellow" }
-        ];
+var PageNotFoundComponent = (function () {
+    function PageNotFoundComponent() {
     }
-    TableComponent = __decorate([
+    PageNotFoundComponent = __decorate([
         core_1.Component({
-            selector: 'pp-table',
-            templateUrl: 'app/components/table/table.html'
+            selector: 'page-not-found',
+            templateUrl: 'app/components/page_not_found/not_found.html',
+            styleUrls: ['app/components/page_not_found/not_found.css']
         }), 
         __metadata('design:paramtypes', [])
-    ], TableComponent);
-    return TableComponent;
+    ], PageNotFoundComponent);
+    return PageNotFoundComponent;
 }());
-exports.TableComponent = TableComponent;
-//# sourceMappingURL=table.component.js.map
+exports.PageNotFoundComponent = PageNotFoundComponent;
+//# sourceMappingURL=not_found.component.js.map
