@@ -1,0 +1,16 @@
+ .navbar{
+  background-color: #0052A5;
+}
+
+.navbar-brand{
+  font-size: 30px !important;
+}
+
+.navbar-brand:hover{
+  color:  #B0C4DE;
+}
+
+.navbar-text{
+  color:white;
+  font-family: Palatino;
+}
