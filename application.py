@@ -1,5 +1,5 @@
 """ Launch the application and route to other pages """
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 # EB looks for an 'application' callable by default.
 # pylint: disable=invalid-name
@@ -9,7 +9,7 @@ application = Flask(__name__)
 @application.route('/')
 def index():
     """ Returns the home page """
-    return render_template('index.html')
+    return send_from_directory('/', 'index.html')
 
 
 

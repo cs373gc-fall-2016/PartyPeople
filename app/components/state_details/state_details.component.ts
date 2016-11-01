@@ -9,6 +9,10 @@ export class StateDetailsComponent implements OnInit, OnDestroy {
 	id: number;
 	private sub: any;
 
+	stateName = "Texas";
+	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
+	data = {"STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps"};
+
 	constructor(private route: ActivatedRoute) {}
 
 	ngOnInit() {

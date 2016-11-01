@@ -31,7 +31,7 @@ var AppModule = (function () {
                         component: about_component_1.AboutComponent
                     },
                     {
-                        path: 'state/:id',
+                        path: 'states/:id',
                         component: state_details_component_1.StateDetailsComponent
                     },
                     {

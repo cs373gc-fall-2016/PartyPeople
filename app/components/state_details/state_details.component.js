@@ -13,6 +13,9 @@ var router_1 = require('@angular/router');
 var StateDetailsComponent = (function () {
     function StateDetailsComponent(route) {
         this.route = route;
+        this.stateName = "Texas";
+        this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
+        this.data = { "STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps" };
     }
     StateDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;

@@ -1,2 +1,12 @@
 <h1>State Details</h1>
-<h3>ID: {{id}}</h3>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-3">
+            <h2 id="title" style="text-align: center;">{{stateName}}</h2>
+        </div>
+    </div>
+    <div class="row">
+        <h3 *ngFor="let column of columns">{{column}}: {{data[column]}}</h3>
+    </div>
+</div>
