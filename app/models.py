@@ -8,19 +8,6 @@ application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
 
 database = SQLAlchemy(application)
 
-"""
-Questions and Concerns about DB:
-Should we have default values in the tables? Some models don't really have things that fit
-    for example the general election is in the election model, and initially our plan was to have states as a part of
-    the election model. In the general election though all the states are participating. How would this be shown in a
-    database? Would there be a value in the state table that is a representation for all the states, so that the
-    general election could have a value to map to, either as a foreign key, or in an intermediate table?
-What relationships are worth having as foreign keys, and which are better suited for another table? What values in each
-    model are inherent to that model? For instance party is inherent to Candidate, because ever politician in the United
-    States is considered to be part of some political party, even if it is 'independent'
-If a call is state1 = State() and state2 = State() will these be in the same table? They should be.
-"""
-
 
 class Candidate(database.Model):
     """ Candidate Model class """
@@ -132,6 +119,20 @@ class PartiesInvolved(database.Model):
 
     def __repr__(self):
         return '<Party %r Election %r>' % (self.party, self.elections)
+
+
+class ElectionsToState(database.Model):
+    __tablename__ = 'election_to_state'
+    id = database.Column(database.Integer, primary_key=True)
+    election_id = database.Column(
+        database.Integer, database.ForeignKey('election.id'))
+    elections = database.relationship(
+        'Election', backref='election_to_state', foreign_keys=[election_id])
+    state_id = database.Column(
+        database.Integer, database.ForeignKey('state.id'))
+    states = database.relationship(
+        'State', backref='election_to_state', foreign_keys=[state_id])
+
 """
 Have more intermediate tables that will relate the main four models
 """
