@@ -15,9 +15,15 @@ var app_component_1 = require('./app.component');
 var header_component_1 = require('./components/header/header.component');
 var about_component_1 = require('./components/about/about.component');
 var home_component_1 = require('./components/home/home.component');
+var not_found_component_1 = require('./components/page_not_found/not_found.component');
 var states_table_component_1 = require('./components/states_table/states_table.component');
 var state_details_component_1 = require('./components/state_details/state_details.component');
-var not_found_component_1 = require('./components/page_not_found/not_found.component');
+var candidates_table_component_1 = require('./components/candidates_table/candidates_table.component');
+var candidate_details_component_1 = require('./components/candidate_details/candidate_details.component');
+var elections_table_component_1 = require('./components/elections_table/elections_table.component');
+var election_details_component_1 = require('./components/election_details/election_details.component');
+var parties_table_component_1 = require('./components/parties_table/parties_table.component');
+var party_details_component_1 = require('./components/party_details/party_details.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -39,6 +45,30 @@ var AppModule = (function () {
                         component: states_table_component_1.StatesTableComponent
                     },
                     {
+                        path: 'candidates/:id',
+                        component: candidate_details_component_1.CandidateDetailsComponent
+                    },
+                    {
+                        path: 'candidates',
+                        component: candidates_table_component_1.CandidatesTableComponent
+                    },
+                    {
+                        path: 'elections/:id',
+                        component: election_details_component_1.ElectionDetailsComponent
+                    },
+                    {
+                        path: 'elections',
+                        component: elections_table_component_1.ElectionsTableComponent
+                    },
+                    {
+                        path: 'parties/:id',
+                        component: party_details_component_1.PartyDetailsComponent
+                    },
+                    {
+                        path: 'parties',
+                        component: parties_table_component_1.PartiesTableComponent
+                    },
+                    {
                         path: '',
                         component: home_component_1.HomeComponent
                     },
@@ -53,7 +83,13 @@ var AppModule = (function () {
                 header_component_1.HeaderComponent,
                 about_component_1.AboutComponent,
                 home_component_1.HomeComponent,
+                candidates_table_component_1.CandidatesTableComponent,
+                elections_table_component_1.ElectionsTableComponent,
+                parties_table_component_1.PartiesTableComponent,
                 states_table_component_1.StatesTableComponent,
+                candidate_details_component_1.CandidateDetailsComponent,
+                election_details_component_1.ElectionDetailsComponent,
+                party_details_component_1.PartyDetailsComponent,
                 state_details_component_1.StateDetailsComponent,
                 not_found_component_1.PageNotFoundComponent
             ],

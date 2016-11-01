@@ -6,9 +6,20 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
+import { PageNotFoundComponent } from './components/page_not_found/not_found.component';
+
 import { StatesTableComponent } from './components/states_table/states_table.component';
 import { StateDetailsComponent } from './components/state_details/state_details.component';
-import { PageNotFoundComponent } from './components/page_not_found/not_found.component';
+
+import { CandidatesTableComponent } from './components/candidates_table/candidates_table.component';
+import { CandidateDetailsComponent } from './components/candidate_details/candidate_details.component';
+
+import { ElectionsTableComponent } from './components/elections_table/elections_table.component';
+import { ElectionDetailsComponent } from './components/election_details/election_details.component';
+
+import { PartiesTableComponent } from './components/parties_table/parties_table.component';
+import { PartyDetailsComponent } from './components/party_details/party_details.component';
+
 
 @NgModule({
   imports: [
@@ -25,6 +36,30 @@ import { PageNotFoundComponent } from './components/page_not_found/not_found.com
       {
         path: 'states',
         component: StatesTableComponent
+      },
+      {
+        path: 'candidates/:id',
+        component: CandidateDetailsComponent
+      },
+      {
+        path: 'candidates',
+        component: CandidatesTableComponent
+      },
+      {
+        path: 'elections/:id',
+        component: ElectionDetailsComponent
+      },
+      {
+        path: 'elections',
+        component: ElectionsTableComponent
+      },
+      {
+        path: 'parties/:id',
+        component: PartyDetailsComponent
+      },
+      {
+        path: 'parties',
+        component: PartiesTableComponent
       },
   		{
         path: '',
@@ -43,7 +78,13 @@ import { PageNotFoundComponent } from './components/page_not_found/not_found.com
   	HeaderComponent,
   	AboutComponent,
     HomeComponent,
+    CandidatesTableComponent,
+    ElectionsTableComponent,
+    PartiesTableComponent,
     StatesTableComponent,
+    CandidateDetailsComponent,
+    ElectionDetailsComponent,
+    PartyDetailsComponent,
     StateDetailsComponent,
     PageNotFoundComponent
   ],
