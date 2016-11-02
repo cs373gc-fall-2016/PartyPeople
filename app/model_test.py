@@ -6,7 +6,7 @@ Module for testing models
 # todo : [Election(One), Party(Many), PartiesInvolved], [Election(One), Politician(Many), Candidate]
 # todo : [Politician(Many), Party(One), Candidate]
 import unittest
-from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved
+from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
 from datetime import datetime
 
 
@@ -21,10 +21,11 @@ class ModelTest(unittest.TestCase):
         self.candidate_1 = Candidate(name="Candidate_1", dob=None, job='politician', contact='candidate1@us.gov', poll=50.0)
         self.candidate_2 = Candidate(name="Candidate_2", dob=None, job='politician', contact='candidate2@us.gov', poll=75.0)
         self.candidate_3 = Candidate(name="Candidate_3", dob=None, job='governor', contact='candidate3@us.gov', poll=50.0)
+
         self.election_1 = Election(name="general", date=None, level='federal')
-        self.election_2 = Election(name="local_1", date=None, level='local_1')
-        self.election_3 = Election(name="local_2", date=None, level='local_2')
-        self.election_3 = Election(name="state", date=None, level='state')
+        self.election_2 = Election(name="local_1", date=None, level='local')
+        self.election_3 = Election(name="local_2", date=None, level='local')
+        self.election_4 = Election(name="state", date=None, level='state')
 
         self.state_1 = State(name='State_1', capital='Capital_1', population=1000)
         self.state_2 = State(name='State_2', capital='Capital_2', population=2000)
@@ -50,9 +51,10 @@ class ModelTest(unittest.TestCase):
         # state.party_affiliation = self.party
         database.session.add(state)
         database.session.commit()
-        query = State.query.all()
+        query = State.query.first()
         print(query)
-        self.assertEqual(query[0].name, state.name)
+        self.assertEqual(query.name, state.name)
+        self.assertEqual(query, state)
 
     def test_state_2(self):
         state_1 = self.state_1
@@ -78,63 +80,175 @@ class ModelTest(unittest.TestCase):
         self.assertIn(state_1, query)
         self.assertIn(state_3, query)
 
-    def test_candidate(self):
-        """Test the Candidate model"""
-        print('Running Candidate Model Test')
-        candidate = self.candidate_1
-        database.session.add(candidate)
+    def test_candidate_1(self):
+        """ Test state model """
+        print('Running State Model Test')
+        candidate_1 = self.candidate_1
+        # state.party_affiliation = self.party
+        database.session.add(candidate_1)
         database.session.commit()
-        query = Candidate.query.all()
+        query = Candidate.query.first()
         print(query)
-        self.assertEqual(query[0].name, candidate.name)
+        self.assertEqual(query.name, candidate_1.name)
+        self.assertEqual(query, candidate_1)
 
     def test_candidate_2(self):
-        """
-        Test having all the different relations in the candidates
-        :return:
-        """
         candidate_1 = self.candidate_1
-        candidate_1.elections = self.election_1
-        candidate_1.states = self.state_1
-        candidate_1.party = self.party_1
+        candidate_2 = self.candidate_2
         database.session.add(candidate_1)
+        database.session.add(candidate_2)
         database.session.commit()
         query = Candidate.query.all()
         self.assertIn(candidate_1, query)
+        self.assertIn(candidate_2, query)
 
-    def test_election(self):
-        """Test the Election Model"""
-        print('Running the Election Model Test')
-        election = self.election_1
-        database.session.add(election)
+    def test_candidate_3(self):
+        candidate_1 = self.candidate_1
+        candidate_2 = self.candidate_2
+        candidate_3 = self.candidate_3
+        database.session.add(candidate_1)
+        database.session.add(candidate_2)
+        database.session.add(candidate_3)
+        database.session.commit()
+        query = Candidate.query.filter_by(job='politician').all()
+        print(query)
+        self.assertIn(candidate_1, query)
+        self.assertIn(candidate_2, query)
+
+    def test_election_1(self):
+        """ Test state model """
+        print('Running Election Model Test')
+        election_1 = self.election_1
+        database.session.add(election_1)
+        database.session.commit()
+        query = Election.query.first()
+        print(query)
+        self.assertEqual(query.name, election_1.name)
+        self.assertEqual(query, election_1)
+
+    def test_election_2(self):
+        election_1 = self.election_1
+        election_2 = self.election_2
+        database.session.add(election_1)
+        database.session.add(election_2)
         database.session.commit()
         query = Election.query.all()
-        self.assertEqual(query[0], election)
+        print(query)
+        self.assertIn(election_1, query)
+        self.assertIn(election_2, query)
 
-    def test_party(self):
-        """Test the party Model"""
-        print('Running the Party Model Test')
-        party = self.party_1
-        database.session.add(party)
+    def test_election_3(self):
+        election_1 = self.election_1
+        election_2 = self.election_2
+        election_3 = self.election_3
+        election_4 = self.election_4
+        database.session.add(election_1)
+        database.session.add(election_2)
+        database.session.add(election_3)
+        database.session.add(election_4)
+        database.session.commit()
+        query = Election.query.filter_by(level='local').all()
+        print(query)
+        self.assertIn(election_2, query)
+        self.assertIn(election_3, query)
+
+    def test_party_1(self):
+        """ Test state model """
+        print('Running Election Model Test')
+        party_1 = self.party_1
+        database.session.add(party_1)
+        database.session.commit()
+        query = Party.query.first()
+        print(query)
+        self.assertEqual(query.name, party_1.name)
+        self.assertEqual(query, party_1)
+
+    def test_party_2(self):
+        party_1 = self.party_1
+        party_2 = self.party_2
+        database.session.add(party_1)
+        database.session.add(party_2)
         database.session.commit()
         query = Party.query.all()
-        self.assertEqual(query[0], party)
+        print(query)
+        self.assertIn(party_1, query)
+        self.assertIn(party_2, query)
+
+    def test_party_3(self):
+        party_1 = self.party_1
+        party_2 = self.party_2
+        party_3 = self.party_3
+        database.session.add(party_1)
+        database.session.add(party_2)
+        database.session.add(party_3)
+        database.session.commit()
+        query = Party.query.filter_by(hq='hq_1').all()
+        print(query)
+        self.assertIn(party_1, query)
+        self.assertIn(party_3, query)
 
     def test_electoral_college(self):
         """
         :return:
         """
         print("Running the Electoral College Test")
-        relation = ElectoralCollege()
-        relation.party = self.party_1
-        relation.states = self.state_1
-        database.session.add(relation)
+        party_1 = self.party_1
+        party_2 = self.party_2
+        party_3 = self.party_3
+        relation_1 = ElectoralCollege()
+        relation_2 = ElectoralCollege()
+        relation_3 = ElectoralCollege()
+
+        relation_1.party = self.party_1
+        relation_1.states = self.state_1
+
+        relation_2.party = self.party_1
+        relation_2.states = self.state_2
+
+        relation_3.party = self.party_2
+        relation_3.states = self.state_3
+
+        database.session.add(relation_1)
+        database.session.add(relation_2)
+        database.session.add(relation_3)
+        database.session.add(party_1)
+        database.session.add(party_2)
+        database.session.add(party_3)
         database.session.commit()
-        query = ElectoralCollege.query.all()
-        print(query)
+        joined_table = ElectoralCollege.query.join(Party, State).add_columns(Party.name, State.name).all() #Query, can this be done dynamically
+        print('Joined Table %r' % joined_table)
+        # query = ElectoralCollege.query.all()
+        # query = joined_table.query.all()
+        # print('QUERY ALL %r' % query)
+        select = ElectoralCollege.query.filter_by(party=self.party_1).all()
+        print('SELECT %r' % select)
 
     def test_parties_involved(self):
-        pass
+        relation_1 = PartiesInvolved(party=self.party_1, elections=self.election_1)
+        relation_2 = PartiesInvolved(party=self.party_2, elections=self.election_1)
+        relation_3 = PartiesInvolved(party=self.party_1, elections=self.election_2)
+        relation_4 = PartiesInvolved(party=self.party_2, elections=self.election_2)
+        database.session.add(relation_1)
+        database.session.add(relation_2)
+        database.session.add(relation_3)
+        database.session.add(relation_4)
+        database.session.commit()
+        joined_table = PartiesInvolved.query.join(Election, Party).add_columns(Election.name, Party.name).all()
+        print("JOINED TABLE %r" % joined_table)
+
+    def test_elections_to_states(self):
+        relation_1 = ElectionsToState(elections=self.election_1, states=self.state_1)
+        relation_2 = ElectionsToState(elections=self.election_2, states=self.state_2)
+        relation_3 = ElectionsToState(elections=self.election_1, states=self.state_2)
+        relation_4 = ElectionsToState(elections=self.election_1, states=self.state_3)
+        database.session.add(relation_1)
+        database.session.add(relation_2)
+        database.session.add(relation_3)
+        database.session.add(relation_4)
+        database.session.commit()
+        joined_table = ElectionsToState().query.join(Election, State).add_columns(Election.name, State.name).all()
+        print("JOINED TABLE : ElectionsToStates %r" % joined_table)
+
 
 # if __name__ == '__main__':
 #     # unittest.main()
