@@ -19,30 +19,22 @@
 </div> -->
 
 <h3 class="first">Single Column</h3>
-<p-dataTable>
-    <p-column field="vin" header="Vin" [sortable]="true"></p-column>
-    <p-column field="year" header="Year" [sortable]="true"></p-column>
-    <p-column field="brand" header="Brand" [sortable]="true"></p-column>
-    <p-column field="color" header="Color" [sortable]="true"></p-column>
+<p-dataTable [value]="data">
+    <p-column *ngFor="let column of columns" field="{{column}}" header="{{column}}" [sortable]="true"></p-column>
 
-    <thead>
-            <tr>
-                <th *ngFor="let column of columns">
-                    {{column}}
-                </th>
-            </tr>
-        </thead>
-        <tbody>
+
+
+
+
+
+      <!--   <tbody>
             <tr *ngFor="let dat of data">
                 <td *ngFor="let column of columns">
                     {{dat[column]}}
                 </td>
             </tr>
-        </tbody>
+        </tbody> -->
 </p-dataTable>
 
 <a [routerLink]="['/states/3']">State 3</a>
 
-<link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/themes/omega/theme.css" />
-<link rel="stylesheet" type="text/css" href="/node_modules/primeng/resources/primeng.min.css" />
