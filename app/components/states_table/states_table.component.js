@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var StatesTableComponent = (function () {
     function StatesTableComponent() {
-        this.title = "State";
+        this.title = "States";
         this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
         this.data = [
             { "STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps" },
@@ -22,7 +22,7 @@ var StatesTableComponent = (function () {
     StatesTableComponent = __decorate([
         core_1.Component({
             selector: 'states-table',
-            templateUrl: 'app/components/states_table/states_table.html'
+            templateUrl: 'app/components/states_table/states_table.html',
         }), 
         __metadata('design:paramtypes', [])
     ], StatesTableComponent);

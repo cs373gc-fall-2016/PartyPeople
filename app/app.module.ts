@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
+import { DataTableModule } from 'primeng/primeng';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -23,6 +24,7 @@ import { PartyDetailsComponent } from './components/party_details/party_details.
 
 @NgModule({
   imports: [
+    DataTableModule,
   	BrowserModule,
   	RouterModule.forRoot([
   		{ 

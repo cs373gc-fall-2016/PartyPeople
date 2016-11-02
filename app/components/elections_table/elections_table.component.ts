@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
     templateUrl: 'app/components/elections_table/elections_table.html'
 })
 export class ElectionsTableComponent {
-	title = "Election";
+	title = "Elections";
 	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
 	data = [
 		{"STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps"},

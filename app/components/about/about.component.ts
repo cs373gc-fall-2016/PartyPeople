@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['app/components/about/about.css']
 })
 export class AboutComponent {
-	componentName: 'AboutComponent'
+	
+	runUnitTests() {
+		console.log("Running Unit Tests!");
+	}
 }
