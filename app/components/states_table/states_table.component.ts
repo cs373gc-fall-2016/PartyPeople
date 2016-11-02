@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'states-table',
-    templateUrl: 'app/components/states_table/states_table.html'
+    templateUrl: 'app/components/states_table/states_table.html',
 })
 export class StatesTableComponent {
 	title = "State";

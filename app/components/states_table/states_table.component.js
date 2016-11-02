@@ -22,7 +22,7 @@ var StatesTableComponent = (function () {
     StatesTableComponent = __decorate([
         core_1.Component({
             selector: 'states-table',
-            templateUrl: 'app/components/states_table/states_table.html'
+            templateUrl: 'app/components/states_table/states_table.html',
         }), 
         __metadata('design:paramtypes', [])
     ], StatesTableComponent);
