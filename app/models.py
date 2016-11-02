@@ -1,12 +1,5 @@
 """ Models """
 # pylint: disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
-# from flask import Flask
-# from flask_sqlalchemy import SQLAlchemy
-#
-# application = Flask(__name__)
-# application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
-#
-# database = SQLAlchemy(application)
 
 from app import database
 
