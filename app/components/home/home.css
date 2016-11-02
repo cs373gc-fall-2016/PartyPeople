@@ -2,12 +2,8 @@
 	padding-top: 20px;
 }
 
-.carousel{
-	margin-top: 70px;
-}
-
 .carousel-image{
-	height: 500px !important;
+	max-height: 500px !important;
 	width: auto;
 	margin: auto;
 }
@@ -22,14 +18,7 @@
 	font-family: helvetica;
 }
 
-html,body{
-	height:100%;
-}
-
-.carousel,.item,.active{
-	height:100%;
-}
-
-.carousel-inner{
-	height:100%;
+h3{
+	color:#E0162B;
+	text-shadow: 1px 2px #939393;
 }
