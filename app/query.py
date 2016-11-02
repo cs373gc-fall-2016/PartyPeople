@@ -19,4 +19,8 @@ def query_candidate_by_name(candidate_name):
 
 
 def query_election_by_name(election_name):
-    pass
+    return Election.query.filter_by(Election.name == election_name).all()
+
+
+def query_election_by_level(level):
+    return Election.query.filter_by(Election.level == level).all()

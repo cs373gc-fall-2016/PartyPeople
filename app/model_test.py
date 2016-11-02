@@ -6,7 +6,7 @@ Module for testing models
 # todo : [Election(One), Party(Many), PartiesInvolved], [Election(One), Politician(Many), Candidate]
 # todo : [Politician(Many), Party(One), Candidate]
 import unittest
-from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved
+from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
 from datetime import datetime
 
 
@@ -215,7 +215,7 @@ class ModelTest(unittest.TestCase):
         database.session.add(party_2)
         database.session.add(party_3)
         database.session.commit()
-        joined_table = ElectoralCollege.query.join(Party).add_columns(Party.name).filter(Party.name == 'Party_1').all() #Query, can this be done dynamically
+        joined_table = ElectoralCollege.query.join(Party, State).add_columns(Party.name, State.name).all() #Query, can this be done dynamically
         print('Joined Table %r' % joined_table)
         # query = ElectoralCollege.query.all()
         # query = joined_table.query.all()
@@ -224,7 +224,31 @@ class ModelTest(unittest.TestCase):
         print('SELECT %r' % select)
 
     def test_parties_involved(self):
-        pass
+        relation_1 = PartiesInvolved(party=self.party_1, elections=self.election_1)
+        relation_2 = PartiesInvolved(party=self.party_2, elections=self.election_1)
+        relation_3 = PartiesInvolved(party=self.party_1, elections=self.election_2)
+        relation_4 = PartiesInvolved(party=self.party_2, elections=self.election_2)
+        database.session.add(relation_1)
+        database.session.add(relation_2)
+        database.session.add(relation_3)
+        database.session.add(relation_4)
+        database.session.commit()
+        joined_table = PartiesInvolved.query.join(Election, Party).add_columns(Election.name, Party.name).all()
+        print("JOINED TABLE %r" % joined_table)
+
+    def test_elections_to_states(self):
+        relation_1 = ElectionsToState(elections=self.election_1, states=self.state_1)
+        relation_2 = ElectionsToState(elections=self.election_2, states=self.state_2)
+        relation_3 = ElectionsToState(elections=self.election_1, states=self.state_2)
+        relation_4 = ElectionsToState(elections=self.election_1, states=self.state_3)
+        database.session.add(relation_1)
+        database.session.add(relation_2)
+        database.session.add(relation_3)
+        database.session.add(relation_4)
+        database.session.commit()
+        joined_table = ElectionsToState().query.join(Election, State).add_columns(Election.name, State.name).all()
+        print("JOINED TABLE : ElectionsToStates %r" % joined_table)
+
 
 # if __name__ == '__main__':
 #     # unittest.main()

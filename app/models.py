@@ -1,12 +1,14 @@
 """ Models """
 # pylint: disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+# from flask import Flask
+# from flask_sqlalchemy import SQLAlchemy
+#
+# application = Flask(__name__)
+# application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
+#
+# database = SQLAlchemy(application)
 
-application = Flask(__name__)
-application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql:///ppdb'
-
-database = SQLAlchemy(application)
+from app import database
 
 
 class Candidate(database.Model):
@@ -14,7 +16,7 @@ class Candidate(database.Model):
     __tablename__ = "candidate"
     id = database.Column(database.Integer, primary_key=True)
     name = database.Column(database.String)
-    dob = database.Column(database.DateTime)
+    dob = database.Column(database.String)
     job = database.Column(database.String)
     contact = database.Column(database.String)
     poll = database.Column(database.Float)
@@ -41,7 +43,7 @@ class Election(database.Model):
     __tablename__ = "election"
     id = database.Column(database.Integer, primary_key=True)
     name = database.Column(database.String)
-    date = database.Column(database.DateTime)
+    date = database.Column(database.String)
     level = database.Column(database.String)
 
     def __repr__(self):
@@ -75,6 +77,7 @@ class State(database.Model):
     capital = database.Column(database.String)
     population = database.Column(database.Integer)
     governor = database.Column(database.String)
+
 
     def __repr__(self):
         return '<State %r %r %r %r>' %\
@@ -132,6 +135,9 @@ class ElectionsToState(database.Model):
         database.Integer, database.ForeignKey('state.id'))
     states = database.relationship(
         'State', backref='election_to_state', foreign_keys=[state_id])
+
+    def __repr__(self):
+        return '<ElectionsToStates %r %r>' % (self.elections, self.states)
 
 """
 Have more intermediate tables that will relate the main four models
