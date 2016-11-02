@@ -25,14 +25,6 @@
     border:1px solid #B0C4DE;
 }
 
-
-navbar-nav > li > a, .navbar-brand {
-    padding-top:5px !important; 
-    padding-bottom:0 !important;
-    height: 28px;
-}
-
-
 .navbar-brand{
   font-size: 30px !important;
 }
