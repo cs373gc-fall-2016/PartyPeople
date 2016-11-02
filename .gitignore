@@ -11,3 +11,6 @@
 
 # __pycache__ Pre-compiled Byte Code
 **/__pycache__/
+
+# Log where info goes when npm start has problems
+npm-debug.log
