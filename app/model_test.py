@@ -6,7 +6,7 @@ Module for testing models
 # todo : [Election(One), Party(Many), PartiesInvolved], [Election(One), Politician(Many), Candidate]
 # todo : [Politician(Many), Party(One), Candidate]
 import unittest
-from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
+from app.models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
 from datetime import datetime
 
 

@@ -30,6 +30,9 @@ class Candidate(database.Model):
         return '<Candidate %r %r %r %r %r>' %\
                (self.name, self.dob, self.job, self.poll, self.contact)
 
+    def get_state(self):
+        return self.states
+
 
 class Election(database.Model):
     """ Election Model class """
