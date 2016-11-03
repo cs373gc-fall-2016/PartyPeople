@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var router_1 = require('@angular/router');
 var primeng_1 = require('primeng/primeng');
+var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var header_component_1 = require('./components/header/header.component');
 var about_component_1 = require('./components/about/about.component');
@@ -33,6 +34,7 @@ var AppModule = (function () {
             imports: [
                 primeng_1.DataTableModule,
                 platform_browser_1.BrowserModule,
+                http_1.HttpModule,
                 router_1.RouterModule.forRoot([
                     {
                         path: 'about',
