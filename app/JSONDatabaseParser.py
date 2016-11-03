@@ -158,25 +158,25 @@ if __name__ == '__main__':
     fill_party_table()
     fill_candidate_table()
     fill_elections_to_state()
-    # fill_electoral_college()
-    # fill_parties_involved()
-    # state_query = State.query.all()
-    # print(str(state_query).replace(',', ',\n'))
+    fill_electoral_college()
+    fill_parties_involved()
+    state_query = State.query.all()
+    print(state_query)
 
     party_query = Party.query.all()
-    print(str(party_query).replace(',', ',\n'))
+    print(party_query)
 
-    # election_query = Election.query.all()
-    # print(str(election_query).replace(',', ',\n'))
+    election_query = Election.query.all()
+    print(election_query)
 
     candidate_query = Candidate.query.all()
-    print(str(candidate_query))
+    print(candidate_query)
 
-    # electoral_college_query = ElectoralCollege.query.all()
-    # print(str(electoral_college_query).replace(',', ',\n'))
+    electoral_college_query = ElectoralCollege.query.all()
+    print(electoral_college_query)
 
-    # parties_involved_query = PartiesInvolved.query.all()
-    # print(str(parties_involved_query).replace(',', ',\n'))
+    parties_involved_query = PartiesInvolved.query.all()
+    print(parties_involved_query)
 
     elections_to_state_query = ElectionsToState.query.all()
-    print(str(elections_to_state_query))
+    print(elections_to_state_query)
