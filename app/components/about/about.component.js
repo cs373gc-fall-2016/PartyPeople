@@ -14,6 +14,8 @@ var AboutComponent = (function () {
     }
     AboutComponent.prototype.runUnitTests = function () {
         console.log("Running Unit Tests!");
+        var div = document.getElementById('runTestsDiv');
+        div.innerHTML = "Running Unit Tests!";
     };
     AboutComponent = __decorate([
         core_1.Component({

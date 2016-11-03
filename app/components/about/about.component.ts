@@ -9,5 +9,7 @@ export class AboutComponent {
 	
 	runUnitTests() {
 		console.log("Running Unit Tests!");
+		var div = document.getElementById('runTestsDiv');
+		div.innerHTML = "Running Unit Tests!";
 	}
 }
