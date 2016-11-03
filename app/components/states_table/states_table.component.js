@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var allServices_service_1 = require('../../services/allServices.service');
 var StatesTableComponent = (function () {
-    function StatesTableComponent() {
+    function StatesTableComponent(allServicesService) {
+        this.allServicesService = allServicesService;
         this.title = "States";
         this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
         this.data = [
@@ -19,12 +21,22 @@ var StatesTableComponent = (function () {
             { "STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows" }
         ];
     }
+    StatesTableComponent.prototype.ngOnInit = function () {
+        this.getAllStates();
+    };
+    StatesTableComponent.prototype.getAllStates = function () {
+        var _this = this;
+        this.allServicesService.getAllStates().subscribe(function (allStates) { return _this.data = allStates; }, function (error) { return _this.errorMessage = error; });
+    };
     StatesTableComponent = __decorate([
         core_1.Component({
             selector: 'states-table',
             templateUrl: 'app/components/states_table/states_table.html',
+            providers: [
+                allServices_service_1.AllServicesService
+            ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
     ], StatesTableComponent);
     return StatesTableComponent;
 }());

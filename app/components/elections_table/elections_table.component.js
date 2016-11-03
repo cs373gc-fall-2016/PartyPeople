@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var allServices_service_1 = require('../../services/allServices.service');
 var ElectionsTableComponent = (function () {
-    function ElectionsTableComponent() {
+    function ElectionsTableComponent(allServicesService) {
+        this.allServicesService = allServicesService;
         this.title = "Elections";
         this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
         this.data = [
@@ -19,12 +21,22 @@ var ElectionsTableComponent = (function () {
             { "STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows" }
         ];
     }
+    ElectionsTableComponent.prototype.ngOnInit = function () {
+        this.getAllElections();
+    };
+    ElectionsTableComponent.prototype.getAllElections = function () {
+        var _this = this;
+        this.allServicesService.getAllElections().subscribe(function (allElections) { return _this.data = allElections; }, function (error) { return _this.errorMessage = error; });
+    };
     ElectionsTableComponent = __decorate([
         core_1.Component({
             selector: 'elections-table',
-            templateUrl: 'app/components/elections_table/elections_table.html'
+            templateUrl: 'app/components/elections_table/elections_table.html',
+            providers: [
+                allServices_service_1.AllServicesService
+            ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
     ], ElectionsTableComponent);
     return ElectionsTableComponent;
 }());

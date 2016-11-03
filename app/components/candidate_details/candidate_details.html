@@ -5,6 +5,8 @@
             <h2 id="title" style="text-align: center;">{{stateName}}</h2>
     </div>
     <div class="panel-body">
-        <h3 *ngFor="let column of columns">{{column}}: {{data[column]}}</h3>
+        <div *ngFor="let column of columns">
+        	<h3>{{column}}: {{data[column]}}</h3>
+        </div>
     </div>
 </div>
