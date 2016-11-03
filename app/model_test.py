@@ -84,7 +84,7 @@ class ModelTest(unittest.TestCase):
         """ Test state model """
         print('Running State Model Test')
         candidate_1 = self.candidate_1
-        # state.party_affiliation = self.party
+        # candidate_1.party = self.party
         database.session.add(candidate_1)
         database.session.commit()
         query = Candidate.query.first()

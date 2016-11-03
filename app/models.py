@@ -27,8 +27,8 @@ class Candidate(database.Model):
         'Party', backref='candidate', foreign_keys=[party_id])
 
     def __repr__(self):
-        return '<Candidate %r %r %r %r %r>' %\
-               (self.name, self.dob, self.job, self.poll, self.contact)
+        return '{"Candidate" : {"name": %r, "dob": %r, "job": %r, "poll": %r, "contact": %r, "states": %r, "party": %r, "election": %r}}' %\
+               (self.name, self.dob, self.job, self.poll, self.contact, self.states, self.party, self.elections)
 
     def get_state(self):
         return self.states
@@ -56,7 +56,7 @@ class Party(database.Model):
     leader = database.Column(database.String)
 
     def __repr__(self):
-        return '<Party %r %r %r>' % (self.name, self.description, self.leader)
+        return '<Party %r>' % (self.name)
 
 
 class State(database.Model):
@@ -73,6 +73,7 @@ class State(database.Model):
     capital = database.Column(database.String)
     population = database.Column(database.Integer)
     governor = database.Column(database.String)
+    abbrev = database.Column(database.String)
 
 
     def __repr__(self):
