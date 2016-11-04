@@ -18,9 +18,12 @@ class ModelTest(unittest.TestCase):
         Will have multiple of each type of model to be placed in the tables, to test different types of relationships
         """
         database.create_all()
-        self.candidate_1 = Candidate(name="Candidate_1", dob=None, job='politician', contact='candidate1@us.gov', poll=50.0)
-        self.candidate_2 = Candidate(name="Candidate_2", dob=None, job='politician', contact='candidate2@us.gov', poll=75.0)
-        self.candidate_3 = Candidate(name="Candidate_3", dob=None, job='governor', contact='candidate3@us.gov', poll=50.0)
+        self.candidate_1 = Candidate(name="Candidate_1", dob=None, job='politician',
+                                     contact='candidate1@us.gov', poll=50.0)
+        self.candidate_2 = Candidate(name="Candidate_2", dob=None, job='politician',
+                                     contact='candidate2@us.gov', poll=75.0)
+        self.candidate_3 = Candidate(name="Candidate_3", dob=None, job='governor',
+                                     contact='candidate3@us.gov', poll=50.0)
 
         self.election_1 = Election(name="general", date=None, level='federal')
         self.election_2 = Election(name="local_1", date=None, level='local')
@@ -45,7 +48,9 @@ class ModelTest(unittest.TestCase):
         # Can drop when the table is just freshly created
 
     def test_state(self):
-        """ Test state model """
+        """ Test state model
+            Test if only a single file is being put in and retrieved
+        """
         print('Running State Model Test')
         state = self.state_1
         # state.party_affiliation = self.party
@@ -57,6 +62,10 @@ class ModelTest(unittest.TestCase):
         self.assertEqual(query, state)
 
     def test_state_2(self):
+        """
+        Test if multiple states are committed to a database, then they are all returned on a query
+        :return:
+        """
         state_1 = self.state_1
         state_2 = self.state_2
         database.session.add(state_1)
@@ -68,6 +77,10 @@ class ModelTest(unittest.TestCase):
         self.assertIn(state_2, query)
 
     def test_state_3(self):
+        """
+        Test if multiple states are added to a database, then they can be queried by one of their attributes
+        :return:
+        """
         state_1 = self.state_1
         state_2 = self.state_2
         state_3 = self.state_3
@@ -81,7 +94,7 @@ class ModelTest(unittest.TestCase):
         self.assertIn(state_3, query)
 
     def test_candidate_1(self):
-        """ Test state model """
+        """ Test state model , adding and committing a single candidate row"""
         print('Running State Model Test')
         candidate_1 = self.candidate_1
         # candidate_1.party = self.party
@@ -93,6 +106,9 @@ class ModelTest(unittest.TestCase):
         self.assertEqual(query, candidate_1)
 
     def test_candidate_2(self):
+        """
+        Test if multiple candidates are committed to a database, then they are all returned on a query
+        """
         candidate_1 = self.candidate_1
         candidate_2 = self.candidate_2
         database.session.add(candidate_1)
@@ -103,6 +119,10 @@ class ModelTest(unittest.TestCase):
         self.assertIn(candidate_2, query)
 
     def test_candidate_3(self):
+        """
+        Test if multiple candidates can be committed and queried based on an attribute
+        :return:
+        """
         candidate_1 = self.candidate_1
         candidate_2 = self.candidate_2
         candidate_3 = self.candidate_3
@@ -116,7 +136,7 @@ class ModelTest(unittest.TestCase):
         self.assertIn(candidate_2, query)
 
     def test_election_1(self):
-        """ Test state model """
+        """ Test election model basics"""
         print('Running Election Model Test')
         election_1 = self.election_1
         database.session.add(election_1)
@@ -127,6 +147,10 @@ class ModelTest(unittest.TestCase):
         self.assertEqual(query, election_1)
 
     def test_election_2(self):
+        """
+        Test if multiple elections can be committed to a table and queried
+        :return:
+        """
         election_1 = self.election_1
         election_2 = self.election_2
         database.session.add(election_1)
@@ -138,6 +162,10 @@ class ModelTest(unittest.TestCase):
         self.assertIn(election_2, query)
 
     def test_election_3(self):
+        """
+        Test if the elections can be added and queried by one of their attribures
+        :return:
+        """
         election_1 = self.election_1
         election_2 = self.election_2
         election_3 = self.election_3
@@ -153,7 +181,7 @@ class ModelTest(unittest.TestCase):
         self.assertIn(election_3, query)
 
     def test_party_1(self):
-        """ Test state model """
+        """ Test state model, if something can be added in and queried """
         print('Running Election Model Test')
         party_1 = self.party_1
         database.session.add(party_1)
@@ -164,6 +192,9 @@ class ModelTest(unittest.TestCase):
         self.assertEqual(query, party_1)
 
     def test_party_2(self):
+        """
+        Test if multiple states are committed to a database, then they are all returned on a query
+        """
         party_1 = self.party_1
         party_2 = self.party_2
         database.session.add(party_1)
@@ -175,6 +206,10 @@ class ModelTest(unittest.TestCase):
         self.assertIn(party_2, query)
 
     def test_party_3(self):
+        """
+        Test if the parties can be queried by attributes
+        :return:
+        """
         party_1 = self.party_1
         party_2 = self.party_2
         party_3 = self.party_3
@@ -189,7 +224,8 @@ class ModelTest(unittest.TestCase):
 
     def test_electoral_college(self):
         """
-        :return:
+        Test the intermediate table for states and the parties that control them,
+        this also tests the results of a join are non empty
         """
         print("Running the Electoral College Test")
         party_1 = self.party_1
@@ -215,15 +251,19 @@ class ModelTest(unittest.TestCase):
         database.session.add(party_2)
         database.session.add(party_3)
         database.session.commit()
-        joined_table = ElectoralCollege.query.join(Party, State).add_columns(Party.name, State.name).all() #Query, can this be done dynamically
+        joined_table = ElectoralCollege.query.join(Party, State).add_columns(Party.name, State.name).all()
         print('Joined Table %r' % joined_table)
-        # query = ElectoralCollege.query.all()
-        # query = joined_table.query.all()
-        # print('QUERY ALL %r' % query)
         select = ElectoralCollege.query.filter_by(party=self.party_1).all()
         print('SELECT %r' % select)
+        self.assertIsNotNone(joined_table)
 
     def test_parties_involved(self):
+        """
+        Test the intermediate table for states and the parties that control them,
+        this also tests the results of a join are non empty
+
+        :return:
+        """
         relation_1 = PartiesInvolved(party=self.party_1, elections=self.election_1)
         relation_2 = PartiesInvolved(party=self.party_2, elections=self.election_1)
         relation_3 = PartiesInvolved(party=self.party_1, elections=self.election_2)
@@ -235,8 +275,14 @@ class ModelTest(unittest.TestCase):
         database.session.commit()
         joined_table = PartiesInvolved.query.join(Election, Party).add_columns(Election.name, Party.name).all()
         print("JOINED TABLE %r" % joined_table)
+        self.assertIsNotNone(joined_table)
 
     def test_elections_to_states(self):
+        """
+        Test the intermediate table for elections and the states they are held in
+        this also tests the results of a join are non empty
+        :return:
+        """
         relation_1 = ElectionsToState(elections=self.election_1, states=self.state_1)
         relation_2 = ElectionsToState(elections=self.election_2, states=self.state_2)
         relation_3 = ElectionsToState(elections=self.election_1, states=self.state_2)
@@ -248,6 +294,7 @@ class ModelTest(unittest.TestCase):
         database.session.commit()
         joined_table = ElectionsToState().query.join(Election, State).add_columns(Election.name, State.name).all()
         print("JOINED TABLE : ElectionsToStates %r" % joined_table)
+        self.assertIsNotNone(joined_table)
 
 
 # if __name__ == '__main__':

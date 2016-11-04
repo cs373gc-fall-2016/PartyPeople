@@ -23,10 +23,11 @@ elections_json = json.loads(election_file.read())
 
 
 def fill_state_table():
-
+    """"""
     for key in state_json.keys():
         temp_state = State(name=state_json[key]['name'], capital=state_json[key]['capital'],
-                           population=int(state_json[key]['population'].replace(',', '')), governor=state_json[key]['governor'], abbrev=key)
+                           population=int(state_json[key]['population'].replace(',', '')),
+                           governor=state_json[key]['governor'], abbrev=key)
         database.session.add(temp_state)
         database.session.commit()
 
