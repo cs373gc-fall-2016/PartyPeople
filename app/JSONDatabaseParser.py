@@ -139,11 +139,11 @@ def fill_elections_to_state():
         state_query = State.query.filter(State.abbrev == state_name).first()
         state_elections = elections_json[election][0]
         for key in state_elections.keys():
-            print('Election == %r ' % election)
-            print('Key == %r' % key)
+            # print('Election == %r ' % election)
+            # print('Key == %r' % key)
             election_query = Election.query.filter(Election.name == key).first()
-            print(election_query)
-            print(state_query)
+            # print(election_query)
+            # print(state_query)
             temp_election_to_state.elections = election_query
             temp_election_to_state.states = state_query
             database.session.add(temp_election_to_state)
@@ -153,12 +153,19 @@ def fill_elections_to_state():
 
 
 if __name__ == '__main__':
+    print("Filling State Table")
     fill_state_table()
+    print("Filling Election Table")
     fill_election_table()
+    print("Filling Party Table")
     fill_party_table()
+    print("Filling Candidate Table")
     fill_candidate_table()
+    print("Filling Elections to States Table")
     fill_elections_to_state()
+    print("Filling Electoral College Table")
     fill_electoral_college()
+    print("Filling Parties Involved")
     fill_parties_involved()
     state_query = State.query.all()
     print(state_query)
