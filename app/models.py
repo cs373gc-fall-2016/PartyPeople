@@ -43,7 +43,7 @@ class Election(database.Model):
     level = database.Column(database.String)
 
     def __repr__(self):
-        return '<Election %r %r %r>' % (self.name, self.date, self.level)
+        return '{"Election" : {"name": %r, "date": %r, "level": %r}}' % (self.name, self.date, self.level)
 
 
 class Party(database.Model):
@@ -56,7 +56,8 @@ class Party(database.Model):
     leader = database.Column(database.String)
 
     def __repr__(self):
-        return '<Party %r>' % (self.name)
+        return '{Party : {"name": %r, "description": %r, "hq": %r, "leader": %r}}' \
+               % (self.name, self.description, self.hq, self.leader)
 
 
 class State(database.Model):
@@ -75,11 +76,10 @@ class State(database.Model):
     governor = database.Column(database.String)
     abbrev = database.Column(database.String)
 
-
     def __repr__(self):
-        return '<State %r %r %r %r>' %\
+        return '{"State" : {"name": %r, "capital": %r, "population": %r, "governor": %r, "abbrev": %r}}' %\
                (self.name, self.capital, self.population,
-                self.governor)
+                self.governor, self.abbrev)
 
 
 class ElectoralCollege(database.Model):
@@ -99,7 +99,7 @@ class ElectoralCollege(database.Model):
         'State', backref='electoral', foreign_keys=[state_id])
 
     def __repr__(self):
-        return '<ElectoralCollege State %r Party %r>' % (self.states, self.party)
+        return '{ElectoralCollege : { "State": %r, "Party": %r}}' % (self.states, self.party)
 
 
 class PartiesInvolved(database.Model):
@@ -118,7 +118,7 @@ class PartiesInvolved(database.Model):
        'Election', backref='parties_involved', foreign_keys=[election_id])
 
     def __repr__(self):
-        return '<Party %r Election %r>' % (self.party, self.elections)
+        return '{"PartiesInvolved": {"Party": %r, "Election": %r}}' % (self.party, self.elections)
 
 
 class ElectionsToState(database.Model):
@@ -134,7 +134,7 @@ class ElectionsToState(database.Model):
         'State', backref='election_to_state', foreign_keys=[state_id])
 
     def __repr__(self):
-        return '<ElectionsToStates %r %r>' % (self.elections, self.states)
+        return '{"ElectionsToStates" : {"elections": %r, "states":%r}}' % (self.elections, self.states)
 
 """
 Have more intermediate tables that will relate the main four models
