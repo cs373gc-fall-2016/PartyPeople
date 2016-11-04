@@ -11,6 +11,7 @@ export class AllServicesService {
 	private partiesUrl = 'api/party';
 	private candidatesUrl = 'api/candidate';
 	private electionsUrl = 'api/election';
+	private testOutputUrl = '';
 
 	constructor(private http: Http) {}
 
@@ -66,9 +67,11 @@ export class AllServicesService {
 				   .catch(this.handleError);
 	}
 
-
-
-
+	getTestOutput(): Observable<any> {
+		return this.http.get(this.testOutputUrl)
+				   .map(this.extractData)
+				   .catch(this.handleError);
+	}
 
 
 

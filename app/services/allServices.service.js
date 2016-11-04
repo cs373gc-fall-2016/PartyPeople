@@ -21,6 +21,7 @@ var AllServicesService = (function () {
         this.partiesUrl = 'api/party';
         this.candidatesUrl = 'api/candidate';
         this.electionsUrl = 'api/election';
+        this.testOutputUrl = '';
     }
     AllServicesService.prototype.getAllStates = function () {
         return this.http.get(this.statesUrl)
@@ -63,6 +64,11 @@ var AllServicesService = (function () {
     AllServicesService.prototype.getElectionDetails = function (id) {
         var singleElectionUrl = this.electionsUrl + "/" + id;
         return this.http.get(singleElectionUrl)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    AllServicesService.prototype.getTestOutput = function () {
+        return this.http.get(this.testOutputUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
