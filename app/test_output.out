@@ -1,0 +1,26 @@
+/usr/bin/python3.5 /home/ndseeg/Misc/pycharm-community-2016.2.2/helpers/pycharm/utrunner.py /home/ndseeg/Documents/cs373/PartyPeople-Phase1/app/model_test.py::ModelTest true
+Testing started at 4:01 PM ...
+/usr/local/lib/python3.5/dist-packages/flask_sqlalchemy/__init__.py:800: UserWarning: SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.
+  warnings.warn('SQLALCHEMY_TRACK_MODIFICATIONS adds significant overhead and will be disabled by default in the future.  Set it to True to suppress this warning.')
+Running State Model Test
+<Candidate 'Candidate_1' None 'politician' 50.0 'candidate1@us.gov'>
+[<Candidate 'Candidate_1' None 'politician' 50.0 'candidate1@us.gov'>, <Candidate 'Candidate_2' None 'politician' 75.0 'candidate2@us.gov'>]
+Running Election Model Test
+<Election 'general' None 'federal'>
+[<Election 'general' None 'federal'>, <Election 'local_1' None 'local'>]
+[<Election 'local_1' None 'local'>, <Election 'local_2' None 'local'>]
+JOINED TABLE : ElectionsToStates [(<ElectionsToStates <Election 'general' None 'federal'> <State 'State_1' 'Capital_1' 1000 None>>, 'general', 'State_1'), (<ElectionsToStates <Election 'general' None 'federal'> <State 'State_2' 'Capital_2' 2000 None>>, 'general', 'State_2'), (<ElectionsToStates <Election 'local_1' None 'local'> <State 'State_2' 'Capital_2' 2000 None>>, 'local_1', 'State_2'), (<ElectionsToStates <Election 'general' None 'federal'> <State 'State_3' 'Capital_3' 1000 None>>, 'general', 'State_3')]
+Running the Electoral College Test
+Joined Table [(<ElectoralCollege State <State 'State_1' 'Capital_1' 1000 None> Party <Party 'Party_1' 'party people' 'leader_1'>>, 'Party_1', 'State_1'), (<ElectoralCollege State <State 'State_2' 'Capital_2' 2000 None> Party <Party 'Party_1' 'party people' 'leader_1'>>, 'Party_1', 'State_2'), (<ElectoralCollege State <State 'State_3' 'Capital_3' 1000 None> Party <Party 'Party_2' 'people party' 'leader_2'>>, 'Party_2', 'State_3')]
+SELECT [<ElectoralCollege State <State 'State_1' 'Capital_1' 1000 None> Party <Party 'Party_1' 'party people' 'leader_1'>>, <ElectoralCollege State <State 'State_2' 'Capital_2' 2000 None> Party <Party 'Party_1' 'party people' 'leader_1'>>]
+JOINED TABLE [(<Party <Party 'Party_1' 'party people' 'leader_1'> Election <Election 'general' None 'federal'>>, 'general', 'Party_1'), (<Party <Party 'Party_1' 'party people' 'leader_1'> Election <Election 'local_1' None 'local'>>, 'local_1', 'Party_1'), (<Party <Party 'Party_2' 'people party' 'leader_2'> Election <Election 'local_1' None 'local'>>, 'local_1', 'Party_2'), (<Party <Party 'Party_2' 'people party' 'leader_2'> Election <Election 'general' None 'federal'>>, 'general', 'Party_2')]
+Running Election Model Test
+<Party 'Party_1' 'party people' 'leader_1'>
+[<Party 'Party_1' 'party people' 'leader_1'>, <Party 'Party_2' 'people party' 'leader_2'>]
+[<Party 'Party_1' 'party people' 'leader_1'>, <Party 'Party_3' 'people people' 'leader_3'>]
+Running State Model Test
+<State 'State_1' 'Capital_1' 1000 None>
+[<State 'State_1' 'Capital_1' 1000 None>, <State 'State_2' 'Capital_2' 2000 None>]
+[<State 'State_1' 'Capital_1' 1000 None>, <State 'State_3' 'Capital_3' 1000 None>]
+
+Process finished with exit code 0
