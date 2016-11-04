@@ -11,24 +11,65 @@
                [rowsPerPageOptions]="[5,10,20]"
                [globalFilter]="gb">
 
+     <p-column field="name"
+              header="Candidate Name"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+        <a routerLink="/candidates/{{fakeCandidate.id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{fakeCandidate.name}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="dob"
+              header="Date of Birth"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.dob}}
+      </template>
+    </p-column>
+
+    <p-column field="party"
+              header="Party Affiliation"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+        <a routerLink="/candidates/{{fakeCandidate.party_id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{fakeCandidate.party}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="poll"
+              header="Poll Numbers (favorabilty)"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.poll}}
+      </template>
+    </p-column>
+
+    <p-column field="states"
+              header="State Affiliation"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.states}}
+      </template>
+    </p-column>
+
     <p-column field="contact"
               header="Contact Info"
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeCandidate="rowData" pTemplate type="body">
           {{fakeCandidate.contact}}
-      </template>
-    </p-column>
-     <p-column field="contact"
-              header="Contact Info"
-              [sortable]="true"
-              filterMatchMode="contains">
-      <template let-fakeCandidate="rowData" pTemplate type="body">
-        <a routerLink="/candidates/{{fakeCandidate.contact}}"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{fakeCandidate.contact}}
-        </a>
       </template>
     </p-column>
     
