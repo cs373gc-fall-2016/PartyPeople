@@ -13,9 +13,34 @@ export class CandidatesTableComponent implements OnInit {
 	title = "Candidate";
 	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
 	data = [
-		{"STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps"},
-		{"STATE NAME": "Colorado", "CAPITAL": "Denver", "POPULATION": "987654", "GOVERNOR": "asdfeqwrasdf", "PARTY IN CONTROL": "dems"},
-		{"STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows"}
+		{
+ "contact": "candidate1@us.gov", 
+ "dob": null, 
+ "election_id": null, 
+ "elections": null, 
+ "id": 1, 
+ "job": "politician", 
+ "name": "Candidate_1", 
+ "party": null, 
+ "party_id": null, 
+ "poll": 50.0, 
+ "state_id": null, 
+ "states": null
+},
+{
+ "contact": "candidate2@us.gov", 
+ "dob": null, 
+ "election_id": null, 
+ "elections": null, 
+ "id": 1, 
+ "job": "politician", 
+ "name": "Candidate_1", 
+ "party": null, 
+ "party_id": null, 
+ "poll": 50.0, 
+ "state_id": null, 
+ "states": null
+}
 	];
 
 	constructor(private allServicesService: AllServicesService) {}
