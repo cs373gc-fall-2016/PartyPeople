@@ -27,6 +27,7 @@ var CandidatesTableComponent = (function () {
     CandidatesTableComponent.prototype.getAllCandidates = function () {
         var _this = this;
         this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
+        console.log("Canidates Data: " + this.data);
     };
     CandidatesTableComponent = __decorate([
         core_1.Component({

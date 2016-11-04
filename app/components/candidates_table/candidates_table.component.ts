@@ -27,7 +27,8 @@ export class CandidatesTableComponent implements OnInit {
 	getAllCandidates() {
 		this.allServicesService.getAllCandidates().subscribe(
 			allCandidates => this.data = allCandidates,
-			error => this.errorMessage = <any>error)
+			error => this.errorMessage = <any>error);
+		console.log("Canidates Data: " + this.data);
 	}
 
 
