@@ -8,8 +8,9 @@ from app.api_test import APITest
 # EB looks for an 'application' callable by default.
 # pylint: disable=invalid-name
 application = Flask(__name__)
-application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://partypeople:sweatypeople@' \
-                                                'partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
+# 'postgresql://partypeople:sweatypeople@' \
+                                                # 'partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
+application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ppdb'
 
 @application.route('/')
 @application.route('/<path:path>')

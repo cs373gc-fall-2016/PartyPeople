@@ -3,8 +3,8 @@ Module to populate the database
 """
 
 import json
-from app import database
-from app.models import State, Candidate, Election, Party, ElectoralCollege, ElectionsToState, PartiesInvolved
+from models import database
+from models import State, Candidate, Election, Party, ElectoralCollege, ElectionsToState, PartiesInvolved
 
 database.drop_all()
 database.create_all()
