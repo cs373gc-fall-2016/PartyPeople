@@ -18,3 +18,6 @@ app/*.pyc
 
 # Log where info goes when npm start has problems
 npm-debug.log
+
+# pylintrc
+.pylintrc
