@@ -38,7 +38,7 @@ class APITest(unittest.TestCase):
     #     # test data
 
     def test_state_single(self):
-        rc = self.app.get('/api/state/1')
+        rc = self.app.get('/api/state')
         self.assertEqual(rc.mimetype, 'application/json')
         print(rc.data.decode('utf-8'))
         # data = json.loads(rc.data.decode('utf-8'))

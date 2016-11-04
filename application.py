@@ -1,9 +1,12 @@
 """ Launch the application and route to other pages """
 from flask import Flask, render_template, send_from_directory
+# from flask_restless import APIManager
+# from flask_sqlalchemy import SQLAlchemy
 
 import unittest
 from StringIO import StringIO
 from app.api_test import APITest
+# from app.models import State, Party, Candidate, Election, ElectoralCollege, PartiesInvolved
 
 # EB looks for an 'application' callable by default.
 # pylint: disable=invalid-name
@@ -35,14 +38,15 @@ def send_app(path):
 def send_systemconfig():
     return send_from_directory('.', 'systemjs.config.js')
 
-@application.route('/api/test', methods=['GET'])
-def run_tests():
-	output = StringIO()
-	suite = unittest.TestLoader().loadTestsFromTestCase(APITest)
-	unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
-	result = output.getvalue().replace('\n', '<br />')
-	output.close()
-	return result
+
+# @application.route('/api/test', methods=['GET'])
+# def run_tests():
+# 	output = StringIO()
+# 	suite = unittest.TestLoader().loadTestsFromTestCase(APITest)
+# 	unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
+# 	result = output.getvalue().replace('\n', '<br />')
+# 	output.close()
+# 	return result
 
 
 # Run the application.
