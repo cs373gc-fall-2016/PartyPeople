@@ -1,16 +1,22 @@
 <h1 id="title" align="center">{{title}}</h1>
 <div class="container">
-    <p-dataTable [value]="data"
-                 [rows]="10"
-                 [paginator]="true"
-                 [pageLinks]="3"
-                 [rowsPerPageOptions]="[5,10,20]">
-        <p-column *ngFor="let column of columns"
-                  field="{{column}}"
-                  header="{{column}}"
-                  [sortable]="true">
-        </p-column>
-    </p-dataTable>
+  <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
+    <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
+    <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
+  </div>
+  <p-dataTable [value]="data"
+               [rows]="10"
+               [paginator]="true"
+               [pageLinks]="3"
+               [rowsPerPageOptions]="[5,10,20]"
+               [globalFilter]="gb">
+      <p-column *ngFor="let column of columns"
+                field="{{column}}"
+                header="{{column}}"
+                [sortable]="true"
+                filterMatchMode="contains">
+      </p-column>
+  </p-dataTable>
 </div>
 
 <a [routerLink]="['/states/3']">State 3</a>

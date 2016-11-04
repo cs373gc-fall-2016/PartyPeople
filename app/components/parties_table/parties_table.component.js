@@ -9,8 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var allServices_service_1 = require('../../services/allServices.service');
 var PartiesTableComponent = (function () {
-    function PartiesTableComponent() {
+    function PartiesTableComponent(allServicesService) {
+        this.allServicesService = allServicesService;
         this.title = "Parties";
         this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
         this.data = [
@@ -19,12 +21,22 @@ var PartiesTableComponent = (function () {
             { "STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows" }
         ];
     }
+    PartiesTableComponent.prototype.ngOnInit = function () {
+        this.getAllParties();
+    };
+    PartiesTableComponent.prototype.getAllParties = function () {
+        var _this = this;
+        this.allServicesService.getAllParties().subscribe(function (allParties) { return _this.data = allParties; }, function (error) { return _this.errorMessage = error; });
+    };
     PartiesTableComponent = __decorate([
         core_1.Component({
             selector: 'parties-table',
-            templateUrl: 'app/components/parties_table/parties_table.html'
+            templateUrl: 'app/components/parties_table/parties_table.html',
+            providers: [
+                allServices_service_1.AllServicesService
+            ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
     ], PartiesTableComponent);
     return PartiesTableComponent;
 }());

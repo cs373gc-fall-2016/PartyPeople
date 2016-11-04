@@ -49,7 +49,6 @@ clean:
 	rm -f  .coverage
 	rm -f  .pylintrc
 	rm -f  *.pyc
-	rm -f  *.html
 	rm -f  IDB1.log
 	rm -f  application_test.tmp
 	rm -rf __pycache__

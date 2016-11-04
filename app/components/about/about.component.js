@@ -12,6 +12,11 @@ var core_1 = require('@angular/core');
 var AboutComponent = (function () {
     function AboutComponent() {
     }
+    AboutComponent.prototype.runUnitTests = function () {
+        console.log("Running Unit Tests!");
+        var div = document.getElementById('runTestsDiv');
+        div.innerHTML = "Running Unit Tests!";
+    };
     AboutComponent = __decorate([
         core_1.Component({
             selector: 'about',

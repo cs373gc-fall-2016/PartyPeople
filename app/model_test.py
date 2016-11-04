@@ -6,7 +6,7 @@ Module for testing models
 # todo : [Election(One), Party(Many), PartiesInvolved], [Election(One), Politician(Many), Candidate]
 # todo : [Politician(Many), Party(One), Candidate]
 import unittest
-from models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
+from app.models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
 from datetime import datetime
 
 
@@ -84,7 +84,7 @@ class ModelTest(unittest.TestCase):
         """ Test state model """
         print('Running State Model Test')
         candidate_1 = self.candidate_1
-        # state.party_affiliation = self.party
+        # candidate_1.party = self.party
         database.session.add(candidate_1)
         database.session.commit()
         query = Candidate.query.first()

@@ -1,0 +1,4558 @@
+{
+  "MO": {
+    "population": "6,083,672",
+    "representatives": {
+      "H4MO08162": {
+        "party": "REP",
+        "gt-id": 412596,
+        "lastname": "Smith",
+        "candidate_id": "H4MO08162",
+        "name": "Jason Smith",
+        "firstname": "Jason"
+      },
+      "H2MO02102": {
+        "party": "REP",
+        "gt-id": 412548,
+        "lastname": "Wagner",
+        "candidate_id": "H2MO02102",
+        "name": "Ann Wagner",
+        "firstname": "Ann"
+      },
+      "H4MO05234": {
+        "party": "DEM",
+        "gt-id": 400639,
+        "lastname": "Cleaver",
+        "candidate_id": "H4MO05234",
+        "name": "Emanuel Cleaver",
+        "firstname": "Emanuel"
+      },
+      "S6MO00305": {
+        "party": "DEM",
+        "gt-id": 412243,
+        "lastname": "McCaskill",
+        "candidate_id": "S6MO00305",
+        "name": "Claire McCaskill",
+        "firstname": "Claire"
+      },
+      "H0MO04086": {
+        "party": "REP",
+        "gt-id": 412444,
+        "lastname": "Hartzler",
+        "candidate_id": "H0MO04086",
+        "name": "Vicky Hartzler",
+        "firstname": "Vicky"
+      },
+      "S0MO00183": {
+        "party": "REP",
+        "gt-id": 400034,
+        "lastname": "Blunt",
+        "candidate_id": "S0MO00183",
+        "name": "Roy Blunt",
+        "firstname": "Roy"
+      },
+      "H0MO07113": {
+        "party": "REP",
+        "gt-id": 412445,
+        "lastname": "Long",
+        "candidate_id": "H0MO07113",
+        "name": "Billy Long",
+        "firstname": "Billy"
+      }
+    },
+    "governor": "Jay Nixon",
+    "elections": {
+      "H": {
+        "MO-H-05": "Missouri Congressional District 05 Election, 2016",
+        "MO-H-02": "Missouri Congressional District 02 Election, 2016",
+        "MO-H-07": "Missouri Congressional District 07 Election, 2016",
+        "MO-H-01": "Missouri Congressional District 01 Election, 2016",
+        "MO-H-03": "Missouri Congressional District 03 Election, 2016",
+        "MO-H-08": "Missouri Congressional District 08 Election, 2016",
+        "MO-H-06": "Missouri Congressional District 06 Election, 2016",
+        "MO-H-04": "Missouri Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "MO-S-00": "Missouri Senate Election, 2018"
+      }
+    },
+    "capital": "Jefferson City",
+    "majority": "REP",
+    "name": "Missouri"
+  },
+  "MS": {
+    "population": "2,992,333",
+    "representatives": {
+      "H8MS03067": {
+        "party": "REP",
+        "gt-id": 412280,
+        "lastname": "Harper",
+        "candidate_id": "H8MS03067",
+        "name": "Gregg Harper",
+        "firstname": "Gregg"
+      },
+      "H4MS02068": {
+        "party": "DEM",
+        "gt-id": 400402,
+        "lastname": "Thompson",
+        "candidate_id": "H4MS02068",
+        "name": "Bennie Thompson",
+        "firstname": "Bennie"
+      },
+      "H0MS04120": {
+        "party": "REP",
+        "gt-id": 412443,
+        "lastname": "Palazzo",
+        "candidate_id": "H0MS04120",
+        "name": "Steven Palazzo",
+        "firstname": "Steven"
+      },
+      "S8MS00196": {
+        "party": "REP",
+        "gt-id": 400432,
+        "lastname": "Wicker",
+        "candidate_id": "S8MS00196",
+        "name": "Roger Wicker",
+        "firstname": "Roger"
+      },
+      "S8MS00055": {
+        "party": "REP",
+        "gt-id": 300023,
+        "lastname": "Cochran",
+        "candidate_id": "S8MS00055",
+        "name": "Thad Cochran",
+        "firstname": "Thad"
+      }
+    },
+    "governor": "Phil Bryant",
+    "elections": {
+      "H": {
+        "MS-H-01": "Mississippi Congressional District 01 Election, 2016",
+        "MS-H-02": "Mississippi Congressional District 02 Election, 2016",
+        "MS-H-03": "Mississippi Congressional District 03 Election, 2016",
+        "MS-H-04": "Mississippi Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "MS-S-00": "Mississippi Senate Election, 2020"
+      }
+    },
+    "capital": "Jackson",
+    "majority": "REP",
+    "name": "Mississippi"
+  },
+  "TX": {
+    "population": "27,469,114",
+    "representatives": {
+      "H2TX23082": {
+        "party": "DEM",
+        "gt-id": 400657,
+        "lastname": "Cuellar",
+        "candidate_id": "H2TX23082",
+        "name": "Henry Cuellar",
+        "firstname": "Henry"
+      },
+      "H2TX35011": {
+        "party": "DEM",
+        "gt-id": 412576,
+        "lastname": "Castro",
+        "candidate_id": "H2TX35011",
+        "name": "Joaquin Castro",
+        "firstname": "Joaquin"
+      },
+      "H4TX04153": {
+        "party": "REP",
+        "gt-id": 412653,
+        "lastname": "Ratcliffe",
+        "candidate_id": "H4TX04153",
+        "name": "John Ratcliffe",
+        "firstname": "John"
+      },
+      "H6TX12060": {
+        "party": "REP",
+        "gt-id": 400157,
+        "lastname": "Granger",
+        "candidate_id": "H6TX12060",
+        "name": "Kay Granger",
+        "firstname": "Kay"
+      },
+      "H2TX00015": {
+        "party": "DEM",
+        "gt-id": 400204,
+        "lastname": "Johnson",
+        "candidate_id": "H2TX00015",
+        "name": "Eddie Johnson",
+        "firstname": "Eddie"
+      },
+      "H6TX08100": {
+        "party": "REP",
+        "gt-id": 400046,
+        "lastname": "Brady",
+        "candidate_id": "H6TX08100",
+        "name": "Kevin Brady",
+        "firstname": "Kevin"
+      },
+      "H4TX06117": {
+        "party": "REP",
+        "gt-id": 400018,
+        "lastname": "Barton",
+        "candidate_id": "H4TX06117",
+        "name": "Joe Barton",
+        "firstname": "Joe"
+      },
+      "S2TX00106": {
+        "party": "REP",
+        "gt-id": 300027,
+        "lastname": "Cornyn",
+        "candidate_id": "S2TX00106",
+        "name": "John Cornyn",
+        "firstname": "John"
+      },
+      "H4TX13014": {
+        "party": "REP",
+        "gt-id": 400404,
+        "lastname": "Thornberry",
+        "candidate_id": "H4TX13014",
+        "name": "Mac Thornberry",
+        "firstname": "Mac"
+      },
+      "H4TX19102": {
+        "party": "REP",
+        "gt-id": 400441,
+        "lastname": "Neugebauer",
+        "candidate_id": "H4TX19102",
+        "name": "Randy Neugebauer",
+        "firstname": "Randy"
+      },
+      "H2TX03118": {
+        "party": "REP",
+        "gt-id": 400206,
+        "lastname": "Johnson",
+        "candidate_id": "H2TX03118",
+        "name": "Sam Johnson",
+        "firstname": "Sam"
+      },
+      "H0TX07055": {
+        "party": "REP",
+        "gt-id": 400089,
+        "lastname": "Culberson",
+        "candidate_id": "H0TX07055",
+        "name": "John Culberson",
+        "firstname": "John"
+      },
+      "H2TX33073": {
+        "party": "DEM",
+        "gt-id": 412579,
+        "lastname": "Veasey",
+        "candidate_id": "H2TX33073",
+        "name": "Marc Veasey",
+        "firstname": "Marc"
+      },
+      "H6TX02079": {
+        "party": "REP",
+        "gt-id": 412655,
+        "lastname": "Babin",
+        "candidate_id": "H6TX02079",
+        "name": "Brian Babin",
+        "firstname": "Brian"
+      },
+      "H4TX02108": {
+        "party": "REP",
+        "gt-id": 400652,
+        "lastname": "Poe",
+        "candidate_id": "H4TX02108",
+        "name": "Ted Poe",
+        "firstname": "Ted"
+      },
+      "H2TX03126": {
+        "party": "REP",
+        "gt-id": 400367,
+        "lastname": "Sessions",
+        "candidate_id": "H2TX03126",
+        "name": "Pete Sessions",
+        "firstname": "Pete"
+      },
+      "H4TX10093": {
+        "party": "REP",
+        "gt-id": 400654,
+        "lastname": "McCaul",
+        "candidate_id": "H4TX10093",
+        "name": "Michael McCaul",
+        "firstname": "Michael"
+      },
+      "H2TX27190": {
+        "party": "DEM",
+        "gt-id": 412580,
+        "lastname": "Vela",
+        "candidate_id": "H2TX27190",
+        "name": "Filemon Vela",
+        "firstname": "Filemon"
+      },
+      "H2TX33040": {
+        "party": "REP",
+        "gt-id": 412578,
+        "lastname": "Williams",
+        "candidate_id": "H2TX33040",
+        "name": "Roger Williams",
+        "firstname": "Roger"
+      },
+      "H6TX21012": {
+        "party": "REP",
+        "gt-id": 400381,
+        "lastname": "Smith",
+        "candidate_id": "H6TX21012",
+        "name": "Lamar Smith",
+        "firstname": "Lamar"
+      },
+      "H0TX17104": {
+        "party": "REP",
+        "gt-id": 412480,
+        "lastname": "Flores",
+        "candidate_id": "H0TX17104",
+        "name": "Bill Flores",
+        "firstname": "Bill"
+      },
+      "H2TX05121": {
+        "party": "REP",
+        "gt-id": 400175,
+        "lastname": "Hensarling",
+        "candidate_id": "H2TX05121",
+        "name": "Jeb Hensarling",
+        "firstname": "Jeb"
+      },
+      "H4TX24094": {
+        "party": "REP",
+        "gt-id": 400656,
+        "lastname": "Marchant",
+        "candidate_id": "H4TX24094",
+        "name": "Kenny Marchant",
+        "firstname": "Kenny"
+      },
+      "H4TX18054": {
+        "party": "DEM",
+        "gt-id": 400199,
+        "lastname": "Jackson Lee",
+        "candidate_id": "H4TX18054",
+        "name": "Sheila Jackson Lee",
+        "firstname": "Sheila"
+      },
+      "H2TX14149": {
+        "party": "REP",
+        "gt-id": 412574,
+        "lastname": "Weber",
+        "candidate_id": "H2TX14149",
+        "name": "Randy Weber",
+        "firstname": "Randy"
+      },
+      "H2TX26093": {
+        "party": "REP",
+        "gt-id": 400052,
+        "lastname": "Burgess",
+        "candidate_id": "H2TX26093",
+        "name": "Michael Burgess",
+        "firstname": "Michael"
+      },
+      "H2TX31044": {
+        "party": "REP",
+        "gt-id": 400068,
+        "lastname": "Carter",
+        "candidate_id": "H2TX31044",
+        "name": "John Carter",
+        "firstname": "John"
+      },
+      "H4TX10028": {
+        "party": "DEM",
+        "gt-id": 400111,
+        "lastname": "Doggett",
+        "candidate_id": "H4TX10028",
+        "name": "Lloyd Doggett",
+        "firstname": "Lloyd"
+      }
+    },
+    "governor": "Greg Abbott",
+    "elections": {
+      "H": {
+        "TX-H-06": "Texas Congressional District 06 Election, 2016",
+        "TX-H-20": "Texas Congressional District 20 Election, 2016",
+        "TX-H-02": "Texas Congressional District 02 Election, 2016",
+        "TX-H-18": "Texas Congressional District 18 Election, 2016",
+        "TX-H-21": "Texas Congressional District 21 Election, 2016",
+        "TX-H-17": "Texas Congressional District 17 Election, 2016",
+        "TX-H-19": "Texas Congressional District 19 Election, 2016",
+        "TX-H-22": "Texas Congressional District 22 Election, 2016",
+        "TX-H-33": "Texas Congressional District 33 Election, 2016",
+        "TX-H-24": "Texas Congressional District 24 Election, 2016",
+        "TX-H-08": "Texas Congressional District 08 Election, 2016",
+        "TX-H-29": "Texas Congressional District 29 Election, 2016",
+        "TX-H-35": "Texas Congressional District 35 Election, 2016",
+        "TX-H-36": "Texas Congressional District 36 Election, 2016",
+        "TX-H-30": "Texas Congressional District 30 Election, 2016",
+        "TX-H-14": "Texas Congressional District 14 Election, 2016",
+        "TX-H-05": "Texas Congressional District 05 Election, 2016",
+        "TX-H-07": "Texas Congressional District 07 Election, 2016",
+        "TX-H-25": "Texas Congressional District 25 Election, 2016",
+        "TX-H-09": "Texas Congressional District 09 Election, 2016",
+        "TX-H-11": "Texas Congressional District 11 Election, 2016",
+        "TX-H-15": "Texas Congressional District 15 Election, 2016",
+        "TX-H-13": "Texas Congressional District 13 Election, 2016",
+        "TX-H-04": "Texas Congressional District 04 Election, 2016",
+        "TX-H-23": "Texas Congressional District 23 Election, 2016",
+        "TX-H-01": "Texas Congressional District 01 Election, 2016",
+        "TX-H-12": "Texas Congressional District 12 Election, 2016",
+        "TX-H-03": "Texas Congressional District 03 Election, 2016",
+        "TX-H-32": "Texas Congressional District 32 Election, 2016",
+        "TX-H-28": "Texas Congressional District 28 Election, 2016",
+        "TX-H-27": "Texas Congressional District 27 Election, 2016",
+        "TX-H-34": "Texas Congressional District 34 Election, 2016",
+        "TX-H-31": "Texas Congressional District 31 Election, 2016",
+        "TX-H-26": "Texas Congressional District 26 Election, 2016",
+        "TX-H-10": "Texas Congressional District 10 Election, 2016",
+        "TX-H-16": "Texas Congressional District 16 Election, 2016"
+      },
+      "S": {
+        "TX-S-00": "Texas Senate Election, 2020"
+      }
+    },
+    "capital": "Austin",
+    "majority": "REP",
+    "name": "Texas"
+  },
+  "IN": {
+    "population": "6,619,680",
+    "representatives": {
+      "H0IN08114": {
+        "party": "REP",
+        "gt-id": 412427,
+        "lastname": "Bucshon",
+        "candidate_id": "H0IN08114",
+        "name": "Larry Bucshon",
+        "firstname": "Larry"
+      },
+      "S0IN00053": {
+        "party": "REP",
+        "gt-id": 402675,
+        "lastname": "Coats",
+        "candidate_id": "S0IN00053",
+        "name": "Daniel Coats",
+        "firstname": "Daniel"
+      },
+      "H0IN09070": {
+        "party": "REP",
+        "gt-id": 412428,
+        "lastname": "Young",
+        "candidate_id": "H0IN09070",
+        "name": "Todd Young",
+        "firstname": "Todd"
+      },
+      "H2IN05082": {
+        "party": "REP",
+        "gt-id": 412539,
+        "lastname": "Brooks",
+        "candidate_id": "H2IN05082",
+        "name": "Susan Brooks",
+        "firstname": "Susan"
+      },
+      "H4IN01012": {
+        "party": "DEM",
+        "gt-id": 400417,
+        "lastname": "Visclosky",
+        "candidate_id": "H4IN01012",
+        "name": "Peter Visclosky",
+        "firstname": "Peter"
+      },
+      "S0IN00095": {
+        "party": "REP",
+        "gt-id": 412392,
+        "lastname": "Stutzman",
+        "candidate_id": "S0IN00095",
+        "name": "Marlin Stutzman",
+        "firstname": "Marlin"
+      }
+    },
+    "governor": "Mike Pence",
+    "elections": {
+      "H": {
+        "IN-H-01": "Indiana Congressional District 01 Election, 2016",
+        "IN-H-06": "Indiana Congressional District 06 Election, 2016",
+        "IN-H-07": "Indiana Congressional District 07 Election, 2016",
+        "IN-H-04": "Indiana Congressional District 04 Election, 2016",
+        "IN-H-08": "Indiana Congressional District 08 Election, 2016",
+        "IN-H-02": "Indiana Congressional District 02 Election, 2016",
+        "IN-H-03": "Indiana Congressional District 03 Election, 2016",
+        "IN-H-05": "Indiana Congressional District 05 Election, 2016",
+        "IN-H-09": "Indiana Congressional District 09 Election, 2016"
+      },
+      "S": {
+        "IN-S-00": "Indiana Senate Election, 2016"
+      }
+    },
+    "capital": "Indianapolis",
+    "majority": "REP",
+    "name": "Indiana"
+  },
+  "AL": {
+    "population": "4,858,979",
+    "representatives": {
+      "S6AL00013": {
+        "party": "REP",
+        "gt-id": 300089,
+        "lastname": "Shelby",
+        "candidate_id": "S6AL00013",
+        "name": "Richard Shelby",
+        "firstname": "Richard"
+      },
+      "H0AL02087": {
+        "party": "REP",
+        "gt-id": 412394,
+        "lastname": "Roby",
+        "candidate_id": "H0AL02087",
+        "name": "Martha Roby",
+        "firstname": "Martha"
+      },
+      "H6AL04098": {
+        "party": "REP",
+        "gt-id": 400004,
+        "lastname": "Aderholt",
+        "candidate_id": "H6AL04098",
+        "name": "Robert Aderholt",
+        "firstname": "Robert"
+      },
+      "H4AL06098": {
+        "party": "REP",
+        "gt-id": 412608,
+        "lastname": "Palmer",
+        "candidate_id": "H4AL06098",
+        "name": "Gary Palmer",
+        "firstname": "Gary"
+      },
+      "H0AL05163": {
+        "party": "REP",
+        "gt-id": 412395,
+        "lastname": "Brooks",
+        "candidate_id": "H0AL05163",
+        "name": "Mo Brooks",
+        "firstname": "Mo"
+      },
+      "H4AL01123": {
+        "party": "REP",
+        "gt-id": 412601,
+        "lastname": "Byrne",
+        "candidate_id": "H4AL01123",
+        "name": "Bradley Byrne",
+        "firstname": "Bradley"
+      }
+    },
+    "governor": "Robert Bentley",
+    "elections": {
+      "H": {
+        "AL-H-07": "Alabama Congressional District 07 Election, 2016",
+        "AL-H-06": "Alabama Congressional District 06 Election, 2016",
+        "AL-H-03": "Alabama Congressional District 03 Election, 2016",
+        "AL-H-04": "Alabama Congressional District 04 Election, 2016",
+        "AL-H-01": "Alabama Congressional District 01 Election, 2016",
+        "AL-H-05": "Alabama Congressional District 05 Election, 2016",
+        "AL-H-02": "Alabama Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "AL-S-00": "Alabama Senate Election, 2016"
+      }
+    },
+    "capital": "Montgomery",
+    "majority": "REP",
+    "name": "Alabama"
+  },
+  "WA": {
+    "population": "7,170,351",
+    "representatives": {
+      "H6WA09025": {
+        "party": "DEM",
+        "gt-id": 400379,
+        "lastname": "Smith",
+        "candidate_id": "H6WA09025",
+        "name": "Adam Smith",
+        "firstname": "Adam"
+      },
+      "H4WA05077": {
+        "party": "REP",
+        "gt-id": 400659,
+        "lastname": "McMorris Rodgers",
+        "candidate_id": "H4WA05077",
+        "name": "Cathy McMorris Rodgers",
+        "firstname": "Cathy"
+      },
+      "H0WA03187": {
+        "party": "REP",
+        "gt-id": 412486,
+        "lastname": "Herrera Beutler",
+        "candidate_id": "H0WA03187",
+        "name": "Jaime Herrera Beutler",
+        "firstname": "Jaime"
+      },
+      "H2WA06129": {
+        "party": "DEM",
+        "gt-id": 412583,
+        "lastname": "Kilmer",
+        "candidate_id": "H2WA06129",
+        "name": "Derek Kilmer",
+        "firstname": "Derek"
+      },
+      "S2WA00189": {
+        "party": "DEM",
+        "gt-id": 300076,
+        "lastname": "Murray",
+        "candidate_id": "S2WA00189",
+        "name": "Patty Murray",
+        "firstname": "Patty"
+      },
+      "H4WA04104": {
+        "party": "REP",
+        "gt-id": 412660,
+        "lastname": "Newhouse",
+        "candidate_id": "H4WA04104",
+        "name": "Dan Newhouse",
+        "firstname": "Dan"
+      },
+      "H0WA08046": {
+        "party": "DEM",
+        "gt-id": 412505,
+        "lastname": "DelBene",
+        "candidate_id": "H0WA08046",
+        "name": "Suzan DelBene",
+        "firstname": "Suzan"
+      },
+      "H0WA02080": {
+        "party": "DEM",
+        "gt-id": 400232,
+        "lastname": "Larsen",
+        "candidate_id": "H0WA02080",
+        "name": "Rick Larsen",
+        "firstname": "Rick"
+      },
+      "S8WA00194": {
+        "party": "DEM",
+        "gt-id": 300018,
+        "lastname": "Cantwell",
+        "candidate_id": "S8WA00194",
+        "name": "Maria Cantwell",
+        "firstname": "Maria"
+      }
+    },
+    "governor": "Jay Inslee",
+    "elections": {
+      "H": {
+        "WA-H-07": "Washington Congressional District 07 Election, 2016",
+        "WA-H-01": "Washington Congressional District 01 Election, 2016",
+        "WA-H-08": "Washington Congressional District 08 Election, 2016",
+        "WA-H-04": "Washington Congressional District 04 Election, 2016",
+        "WA-H-10": "Washington Congressional District 10 Election, 2016",
+        "WA-H-02": "Washington Congressional District 02 Election, 2016",
+        "WA-H-05": "Washington Congressional District 05 Election, 2016",
+        "WA-H-03": "Washington Congressional District 03 Election, 2016",
+        "WA-H-09": "Washington Congressional District 09 Election, 2016",
+        "WA-H-06": "Washington Congressional District 06 Election, 2016"
+      },
+      "S": {
+        "WA-S-00": "Washington Senate Election, 2018"
+      }
+    },
+    "capital": "Olympia",
+    "majority": "DEM",
+    "name": "Washington"
+  },
+  "CA": {
+    "population": "39,144,818",
+    "representatives": {
+      "H0CA10149": {
+        "party": "DEM",
+        "gt-id": 412382,
+        "lastname": "Garamendi",
+        "candidate_id": "H0CA10149",
+        "name": "John Garamendi",
+        "firstname": "John"
+      },
+      "H8CA12098": {
+        "party": "DEM",
+        "gt-id": 400124,
+        "lastname": "Eshoo",
+        "candidate_id": "H8CA12098",
+        "name": "Anna Eshoo",
+        "firstname": "Anna"
+      },
+      "H2CA06259": {
+        "party": "DEM",
+        "gt-id": 412511,
+        "lastname": "Huffman",
+        "candidate_id": "H2CA06259",
+        "name": "Jared Huffman",
+        "firstname": "Jared"
+      },
+      "H8CA01109": {
+        "party": "DEM",
+        "gt-id": 400403,
+        "lastname": "Thompson",
+        "candidate_id": "H8CA01109",
+        "name": "Mike Thompson",
+        "firstname": "Mike"
+      },
+      "H2CA00104": {
+        "party": "DEM",
+        "gt-id": 412521,
+        "lastname": "Lowenthal",
+        "candidate_id": "H2CA00104",
+        "name": "Alan Lowenthal",
+        "firstname": "Alan"
+      },
+      "H8CA34068": {
+        "party": "DEM",
+        "gt-id": 400290,
+        "lastname": "Napolitano",
+        "candidate_id": "H8CA34068",
+        "name": "Grace Napolitano",
+        "firstname": "Grace"
+      },
+      "H2CA33048": {
+        "party": "DEM",
+        "gt-id": 400347,
+        "lastname": "Roybal-Allard",
+        "candidate_id": "H2CA33048",
+        "name": "Lucille Roybal-Allard",
+        "firstname": "Lucille"
+      },
+      "H0CA19173": {
+        "party": "REP",
+        "gt-id": 412403,
+        "lastname": "Denham",
+        "candidate_id": "H0CA19173",
+        "name": "Jeff Denham",
+        "firstname": "Jeff"
+      },
+      "H4CA16049": {
+        "party": "DEM",
+        "gt-id": 400245,
+        "lastname": "Lofgren",
+        "candidate_id": "H4CA16049",
+        "name": "Zoe Lofgren",
+        "firstname": "Zoe"
+      },
+      "H4CA35031": {
+        "party": "DEM",
+        "gt-id": 412617,
+        "lastname": "Torres",
+        "candidate_id": "H4CA35031",
+        "name": "Norma Torres",
+        "firstname": "Norma"
+      },
+      "H0CA10073": {
+        "party": "DEM",
+        "gt-id": 412613,
+        "lastname": "DeSaulnier",
+        "candidate_id": "H0CA10073",
+        "name": "Mark DeSaulnier",
+        "firstname": "Mark"
+      },
+      "H4CA20082": {
+        "party": "DEM",
+        "gt-id": 400618,
+        "lastname": "Costa",
+        "candidate_id": "H4CA20082",
+        "name": "Jim Costa",
+        "firstname": "Jim"
+      },
+      "H6CA22125": {
+        "party": "REP",
+        "gt-id": 412190,
+        "lastname": "McCarthy",
+        "candidate_id": "H6CA22125",
+        "name": "Kevin McCarthy",
+        "firstname": "Kevin"
+      },
+      "H2CA08164": {
+        "party": "REP",
+        "gt-id": 412513,
+        "lastname": "Cook",
+        "candidate_id": "H2CA08164",
+        "name": "Paul Cook",
+        "firstname": "Paul"
+      },
+      "H2CA30143": {
+        "party": "DEM",
+        "gt-id": 400021,
+        "lastname": "Becerra",
+        "candidate_id": "H2CA30143",
+        "name": "Xavier Becerra",
+        "firstname": "Xavier"
+      },
+      "H8CA22089": {
+        "party": "DEM",
+        "gt-id": 400062,
+        "lastname": "Capps",
+        "candidate_id": "H8CA22089",
+        "name": "Lois Capps",
+        "firstname": "Lois"
+      },
+      "H6CA05195": {
+        "party": "DEM",
+        "gt-id": 400663,
+        "lastname": "Matsui",
+        "candidate_id": "H6CA05195",
+        "name": "Doris Matsui",
+        "firstname": "Doris"
+      },
+      "S2CA00286": {
+        "party": "DEM",
+        "gt-id": 300011,
+        "lastname": "Boxer",
+        "candidate_id": "S2CA00286",
+        "name": "Barbara Boxer",
+        "firstname": "Barbara"
+      },
+      "H8CA20059": {
+        "party": "REP",
+        "gt-id": 400297,
+        "lastname": "Nunes",
+        "candidate_id": "H8CA20059",
+        "name": "Devin Nunes",
+        "firstname": "Devin"
+      },
+      "H4CA11081": {
+        "party": "DEM",
+        "gt-id": 412189,
+        "lastname": "McNerney",
+        "candidate_id": "H4CA11081",
+        "name": "Jerry McNerney",
+        "firstname": "Jerry"
+      },
+      "H2CA43245": {
+        "party": "DEM",
+        "gt-id": 412520,
+        "lastname": "Takano",
+        "candidate_id": "H2CA43245",
+        "name": "Mark Takano",
+        "firstname": "Mark"
+      },
+      "H8CA36097": {
+        "party": "DEM",
+        "gt-id": 412498,
+        "lastname": "Hahn",
+        "candidate_id": "H8CA36097",
+        "name": "Janice Hahn",
+        "firstname": "Janice"
+      },
+      "H2CA00120": {
+        "party": "DEM",
+        "gt-id": 412516,
+        "lastname": "Brownley",
+        "candidate_id": "H2CA00120",
+        "name": "Julia Brownley",
+        "firstname": "Julia"
+      },
+      "H2CA15094": {
+        "party": "DEM",
+        "gt-id": 412514,
+        "lastname": "Swalwell",
+        "candidate_id": "H2CA15094",
+        "name": "Eric Swalwell",
+        "firstname": "Eric"
+      },
+      "H4CA25123": {
+        "party": "REP",
+        "gt-id": 412614,
+        "lastname": "Knight",
+        "candidate_id": "H4CA25123",
+        "name": "Steve Knight",
+        "firstname": "Steve"
+      },
+      "H8CA42061": {
+        "party": "REP",
+        "gt-id": 400343,
+        "lastname": "Rohrabacher",
+        "candidate_id": "H8CA42061",
+        "name": "Dana Rohrabacher",
+        "firstname": "Dana"
+      },
+      "H2CA31125": {
+        "party": "DEM",
+        "gt-id": 412615,
+        "lastname": "Aguilar",
+        "candidate_id": "H2CA31125",
+        "name": "Pete Aguilar",
+        "firstname": "Pete"
+      },
+      "H4CA45097": {
+        "party": "REP",
+        "gt-id": 412618,
+        "lastname": "Walters",
+        "candidate_id": "H4CA45097",
+        "name": "Mimi Walters",
+        "firstname": "Mimi"
+      },
+      "H8CA05035": {
+        "party": "DEM",
+        "gt-id": 400314,
+        "lastname": "Pelosi",
+        "candidate_id": "H8CA05035",
+        "name": "Nancy Pelosi",
+        "firstname": "Nancy"
+      },
+      "H0CA49055": {
+        "party": "DEM",
+        "gt-id": 400097,
+        "lastname": "Davis",
+        "candidate_id": "H0CA49055",
+        "name": "Susan Davis",
+        "firstname": "Susan"
+      },
+      "H4CA23011": {
+        "party": "DEM",
+        "gt-id": 400422,
+        "lastname": "Waters",
+        "candidate_id": "H4CA23011",
+        "name": "Maxine Waters",
+        "firstname": "Maxine"
+      },
+      "H0CA27085": {
+        "party": "DEM",
+        "gt-id": 400361,
+        "lastname": "Schiff",
+        "candidate_id": "H0CA27085",
+        "name": "Adam Schiff",
+        "firstname": "Adam"
+      },
+      "H2CA02142": {
+        "party": "REP",
+        "gt-id": 412510,
+        "lastname": "LaMalfa",
+        "candidate_id": "H2CA02142",
+        "name": "Doug LaMalfa",
+        "firstname": "Doug"
+      },
+      "H2CA20094": {
+        "party": "REP",
+        "gt-id": 412515,
+        "lastname": "Valadao",
+        "candidate_id": "H2CA20094",
+        "name": "David Valadao",
+        "firstname": "David"
+      },
+      "H6CA24113": {
+        "party": "DEM",
+        "gt-id": 400371,
+        "lastname": "Sherman",
+        "candidate_id": "H6CA24113",
+        "name": "Brad Sherman",
+        "firstname": "Brad"
+      },
+      "H2CA37023": {
+        "party": "REP",
+        "gt-id": 400057,
+        "lastname": "Calvert",
+        "candidate_id": "H2CA37023",
+        "name": "Ken Calvert",
+        "firstname": "Ken"
+      },
+      "S0CA00199": {
+        "party": "DEM",
+        "gt-id": 300043,
+        "lastname": "Feinstein",
+        "candidate_id": "S0CA00199",
+        "name": "Dianne Feinstein",
+        "firstname": "Dianne"
+      },
+      "H0CA48024": {
+        "party": "REP",
+        "gt-id": 400196,
+        "lastname": "Issa",
+        "candidate_id": "H0CA48024",
+        "name": "Darrell Issa",
+        "firstname": "Darrell"
+      },
+      "H8CA12171": {
+        "party": "DEM",
+        "gt-id": 412259,
+        "lastname": "Speier",
+        "candidate_id": "H8CA12171",
+        "name": "Jackie Speier",
+        "firstname": "Jackie"
+      },
+      "H0CA32101": {
+        "party": "DEM",
+        "gt-id": 412379,
+        "lastname": "Chu",
+        "candidate_id": "H0CA32101",
+        "name": "Judy Chu",
+        "firstname": "Judy"
+      },
+      "H4CA33119": {
+        "party": "DEM",
+        "gt-id": 412616,
+        "lastname": "Lieu",
+        "candidate_id": "H4CA33119",
+        "name": "Ted Lieu",
+        "firstname": "Ted"
+      },
+      "H8CA09060": {
+        "party": "DEM",
+        "gt-id": 400237,
+        "lastname": "Lee",
+        "candidate_id": "H8CA09060",
+        "name": "Barbara Lee",
+        "firstname": "Barbara"
+      },
+      "H6CA46033": {
+        "party": "DEM",
+        "gt-id": 400356,
+        "lastname": "Sanchez",
+        "candidate_id": "H6CA46033",
+        "name": "Loretta Sanchez",
+        "firstname": "Loretta"
+      },
+      "H8CA52052": {
+        "party": "REP",
+        "gt-id": 412283,
+        "lastname": "Hunter",
+        "candidate_id": "H8CA52052",
+        "name": "Duncan Hunter",
+        "firstname": "Duncan"
+      },
+      "H0CA33117": {
+        "party": "DEM",
+        "gt-id": 412404,
+        "lastname": "Bass",
+        "candidate_id": "H0CA33117",
+        "name": "Karen Bass",
+        "firstname": "Karen"
+      },
+      "H4CA17021": {
+        "party": "DEM",
+        "gt-id": 400129,
+        "lastname": "Farr",
+        "candidate_id": "H4CA17021",
+        "name": "Sam Farr",
+        "firstname": "Sam"
+      },
+      "H6CA39020": {
+        "party": "REP",
+        "gt-id": 400348,
+        "lastname": "Royce",
+        "candidate_id": "H6CA39020",
+        "name": "Edward Royce",
+        "firstname": "Edward"
+      },
+      "H2CA52089": {
+        "party": "DEM",
+        "gt-id": 412523,
+        "lastname": "Peters",
+        "candidate_id": "H2CA52089",
+        "name": "Scott Peters",
+        "firstname": "Scott"
+      },
+      "H2CA50026": {
+        "party": "DEM",
+        "gt-id": 412522,
+        "lastname": "Vargas",
+        "candidate_id": "H2CA50026",
+        "name": "Juan Vargas",
+        "firstname": "Juan"
+      },
+      "H2CA36439": {
+        "party": "DEM",
+        "gt-id": 412519,
+        "lastname": "Ruiz",
+        "candidate_id": "H2CA36439",
+        "name": "Raul Ruiz",
+        "firstname": "Raul"
+      }
+    },
+    "governor": "Jerry Brown",
+    "elections": {
+      "H": {
+        "CA-H-09": "California Congressional District 09 Election, 2016",
+        "CA-H-06": "California Congressional District 06 Election, 2016",
+        "CA-H-45": "California Congressional District 45 Election, 2016",
+        "CA-H-25": "California Congressional District 25 Election, 2016",
+        "CA-H-32": "California Congressional District 32 Election, 2016",
+        "CA-H-10": "California Congressional District 10 Election, 2016",
+        "CA-H-40": "California Congressional District 40 Election, 2016",
+        "CA-H-35": "California Congressional District 35 Election, 2016",
+        "CA-H-03": "California Congressional District 03 Election, 2016",
+        "CA-H-53": "California Congressional District 53 Election, 2016",
+        "CA-H-49": "California Congressional District 49 Election, 2016",
+        "CA-H-14": "California Congressional District 14 Election, 2016",
+        "CA-H-51": "California Congressional District 51 Election, 2016",
+        "CA-H-28": "California Congressional District 28 Election, 2016",
+        "CA-H-44": "California Congressional District 44 Election, 2016",
+        "CA-H-21": "California Congressional District 21 Election, 2016",
+        "CA-H-33": "California Congressional District 33 Election, 2016",
+        "CA-H-36": "California Congressional District 36 Election, 2016",
+        "CA-H-05": "California Congressional District 05 Election, 2016",
+        "CA-H-17": "California Congressional District 17 Election, 2016",
+        "CA-H-52": "California Congressional District 52 Election, 2016",
+        "CA-H-41": "California Congressional District 41 Election, 2016",
+        "CA-H-30": "California Congressional District 30 Election, 2016",
+        "CA-H-27": "California Congressional District 27 Election, 2016",
+        "CA-H-19": "California Congressional District 19 Election, 2016",
+        "CA-H-08": "California Congressional District 08 Election, 2016",
+        "CA-H-02": "California Congressional District 02 Election, 2016",
+        "CA-H-18": "California Congressional District 18 Election, 2016",
+        "CA-H-07": "California Congressional District 07 Election, 2016",
+        "CA-H-48": "California Congressional District 48 Election, 2016",
+        "CA-H-29": "California Congressional District 29 Election, 2016",
+        "CA-H-39": "California Congressional District 39 Election, 2016",
+        "CA-H-04": "California Congressional District 04 Election, 2016",
+        "CA-H-38": "California Congressional District 38 Election, 2016",
+        "CA-H-15": "California Congressional District 15 Election, 2016",
+        "CA-H-13": "California Congressional District 13 Election, 2016",
+        "CA-H-26": "California Congressional District 26 Election, 2016",
+        "CA-H-01": "California Congressional District 01 Election, 2016",
+        "CA-H-37": "California Congressional District 37 Election, 2016",
+        "CA-H-47": "California Congressional District 47 Election, 2016",
+        "CA-H-12": "California Congressional District 12 Election, 2016",
+        "CA-H-22": "California Congressional District 22 Election, 2016",
+        "CA-H-43": "California Congressional District 43 Election, 2016",
+        "CA-H-46": "California Congressional District 46 Election, 2016",
+        "CA-H-23": "California Congressional District 23 Election, 2016",
+        "CA-H-20": "California Congressional District 20 Election, 2016",
+        "CA-H-50": "California Congressional District 50 Election, 2016",
+        "CA-H-24": "California Congressional District 24 Election, 2016",
+        "CA-H-42": "California Congressional District 42 Election, 2016",
+        "CA-H-16": "California Congressional District 16 Election, 2016",
+        "CA-H-34": "California Congressional District 34 Election, 2016",
+        "CA-H-31": "California Congressional District 31 Election, 2016",
+        "CA-H-11": "California Congressional District 11 Election, 2016"
+      },
+      "S": {
+        "CA-S-00": "California Senate Election, 2016"
+      }
+    },
+    "capital": "Sacramento",
+    "majority": "DEM",
+    "name": "California"
+  },
+  "TN": {
+    "population": "6,600,299",
+    "representatives": {
+      "H8TN02069": {
+        "party": "REP",
+        "gt-id": 400116,
+        "lastname": "Duncan",
+        "candidate_id": "H8TN02069",
+        "name": "John Duncan",
+        "firstname": "John"
+      },
+      "H2TN06030": {
+        "party": "REP",
+        "gt-id": 400032,
+        "lastname": "Blackburn",
+        "candidate_id": "H2TN06030",
+        "name": "Marsha Blackburn",
+        "firstname": "Marsha"
+      },
+      "H0TN06257": {
+        "party": "REP",
+        "gt-id": 412478,
+        "lastname": "Black",
+        "candidate_id": "H0TN06257",
+        "name": "Diane Black",
+        "firstname": "Diane"
+      },
+      "H0TN03254": {
+        "party": "REP",
+        "gt-id": 412476,
+        "lastname": "Fleischmann",
+        "candidate_id": "H0TN03254",
+        "name": "Charles Fleischmann",
+        "firstname": "Charles"
+      },
+      "H6TN01388": {
+        "party": "REP",
+        "gt-id": 412310,
+        "lastname": "Roe",
+        "candidate_id": "H6TN01388",
+        "name": "David Roe",
+        "firstname": "David"
+      },
+      "H0TN04195": {
+        "party": "REP",
+        "gt-id": 412477,
+        "lastname": "DesJarlais",
+        "candidate_id": "H0TN04195",
+        "name": "Scott DesJarlais",
+        "firstname": "Scott"
+      }
+    },
+    "governor": "Bill Haslam",
+    "elections": {
+      "H": {
+        "TN-H-03": "Tennessee Congressional District 03 Election, 2016",
+        "TN-H-08": "Tennessee Congressional District 08 Election, 2016",
+        "TN-H-02": "Tennessee Congressional District 02 Election, 2016",
+        "TN-H-04": "Tennessee Congressional District 04 Election, 2016",
+        "TN-H-07": "Tennessee Congressional District 07 Election, 2016",
+        "TN-H-05": "Tennessee Congressional District 05 Election, 2016",
+        "TN-H-01": "Tennessee Congressional District 01 Election, 2016",
+        "TN-H-09": "Tennessee Congressional District 09 Election, 2016",
+        "TN-H-06": "Tennessee Congressional District 06 Election, 2016"
+      },
+      "S": {
+        "TN-S-00": "Tennessee Senate Election, 2018"
+      }
+    },
+    "capital": "Nashville",
+    "majority": "REP",
+    "name": "Tennessee"
+  },
+  "ND": {
+    "population": "756,927",
+    "representatives": {
+      "H0ND01026": {
+        "party": "REP",
+        "gt-id": 412555,
+        "lastname": "Cramer",
+        "candidate_id": "H0ND01026",
+        "name": "Kevin Cramer",
+        "firstname": "Kevin"
+      },
+      "S2ND00099": {
+        "party": "DEM",
+        "gt-id": 412554,
+        "lastname": "Heitkamp",
+        "candidate_id": "S2ND00099",
+        "name": "Heidi Heitkamp",
+        "firstname": "Heidi"
+      },
+      "S0ND00093": {
+        "party": "REP",
+        "gt-id": 412494,
+        "lastname": "Hoeven",
+        "candidate_id": "S0ND00093",
+        "name": "John Hoeven",
+        "firstname": "John"
+      }
+    },
+    "governor": "Jack Dalrymple",
+    "elections": {
+      "H": {
+        "ND-H-00": "North Dakota Congressional District 00 Election, 2016"
+      },
+      "S": {
+        "ND-S-00": "North Dakota Senate Election, 2016"
+      }
+    },
+    "capital": "Bismarck",
+    "majority": "REP",
+    "name": "North Dakota"
+  },
+  "OK": {
+    "population": "3,911,338",
+    "representatives": {
+      "H4OK06056": {
+        "party": "REP",
+        "gt-id": 400247,
+        "lastname": "Lucas",
+        "candidate_id": "H4OK06056",
+        "name": "Frank Lucas",
+        "firstname": "Frank"
+      },
+      "H2OK04055": {
+        "party": "REP",
+        "gt-id": 400077,
+        "lastname": "Cole",
+        "candidate_id": "H2OK04055",
+        "name": "Tom Cole",
+        "firstname": "Tom"
+      },
+      "H2OK02083": {
+        "party": "REP",
+        "gt-id": 412568,
+        "lastname": "Mullin",
+        "candidate_id": "H2OK02083",
+        "name": "Markwayne Mullin",
+        "firstname": "Markwayne"
+      },
+      "S4OK00083": {
+        "party": "REP",
+        "gt-id": 300055,
+        "lastname": "Inhofe",
+        "candidate_id": "S4OK00083",
+        "name": "James Inhofe",
+        "firstname": "James"
+      },
+      "S4OK00232": {
+        "party": "REP",
+        "gt-id": 412464,
+        "lastname": "Lankford",
+        "candidate_id": "S4OK00232",
+        "name": "James Lankford",
+        "firstname": "James"
+      }
+    },
+    "governor": "Mary Fallin",
+    "elections": {
+      "H": {
+        "OK-H-05": "Oklahoma Congressional District 05 Election, 2016",
+        "OK-H-02": "Oklahoma Congressional District 02 Election, 2016",
+        "OK-H-03": "Oklahoma Congressional District 03 Election, 2016",
+        "OK-H-01": "Oklahoma Congressional District 01 Election, 2016",
+        "OK-H-04": "Oklahoma Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "OK-S-00": "Oklahoma Senate Election, 2016"
+      }
+    },
+    "capital": "Oklahoma City",
+    "majority": "REP",
+    "name": "Oklahoma"
+  },
+  "AR": {
+    "population": "2,978,204",
+    "representatives": {
+      "S0AR00150": {
+        "party": "REP",
+        "gt-id": 400040,
+        "lastname": "Boozman",
+        "candidate_id": "S0AR00150",
+        "name": "John Boozman",
+        "firstname": "John"
+      },
+      "H4AR04048": {
+        "party": "REP",
+        "gt-id": 412610,
+        "lastname": "Westerman",
+        "candidate_id": "H4AR04048",
+        "name": "Bruce Westerman",
+        "firstname": "Bruce"
+      },
+      "H0AR03055": {
+        "party": "REP",
+        "gt-id": 412402,
+        "lastname": "Womack",
+        "candidate_id": "H0AR03055",
+        "name": "Steve Womack",
+        "firstname": "Steve"
+      },
+      "H0AR01083": {
+        "party": "REP",
+        "gt-id": 412400,
+        "lastname": "Crawford",
+        "candidate_id": "H0AR01083",
+        "name": "Eric Crawford",
+        "firstname": "Eric"
+      }
+    },
+    "governor": "Asa Hutchinson",
+    "elections": {
+      "H": {
+        "AR-H-04": "Arkansas Congressional District 04 Election, 2016",
+        "AR-H-02": "Arkansas Congressional District 02 Election, 2016",
+        "AR-H-01": "Arkansas Congressional District 01 Election, 2016",
+        "AR-H-03": "Arkansas Congressional District 03 Election, 2016"
+      },
+      "S": {
+        "AR-S-00": "Arkansas Senate Election, 2016"
+      }
+    },
+    "capital": "Little Rock",
+    "majority": "REP",
+    "name": "Arkansas"
+  },
+  "NV": {
+    "population": "2,890,845",
+    "representatives": {
+      "H8NV03036": {
+        "party": "DEM",
+        "gt-id": 412318,
+        "lastname": "Titus",
+        "candidate_id": "H8NV03036",
+        "name": "Dina Titus",
+        "firstname": "Dina"
+      },
+      "H2NV02395": {
+        "party": "REP",
+        "gt-id": 412500,
+        "lastname": "Amodei",
+        "candidate_id": "H2NV02395",
+        "name": "Mark Amodei",
+        "firstname": "Mark"
+      },
+      "S2NV00183": {
+        "party": "REP",
+        "gt-id": 412218,
+        "lastname": "Heller",
+        "candidate_id": "S2NV00183",
+        "name": "Dean Heller",
+        "firstname": "Dean"
+      },
+      "H4NV04017": {
+        "party": "REP",
+        "gt-id": 412645,
+        "lastname": "Hardy",
+        "candidate_id": "H4NV04017",
+        "name": "Cresent Hardy",
+        "firstname": "Cresent"
+      },
+      "S6NV00028": {
+        "party": "DEM",
+        "gt-id": 300082,
+        "lastname": "Reid",
+        "candidate_id": "S6NV00028",
+        "name": "Harry Reid",
+        "firstname": "Harry"
+      }
+    },
+    "governor": "Brian Sandoval",
+    "elections": {
+      "H": {
+        "NV-H-01": "Nevada Congressional District 01 Election, 2016",
+        "NV-H-04": "Nevada Congressional District 04 Election, 2016",
+        "NV-H-03": "Nevada Congressional District 03 Election, 2016",
+        "NV-H-02": "Nevada Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "NV-S-00": "Nevada Senate Election, 2016"
+      }
+    },
+    "capital": "Carson City",
+    "majority": "REP",
+    "name": "Nevada"
+  },
+  "LA": {
+    "population": "4,670,724",
+    "representatives": {
+      "H8LA04225": {
+        "party": "REP",
+        "gt-id": 412275,
+        "lastname": "Fleming",
+        "candidate_id": "H8LA04225",
+        "name": "John Fleming",
+        "firstname": "John"
+      },
+      "H4LA06153": {
+        "party": "REP",
+        "gt-id": 412631,
+        "lastname": "Graves",
+        "candidate_id": "H4LA06153",
+        "name": "Garret Graves",
+        "firstname": "Garret"
+      },
+      "S4LA00057": {
+        "party": "REP",
+        "gt-id": 400418,
+        "lastname": "Vitter",
+        "candidate_id": "S4LA00057",
+        "name": "David Vitter",
+        "firstname": "David"
+      },
+      "H0LA01087": {
+        "party": "REP",
+        "gt-id": 412261,
+        "lastname": "Scalise",
+        "candidate_id": "H0LA01087",
+        "name": "Steve Scalise",
+        "firstname": "Steve"
+      },
+      "H8LA02054": {
+        "party": "DEM",
+        "gt-id": 412432,
+        "lastname": "Richmond",
+        "candidate_id": "H8LA02054",
+        "name": "Cedric Richmond",
+        "firstname": "Cedric"
+      },
+      "S6LA00300": {
+        "party": "REP",
+        "gt-id": 400636,
+        "lastname": "Boustany",
+        "candidate_id": "S6LA00300",
+        "name": "Charles Boustany",
+        "firstname": "Charles"
+      },
+      "H4LA05221": {
+        "party": "REP",
+        "gt-id": 412630,
+        "lastname": "Abraham",
+        "candidate_id": "H4LA05221",
+        "name": "Ralph Abraham",
+        "firstname": "Ralph"
+      }
+    },
+    "governor": "John Edwards",
+    "elections": {
+      "H": {
+        "LA-H-01": "Louisiana Congressional District 01 Election, 2016",
+        "LA-H-06": "Louisiana Congressional District 06 Election, 2016",
+        "LA-H-03": "Louisiana Congressional District 03 Election, 2016",
+        "LA-H-04": "Louisiana Congressional District 04 Election, 2016",
+        "LA-H-02": "Louisiana Congressional District 02 Election, 2016",
+        "LA-H-05": "Louisiana Congressional District 05 Election, 2016"
+      },
+      "S": {
+        "LA-S-00": "Louisiana Senate Election, 2016"
+      }
+    },
+    "capital": "Baton Rouge",
+    "majority": "REP",
+    "name": "Louisiana"
+  },
+  "KY": {
+    "population": "4,425,092",
+    "representatives": {
+      "H0KY05015": {
+        "party": "REP",
+        "gt-id": 400340,
+        "lastname": "Rogers",
+        "candidate_id": "H0KY05015",
+        "name": "Harold Rogers",
+        "firstname": "Harold"
+      },
+      "H0KY06104": {
+        "party": "REP",
+        "gt-id": 412541,
+        "lastname": "Barr",
+        "candidate_id": "H0KY06104",
+        "name": "Garland Barr",
+        "firstname": "Garland"
+      },
+      "H2KY04121": {
+        "party": "REP",
+        "gt-id": 412503,
+        "lastname": "Massie",
+        "candidate_id": "H2KY04121",
+        "name": "Thomas Massie",
+        "firstname": "Thomas"
+      },
+      "H6KY03124": {
+        "party": "DEM",
+        "gt-id": 412211,
+        "lastname": "Yarmuth",
+        "candidate_id": "H6KY03124",
+        "name": "John Yarmuth",
+        "firstname": "John"
+      },
+      "P40003576": {
+        "party": "REP",
+        "gt-id": 412492,
+        "lastname": "Paul",
+        "candidate_id": "P40003576",
+        "name": "Rand Paul",
+        "firstname": "Rand"
+      },
+      "S2KY00012": {
+        "party": "REP",
+        "gt-id": 300072,
+        "lastname": "McConnell",
+        "candidate_id": "S2KY00012",
+        "name": "Mitch McConnell",
+        "firstname": "Mitch"
+      }
+    },
+    "governor": "Matt Bevin",
+    "elections": {
+      "H": {
+        "KY-H-02": "Kentucky Congressional District 02 Election, 2016",
+        "KY-H-04": "Kentucky Congressional District 04 Election, 2016",
+        "KY-H-06": "Kentucky Congressional District 06 Election, 2016",
+        "KY-H-01": "Kentucky Congressional District 01 Election, 2016",
+        "KY-H-03": "Kentucky Congressional District 03 Election, 2016",
+        "KY-H-05": "Kentucky Congressional District 05 Election, 2016"
+      },
+      "S": {
+        "KY-S-00": "Kentucky Senate Election, 2016"
+      }
+    },
+    "capital": "Frankfort",
+    "majority": "REP",
+    "name": "Kentucky"
+  },
+  "MI": {
+    "population": "9,922,576",
+    "representatives": {
+      "H4MI04126": {
+        "party": "REP",
+        "gt-id": 412634,
+        "lastname": "Moolenaar",
+        "candidate_id": "H4MI04126",
+        "name": "John Moolenaar",
+        "firstname": "John"
+      },
+      "H4MI12079": {
+        "party": "DEM",
+        "gt-id": 412637,
+        "lastname": "Dingell",
+        "candidate_id": "H4MI12079",
+        "name": "Debbie Dingell",
+        "firstname": "Debbie"
+      },
+      "H6MI12181": {
+        "party": "REP",
+        "gt-id": 400276,
+        "lastname": "Miller",
+        "candidate_id": "H6MI12181",
+        "name": "Candice Miller",
+        "firstname": "Candice"
+      },
+      "H2MI05119": {
+        "party": "DEM",
+        "gt-id": 412546,
+        "lastname": "Kildee",
+        "candidate_id": "H2MI05119",
+        "name": "Daniel Kildee",
+        "firstname": "Daniel"
+      },
+      "H0MI03126": {
+        "party": "REP",
+        "gt-id": 412438,
+        "lastname": "Amash",
+        "candidate_id": "H0MI03126",
+        "name": "Justin Amash",
+        "firstname": "Justin"
+      },
+      "S4MI00355": {
+        "party": "DEM",
+        "gt-id": 412305,
+        "lastname": "Peters",
+        "candidate_id": "S4MI00355",
+        "name": "Gary Peters",
+        "firstname": "Gary"
+      },
+      "S8MI00281": {
+        "party": "DEM",
+        "gt-id": 300093,
+        "lastname": "Stabenow",
+        "candidate_id": "S8MI00281",
+        "name": "Debbie Stabenow",
+        "firstname": "Debbie"
+      },
+      "H6MI01028": {
+        "party": "DEM",
+        "gt-id": 400080,
+        "lastname": "Conyers",
+        "candidate_id": "H6MI01028",
+        "name": "John Conyers",
+        "firstname": "John"
+      },
+      "H2MI17023": {
+        "party": "DEM",
+        "gt-id": 400238,
+        "lastname": "Levin",
+        "candidate_id": "H2MI17023",
+        "name": "Sander Levin",
+        "firstname": "Sander"
+      },
+      "H4MI08135": {
+        "party": "REP",
+        "gt-id": 412635,
+        "lastname": "Bishop",
+        "candidate_id": "H4MI08135",
+        "name": "Mike Bishop",
+        "firstname": "Mike"
+      },
+      "H2MI14111": {
+        "party": "DEM",
+        "gt-id": 412638,
+        "lastname": "Lawrence",
+        "candidate_id": "H2MI14111",
+        "name": "Brenda Lawrence",
+        "firstname": "Brenda"
+      }
+    },
+    "governor": "Rick Snyder",
+    "elections": {
+      "H": {
+        "MI-H-10": "Michigan Congressional District 10 Election, 2016",
+        "MI-H-13": "Michigan Congressional District 13 Election, 2016",
+        "MI-H-03": "Michigan Congressional District 03 Election, 2016",
+        "MI-H-07": "Michigan Congressional District 07 Election, 2016",
+        "MI-H-09": "Michigan Congressional District 09 Election, 2016",
+        "MI-H-14": "Michigan Congressional District 14 Election, 2016",
+        "MI-H-05": "Michigan Congressional District 05 Election, 2016",
+        "MI-H-11": "Michigan Congressional District 11 Election, 2016",
+        "MI-H-01": "Michigan Congressional District 01 Election, 2016",
+        "MI-H-12": "Michigan Congressional District 12 Election, 2016",
+        "MI-H-02": "Michigan Congressional District 02 Election, 2016",
+        "MI-H-06": "Michigan Congressional District 06 Election, 2016",
+        "MI-H-08": "Michigan Congressional District 08 Election, 2016",
+        "MI-H-04": "Michigan Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "MI-S-00": "Michigan Senate Election, 2020"
+      }
+    },
+    "capital": "Lansing",
+    "majority": "DEM",
+    "name": "Michigan"
+  },
+  "MT": {
+    "population": "1,032,949",
+    "representatives": {
+      "H4MT01041": {
+        "party": "REP",
+        "gt-id": 412640,
+        "lastname": "Zinke",
+        "candidate_id": "H4MT01041",
+        "name": "Ryan Zinke",
+        "firstname": "Ryan"
+      },
+      "S6MT00162": {
+        "party": "DEM",
+        "gt-id": 412244,
+        "lastname": "Tester",
+        "candidate_id": "S6MT00162",
+        "name": "Jon Tester",
+        "firstname": "Jon"
+      }
+    },
+    "governor": "Steve Bullock",
+    "elections": {
+      "H": {
+        "MT-H-00": "Montana Congressional District 00 Election, 2016"
+      },
+      "S": {
+        "MT-S-00": "Montana Senate Election, 2020"
+      }
+    },
+    "capital": "Helena",
+    "majority": "REP",
+    "name": "Montana"
+  },
+  "IA": {
+    "population": "3,123,899",
+    "representatives": {
+      "S0IA00028": {
+        "party": "REP",
+        "gt-id": 300048,
+        "lastname": "Grassley",
+        "candidate_id": "S0IA00028",
+        "name": "Charles Grassley",
+        "firstname": "Charles"
+      },
+      "S4IA00129": {
+        "party": "REP",
+        "gt-id": 412667,
+        "lastname": "Ernst",
+        "candidate_id": "S4IA00129",
+        "name": "Joni Ernst",
+        "firstname": "Joni"
+      },
+      "H6IA02146": {
+        "party": "DEM",
+        "gt-id": 412209,
+        "lastname": "Loebsack",
+        "candidate_id": "H6IA02146",
+        "name": "David Loebsack",
+        "firstname": "David"
+      },
+      "H4IA03115": {
+        "party": "REP",
+        "gt-id": 412628,
+        "lastname": "Young",
+        "candidate_id": "H4IA03115",
+        "name": "David Young",
+        "firstname": "David"
+      },
+      "H2IA05072": {
+        "party": "REP",
+        "gt-id": 400220,
+        "lastname": "King",
+        "candidate_id": "H2IA05072",
+        "name": "Steve King",
+        "firstname": "Steve"
+      }
+    },
+    "governor": "Terry Branstad",
+    "elections": {
+      "H": {
+        "IA-H-04": "Iowa Congressional District 04 Election, 2016",
+        "IA-H-02": "Iowa Congressional District 02 Election, 2016",
+        "IA-H-01": "Iowa Congressional District 01 Election, 2016",
+        "IA-H-03": "Iowa Congressional District 03 Election, 2016"
+      },
+      "S": {
+        "IA-S-00": "Iowa Senate Election, 2020"
+      }
+    },
+    "capital": "Des Moines",
+    "majority": "REP",
+    "name": "Iowa"
+  },
+  "VA": {
+    "population": "8,382,993",
+    "representatives": {
+      "S2VA00142": {
+        "party": "DEM",
+        "gt-id": 412582,
+        "lastname": "Kaine",
+        "candidate_id": "S2VA00142",
+        "name": "Timothy Kaine",
+        "firstname": "Timothy"
+      },
+      "H4VA08224": {
+        "party": "DEM",
+        "gt-id": 412657,
+        "lastname": "Beyer",
+        "candidate_id": "H4VA08224",
+        "name": "Donald Beyer",
+        "firstname": "Donald"
+      },
+      "H4VA10089": {
+        "party": "REP",
+        "gt-id": 412658,
+        "lastname": "Comstock",
+        "candidate_id": "H4VA10089",
+        "name": "Barbara Comstock",
+        "firstname": "Barbara"
+      },
+      "H0VA05095": {
+        "party": "REP",
+        "gt-id": 412484,
+        "lastname": "Hurt",
+        "candidate_id": "H0VA05095",
+        "name": "Robert Hurt",
+        "firstname": "Robert"
+      },
+      "H0VA02084": {
+        "party": "REP",
+        "gt-id": 412483,
+        "lastname": "Rigell",
+        "candidate_id": "H0VA02084",
+        "name": "Edward Rigell",
+        "firstname": "Edward"
+      },
+      "H0VA09055": {
+        "party": "REP",
+        "gt-id": 412485,
+        "lastname": "Griffith",
+        "candidate_id": "H0VA09055",
+        "name": "H. Griffith",
+        "firstname": "H."
+      },
+      "S6VA00093": {
+        "party": "DEM",
+        "gt-id": 412321,
+        "lastname": "Warner",
+        "candidate_id": "S6VA00093",
+        "name": "Mark Warner",
+        "firstname": "Mark"
+      },
+      "H8VA01147": {
+        "party": "REP",
+        "gt-id": 412255,
+        "lastname": "Wittman",
+        "candidate_id": "H8VA01147",
+        "name": "Robert Wittman",
+        "firstname": "Robert"
+      },
+      "H8VA11062": {
+        "party": "DEM",
+        "gt-id": 412272,
+        "lastname": "Connolly",
+        "candidate_id": "H8VA11062",
+        "name": "Gerald Connolly",
+        "firstname": "Gerald"
+      },
+      "H2VA04052": {
+        "party": "REP",
+        "gt-id": 400137,
+        "lastname": "Forbes",
+        "candidate_id": "H2VA04052",
+        "name": "J. Forbes",
+        "firstname": "J."
+      },
+      "H4VA07143": {
+        "party": "REP",
+        "gt-id": 412605,
+        "lastname": "Brat",
+        "candidate_id": "H4VA07143",
+        "name": "David Brat",
+        "firstname": "David"
+      },
+      "H6VA01117": {
+        "party": "DEM",
+        "gt-id": 400364,
+        "lastname": "Scott",
+        "candidate_id": "H6VA01117",
+        "name": "Robert Scott",
+        "firstname": "Robert"
+      }
+    },
+    "governor": "Terry McAuliffe",
+    "elections": {
+      "H": {
+        "VA-H-05": "Virginia Congressional District 05 Election, 2016",
+        "VA-H-01": "Virginia Congressional District 01 Election, 2016",
+        "VA-H-02": "Virginia Congressional District 02 Election, 2016",
+        "VA-H-07": "Virginia Congressional District 07 Election, 2016",
+        "VA-H-08": "Virginia Congressional District 08 Election, 2016",
+        "VA-H-06": "Virginia Congressional District 06 Election, 2016",
+        "VA-H-04": "Virginia Congressional District 04 Election, 2016",
+        "VA-H-03": "Virginia Congressional District 03 Election, 2016",
+        "VA-H-10": "Virginia Congressional District 10 Election, 2016",
+        "VA-H-09": "Virginia Congressional District 09 Election, 2016",
+        "VA-H-11": "Virginia Congressional District 11 Election, 2016"
+      },
+      "S": {
+        "VA-S-00": "Virginia Senate Election, 2018"
+      }
+    },
+    "capital": "Richmond",
+    "majority": "REP",
+    "name": "Virginia"
+  },
+  "OR": {
+    "population": "4,028,977",
+    "representatives": {
+      "H6OR03064": {
+        "party": "DEM",
+        "gt-id": 400033,
+        "lastname": "Blumenauer",
+        "candidate_id": "H6OR03064",
+        "name": "Earl Blumenauer",
+        "firstname": "Earl"
+      },
+      "H6OR04047": {
+        "party": "DEM",
+        "gt-id": 400100,
+        "lastname": "DeFazio",
+        "candidate_id": "H6OR04047",
+        "name": "Peter DeFazio",
+        "firstname": "Peter"
+      },
+      "H2OR01133": {
+        "party": "DEM",
+        "gt-id": 412501,
+        "lastname": "Bonamici",
+        "candidate_id": "H2OR01133",
+        "name": "Suzanne Bonamici",
+        "firstname": "Suzanne"
+      },
+      "H8OR05107": {
+        "party": "DEM",
+        "gt-id": 412315,
+        "lastname": "Schrader",
+        "candidate_id": "H8OR05107",
+        "name": "Kurt Schrader",
+        "firstname": "Kurt"
+      }
+    },
+    "governor": "Kate Brown",
+    "elections": {
+      "H": {
+        "OR-H-02": "Oregon Congressional District 02 Election, 2016",
+        "OR-H-01": "Oregon Congressional District 01 Election, 2016",
+        "OR-H-05": "Oregon Congressional District 05 Election, 2016",
+        "OR-H-03": "Oregon Congressional District 03 Election, 2016",
+        "OR-H-04": "Oregon Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "OR-S-00": "Oregon Senate Election, 2016"
+      }
+    },
+    "capital": "Salem",
+    "majority": "DEM",
+    "name": "Oregon"
+  },
+  "ID": {
+    "population": "1,654,930",
+    "representatives": {
+      "S8ID00027": {
+        "party": "REP",
+        "gt-id": 300030,
+        "lastname": "Crapo",
+        "candidate_id": "S8ID00027",
+        "name": "Michael Crapo",
+        "firstname": "Michael"
+      },
+      "H8ID02064": {
+        "party": "REP",
+        "gt-id": 400376,
+        "lastname": "Simpson",
+        "candidate_id": "H8ID02064",
+        "name": "Michael Simpson",
+        "firstname": "Michael"
+      },
+      "S8ID00092": {
+        "party": "REP",
+        "gt-id": 412322,
+        "lastname": "Risch",
+        "candidate_id": "S8ID00092",
+        "name": "James Risch",
+        "firstname": "James"
+      }
+    },
+    "governor": "Butch Otter",
+    "elections": {
+      "H": {
+        "ID-H-01": "Idaho Congressional District 01 Election, 2016",
+        "ID-H-02": "Idaho Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "ID-S-00": "Idaho Senate Election, 2016"
+      }
+    },
+    "capital": "Boise",
+    "majority": "REP",
+    "name": "Idaho"
+  },
+  "MN": {
+    "population": "5,489,594",
+    "representatives": {
+      "H6MN01174": {
+        "party": "DEM",
+        "gt-id": 412214,
+        "lastname": "Walz",
+        "candidate_id": "H6MN01174",
+        "name": "Timothy Walz",
+        "firstname": "Timothy"
+      },
+      "H8MN03077": {
+        "party": "REP",
+        "gt-id": 412303,
+        "lastname": "Paulsen",
+        "candidate_id": "H8MN03077",
+        "name": "Erik Paulsen",
+        "firstname": "Erik"
+      },
+      "H2MN08111": {
+        "party": "DEM",
+        "gt-id": 408211,
+        "lastname": "Nolan",
+        "candidate_id": "H2MN08111",
+        "name": "Richard Nolan",
+        "firstname": "Richard"
+      },
+      "H6MN05183": {
+        "party": "DEM",
+        "gt-id": 412215,
+        "lastname": "Ellison",
+        "candidate_id": "H6MN05183",
+        "name": "Keith Ellison",
+        "firstname": "Keith"
+      },
+      "H8MN06047": {
+        "party": "REP",
+        "gt-id": 400224,
+        "lastname": "Kline",
+        "candidate_id": "H8MN06047",
+        "name": "John Kline",
+        "firstname": "John"
+      },
+      "S8MN00438": {
+        "party": "DEM",
+        "gt-id": 412378,
+        "lastname": "Franken",
+        "candidate_id": "S8MN00438",
+        "name": "Alan Franken",
+        "firstname": "Alan"
+      },
+      "H0MN04049": {
+        "party": "DEM",
+        "gt-id": 400259,
+        "lastname": "McCollum",
+        "candidate_id": "H0MN04049",
+        "name": "Betty McCollum",
+        "firstname": "Betty"
+      },
+      "S6MN00267": {
+        "party": "DEM",
+        "gt-id": 412242,
+        "lastname": "Klobuchar",
+        "candidate_id": "S6MN00267",
+        "name": "Amy Klobuchar",
+        "firstname": "Amy"
+      },
+      "H2MN07014": {
+        "party": "DEM",
+        "gt-id": 400316,
+        "lastname": "Peterson",
+        "candidate_id": "H2MN07014",
+        "name": "Collin Peterson",
+        "firstname": "Collin"
+      }
+    },
+    "governor": "Mark Dayton",
+    "elections": {
+      "H": {
+        "MN-H-05": "Minnesota Congressional District 05 Election, 2016",
+        "MN-H-08": "Minnesota Congressional District 08 Election, 2016",
+        "MN-H-02": "Minnesota Congressional District 02 Election, 2016",
+        "MN-H-04": "Minnesota Congressional District 04 Election, 2016",
+        "MN-H-07": "Minnesota Congressional District 07 Election, 2016",
+        "MN-H-01": "Minnesota Congressional District 01 Election, 2016",
+        "MN-H-06": "Minnesota Congressional District 06 Election, 2016",
+        "MN-H-03": "Minnesota Congressional District 03 Election, 2016"
+      },
+      "S": {
+        "MN-S-00": "Minnesota Senate Election, 2020"
+      }
+    },
+    "capital": "St. Paul",
+    "majority": "DEM",
+    "name": "Minnesota"
+  },
+  "RI": {
+    "population": "1,056,298",
+    "representatives": {
+      "S6RI00221": {
+        "party": "DEM",
+        "gt-id": 412247,
+        "lastname": "Whitehouse",
+        "candidate_id": "S6RI00221",
+        "name": "Sheldon Whitehouse",
+        "firstname": "Sheldon"
+      },
+      "H0RI01073": {
+        "party": "DEM",
+        "gt-id": 412470,
+        "lastname": "Cicilline",
+        "candidate_id": "H0RI01073",
+        "name": "David Cicilline",
+        "firstname": "David"
+      },
+      "S6RI00163": {
+        "party": "DEM",
+        "gt-id": 300081,
+        "lastname": "Reed",
+        "candidate_id": "S6RI00163",
+        "name": "John Reed",
+        "firstname": "John"
+      },
+      "H0RI02139": {
+        "party": "DEM",
+        "gt-id": 400230,
+        "lastname": "Langevin",
+        "candidate_id": "H0RI02139",
+        "name": "James Langevin",
+        "firstname": "James"
+      }
+    },
+    "governor": "Gina Raimondo",
+    "elections": {
+      "H": {
+        "RI-H-02": "Rhode Island Congressional District 02 Election, 2016",
+        "RI-H-01": "Rhode Island Congressional District 01 Election, 2016"
+      },
+      "S": {
+        "RI-S-00": "Rhode Island Senate Election, 2020"
+      }
+    },
+    "capital": "Providence",
+    "majority": "DEM",
+    "name": "Rhode Island"
+  },
+  "UT": {
+    "population": "2,995,919",
+    "representatives": {
+      "S0UT00165": {
+        "party": "REP",
+        "gt-id": 412495,
+        "lastname": "Lee",
+        "candidate_id": "S0UT00165",
+        "name": "Mike Lee",
+        "firstname": "Mike"
+      },
+      "H8UT03089": {
+        "party": "REP",
+        "gt-id": 412270,
+        "lastname": "Chaffetz",
+        "candidate_id": "H8UT03089",
+        "name": "Jason Chaffetz",
+        "firstname": "Jason"
+      },
+      "H2UT04023": {
+        "party": "REP",
+        "gt-id": 412656,
+        "lastname": "Love",
+        "candidate_id": "H2UT04023",
+        "name": "Mia Love",
+        "firstname": "Mia"
+      },
+      "S6UT00063": {
+        "party": "REP",
+        "gt-id": 300052,
+        "lastname": "Hatch",
+        "candidate_id": "S6UT00063",
+        "name": "Orrin Hatch",
+        "firstname": "Orrin"
+      },
+      "H2UT02324": {
+        "party": "REP",
+        "gt-id": 412581,
+        "lastname": "Stewart",
+        "candidate_id": "H2UT02324",
+        "name": "Chris Stewart",
+        "firstname": "Chris"
+      }
+    },
+    "governor": "Gary Herbert",
+    "elections": {
+      "H": {
+        "UT-H-02": "Utah Congressional District 02 Election, 2016",
+        "UT-H-04": "Utah Congressional District 04 Election, 2016",
+        "UT-H-03": "Utah Congressional District 03 Election, 2016",
+        "UT-H-01": "Utah Congressional District 01 Election, 2016"
+      },
+      "S": {
+        "UT-S-00": "Utah Senate Election, 2016"
+      }
+    },
+    "capital": "Salt Lake City",
+    "majority": "REP",
+    "name": "Utah"
+  },
+  "NY": {
+    "population": "19,795,791",
+    "representatives": {
+      "H6NY11174": {
+        "party": "REP",
+        "gt-id": 412672,
+        "lastname": "Donovan",
+        "candidate_id": "H6NY11174",
+        "name": "Daniel Donovan",
+        "firstname": "Daniel"
+      },
+      "H2NY14037": {
+        "party": "DEM",
+        "gt-id": 400251,
+        "lastname": "Maloney",
+        "candidate_id": "H2NY14037",
+        "name": "Carolyn Maloney",
+        "firstname": "Carolyn"
+      },
+      "H4NY21079": {
+        "party": "REP",
+        "gt-id": 412648,
+        "lastname": "Stefanik",
+        "candidate_id": "H4NY21079",
+        "name": "Elise Stefanik",
+        "firstname": "Elise"
+      },
+      "H0NY02085": {
+        "party": "DEM",
+        "gt-id": 400195,
+        "lastname": "Israel",
+        "candidate_id": "H0NY02085",
+        "name": "Steve Israel",
+        "firstname": "Steve"
+      },
+      "H4NY24073": {
+        "party": "REP",
+        "gt-id": 412649,
+        "lastname": "Katko",
+        "candidate_id": "H4NY24073",
+        "name": "John Katko",
+        "firstname": "John"
+      },
+      "H8NY24066": {
+        "party": "REP",
+        "gt-id": 412454,
+        "lastname": "Hanna",
+        "candidate_id": "H8NY24066",
+        "name": "Richard Hanna",
+        "firstname": "Richard"
+      },
+      "H4NY11138": {
+        "party": "DEM",
+        "gt-id": 412221,
+        "lastname": "Clarke",
+        "candidate_id": "H4NY11138",
+        "name": "Yvette Clarke",
+        "firstname": "Yvette"
+      },
+      "H2NY22139": {
+        "party": "DEM",
+        "gt-id": 412562,
+        "lastname": "Maloney",
+        "candidate_id": "H2NY22139",
+        "name": "Sean Maloney",
+        "firstname": "Sean"
+      },
+      "H8NY06048": {
+        "party": "DEM",
+        "gt-id": 400271,
+        "lastname": "Meeks",
+        "candidate_id": "H8NY06048",
+        "name": "Gregory Meeks",
+        "firstname": "Gregory"
+      },
+      "S0NY00410": {
+        "party": "DEM",
+        "gt-id": 412223,
+        "lastname": "Gillibrand",
+        "candidate_id": "S0NY00410",
+        "name": "Kirsten Gillibrand",
+        "firstname": "Kirsten"
+      },
+      "S8NY00082": {
+        "party": "DEM",
+        "gt-id": 300087,
+        "lastname": "Schumer",
+        "candidate_id": "S8NY00082",
+        "name": "Charles Schumer",
+        "firstname": "Charles"
+      },
+      "H8NY07046": {
+        "party": "DEM",
+        "gt-id": 400087,
+        "lastname": "Crowley",
+        "candidate_id": "H8NY07046",
+        "name": "Joseph Crowley",
+        "firstname": "Joseph"
+      },
+      "H0NY20095": {
+        "party": "REP",
+        "gt-id": 412453,
+        "lastname": "Gibson",
+        "candidate_id": "H0NY20095",
+        "name": "Christopher Gibson",
+        "firstname": "Christopher"
+      },
+      "H8NY01148": {
+        "party": "REP",
+        "gt-id": 412646,
+        "lastname": "Zeldin",
+        "candidate_id": "H8NY01148",
+        "name": "Lee Zeldin",
+        "firstname": "Lee"
+      },
+      "H2NY03089": {
+        "party": "REP",
+        "gt-id": 400219,
+        "lastname": "King",
+        "candidate_id": "H2NY03089",
+        "name": "Peter King",
+        "firstname": "Peter"
+      },
+      "H4NY27076": {
+        "party": "DEM",
+        "gt-id": 400641,
+        "lastname": "Higgins",
+        "candidate_id": "H4NY27076",
+        "name": "Brian Higgins",
+        "firstname": "Brian"
+      },
+      "H6NY03031": {
+        "party": "DEM",
+        "gt-id": 400378,
+        "lastname": "Slaughter",
+        "candidate_id": "H6NY03031",
+        "name": "Louise Slaughter",
+        "firstname": "Louise"
+      },
+      "H8NY21203": {
+        "party": "DEM",
+        "gt-id": 412319,
+        "lastname": "Tonko",
+        "candidate_id": "H8NY21203",
+        "name": "Paul Tonko",
+        "firstname": "Paul"
+      },
+      "H4NY04075": {
+        "party": "DEM",
+        "gt-id": 412647,
+        "lastname": "Rice",
+        "candidate_id": "H4NY04075",
+        "name": "Kathleen Rice",
+        "firstname": "Kathleen"
+      },
+      "H8NY20056": {
+        "party": "DEM",
+        "gt-id": 400246,
+        "lastname": "Lowey",
+        "candidate_id": "H8NY20056",
+        "name": "Nita Lowey",
+        "firstname": "Nita"
+      },
+      "H2NY06116": {
+        "party": "DEM",
+        "gt-id": 412560,
+        "lastname": "Meng",
+        "candidate_id": "H2NY06116",
+        "name": "Grace Meng",
+        "firstname": "Grace"
+      },
+      "H2NY17071": {
+        "party": "DEM",
+        "gt-id": 400289,
+        "lastname": "Nadler",
+        "candidate_id": "H2NY17071",
+        "name": "Jerrold Nadler",
+        "firstname": "Jerrold"
+      },
+      "H2NY10092": {
+        "party": "DEM",
+        "gt-id": 412561,
+        "lastname": "Jeffries",
+        "candidate_id": "H2NY10092",
+        "name": "Hakeem Jeffries",
+        "firstname": "Hakeem"
+      },
+      "H8NY19058": {
+        "party": "DEM",
+        "gt-id": 400122,
+        "lastname": "Engel",
+        "candidate_id": "H8NY19058",
+        "name": "Eliot Engel",
+        "firstname": "Eliot"
+      }
+    },
+    "governor": "Andrew Cuomo",
+    "elections": {
+      "H": {
+        "NY-H-21": "New York Congressional District 21 Election, 2016",
+        "NY-H-05": "New York Congressional District 05 Election, 2016",
+        "NY-H-24": "New York Congressional District 24 Election, 2016",
+        "NY-H-11": "New York Congressional District 11 Election, 2016",
+        "NY-H-12": "New York Congressional District 12 Election, 2016",
+        "NY-H-06": "New York Congressional District 06 Election, 2016",
+        "NY-H-07": "New York Congressional District 07 Election, 2016",
+        "NY-H-02": "New York Congressional District 02 Election, 2016",
+        "NY-H-01": "New York Congressional District 01 Election, 2016",
+        "NY-H-27": "New York Congressional District 27 Election, 2016",
+        "NY-H-09": "New York Congressional District 09 Election, 2016",
+        "NY-H-25": "New York Congressional District 25 Election, 2016",
+        "NY-H-22": "New York Congressional District 22 Election, 2016",
+        "NY-H-20": "New York Congressional District 20 Election, 2016",
+        "NY-H-04": "New York Congressional District 04 Election, 2016",
+        "NY-H-26": "New York Congressional District 26 Election, 2016",
+        "NY-H-17": "New York Congressional District 17 Election, 2016",
+        "NY-H-19": "New York Congressional District 19 Election, 2016",
+        "NY-H-03": "New York Congressional District 03 Election, 2016",
+        "NY-H-16": "New York Congressional District 16 Election, 2016",
+        "NY-H-13": "New York Congressional District 13 Election, 2016",
+        "NY-H-23": "New York Congressional District 23 Election, 2016",
+        "NY-H-10": "New York Congressional District 10 Election, 2016",
+        "NY-H-15": "New York Congressional District 15 Election, 2016",
+        "NY-H-18": "New York Congressional District 18 Election, 2016",
+        "NY-H-08": "New York Congressional District 08 Election, 2016",
+        "NY-H-14": "New York Congressional District 14 Election, 2016"
+      },
+      "S": {
+        "NY-S-00": "New York Senate Election, 2018"
+      }
+    },
+    "capital": "Albany",
+    "majority": "DEM",
+    "name": "New York"
+  },
+  "GA": {
+    "population": "10,214,860",
+    "representatives": {
+      "H0GA07125": {
+        "party": "REP",
+        "gt-id": 412623,
+        "lastname": "Hice",
+        "candidate_id": "H0GA07125",
+        "name": "Jody Hice",
+        "firstname": "Jody"
+      },
+      "H2SC07066": {
+        "party": "REP",
+        "gt-id": 400626,
+        "lastname": "Price",
+        "candidate_id": "H2SC07066",
+        "name": "Tom Price",
+        "firstname": "Tom"
+      },
+      "S4GA11285": {
+        "party": "REP",
+        "gt-id": 412666,
+        "lastname": "Perdue",
+        "candidate_id": "S4GA11285",
+        "name": "David Perdue",
+        "firstname": "David"
+      },
+      "H2GA02031": {
+        "party": "DEM",
+        "gt-id": 400030,
+        "lastname": "Bishop",
+        "candidate_id": "H2GA02031",
+        "name": "Sanford Bishop",
+        "firstname": "Sanford"
+      },
+      "H6GA05217": {
+        "party": "DEM",
+        "gt-id": 400240,
+        "lastname": "Lewis",
+        "candidate_id": "H6GA05217",
+        "name": "John Lewis",
+        "firstname": "John"
+      },
+      "H0GA07133": {
+        "party": "REP",
+        "gt-id": 412416,
+        "lastname": "Woodall",
+        "candidate_id": "H0GA07133",
+        "name": "Rob Woodall",
+        "firstname": "Rob"
+      },
+      "H2GA13012": {
+        "party": "DEM",
+        "gt-id": 400363,
+        "lastname": "Scott",
+        "candidate_id": "H2GA13012",
+        "name": "David Scott",
+        "firstname": "David"
+      },
+      "H4GA08067": {
+        "party": "REP",
+        "gt-id": 400627,
+        "lastname": "Westmoreland",
+        "candidate_id": "H4GA08067",
+        "name": "Lynn Westmoreland",
+        "firstname": "Lynn"
+      },
+      "H6GA04129": {
+        "party": "DEM",
+        "gt-id": 412199,
+        "lastname": "Johnson",
+        "candidate_id": "H6GA04129",
+        "name": "Henry Johnson",
+        "firstname": "Henry"
+      },
+      "H4GA11061": {
+        "party": "REP",
+        "gt-id": 412624,
+        "lastname": "Loudermilk",
+        "candidate_id": "H4GA11061",
+        "name": "Barry Loudermilk",
+        "firstname": "Barry"
+      },
+      "S6GA00119": {
+        "party": "REP",
+        "gt-id": 400194,
+        "lastname": "Isakson",
+        "candidate_id": "S6GA00119",
+        "name": "John Isakson",
+        "firstname": "John"
+      }
+    },
+    "governor": "Nathan Deal",
+    "elections": {
+      "H": {
+        "GA-H-10": "Georgia Congressional District 10 Election, 2016",
+        "GA-H-04": "Georgia Congressional District 04 Election, 2016",
+        "GA-H-07": "Georgia Congressional District 07 Election, 2016",
+        "GA-H-09": "Georgia Congressional District 09 Election, 2016",
+        "GA-H-02": "Georgia Congressional District 02 Election, 2016",
+        "GA-H-13": "Georgia Congressional District 13 Election, 2016",
+        "GA-H-12": "Georgia Congressional District 12 Election, 2016",
+        "GA-H-03": "Georgia Congressional District 03 Election, 2016",
+        "GA-H-11": "Georgia Congressional District 11 Election, 2016",
+        "GA-H-01": "Georgia Congressional District 01 Election, 2016",
+        "GA-H-06": "Georgia Congressional District 06 Election, 2016",
+        "GA-H-08": "Georgia Congressional District 08 Election, 2016",
+        "GA-H-05": "Georgia Congressional District 05 Election, 2016",
+        "GA-H-14": "Georgia Congressional District 14 Election, 2016"
+      },
+      "S": {
+        "GA-S-00": "Georgia Senate Election, 2016"
+      }
+    },
+    "capital": "Atlanta",
+    "majority": "REP",
+    "name": "Georgia"
+  },
+  "AZ": {
+    "population": "6,828,065",
+    "representatives": {
+      "H0AZ01259": {
+        "party": "REP",
+        "gt-id": 412397,
+        "lastname": "Gosar",
+        "candidate_id": "H0AZ01259",
+        "name": "Paul Gosar",
+        "firstname": "Paul"
+      },
+      "S6AZ00225": {
+        "party": "DEM",
+        "gt-id": 412286,
+        "lastname": "Kirkpatrick",
+        "candidate_id": "S6AZ00225",
+        "name": "Ann Kirkpatrick",
+        "firstname": "Ann"
+      },
+      "H2AZ08102": {
+        "party": "REP",
+        "gt-id": 412611,
+        "lastname": "McSally",
+        "candidate_id": "H2AZ08102",
+        "name": "Martha McSally",
+        "firstname": "Martha"
+      },
+      "H4AZ07043": {
+        "party": "DEM",
+        "gt-id": 412612,
+        "lastname": "Gallego",
+        "candidate_id": "H4AZ07043",
+        "name": "Ruben Gallego",
+        "firstname": "Ruben"
+      },
+      "H4AZ01038": {
+        "party": "REP",
+        "gt-id": 400606,
+        "lastname": "Salmon",
+        "candidate_id": "H4AZ01038",
+        "name": "Matt Salmon",
+        "firstname": "Matt"
+      },
+      "H4AZ06045": {
+        "party": "REP",
+        "gt-id": 412399,
+        "lastname": "Schweikert",
+        "candidate_id": "H4AZ06045",
+        "name": "David Schweikert",
+        "firstname": "David"
+      },
+      "S6AZ00019": {
+        "party": "REP",
+        "gt-id": 300071,
+        "lastname": "McCain",
+        "candidate_id": "S6AZ00019",
+        "name": "John McCain",
+        "firstname": "John"
+      },
+      "H2AZ09019": {
+        "party": "DEM",
+        "gt-id": 412509,
+        "lastname": "Sinema",
+        "candidate_id": "H2AZ09019",
+        "name": "Kyrsten Sinema",
+        "firstname": "Kyrsten"
+      },
+      "H4AZ04024": {
+        "party": "REP",
+        "gt-id": 400141,
+        "lastname": "Franks",
+        "candidate_id": "H4AZ04024",
+        "name": "Trent Franks",
+        "firstname": "Trent"
+      },
+      "S2AZ00141": {
+        "party": "REP",
+        "gt-id": 400134,
+        "lastname": "Flake",
+        "candidate_id": "S2AZ00141",
+        "name": "Jeff Flake",
+        "firstname": "Jeff"
+      }
+    },
+    "governor": "Doug Ducey",
+    "elections": {
+      "H": {
+        "AZ-H-02": "Arizona Congressional District 02 Election, 2016",
+        "AZ-H-03": "Arizona Congressional District 03 Election, 2016",
+        "AZ-H-07": "Arizona Congressional District 07 Election, 2016",
+        "AZ-H-08": "Arizona Congressional District 08 Election, 2016",
+        "AZ-H-01": "Arizona Congressional District 01 Election, 2016",
+        "AZ-H-05": "Arizona Congressional District 05 Election, 2016",
+        "AZ-H-09": "Arizona Congressional District 09 Election, 2016",
+        "AZ-H-06": "Arizona Congressional District 06 Election, 2016",
+        "AZ-H-04": "Arizona Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "AZ-S-00": "Arizona Senate Election, 2018"
+      }
+    },
+    "capital": "Phoenix",
+    "majority": "REP",
+    "name": "Arizona"
+  },
+  "ME": {
+    "population": "1,329,328",
+    "representatives": {
+      "S6ME00159": {
+        "party": "REP",
+        "gt-id": 300025,
+        "lastname": "Collins",
+        "candidate_id": "S6ME00159",
+        "name": "Susan Collins",
+        "firstname": "Susan"
+      },
+      "H8ME01120": {
+        "party": "DEM",
+        "gt-id": 412307,
+        "lastname": "Pingree",
+        "candidate_id": "H8ME01120",
+        "name": "Chellie Pingree",
+        "firstname": "Chellie"
+      },
+      "S2ME00109": {
+        "party": "IND",
+        "gt-id": 412545,
+        "lastname": "King",
+        "candidate_id": "S2ME00109",
+        "name": "Angus King",
+        "firstname": "Angus"
+      },
+      "H4ME02234": {
+        "party": "REP",
+        "gt-id": 412633,
+        "lastname": "Poliquin",
+        "candidate_id": "H4ME02234",
+        "name": "Bruce Poliquin",
+        "firstname": "Bruce"
+      }
+    },
+    "governor": "Paul LePage",
+    "elections": {
+      "H": {
+        "ME-H-01": "Maine Congressional District 01 Election, 2016",
+        "ME-H-02": "Maine Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "ME-S-00": "Maine Senate Election, 2020"
+      }
+    },
+    "capital": "Augusta",
+    "majority": "REP",
+    "name": "Maine"
+  },
+  "WI": {
+    "population": "5,771,337",
+    "representatives": {
+      "H0WI08075": {
+        "party": "REP",
+        "gt-id": 412489,
+        "lastname": "Ribble",
+        "candidate_id": "H0WI08075",
+        "name": "Reid Ribble",
+        "firstname": "Reid"
+      },
+      "S2WI00219": {
+        "party": "DEM",
+        "gt-id": 400013,
+        "lastname": "Baldwin",
+        "candidate_id": "S2WI00219",
+        "name": "Tammy Baldwin",
+        "firstname": "Tammy"
+      },
+      "H8WI09050": {
+        "party": "REP",
+        "gt-id": 400365,
+        "lastname": "Sensenbrenner",
+        "candidate_id": "H8WI09050",
+        "name": "F. Sensenbrenner",
+        "firstname": "F."
+      },
+      "H2WI02124": {
+        "party": "DEM",
+        "gt-id": 412585,
+        "lastname": "Pocan",
+        "candidate_id": "H2WI02124",
+        "name": "Mark Pocan",
+        "firstname": "Mark"
+      },
+      "H4WI04183": {
+        "party": "DEM",
+        "gt-id": 400661,
+        "lastname": "Moore",
+        "candidate_id": "H4WI04183",
+        "name": "Gwen Moore",
+        "firstname": "Gwen"
+      },
+      "H4WI06048": {
+        "party": "REP",
+        "gt-id": 412661,
+        "lastname": "Grothman",
+        "candidate_id": "H4WI06048",
+        "name": "Glenn Grothman",
+        "firstname": "Glenn"
+      },
+      "H8WI01024": {
+        "party": "REP",
+        "gt-id": 400351,
+        "lastname": "Ryan",
+        "candidate_id": "H8WI01024",
+        "name": "Paul Ryan",
+        "firstname": "Paul"
+      },
+      "H0WI07051": {
+        "party": "REP",
+        "gt-id": 412488,
+        "lastname": "Duffy",
+        "candidate_id": "H0WI07051",
+        "name": "Sean Duffy",
+        "firstname": "Sean"
+      }
+    },
+    "governor": "Scott Walker",
+    "elections": {
+      "H": {
+        "WI-H-07": "Wisconsin Congressional District 07 Election, 2016",
+        "WI-H-04": "Wisconsin Congressional District 04 Election, 2016",
+        "WI-H-05": "Wisconsin Congressional District 05 Election, 2016",
+        "WI-H-03": "Wisconsin Congressional District 03 Election, 2016",
+        "WI-H-08": "Wisconsin Congressional District 08 Election, 2016",
+        "WI-H-06": "Wisconsin Congressional District 06 Election, 2016",
+        "WI-H-01": "Wisconsin Congressional District 01 Election, 2016",
+        "WI-H-02": "Wisconsin Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "WI-S-00": "Wisconsin Senate Election, 2018"
+      }
+    },
+    "capital": "Madison",
+    "majority": "REP",
+    "name": "Wisconsin"
+  },
+  "WV": {
+    "population": "1,844,128",
+    "representatives": {
+      "H0WV01072": {
+        "party": "REP",
+        "gt-id": 412487,
+        "lastname": "McKinley",
+        "candidate_id": "H0WV01072",
+        "name": "David McKinley",
+        "firstname": "David"
+      },
+      "S4WV00159": {
+        "party": "REP",
+        "gt-id": 400061,
+        "lastname": "Capito",
+        "candidate_id": "S4WV00159",
+        "name": "Shelley Capito",
+        "firstname": "Shelley"
+      },
+      "H4WV03070": {
+        "party": "REP",
+        "gt-id": 412663,
+        "lastname": "Jenkins",
+        "candidate_id": "H4WV03070",
+        "name": "Evan Jenkins",
+        "firstname": "Evan"
+      }
+    },
+    "governor": "Earl Ray Tomblin",
+    "elections": {
+      "H": {
+        "WV-H-01": "West Virginia Congressional District 01 Election, 2016",
+        "WV-H-03": "West Virginia Congressional District 03 Election, 2016",
+        "WV-H-02": "West Virginia Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "WV-S-00": "West Virginia Senate Election, 2020"
+      }
+    },
+    "capital": "Charleston",
+    "majority": "REP",
+    "name": "West Virginia"
+  },
+  "VT": {
+    "population": "626,042",
+    "representatives": {
+      "S4VT00033": {
+        "party": "IND",
+        "gt-id": 400357,
+        "lastname": "Sanders",
+        "candidate_id": "S4VT00033",
+        "name": "Bernard Sanders",
+        "firstname": "Bernard"
+      },
+      "H6VT00160": {
+        "party": "DEM",
+        "gt-id": 412239,
+        "lastname": "Welch",
+        "candidate_id": "H6VT00160",
+        "name": "Peter Welch",
+        "firstname": "Peter"
+      },
+      "S4VT00017": {
+        "party": "DEM",
+        "gt-id": 300065,
+        "lastname": "Leahy",
+        "candidate_id": "S4VT00017",
+        "name": "Patrick Leahy",
+        "firstname": "Patrick"
+      }
+    },
+    "governor": "Peter Shumlin",
+    "elections": {
+      "H": {
+        "VT-H-00": "Vermont Congressional District 00 Election, 2016"
+      },
+      "S": {
+        "VT-S-00": "Vermont Senate Election, 2016"
+      }
+    },
+    "capital": "Montpelier",
+    "majority": "DEM",
+    "name": "Vermont"
+  },
+  "CT": {
+    "population": "3,590,886",
+    "representatives": {
+      "H2CT05131": {
+        "party": "DEM",
+        "gt-id": 412524,
+        "lastname": "Esty",
+        "candidate_id": "H2CT05131",
+        "name": "Elizabeth Esty",
+        "firstname": "Elizabeth"
+      },
+      "H8CT01046": {
+        "party": "DEM",
+        "gt-id": 400233,
+        "lastname": "Larson",
+        "candidate_id": "H8CT01046",
+        "name": "John Larson",
+        "firstname": "John"
+      },
+      "S2CT00132": {
+        "party": "DEM",
+        "gt-id": 412194,
+        "lastname": "Murphy",
+        "candidate_id": "S2CT00132",
+        "name": "Christopher Murphy",
+        "firstname": "Christopher"
+      },
+      "S0CT00177": {
+        "party": "DEM",
+        "gt-id": 412490,
+        "lastname": "Blumenthal",
+        "candidate_id": "S0CT00177",
+        "name": "Richard Blumenthal",
+        "firstname": "Richard"
+      }
+    },
+    "governor": "Dan Malloy",
+    "elections": {
+      "H": {
+        "CT-H-04": "Connecticut Congressional District 04 Election, 2016",
+        "CT-H-05": "Connecticut Congressional District 05 Election, 2016",
+        "CT-H-03": "Connecticut Congressional District 03 Election, 2016",
+        "CT-H-02": "Connecticut Congressional District 02 Election, 2016",
+        "CT-H-01": "Connecticut Congressional District 01 Election, 2016"
+      },
+      "S": {
+        "CT-S-00": "Connecticut Senate Election, 2016"
+      }
+    },
+    "capital": "Hartford",
+    "majority": "DEM",
+    "name": "Connecticut"
+  },
+  "MA": {
+    "population": "6,794,422",
+    "representatives": {
+      "H2MA09072": {
+        "party": "DEM",
+        "gt-id": 400249,
+        "lastname": "Lynch",
+        "candidate_id": "H2MA09072",
+        "name": "Stephen Lynch",
+        "firstname": "Stephen"
+      },
+      "H6FL06225": {
+        "party": "DEM",
+        "gt-id": 400263,
+        "lastname": "McGovern",
+        "candidate_id": "H6FL06225",
+        "name": "James McGovern",
+        "firstname": "James"
+      },
+      "S2MA00170": {
+        "party": "DEM",
+        "gt-id": 412542,
+        "lastname": "Warren",
+        "candidate_id": "S2MA00170",
+        "name": "Elizabeth Warren",
+        "firstname": "Elizabeth"
+      },
+      "H4MA06090": {
+        "party": "DEM",
+        "gt-id": 412632,
+        "lastname": "Moulton",
+        "candidate_id": "H4MA06090",
+        "name": "Seth Moulton",
+        "firstname": "Seth"
+      },
+      "H8MA02041": {
+        "party": "DEM",
+        "gt-id": 400291,
+        "lastname": "Neal",
+        "candidate_id": "H8MA02041",
+        "name": "Richard Neal",
+        "firstname": "Richard"
+      },
+      "H8MA08071": {
+        "party": "DEM",
+        "gt-id": 400063,
+        "lastname": "Capuano",
+        "candidate_id": "H8MA08071",
+        "name": "Michael Capuano",
+        "firstname": "Michael"
+      },
+      "S4MA00028": {
+        "party": "DEM",
+        "gt-id": 400253,
+        "lastname": "Markey",
+        "candidate_id": "S4MA00028",
+        "name": "Edward Markey",
+        "firstname": "Edward"
+      },
+      "H2MA04073": {
+        "party": "DEM",
+        "gt-id": 412543,
+        "lastname": "Kennedy",
+        "candidate_id": "H2MA04073",
+        "name": "Joseph Kennedy",
+        "firstname": "Joseph"
+      },
+      "H0MA10082": {
+        "party": "DEM",
+        "gt-id": 412435,
+        "lastname": "Keating",
+        "candidate_id": "H0MA10082",
+        "name": "William Keating",
+        "firstname": "William"
+      },
+      "H4MA05084": {
+        "party": "DEM",
+        "gt-id": 412600,
+        "lastname": "Clark",
+        "candidate_id": "H4MA05084",
+        "name": "Katherine Clark",
+        "firstname": "Katherine"
+      }
+    },
+    "governor": "Charlie Baker",
+    "elections": {
+      "H": {
+        "MA-H-05": "Massachusetts Congressional District 05 Election, 2016",
+        "MA-H-01": "Massachusetts Congressional District 01 Election, 2016",
+        "MA-H-04": "Massachusetts Congressional District 04 Election, 2016",
+        "MA-H-06": "Massachusetts Congressional District 06 Election, 2016",
+        "MA-H-09": "Massachusetts Congressional District 09 Election, 2016",
+        "MA-H-07": "Massachusetts Congressional District 07 Election, 2016",
+        "MA-H-03": "Massachusetts Congressional District 03 Election, 2016",
+        "MA-H-08": "Massachusetts Congressional District 08 Election, 2016",
+        "MA-H-02": "Massachusetts Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "MA-S-00": "Massachusetts Senate Election, 2020"
+      }
+    },
+    "capital": "Boston",
+    "majority": "DEM",
+    "name": "Massachusetts"
+  },
+  "NC": {
+    "population": "10,042,802",
+    "representatives": {
+      "H2NC08185": {
+        "party": "REP",
+        "gt-id": 412550,
+        "lastname": "Hudson",
+        "candidate_id": "H2NC08185",
+        "name": "Richard Hudson",
+        "firstname": "Richard"
+      },
+      "H2NC11080": {
+        "party": "REP",
+        "gt-id": 412552,
+        "lastname": "Meadows",
+        "candidate_id": "H2NC11080",
+        "name": "Mark Meadows",
+        "firstname": "Mark"
+      },
+      "S4NC00162": {
+        "party": "REP",
+        "gt-id": 412668,
+        "lastname": "Tillis",
+        "candidate_id": "S4NC00162",
+        "name": "Thom Tillis",
+        "firstname": "Thom"
+      },
+      "H4NC01046": {
+        "party": "DEM",
+        "gt-id": 400616,
+        "lastname": "Butterfield",
+        "candidate_id": "H4NC01046",
+        "name": "George Butterfield",
+        "firstname": "George"
+      },
+      "H2NC09134": {
+        "party": "REP",
+        "gt-id": 412551,
+        "lastname": "Pittenger",
+        "candidate_id": "H2NC09134",
+        "name": "Robert Pittenger",
+        "firstname": "Robert"
+      },
+      "H6NC04037": {
+        "party": "DEM",
+        "gt-id": 400326,
+        "lastname": "Price",
+        "candidate_id": "H6NC04037",
+        "name": "David Price",
+        "firstname": "David"
+      },
+      "H0NC02059": {
+        "party": "REP",
+        "gt-id": 412457,
+        "lastname": "Ellmers",
+        "candidate_id": "H0NC02059",
+        "name": "Renee Ellmers",
+        "firstname": "Renee"
+      },
+      "H4NC10047": {
+        "party": "REP",
+        "gt-id": 400644,
+        "lastname": "McHenry",
+        "candidate_id": "H4NC10047",
+        "name": "Patrick McHenry",
+        "firstname": "Patrick"
+      },
+      "H2NC01081": {
+        "party": "REP",
+        "gt-id": 400209,
+        "lastname": "Jones",
+        "candidate_id": "H2NC01081",
+        "name": "Walter Jones",
+        "firstname": "Walter"
+      },
+      "H4NC12100": {
+        "party": "DEM",
+        "gt-id": 412607,
+        "lastname": "Adams",
+        "candidate_id": "H4NC12100",
+        "name": "Alma Adams",
+        "firstname": "Alma"
+      },
+      "S4NC00089": {
+        "party": "REP",
+        "gt-id": 400054,
+        "lastname": "Burr",
+        "candidate_id": "S4NC00089",
+        "name": "Richard Burr",
+        "firstname": "Richard"
+      },
+      "H4NC05146": {
+        "party": "REP",
+        "gt-id": 400643,
+        "lastname": "Foxx",
+        "candidate_id": "H4NC05146",
+        "name": "Virginia Foxx",
+        "firstname": "Virginia"
+      },
+      "H2NC13110": {
+        "party": "REP",
+        "gt-id": 412553,
+        "lastname": "Holding",
+        "candidate_id": "H2NC13110",
+        "name": "George Holding",
+        "firstname": "George"
+      },
+      "H2NC07096": {
+        "party": "REP",
+        "gt-id": 412641,
+        "lastname": "Rouzer",
+        "candidate_id": "H2NC07096",
+        "name": "David Rouzer",
+        "firstname": "David"
+      }
+    },
+    "governor": "Pat McCrory",
+    "elections": {
+      "H": {
+        "NC-H-10": "North Carolina Congressional District 10 Election, 2016",
+        "NC-H-11": "North Carolina Congressional District 11 Election, 2016",
+        "NC-H-04": "North Carolina Congressional District 04 Election, 2016",
+        "NC-H-03": "North Carolina Congressional District 03 Election, 2016",
+        "NC-H-01": "North Carolina Congressional District 01 Election, 2016",
+        "NC-H-06": "North Carolina Congressional District 06 Election, 2016",
+        "NC-H-05": "North Carolina Congressional District 05 Election, 2016",
+        "NC-H-13": "North Carolina Congressional District 13 Election, 2016",
+        "NC-H-08": "North Carolina Congressional District 08 Election, 2016",
+        "NC-H-02": "North Carolina Congressional District 02 Election, 2016",
+        "NC-H-12": "North Carolina Congressional District 12 Election, 2016",
+        "NC-H-07": "North Carolina Congressional District 07 Election, 2016",
+        "NC-H-09": "North Carolina Congressional District 09 Election, 2016"
+      },
+      "S": {
+        "NC-S-00": "North Carolina Senate Election, 2016"
+      }
+    },
+    "capital": "Raleigh",
+    "majority": "REP",
+    "name": "North Carolina"
+  },
+  "NE": {
+    "population": "1,896,190",
+    "representatives": {
+      "H4NE02054": {
+        "party": "DEM",
+        "gt-id": 412642,
+        "lastname": "Ashford",
+        "candidate_id": "H4NE02054",
+        "name": "Brad Ashford",
+        "firstname": "Brad"
+      },
+      "S4NE00090": {
+        "party": "REP",
+        "gt-id": 412671,
+        "lastname": "Sasse",
+        "candidate_id": "S4NE00090",
+        "name": "Benjamin Sasse",
+        "firstname": "Benjamin"
+      },
+      "H6NE03115": {
+        "party": "REP",
+        "gt-id": 412217,
+        "lastname": "Smith",
+        "candidate_id": "H6NE03115",
+        "name": "Adrian Smith",
+        "firstname": "Adrian"
+      }
+    },
+    "governor": "Pete Ricketts",
+    "elections": {
+      "H": {
+        "NE-H-02": "Nebraska Congressional District 02 Election, 2016",
+        "NE-H-01": "Nebraska Congressional District 01 Election, 2016",
+        "NE-H-03": "Nebraska Congressional District 03 Election, 2016"
+      },
+      "S": {
+        "NE-S-00": "Nebraska Senate Election, 2018"
+      }
+    },
+    "capital": "Lincoln",
+    "majority": "REP",
+    "name": "Nebraska"
+  },
+  "HI": {
+    "population": "1,431,603",
+    "representatives": {
+      "S2HI00106": {
+        "party": "DEM",
+        "gt-id": 412200,
+        "lastname": "Hirono",
+        "candidate_id": "S2HI00106",
+        "name": "Mazie Hirono",
+        "firstname": "Mazie"
+      },
+      "H2HI02508": {
+        "party": "DEM",
+        "gt-id": 412532,
+        "lastname": "Gabbard",
+        "candidate_id": "H2HI02508",
+        "name": "Tulsi Gabbard",
+        "firstname": "Tulsi"
+      },
+      "S4HI00136": {
+        "party": "DEM",
+        "gt-id": 412507,
+        "lastname": "Schatz",
+        "candidate_id": "S4HI00136",
+        "name": "Brian Schatz",
+        "firstname": "Brian"
+      }
+    },
+    "governor": "David Ige",
+    "elections": {
+      "H": {
+        "HI-H-02": "Hawaii Congressional District 02 Election, 2016",
+        "HI-H-01": "Hawaii Congressional District 01 Election, 2016"
+      },
+      "S": {
+        "HI-S-00": "Hawaii Senate Election, 2016"
+      }
+    },
+    "capital": "Honolulu",
+    "majority": "DEM",
+    "name": "Hawaii"
+  },
+  "SD": {
+    "population": "858,469",
+    "representatives": {
+      "S2SD00068": {
+        "party": "REP",
+        "gt-id": 400546,
+        "lastname": "Thune",
+        "candidate_id": "S2SD00068",
+        "name": "John Thune",
+        "firstname": "John"
+      },
+      "H0SD00054": {
+        "party": "REP",
+        "gt-id": 412475,
+        "lastname": "Noem",
+        "candidate_id": "H0SD00054",
+        "name": "Kristi Noem",
+        "firstname": "Kristi"
+      },
+      "S4SD00049": {
+        "party": "REP",
+        "gt-id": 412669,
+        "lastname": "Rounds",
+        "candidate_id": "S4SD00049",
+        "name": "Mike Rounds",
+        "firstname": "Mike"
+      }
+    },
+    "governor": "Dennis Daugaard",
+    "elections": {
+      "H": {
+        "SD-H-00": "South Dakota Congressional District 00 Election, 2016"
+      },
+      "S": {
+        "SD-S-00": "South Dakota Senate Election, 2020"
+      }
+    },
+    "capital": "Pierre",
+    "majority": "REP",
+    "name": "South Dakota"
+  },
+  "CO": {
+    "population": "5,456,574",
+    "representatives": {
+      "S4CO00395": {
+        "party": "REP",
+        "gt-id": 412406,
+        "lastname": "Gardner",
+        "candidate_id": "S4CO00395",
+        "name": "Cory Gardner",
+        "firstname": "Cory"
+      },
+      "H8CO06138": {
+        "party": "REP",
+        "gt-id": 412271,
+        "lastname": "Coffman",
+        "candidate_id": "H8CO06138",
+        "name": "Mike Coffman",
+        "firstname": "Mike"
+      },
+      "S0CO00211": {
+        "party": "DEM",
+        "gt-id": 412330,
+        "lastname": "Bennet",
+        "candidate_id": "S0CO00211",
+        "name": "Michael Bennet",
+        "firstname": "Michael"
+      },
+      "H6CO01141": {
+        "party": "DEM",
+        "gt-id": 400101,
+        "lastname": "DeGette",
+        "candidate_id": "H6CO01141",
+        "name": "Diana DeGette",
+        "firstname": "Diana"
+      },
+      "H6CO03139": {
+        "party": "REP",
+        "gt-id": 412405,
+        "lastname": "Tipton",
+        "candidate_id": "H6CO03139",
+        "name": "Scott Tipton",
+        "firstname": "Scott"
+      },
+      "H8CO02137": {
+        "party": "DEM",
+        "gt-id": 412308,
+        "lastname": "Polis",
+        "candidate_id": "H8CO02137",
+        "name": "Jared Polis",
+        "firstname": "Jared"
+      }
+    },
+    "governor": "John Hickenlooper",
+    "elections": {
+      "H": {
+        "CO-H-05": "Colorado Congressional District 05 Election, 2016",
+        "CO-H-04": "Colorado Congressional District 04 Election, 2016",
+        "CO-H-01": "Colorado Congressional District 01 Election, 2016",
+        "CO-H-02": "Colorado Congressional District 02 Election, 2016",
+        "CO-H-03": "Colorado Congressional District 03 Election, 2016",
+        "CO-H-07": "Colorado Congressional District 07 Election, 2016",
+        "CO-H-06": "Colorado Congressional District 06 Election, 2016"
+      },
+      "S": {
+        "CO-S-00": "Colorado Senate Election, 2016"
+      }
+    },
+    "capital": "Denver",
+    "majority": "REP",
+    "name": "Colorado"
+  },
+  "PA": {
+    "population": "12,802,503",
+    "representatives": {
+      "H4PA15087": {
+        "party": "REP",
+        "gt-id": 400648,
+        "lastname": "Dent",
+        "candidate_id": "H4PA15087",
+        "name": "Charles Dent",
+        "firstname": "Charles"
+      },
+      "S6PA00217": {
+        "party": "DEM",
+        "gt-id": 412246,
+        "lastname": "Casey",
+        "candidate_id": "S6PA00217",
+        "name": "Robert Casey",
+        "firstname": "Robert"
+      },
+      "H4PA13199": {
+        "party": "DEM",
+        "gt-id": 412652,
+        "lastname": "Boyle",
+        "candidate_id": "H4PA13199",
+        "name": "Brendan Boyle",
+        "firstname": "Brendan"
+      },
+      "H0PA06076": {
+        "party": "REP",
+        "gt-id": 412651,
+        "lastname": "Costello",
+        "candidate_id": "H0PA06076",
+        "name": "Ryan Costello",
+        "firstname": "Ryan"
+      },
+      "H8PA05071": {
+        "party": "REP",
+        "gt-id": 412317,
+        "lastname": "Thompson",
+        "candidate_id": "H8PA05071",
+        "name": "Glenn Thompson",
+        "firstname": "Glenn"
+      },
+      "H2PA04135": {
+        "party": "REP",
+        "gt-id": 412569,
+        "lastname": "Perry",
+        "candidate_id": "H2PA04135",
+        "name": "Scott Perry",
+        "firstname": "Scott"
+      },
+      "H2PA17079": {
+        "party": "DEM",
+        "gt-id": 412571,
+        "lastname": "Cartwright",
+        "candidate_id": "H2PA17079",
+        "name": "Matthew Cartwright",
+        "firstname": "Matthew"
+      },
+      "H2PA11098": {
+        "party": "REP",
+        "gt-id": 412469,
+        "lastname": "Barletta",
+        "candidate_id": "H2PA11098",
+        "name": "Lou Barletta",
+        "firstname": "Lou"
+      },
+      "H8PA01153": {
+        "party": "DEM",
+        "gt-id": 400047,
+        "lastname": "Brady",
+        "candidate_id": "H8PA01153",
+        "name": "Robert Brady",
+        "firstname": "Robert"
+      },
+      "H6PA16197": {
+        "party": "REP",
+        "gt-id": 400320,
+        "lastname": "Pitts",
+        "candidate_id": "H6PA16197",
+        "name": "Joseph Pitts",
+        "firstname": "Joseph"
+      },
+      "H0PA07082": {
+        "party": "REP",
+        "gt-id": 412466,
+        "lastname": "Meehan",
+        "candidate_id": "H0PA07082",
+        "name": "Patrick Meehan",
+        "firstname": "Patrick"
+      },
+      "H0PA04220": {
+        "party": "REP",
+        "gt-id": 412570,
+        "lastname": "Rothfus",
+        "candidate_id": "H0PA04220",
+        "name": "Keith Rothfus",
+        "firstname": "Keith"
+      },
+      "S4PA00121": {
+        "party": "REP",
+        "gt-id": 400408,
+        "lastname": "Toomey",
+        "candidate_id": "S4PA00121",
+        "name": "Patrick Toomey",
+        "firstname": "Patrick"
+      }
+    },
+    "governor": "Tom Wolf",
+    "elections": {
+      "H": {
+        "PA-H-12": "Pennsylvania Congressional District 12 Election, 2016",
+        "PA-H-03": "Pennsylvania Congressional District 03 Election, 2016",
+        "PA-H-16": "Pennsylvania Congressional District 16 Election, 2016",
+        "PA-H-01": "Pennsylvania Congressional District 01 Election, 2016",
+        "PA-H-05": "Pennsylvania Congressional District 05 Election, 2016",
+        "PA-H-10": "Pennsylvania Congressional District 10 Election, 2016",
+        "PA-H-06": "Pennsylvania Congressional District 06 Election, 2016",
+        "PA-H-17": "Pennsylvania Congressional District 17 Election, 2016",
+        "PA-H-14": "Pennsylvania Congressional District 14 Election, 2016",
+        "PA-H-07": "Pennsylvania Congressional District 07 Election, 2016",
+        "PA-H-13": "Pennsylvania Congressional District 13 Election, 2016",
+        "PA-H-11": "Pennsylvania Congressional District 11 Election, 2016",
+        "PA-H-02": "Pennsylvania Congressional District 02 Election, 2016",
+        "PA-H-15": "Pennsylvania Congressional District 15 Election, 2016",
+        "PA-H-18": "Pennsylvania Congressional District 18 Election, 2016",
+        "PA-H-09": "Pennsylvania Congressional District 09 Election, 2016",
+        "PA-H-08": "Pennsylvania Congressional District 08 Election, 2016",
+        "PA-H-04": "Pennsylvania Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "PA-S-00": "Pennsylvania Senate Election, 2018"
+      }
+    },
+    "capital": "Harrisburg",
+    "majority": "REP",
+    "name": "Pennsylvania"
+  },
+  "FL": {
+    "population": "20,271,272",
+    "representatives": {
+      "H0FL18025": {
+        "party": "REP",
+        "gt-id": 400344,
+        "lastname": "Ros-Lehtinen",
+        "candidate_id": "H0FL18025",
+        "name": "Ileana Ros-Lehtinen",
+        "firstname": "Ileana"
+      },
+      "H2FL25018": {
+        "party": "REP",
+        "gt-id": 400108,
+        "lastname": "Diaz-Balart",
+        "candidate_id": "H2FL25018",
+        "name": "Mario Diaz-Balart",
+        "firstname": "Mario"
+      },
+      "S8FL00166": {
+        "party": "DEM",
+        "gt-id": 300078,
+        "lastname": "Nelson",
+        "candidate_id": "S8FL00166",
+        "name": "Bill Nelson",
+        "firstname": "Bill"
+      },
+      "H4FL13101": {
+        "party": "REP",
+        "gt-id": 412603,
+        "lastname": "Jolly",
+        "candidate_id": "H4FL13101",
+        "name": "David Jolly",
+        "firstname": "David"
+      },
+      "H4FL20023": {
+        "party": "DEM",
+        "gt-id": 400623,
+        "lastname": "Wasserman Schultz",
+        "candidate_id": "H4FL20023",
+        "name": "Debbie Wasserman Schultz",
+        "firstname": "Debbie"
+      },
+      "H4FL26038": {
+        "party": "REP",
+        "gt-id": 412621,
+        "lastname": "Curbelo",
+        "candidate_id": "H4FL26038",
+        "name": "Carlos Curbelo",
+        "firstname": "Carlos"
+      },
+      "S0FL00338": {
+        "party": "REP",
+        "gt-id": 412491,
+        "lastname": "Rubio",
+        "candidate_id": "S0FL00338",
+        "name": "Marco Rubio",
+        "firstname": "Marco"
+      },
+      "S6FL00376": {
+        "party": "DEM",
+        "gt-id": 412276,
+        "lastname": "Grayson",
+        "candidate_id": "S6FL00376",
+        "name": "Alan Grayson",
+        "firstname": "Alan"
+      },
+      "H0FL19080": {
+        "party": "DEM",
+        "gt-id": 412385,
+        "lastname": "Deutch",
+        "candidate_id": "H0FL19080",
+        "name": "Theodore Deutch",
+        "firstname": "Theodore"
+      },
+      "H0FL17068": {
+        "party": "DEM",
+        "gt-id": 412412,
+        "lastname": "Wilson",
+        "candidate_id": "H0FL17068",
+        "name": "Frederica Wilson",
+        "firstname": "Frederica"
+      },
+      "H6FL09070": {
+        "party": "REP",
+        "gt-id": 412250,
+        "lastname": "Bilirakis",
+        "candidate_id": "H6FL09070",
+        "name": "Gus Bilirakis",
+        "firstname": "Gus"
+      },
+      "H0FL08208": {
+        "party": "REP",
+        "gt-id": 412410,
+        "lastname": "Webster",
+        "candidate_id": "H0FL08208",
+        "name": "Daniel Webster",
+        "firstname": "Daniel"
+      },
+      "H2FL03056": {
+        "party": "DEM",
+        "gt-id": 400048,
+        "lastname": "Brown",
+        "candidate_id": "H2FL03056",
+        "name": "Corrine Brown",
+        "firstname": "Corrine"
+      },
+      "H2FL08055": {
+        "party": "REP",
+        "gt-id": 400273,
+        "lastname": "Mica",
+        "candidate_id": "H2FL08055",
+        "name": "John Mica",
+        "firstname": "John"
+      },
+      "S6FL00319": {
+        "party": "DEM",
+        "gt-id": 412527,
+        "lastname": "Murphy",
+        "candidate_id": "S6FL00319",
+        "name": "Patrick Murphy",
+        "firstname": "Patrick"
+      },
+      "H2FL23021": {
+        "party": "DEM",
+        "gt-id": 400170,
+        "lastname": "Hastings",
+        "candidate_id": "H2FL23021",
+        "name": "Alcee Hastings",
+        "firstname": "Alcee"
+      },
+      "H4FL19074": {
+        "party": "REP",
+        "gt-id": 412604,
+        "lastname": "Clawson",
+        "candidate_id": "H4FL19074",
+        "name": "Curtis Clawson",
+        "firstname": "Curtis"
+      },
+      "H0FL04066": {
+        "party": "REP",
+        "gt-id": 400086,
+        "lastname": "Crenshaw",
+        "candidate_id": "H0FL04066",
+        "name": "Ander Crenshaw",
+        "firstname": "Ander"
+      },
+      "H6FL11126": {
+        "party": "DEM",
+        "gt-id": 412195,
+        "lastname": "Castor",
+        "candidate_id": "H6FL11126",
+        "name": "Kathy Castor",
+        "firstname": "Kathy"
+      },
+      "H0FL05139": {
+        "party": "REP",
+        "gt-id": 412409,
+        "lastname": "Nugent",
+        "candidate_id": "H0FL05139",
+        "name": "Richard Nugent",
+        "firstname": "Richard"
+      },
+      "H2FL14053": {
+        "party": "DEM",
+        "gt-id": 412529,
+        "lastname": "Frankel",
+        "candidate_id": "H2FL14053",
+        "name": "Lois Frankel",
+        "firstname": "Lois"
+      },
+      "H8FL15107": {
+        "party": "REP",
+        "gt-id": 412309,
+        "lastname": "Posey",
+        "candidate_id": "H8FL15107",
+        "name": "Bill Posey",
+        "firstname": "Bill"
+      },
+      "H0FL12101": {
+        "party": "REP",
+        "gt-id": 412411,
+        "lastname": "Ross",
+        "candidate_id": "H0FL12101",
+        "name": "Dennis Ross",
+        "firstname": "Dennis"
+      },
+      "H4FL02062": {
+        "party": "DEM",
+        "gt-id": 412620,
+        "lastname": "Graham",
+        "candidate_id": "H4FL02062",
+        "name": "Gwen Graham",
+        "firstname": "Gwen"
+      }
+    },
+    "governor": "Rick Scott",
+    "elections": {
+      "H": {
+        "FL-H-21": "Florida Congressional District 21 Election, 2016",
+        "FL-H-25": "Florida Congressional District 25 Election, 2016",
+        "FL-H-05": "Florida Congressional District 05 Election, 2016",
+        "FL-H-01": "Florida Congressional District 01 Election, 2016",
+        "FL-H-03": "Florida Congressional District 03 Election, 2016",
+        "FL-H-26": "Florida Congressional District 26 Election, 2016",
+        "FL-H-09": "Florida Congressional District 09 Election, 2016",
+        "FL-H-06": "Florida Congressional District 06 Election, 2016",
+        "FL-H-23": "Florida Congressional District 23 Election, 2016",
+        "FL-H-16": "Florida Congressional District 16 Election, 2016",
+        "FL-H-27": "Florida Congressional District 27 Election, 2016",
+        "FL-H-24": "Florida Congressional District 24 Election, 2016",
+        "FL-H-22": "Florida Congressional District 22 Election, 2016",
+        "FL-H-17": "Florida Congressional District 17 Election, 2016",
+        "FL-H-15": "Florida Congressional District 15 Election, 2016",
+        "FL-H-18": "Florida Congressional District 18 Election, 2016",
+        "FL-H-14": "Florida Congressional District 14 Election, 2016",
+        "FL-H-10": "Florida Congressional District 10 Election, 2016",
+        "FL-H-04": "Florida Congressional District 04 Election, 2016",
+        "FL-H-07": "Florida Congressional District 07 Election, 2016",
+        "FL-H-12": "Florida Congressional District 12 Election, 2016",
+        "FL-H-20": "Florida Congressional District 20 Election, 2016",
+        "FL-H-11": "Florida Congressional District 11 Election, 2016",
+        "FL-H-08": "Florida Congressional District 08 Election, 2016",
+        "FL-H-02": "Florida Congressional District 02 Election, 2016",
+        "FL-H-19": "Florida Congressional District 19 Election, 2016",
+        "FL-H-13": "Florida Congressional District 13 Election, 2016"
+      },
+      "S": {
+        "FL-S-00": "Florida Senate Election, 2016"
+      }
+    },
+    "capital": "Tallahassee",
+    "majority": "REP",
+    "name": "Florida"
+  },
+  "NM": {
+    "population": "2,085,109",
+    "representatives": {
+      "H8NM01257": {
+        "party": "DEM",
+        "gt-id": 412558,
+        "lastname": "Lujan Grisham",
+        "candidate_id": "H8NM01257",
+        "name": "Michelle Lujan Grisham",
+        "firstname": "Michelle"
+      },
+      "S2NM00088": {
+        "party": "DEM",
+        "gt-id": 412281,
+        "lastname": "Heinrich",
+        "candidate_id": "S2NM00088",
+        "name": "Martin Heinrich",
+        "firstname": "Martin"
+      },
+      "H2NM02126": {
+        "party": "REP",
+        "gt-id": 400313,
+        "lastname": "Pearce",
+        "candidate_id": "H2NM02126",
+        "name": "Stevan Pearce",
+        "firstname": "Stevan"
+      }
+    },
+    "governor": "Susana Martinez",
+    "elections": {
+      "H": {
+        "NM-H-03": "New Mexico Congressional District 03 Election, 2016",
+        "NM-H-02": "New Mexico Congressional District 02 Election, 2016",
+        "NM-H-01": "New Mexico Congressional District 01 Election, 2016"
+      },
+      "S": {
+        "NM-S-00": "New Mexico Senate Election, 2018"
+      }
+    },
+    "capital": "Santa Fe",
+    "majority": "DEM",
+    "name": "New Mexico"
+  },
+  "AK": {
+    "population": "738,432",
+    "representatives": {
+      "S4AK00214": {
+        "party": "REP",
+        "gt-id": 412665,
+        "lastname": "Sullivan",
+        "candidate_id": "S4AK00214",
+        "name": "Dan Sullivan",
+        "firstname": "Dan"
+      },
+      "S4AK00099": {
+        "party": "REP",
+        "gt-id": 300075,
+        "lastname": "Murkowski",
+        "candidate_id": "S4AK00099",
+        "name": "Lisa Murkowski",
+        "firstname": "Lisa"
+      }
+    },
+    "governor": "Bill Walker",
+    "elections": {
+      "H": {
+        "AK-H-00": "Alaska Congressional District 00 Election, 2016",
+        "AK-H-null": "Alaska Congressional District null Election, 2016"
+      },
+      "S": {
+        "AK-S-00": "Alaska Senate Election, 2016"
+      }
+    },
+    "capital": "Juneau",
+    "majority": "REP",
+    "name": "Alaska"
+  },
+  "KS": {
+    "population": "2,911,641",
+    "representatives": {
+      "H0KS03137": {
+        "party": "REP",
+        "gt-id": 412430,
+        "lastname": "Yoder",
+        "candidate_id": "H0KS03137",
+        "name": "Kevin Yoder",
+        "firstname": "Kevin"
+      },
+      "S0KS00091": {
+        "party": "REP",
+        "gt-id": 400284,
+        "lastname": "Moran",
+        "candidate_id": "S0KS00091",
+        "name": "Jerry Moran",
+        "firstname": "Jerry"
+      },
+      "H8KS02090": {
+        "party": "REP",
+        "gt-id": 412284,
+        "lastname": "Jenkins",
+        "candidate_id": "H8KS02090",
+        "name": "Lynn Jenkins",
+        "firstname": "Lynn"
+      }
+    },
+    "governor": "Sam Brownback",
+    "elections": {
+      "H": {
+        "KS-H-02": "Kansas Congressional District 02 Election, 2016",
+        "KS-H-03": "Kansas Congressional District 03 Election, 2016",
+        "KS-H-04": "Kansas Congressional District 04 Election, 2016",
+        "KS-H-01": "Kansas Congressional District 01 Election, 2016"
+      },
+      "S": {
+        "KS-S-00": "Kansas Senate Election, 2016"
+      }
+    },
+    "capital": "Topeka",
+    "majority": "REP",
+    "name": "Kansas"
+  },
+  "IL": {
+    "population": "12,859,995",
+    "representatives": {
+      "H2IL02172": {
+        "party": "DEM",
+        "gt-id": 412595,
+        "lastname": "Kelly",
+        "candidate_id": "H2IL02172",
+        "name": "Robin Kelly",
+        "firstname": "Robin"
+      },
+      "H2IL01042": {
+        "party": "DEM",
+        "gt-id": 400350,
+        "lastname": "Rush",
+        "candidate_id": "H2IL01042",
+        "name": "Bobby Rush",
+        "firstname": "Bobby"
+      },
+      "H0IL14080": {
+        "party": "REP",
+        "gt-id": 412422,
+        "lastname": "Hultgren",
+        "candidate_id": "H0IL14080",
+        "name": "Randy Hultgren",
+        "firstname": "Randy"
+      },
+      "H0IL11052": {
+        "party": "REP",
+        "gt-id": 412421,
+        "lastname": "Kinzinger",
+        "candidate_id": "H0IL11052",
+        "name": "Adam Kinzinger",
+        "firstname": "Adam"
+      },
+      "H0IL05096": {
+        "party": "DEM",
+        "gt-id": 412331,
+        "lastname": "Quigley",
+        "candidate_id": "H0IL05096",
+        "name": "Mike Quigley",
+        "firstname": "Mike"
+      },
+      "H4IL07037": {
+        "party": "DEM",
+        "gt-id": 400093,
+        "lastname": "Davis",
+        "candidate_id": "H4IL07037",
+        "name": "Danny Davis",
+        "firstname": "Danny"
+      },
+      "H4IL03077": {
+        "party": "DEM",
+        "gt-id": 400630,
+        "lastname": "Lipinski",
+        "candidate_id": "H4IL03077",
+        "name": "Daniel Lipinski",
+        "firstname": "Daniel"
+      },
+      "S6IL00151": {
+        "party": "DEM",
+        "gt-id": 300038,
+        "lastname": "Durbin",
+        "candidate_id": "S6IL00151",
+        "name": "Richard Durbin",
+        "firstname": "Richard"
+      },
+      "H6IL06117": {
+        "party": "REP",
+        "gt-id": 412202,
+        "lastname": "Roskam",
+        "candidate_id": "H6IL06117",
+        "name": "Peter Roskam",
+        "firstname": "Peter"
+      },
+      "H2IL17071": {
+        "party": "DEM",
+        "gt-id": 412537,
+        "lastname": "Bustos",
+        "candidate_id": "H2IL17071",
+        "name": "Cheri Bustos",
+        "firstname": "Cheri"
+      },
+      "H6IL18088": {
+        "party": "REP",
+        "gt-id": 412674,
+        "lastname": "LaHood",
+        "candidate_id": "H6IL18088",
+        "name": "Darin LaHood",
+        "firstname": "Darin"
+      },
+      "H2IL20042": {
+        "party": "REP",
+        "gt-id": 400373,
+        "lastname": "Shimkus",
+        "candidate_id": "H2IL20042",
+        "name": "John Shimkus",
+        "firstname": "John"
+      },
+      "H8IL09067": {
+        "party": "DEM",
+        "gt-id": 400360,
+        "lastname": "Schakowsky",
+        "candidate_id": "H8IL09067",
+        "name": "Janice Schakowsky",
+        "firstname": "Janice"
+      },
+      "H2IL13120": {
+        "party": "REP",
+        "gt-id": 412536,
+        "lastname": "Davis",
+        "candidate_id": "H2IL13120",
+        "name": "Rodney Davis",
+        "firstname": "Rodney"
+      }
+    },
+    "governor": "Bruce Rauner",
+    "elections": {
+      "H": {
+        "IL-H-04": "Illinois Congressional District 04 Election, 2016",
+        "IL-H-09": "Illinois Congressional District 09 Election, 2016",
+        "IL-H-02": "Illinois Congressional District 02 Election, 2016",
+        "IL-H-15": "Illinois Congressional District 15 Election, 2016",
+        "IL-H-11": "Illinois Congressional District 11 Election, 2016",
+        "IL-H-13": "Illinois Congressional District 13 Election, 2016",
+        "IL-H-10": "Illinois Congressional District 10 Election, 2016",
+        "IL-H-14": "Illinois Congressional District 14 Election, 2016",
+        "IL-H-05": "Illinois Congressional District 05 Election, 2016",
+        "IL-H-08": "Illinois Congressional District 08 Election, 2016",
+        "IL-H-12": "Illinois Congressional District 12 Election, 2016",
+        "IL-H-16": "Illinois Congressional District 16 Election, 2016",
+        "IL-H-07": "Illinois Congressional District 07 Election, 2016",
+        "IL-H-17": "Illinois Congressional District 17 Election, 2016",
+        "IL-H-06": "Illinois Congressional District 06 Election, 2016",
+        "IL-H-03": "Illinois Congressional District 03 Election, 2016",
+        "IL-H-01": "Illinois Congressional District 01 Election, 2016",
+        "IL-H-18": "Illinois Congressional District 18 Election, 2016"
+      },
+      "S": {
+        "IL-S-00": "Illinois Senate Election, 2016"
+      }
+    },
+    "capital": "Springfield",
+    "majority": "DEM",
+    "name": "Illinois"
+  },
+  "NJ": {
+    "population": "8,958,013",
+    "representatives": {
+      "H2NJ10154": {
+        "party": "DEM",
+        "gt-id": 412506,
+        "lastname": "Payne",
+        "candidate_id": "H2NJ10154",
+        "name": "Donald Payne",
+        "firstname": "Donald"
+      },
+      "H2NJ02037": {
+        "party": "REP",
+        "gt-id": 400244,
+        "lastname": "LoBiondo",
+        "candidate_id": "H2NJ02037",
+        "name": "Frank LoBiondo",
+        "firstname": "Frank"
+      },
+      "H6NJ12136": {
+        "party": "REP",
+        "gt-id": 412290,
+        "lastname": "Lance",
+        "candidate_id": "H6NJ12136",
+        "name": "Leonard Lance",
+        "firstname": "Leonard"
+      },
+      "H8NJ03073": {
+        "party": "DEM",
+        "gt-id": 400308,
+        "lastname": "Pallone",
+        "candidate_id": "H8NJ03073",
+        "name": "Frank Pallone",
+        "firstname": "Frank"
+      },
+      "H2NJ05014": {
+        "party": "REP",
+        "gt-id": 400142,
+        "lastname": "Frelinghuysen",
+        "candidate_id": "H2NJ05014",
+        "name": "Rodney Frelinghuysen",
+        "firstname": "Rodney"
+      },
+      "H6NJ13191": {
+        "party": "DEM",
+        "gt-id": 412186,
+        "lastname": "Sires",
+        "candidate_id": "H6NJ13191",
+        "name": "Albio Sires",
+        "firstname": "Albio"
+      },
+      "S4NJ00185": {
+        "party": "DEM",
+        "gt-id": 412598,
+        "lastname": "Booker",
+        "candidate_id": "S4NJ00185",
+        "name": "Cory Booker",
+        "firstname": "Cory"
+      },
+      "H4NJ01084": {
+        "party": "DEM",
+        "gt-id": 412606,
+        "lastname": "Norcross",
+        "candidate_id": "H4NJ01084",
+        "name": "Donald Norcross",
+        "firstname": "Donald"
+      },
+      "H8NJ05052": {
+        "party": "REP",
+        "gt-id": 400145,
+        "lastname": "Garrett",
+        "candidate_id": "H8NJ05052",
+        "name": "Scott Garrett",
+        "firstname": "Scott"
+      },
+      "H8NJ04014": {
+        "party": "REP",
+        "gt-id": 400380,
+        "lastname": "Smith",
+        "candidate_id": "H8NJ04014",
+        "name": "Christopher Smith",
+        "firstname": "Christopher"
+      },
+      "H4NJ12149": {
+        "party": "DEM",
+        "gt-id": 412644,
+        "lastname": "Watson Coleman",
+        "candidate_id": "H4NJ12149",
+        "name": "Bonnie Watson Coleman",
+        "firstname": "Bonnie"
+      }
+    },
+    "governor": "Chris Christie",
+    "elections": {
+      "H": {
+        "NJ-H-08": "New Jersey Congressional District 08 Election, 2016",
+        "NJ-H-07": "New Jersey Congressional District 07 Election, 2016",
+        "NJ-H-09": "New Jersey Congressional District 09 Election, 2016",
+        "NJ-H-02": "New Jersey Congressional District 02 Election, 2016",
+        "NJ-H-05": "New Jersey Congressional District 05 Election, 2016",
+        "NJ-H-10": "New Jersey Congressional District 10 Election, 2016",
+        "NJ-H-11": "New Jersey Congressional District 11 Election, 2016",
+        "NJ-H-04": "New Jersey Congressional District 04 Election, 2016",
+        "NJ-H-12": "New Jersey Congressional District 12 Election, 2016",
+        "NJ-H-06": "New Jersey Congressional District 06 Election, 2016",
+        "NJ-H-01": "New Jersey Congressional District 01 Election, 2016",
+        "NJ-H-03": "New Jersey Congressional District 03 Election, 2016"
+      },
+      "S": {
+        "NJ-S-00": "New Jersey Senate Election, 2018"
+      }
+    },
+    "capital": "Trenton",
+    "majority": "DEM",
+    "name": "New Jersey"
+  },
+  "OH": {
+    "population": "11,613,423",
+    "representatives": {
+      "H8OH11141": {
+        "party": "DEM",
+        "gt-id": 412327,
+        "lastname": "Fudge",
+        "candidate_id": "H8OH11141",
+        "name": "Marcia Fudge",
+        "firstname": "Marcia"
+      },
+      "H6OH08315": {
+        "party": "REP",
+        "gt-id": 412675,
+        "lastname": "Davidson",
+        "candidate_id": "H6OH08315",
+        "name": "Warren Davidson",
+        "firstname": "Warren"
+      },
+      "H8OH05036": {
+        "party": "REP",
+        "gt-id": 412256,
+        "lastname": "Latta",
+        "candidate_id": "H8OH05036",
+        "name": "Robert Latta",
+        "firstname": "Robert"
+      },
+      "H2OH02085": {
+        "party": "REP",
+        "gt-id": 412564,
+        "lastname": "Wenstrup",
+        "candidate_id": "H2OH02085",
+        "name": "Brad Wenstrup",
+        "firstname": "Brad"
+      },
+      "H2OH03125": {
+        "party": "DEM",
+        "gt-id": 412565,
+        "lastname": "Beatty",
+        "candidate_id": "H2OH03125",
+        "name": "Joyce Beatty",
+        "firstname": "Joyce"
+      },
+      "S0OH00133": {
+        "party": "REP",
+        "gt-id": 400325,
+        "lastname": "Portman",
+        "candidate_id": "S0OH00133",
+        "name": "Robert Portman",
+        "firstname": "Robert"
+      },
+      "H2OH03067": {
+        "party": "REP",
+        "gt-id": 400411,
+        "lastname": "Turner",
+        "candidate_id": "H2OH03067",
+        "name": "Michael Turner",
+        "firstname": "Michael"
+      },
+      "S6OH00163": {
+        "party": "DEM",
+        "gt-id": 400050,
+        "lastname": "Brown",
+        "candidate_id": "S6OH00163",
+        "name": "Sherrod Brown",
+        "firstname": "Sherrod"
+      },
+      "H8OH15076": {
+        "party": "REP",
+        "gt-id": 412461,
+        "lastname": "Stivers",
+        "candidate_id": "H8OH15076",
+        "name": "Steve Stivers",
+        "firstname": "Steve"
+      },
+      "H0OH06189": {
+        "party": "REP",
+        "gt-id": 412460,
+        "lastname": "Johnson",
+        "candidate_id": "H0OH06189",
+        "name": "Bill Johnson",
+        "firstname": "Bill"
+      },
+      "H8OH01043": {
+        "party": "REP",
+        "gt-id": 400071,
+        "lastname": "Chabot",
+        "candidate_id": "H8OH01043",
+        "name": "Steve Chabot",
+        "firstname": "Steve"
+      },
+      "H0OH12062": {
+        "party": "REP",
+        "gt-id": 400406,
+        "lastname": "Tiberi",
+        "candidate_id": "H0OH12062",
+        "name": "Patrick Tiberi",
+        "firstname": "Patrick"
+      },
+      "H2OH09031": {
+        "party": "DEM",
+        "gt-id": 400211,
+        "lastname": "Kaptur",
+        "candidate_id": "H2OH09031",
+        "name": "Marcy Kaptur",
+        "firstname": "Marcy"
+      },
+      "H0OH16097": {
+        "party": "REP",
+        "gt-id": 412462,
+        "lastname": "Renacci",
+        "candidate_id": "H0OH16097",
+        "name": "James Renacci",
+        "firstname": "James"
+      },
+      "H2OH14064": {
+        "party": "REP",
+        "gt-id": 412566,
+        "lastname": "Joyce",
+        "candidate_id": "H2OH14064",
+        "name": "David Joyce",
+        "firstname": "David"
+      }
+    },
+    "governor": "John Kasich",
+    "elections": {
+      "H": {
+        "OH-H-02": "Ohio Congressional District 02 Election, 2016",
+        "OH-H-03": "Ohio Congressional District 03 Election, 2016",
+        "OH-H-09": "Ohio Congressional District 09 Election, 2016",
+        "OH-H-04": "Ohio Congressional District 04 Election, 2016",
+        "OH-H-11": "Ohio Congressional District 11 Election, 2016",
+        "OH-H-07": "Ohio Congressional District 07 Election, 2016",
+        "OH-H-13": "Ohio Congressional District 13 Election, 2016",
+        "OH-H-12": "Ohio Congressional District 12 Election, 2016",
+        "OH-H-05": "Ohio Congressional District 05 Election, 2016",
+        "OH-H-01": "Ohio Congressional District 01 Election, 2016",
+        "OH-H-14": "Ohio Congressional District 14 Election, 2016",
+        "OH-H-08": "Ohio Congressional District 08 Election, 2016",
+        "OH-H-10": "Ohio Congressional District 10 Election, 2016",
+        "OH-H-15": "Ohio Congressional District 15 Election, 2016",
+        "OH-H-06": "Ohio Congressional District 06 Election, 2016",
+        "OH-H-16": "Ohio Congressional District 16 Election, 2016"
+      },
+      "S": {
+        "OH-S-00": "Ohio Senate Election, 2018"
+      }
+    },
+    "capital": "Columbus",
+    "majority": "REP",
+    "name": "Ohio"
+  },
+  "NH": {
+    "population": "1,330,608",
+    "representatives": {
+      "H0NH01217": {
+        "party": "REP",
+        "gt-id": 412447,
+        "lastname": "Guinta",
+        "candidate_id": "H0NH01217",
+        "name": "Frank Guinta",
+        "firstname": "Frank"
+      },
+      "S0NH00235": {
+        "party": "REP",
+        "gt-id": 412493,
+        "lastname": "Ayotte",
+        "candidate_id": "S0NH00235",
+        "name": "Kelly Ayotte",
+        "firstname": "Kelly"
+      },
+      "H0NH02181": {
+        "party": "DEM",
+        "gt-id": 412557,
+        "lastname": "Kuster",
+        "candidate_id": "H0NH02181",
+        "name": "Ann Kuster",
+        "firstname": "Ann"
+      },
+      "S0NH00219": {
+        "party": "DEM",
+        "gt-id": 412323,
+        "lastname": "Shaheen",
+        "candidate_id": "S0NH00219",
+        "name": "Jeanne Shaheen",
+        "firstname": "Jeanne"
+      }
+    },
+    "governor": "Maggie Hassan",
+    "elections": {
+      "H": {
+        "NH-H-01": "New Hampshire Congressional District 01 Election, 2016",
+        "NH-H-02": "New Hampshire Congressional District 02 Election, 2016"
+      },
+      "S": {
+        "NH-S-00": "New Hampshire Senate Election, 2016"
+      }
+    },
+    "capital": "Concord",
+    "majority": "REP",
+    "name": "New Hampshire"
+  },
+  "MD": {
+    "population": "6,006,401",
+    "representatives": {
+      "S6MD03441": {
+        "party": "DEM",
+        "gt-id": 400415,
+        "lastname": "Van Hollen",
+        "candidate_id": "S6MD03441",
+        "name": "Chris Van Hollen",
+        "firstname": "Chris"
+      },
+      "H6MD03292": {
+        "party": "DEM",
+        "gt-id": 412212,
+        "lastname": "Sarbanes",
+        "candidate_id": "H6MD03292",
+        "name": "John Sarbanes",
+        "firstname": "John"
+      },
+      "S6MD03458": {
+        "party": "DEM",
+        "gt-id": 412263,
+        "lastname": "Edwards",
+        "candidate_id": "S6MD03458",
+        "name": "Donna Edwards",
+        "firstname": "Donna"
+      },
+      "H2MD05155": {
+        "party": "DEM",
+        "gt-id": 400189,
+        "lastname": "Hoyer",
+        "candidate_id": "H2MD05155",
+        "name": "Steny Hoyer",
+        "firstname": "Steny"
+      },
+      "S6MD03177": {
+        "party": "DEM",
+        "gt-id": 400064,
+        "lastname": "Cardin",
+        "candidate_id": "S6MD03177",
+        "name": "Benjamin Cardin",
+        "firstname": "Benjamin"
+      },
+      "H2MD06195": {
+        "party": "DEM",
+        "gt-id": 412544,
+        "lastname": "Delaney",
+        "candidate_id": "H2MD06195",
+        "name": "John Delaney",
+        "firstname": "John"
+      },
+      "S6MD00140": {
+        "party": "DEM",
+        "gt-id": 300073,
+        "lastname": "Mikulski",
+        "candidate_id": "S6MD00140",
+        "name": "Barbara Mikulski",
+        "firstname": "Barbara"
+      },
+      "H6MD07160": {
+        "party": "DEM",
+        "gt-id": 400090,
+        "lastname": "Cummings",
+        "candidate_id": "H6MD07160",
+        "name": "Elijah Cummings",
+        "firstname": "Elijah"
+      }
+    },
+    "governor": "Larry Hogan",
+    "elections": {
+      "H": {
+        "MD-H-06": "Maryland Congressional District 06 Election, 2016",
+        "MD-H-01": "Maryland Congressional District 01 Election, 2016",
+        "MD-H-07": "Maryland Congressional District 07 Election, 2016",
+        "MD-H-03": "Maryland Congressional District 03 Election, 2016",
+        "MD-H-04": "Maryland Congressional District 04 Election, 2016",
+        "MD-H-08": "Maryland Congressional District 08 Election, 2016",
+        "MD-H-02": "Maryland Congressional District 02 Election, 2016",
+        "MD-H-05": "Maryland Congressional District 05 Election, 2016"
+      },
+      "S": {
+        "MD-S-00": "Maryland Senate Election, 2018"
+      }
+    },
+    "capital": "Annapolis",
+    "majority": "DEM",
+    "name": "Maryland"
+  },
+  "WY": {
+    "population": "586,107",
+    "representatives": {
+      "S6WY00068": {
+        "party": "REP",
+        "gt-id": 412251,
+        "lastname": "Barrasso",
+        "candidate_id": "S6WY00068",
+        "name": "John Barrasso",
+        "firstname": "John"
+      },
+      "S6WY00126": {
+        "party": "REP",
+        "gt-id": 300041,
+        "lastname": "Enzi",
+        "candidate_id": "S6WY00126",
+        "name": "Michael Enzi",
+        "firstname": "Michael"
+      },
+      "H8WY00148": {
+        "party": "REP",
+        "gt-id": 412294,
+        "lastname": "Lummis",
+        "candidate_id": "H8WY00148",
+        "name": "Cynthia Lummis",
+        "firstname": "Cynthia"
+      }
+    },
+    "governor": "Matt Mead",
+    "elections": {
+      "H": {
+        "WY-H-00": "Wyoming Congressional District 00 Election, 2016"
+      },
+      "S": {
+        "WY-S-00": "Wyoming Senate Election, 2018"
+      }
+    },
+    "capital": "Cheyenne",
+    "majority": "REP",
+    "name": "Wyoming"
+  },
+  "DE": {
+    "population": "945,934",
+    "representatives": {
+      "H0DE01017": {
+        "party": "DEM",
+        "gt-id": 412407,
+        "lastname": "Carney",
+        "candidate_id": "H0DE01017",
+        "name": "John Carney",
+        "firstname": "John"
+      },
+      "S8DE00079": {
+        "party": "DEM",
+        "gt-id": 300019,
+        "lastname": "Carper",
+        "candidate_id": "S8DE00079",
+        "name": "Thomas Carper",
+        "firstname": "Thomas"
+      }
+    },
+    "governor": "Jack Markell",
+    "elections": {
+      "H": {
+        "DE-H-00": "Delaware Congressional District 00 Election, 2016"
+      },
+      "S": {
+        "DE-S-00": "Delaware Senate Election, 2018"
+      }
+    },
+    "capital": "Dover",
+    "majority": "DEM",
+    "name": "Delaware"
+  },
+  "SC": {
+    "population": "4,896,146",
+    "representatives": {
+      "P60007697": {
+        "party": "REP",
+        "gt-id": 300047,
+        "lastname": "Graham",
+        "candidate_id": "P60007697",
+        "name": "Lindsey Graham",
+        "firstname": "Lindsey"
+      },
+      "H2SC02042": {
+        "party": "DEM",
+        "gt-id": 400075,
+        "lastname": "Clyburn",
+        "candidate_id": "H2SC02042",
+        "name": "James Clyburn",
+        "firstname": "James"
+      },
+      "H2SC02059": {
+        "party": "REP",
+        "gt-id": 400433,
+        "lastname": "Wilson",
+        "candidate_id": "H2SC02059",
+        "name": "Joe Wilson",
+        "firstname": "Joe"
+      },
+      "H4SC01073": {
+        "party": "REP",
+        "gt-id": 400607,
+        "lastname": "Sanford",
+        "candidate_id": "H4SC01073",
+        "name": "Marshall Sanford",
+        "firstname": "Marshall"
+      },
+      "H0SC04257": {
+        "party": "REP",
+        "gt-id": 412473,
+        "lastname": "Gowdy",
+        "candidate_id": "H0SC04257",
+        "name": "Trey Gowdy",
+        "firstname": "Trey"
+      }
+    },
+    "governor": "Nikki Haley",
+    "elections": {
+      "H": {
+        "SC-H-06": "South Carolina Congressional District 06 Election, 2016",
+        "SC-H-07": "South Carolina Congressional District 07 Election, 2016",
+        "SC-H-05": "South Carolina Congressional District 05 Election, 2016",
+        "SC-H-01": "South Carolina Congressional District 01 Election, 2016",
+        "SC-H-03": "South Carolina Congressional District 03 Election, 2016",
+        "SC-H-02": "South Carolina Congressional District 02 Election, 2016",
+        "SC-H-04": "South Carolina Congressional District 04 Election, 2016"
+      },
+      "S": {
+        "SC-S-00": "South Carolina Senate Election, 2016"
+      }
+    },
+    "capital": "Columbia",
+    "majority": "REP",
+    "name": "South Carolina"
+  }
+}

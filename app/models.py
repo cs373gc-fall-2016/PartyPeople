@@ -1,8 +1,11 @@
 """ Models """
 # pylint: disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
+from flask_restless import APIManager
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 
-from app import database
-
+application = Flask(__name__)
+database = SQLAlchemy(application)
 
 class Candidate(database.Model):
     """ Candidate Model class """
@@ -27,8 +30,11 @@ class Candidate(database.Model):
         'Party', backref='candidate', foreign_keys=[party_id])
 
     def __repr__(self):
-        return '<Candidate %r %r %r %r %r>' %\
-               (self.name, self.dob, self.job, self.poll, self.contact)
+        return '{"Candidate" : {"name": %r, "dob": %r, "job": %r, "poll": %r, "contact": %r, "states": %r, "party": %r, "election": %r}}' %\
+               (self.name, self.dob, self.job, self.poll, self.contact, self.states, self.party, self.elections)
+
+    def get_state(self):
+        return self.states
 
 
 class Election(database.Model):
@@ -53,7 +59,7 @@ class Party(database.Model):
     leader = database.Column(database.String)
 
     def __repr__(self):
-        return '<Party %r %r %r>' % (self.name, self.description, self.leader)
+        return '<Party %r>' % (self.name)
 
 
 class State(database.Model):
@@ -70,6 +76,7 @@ class State(database.Model):
     capital = database.Column(database.String)
     population = database.Column(database.Integer)
     governor = database.Column(database.String)
+    abbrev = database.Column(database.String)
 
 
     def __repr__(self):
@@ -135,3 +142,12 @@ class ElectionsToState(database.Model):
 """
 Have more intermediate tables that will relate the main four models
 """
+
+# https://flask-restless.readthedocs.io/en/stable/customizing.html
+apimanager = APIManager(application, flask_sqlalchemy_db=database)
+apimanager.create_api(State)
+apimanager.create_api(Party)
+apimanager.create_api(Candidate)
+apimanager.create_api(Election)
+apimanager.create_api(ElectoralCollege)
+apimanager.create_api(PartiesInvolved)
