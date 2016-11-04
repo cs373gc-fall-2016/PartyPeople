@@ -1,5 +1,6 @@
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
+# from flask import Flask
+# from flask_sqlalchemy import SQLAlchemy
+
 
 application = Flask(__name__)
 # For AWS

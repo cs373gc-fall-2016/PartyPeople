@@ -16,9 +16,34 @@ var CandidatesTableComponent = (function () {
         this.title = "Candidate";
         this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
         this.data = [
-            { "STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps" },
-            { "STATE NAME": "Colorado", "CAPITAL": "Denver", "POPULATION": "987654", "GOVERNOR": "asdfeqwrasdf", "PARTY IN CONTROL": "dems" },
-            { "STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows" }
+            {
+                "contact": "candidate1@us.gov",
+                "dob": null,
+                "election_id": null,
+                "elections": null,
+                "id": 1,
+                "job": "politician",
+                "name": "Candidate_1",
+                "party": null,
+                "party_id": null,
+                "poll": 50.0,
+                "state_id": null,
+                "states": null
+            },
+            {
+                "contact": "candidate2@us.gov",
+                "dob": null,
+                "election_id": null,
+                "elections": null,
+                "id": 1,
+                "job": "politician",
+                "name": "Candidate_1",
+                "party": null,
+                "party_id": null,
+                "poll": 50.0,
+                "state_id": null,
+                "states": null
+            }
         ];
     }
     CandidatesTableComponent.prototype.ngOnInit = function () {
@@ -27,6 +52,7 @@ var CandidatesTableComponent = (function () {
     CandidatesTableComponent.prototype.getAllCandidates = function () {
         var _this = this;
         this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
+        console.log("Canidates Data: " + this.data);
     };
     CandidatesTableComponent = __decorate([
         core_1.Component({
