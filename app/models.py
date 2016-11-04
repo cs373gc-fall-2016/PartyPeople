@@ -1,8 +1,11 @@
 """ Models """
 # pylint: disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
+from flask_restless import APIManager
+from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 
-from app import database
-
+application = Flask(__name__)
+database = SQLAlchemy(application)
 
 class Candidate(database.Model):
     """ Candidate Model class """
@@ -139,3 +142,12 @@ class ElectionsToState(database.Model):
 """
 Have more intermediate tables that will relate the main four models
 """
+
+# https://flask-restless.readthedocs.io/en/stable/customizing.html
+apimanager = APIManager(application, flask_sqlalchemy_db=database)
+apimanager.create_api(State)
+apimanager.create_api(Party)
+apimanager.create_api(Candidate)
+apimanager.create_api(Election)
+apimanager.create_api(ElectoralCollege)
+apimanager.create_api(PartiesInvolved)
