@@ -1,5 +1,5 @@
 from flask import Blueprint, send_from_directory
-from StringIO import StringIO
+from io import StringIO
 import unittest
 
 # from app.api_test import APITest
