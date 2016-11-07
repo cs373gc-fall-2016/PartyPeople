@@ -1,56 +1,23 @@
 """ Launch the application and route to other pages """
-from flask import Flask, render_template, send_from_directory
-# from flask_restless import APIManager
-# from flask_sqlalchemy import SQLAlchemy
+from flask import Flask
 
-import unittest
-from StringIO import StringIO
-from app.api_test import APITest
-# from app.models import State, Party, Candidate, Election, ElectoralCollege, PartiesInvolved
+def create_app():
+    app = Flask(__name__)
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://partypeople:sweatypeople@partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
+    # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ppdb'
+    app.debug = True
 
-# EB looks for an 'application' callable by default.
-# pylint: disable=invalid-name
-application = Flask(__name__)
-# 'postgresql://partypeople:sweatypeople@' \
-                                                # 'partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
-application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ppdb'
+    from app.models import database
+    database.init_app(app)
 
-@application.route('/')
-@application.route('/<path:path>')
-def index(path = ""):
-    """ Returns the home page """
-    return send_from_directory('.', 'index.html')
+    from app.api import create_api_endpoints
+    create_api_endpoints(app)
 
+    from app.views import frontend
+    app.register_blueprint(frontend)
 
-@application.route('/node_modules/<path:path>')
-def send_nodemodules(path):
-    return send_from_directory('node_modules', path)
+    return app
 
-@application.route('/app/<path:path>')
-def send_app(path):
-    return send_from_directory('app', path)
-
-# @app.route('/favicon.ico')
-# def send_favicon():
-#     return send_from_directory('.', 'favicon.ico')
-
-@application.route('/systemjs.config.js')
-def send_systemconfig():
-    return send_from_directory('.', 'systemjs.config.js')
-
-
-# @application.route('/api/test', methods=['GET'])
-# def run_tests():
-# 	output = StringIO()
-# 	suite = unittest.TestLoader().loadTestsFromTestCase(APITest)
-# 	unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
-# 	result = output.getvalue().replace('\n', '<br />')
-# 	output.close()
-# 	return result
-
-
-# Run the application.
 if __name__ == "__main__":
-    # Setting debug to True enables debug output. This line should be
-    # removed before deploying a production app.
-    application.run(debug=False)
+    app = create_app()
+    app.run()
