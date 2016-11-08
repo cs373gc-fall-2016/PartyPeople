@@ -10,38 +10,8 @@ import { AllServicesService } from '../../services/allServices.service';
 })
 export class CandidatesTableComponent implements OnInit {
 	errorMessage: string;
-	title = "Candidate";
-	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-	data = [
-		{
- "contact": "candidate1@us.gov", 
- "dob": null, 
- "election_id": null, 
- "elections": null, 
- "id": 1, 
- "job": "politician", 
- "name": "Candidate_1", 
- "party": null, 
- "party_id": null, 
- "poll": 50.0, 
- "state_id": null, 
- "states": null
-},
-{
- "contact": "candidate2@us.gov", 
- "dob": null, 
- "election_id": null, 
- "elections": null, 
- "id": 1, 
- "job": "politician", 
- "name": "Candidate_1", 
- "party": null, 
- "party_id": null, 
- "poll": 50.0, 
- "state_id": null, 
- "states": null
-}
-	];
+	title = "Candidates";
+	data: any[];
 
 	constructor(private allServicesService: AllServicesService) {}
 
@@ -53,7 +23,7 @@ export class CandidatesTableComponent implements OnInit {
 		this.allServicesService.getAllCandidates().subscribe(
 			allCandidates => this.data = allCandidates,
 			error => this.errorMessage = <any>error);
-		console.log("Canidates Data: " + this.data);
+		console.log("Getting all candidates.");
 	}
 
 
