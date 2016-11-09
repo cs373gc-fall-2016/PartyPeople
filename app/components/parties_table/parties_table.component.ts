@@ -11,12 +11,7 @@ import { AllServicesService } from '../../services/allServices.service';
 export class PartiesTableComponent implements OnInit {
 	errorMessage: string;
 	title = "Parties";
-	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-	data = [
-		{"STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps"},
-		{"STATE NAME": "Colorado", "CAPITAL": "Denver", "POPULATION": "987654", "GOVERNOR": "asdfeqwrasdf", "PARTY IN CONTROL": "dems"},
-		{"STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows"}
-	];
+	data: any[];
 
 	constructor(private allServicesService: AllServicesService) {}
 

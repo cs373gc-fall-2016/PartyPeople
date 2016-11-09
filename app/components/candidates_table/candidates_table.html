@@ -38,11 +38,20 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeCandidate="rowData" pTemplate type="body">
-        <a routerLink="/candidates/{{fakeCandidate.party_id}}"
+        <a routerLink="/parties/{{fakeCandidate.party_id}}"
            routerLinkActive="active"
            style="color: #0052A5;">
-          {{fakeCandidate.party}}
+          {{fakeCandidate.party.name}}
         </a>
+      </template>
+    </p-column>
+
+    <p-column field="job"
+              header="Current Position"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.job}}
       </template>
     </p-column>
 
@@ -60,7 +69,11 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeCandidate="rowData" pTemplate type="body">
-          {{fakeCandidate.states}}
+        <a routerLink="/states/{{fakeCandidate.state_id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{fakeCandidate.states.name}}
+        </a>
       </template>
     </p-column>
 
