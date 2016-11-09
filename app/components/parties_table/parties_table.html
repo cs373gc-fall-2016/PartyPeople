@@ -47,11 +47,15 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
-        <a routerLink="/candidates/nothing"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{fakeParty.candidate}}
-        </a>
+        <ul>
+          <li *ngFor="let candidate of fakeParty.candidate">
+            <a routerLink="/candidates/{{candidate.id}}"
+                routerLinkActive="active"
+                style="color: #0052A5;">
+              {{candidate.name}}
+            </a>
+          </li>
+        </ul>
       </template>
     </p-column>
 
@@ -64,6 +68,7 @@
            routerLinkActive="active"
            style="color: #0052A5;">
           {{fakeParty.electoral}}
+          nothing in electoral yet
         </a>
       </template>
     </p-column>

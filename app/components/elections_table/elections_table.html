@@ -38,11 +38,15 @@
                 [sortable]="true"
                 filterMatchMode="contains">
         <template let-fakeElection="rowData" pTemplate type="body">
-          <a routerLink="/states/{{fakeElection.election_to_state.state_id}}"
-             routerLinkActive="active"
-             style="color: #0052A5;">
-            {{fakeElection.election_to_state}}
-          </a>
+          <ul>
+            <li *ngFor="let state of fakeElection.election_to_state">
+              <a routerLink="/states/{{state.id}}"
+                  routerLinkActive="active"
+                  style="color: #0052A5;">
+                {{state.id}}
+              </a>
+            </li>
+          </ul>          
         </template>
       </p-column>
 
@@ -60,11 +64,15 @@
                 [sortable]="true"
                 filterMatchMode="contains">
         <template let-fakeElection="rowData" pTemplate type="body">
-          <a routerLink="/states/{{fakeElection.election_to_state.state_id}}"
-             routerLinkActive="active"
-             style="color: #0052A5;">
-            {{fakeElection.candidate_election}}
-          </a>
+          <ul>
+            <li *ngFor="let candidate of fakeElection.candidate_election">
+              <a routerLink="/candidates/{{candidate.id}}"
+                  routerLinkActive="active"
+                  style="color: #0052A5;">
+                {{candidate.name}}
+              </a>
+            </li>
+          </ul>
         </template>
       </p-column>
 
@@ -73,11 +81,15 @@
                 [sortable]="true"
                 filterMatchMode="contains">
         <template let-fakeElection="rowData" pTemplate type="body">
-          <a routerLink="/parties/{{fakeElection.parties_id}}"
-             routerLinkActive="active"
-             style="color: #0052A5;">
-            {{fakeElection.parties_involved}}
-          </a>
+          <ul>
+            <li *ngFor="let party of fakeElection.parties_involved">
+              <a routerLink="/parties/{{party.id}}"
+                  routerLinkActive="active"
+                  style="color: #0052A5;">
+                {{party.id}}
+              </a>
+            </li>
+          </ul>
         </template>
       </p-column>
 
