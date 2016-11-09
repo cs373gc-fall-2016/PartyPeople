@@ -2,9 +2,41 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-            <h2 id="title" style="text-align: center;">{{stateName}}</h2>
+            <h2 id="title" style="text-align: center;">{{data.name}}</h2>
     </div>
     <div class="panel-body">
-        <h3 *ngFor="let column of columns">{{column}}: {{data[column]}}</h3>
+        <h3>Name: {{data.name}}</h3>
+        <h3>Date: {{data.date}}</h3>
+        <h3>Level: {{data.level}}</h3>
+        <h3>State(s):</h3>
+        	<ul>
+	            <li *ngFor="let state of data.election_to_state">
+	              <a routerLink="/states/{{state.id}}"
+	                  routerLinkActive="active"
+	                  style="color: #0052A5;">
+	                {{state.state_id}}
+	              </a>
+	            </li>
+	        </ul> 
+        <h3>Canididates:</h3>
+	        <ul>
+	            <li *ngFor="let candidate of data.candidate_election">
+	              <a routerLink="/candidates/{{candidate.id}}"
+	                  routerLinkActive="active"
+	                  style="color: #0052A5;">
+	                {{candidate.name}}
+	              </a>
+	            </li>
+	        </ul> 
+        <h3>Parties:</h3> 
+        <ul>
+	            <li *ngFor="let party of data.parties_involved">
+	              <a routerLink="/parties/{{party.party_id}}"
+	                  routerLinkActive="active"
+	                  style="color: #0052A5;">
+	                {{party.party_id}}
+	              </a>
+	            </li>
+	        </ul> 
     </div>
 </div>

@@ -74,8 +74,7 @@ var AllServicesService = (function () {
     };
     AllServicesService.prototype.extractData = function (res) {
         var body = res.json();
-        console.log("BODYYYYYYY: " + JSON.stringify(body));
-        return body.objects || {};
+        return body.objects || body || {};
     };
     AllServicesService.prototype.handleError = function (error) {
         var errMsg;
