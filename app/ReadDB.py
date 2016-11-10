@@ -1,5 +1,9 @@
 from app.models import State, Candidate, Election, Party, ElectoralCollege, ElectionsToState, PartiesInvolved
+import os
+from application import create_app
 
+create_app().app_context().push()
+os.remove('/home/ndseeg/Documents/cs373/dbout.txt')
 db_out = open('/home/ndseeg/Documents/cs373/dbout.txt', 'w')
 
 state_query = State.query.all()
