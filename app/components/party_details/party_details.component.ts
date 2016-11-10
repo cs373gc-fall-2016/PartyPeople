@@ -14,9 +14,7 @@ export class PartyDetailsComponent implements OnInit, OnDestroy {
 	id: number;
 	private sub: any;
 
-	stateName = "Party Name";
-	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-	data = {"STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps"};
+	data = {};
 
 	constructor(private route: ActivatedRoute, private allServicesService: AllServicesService) {}
 

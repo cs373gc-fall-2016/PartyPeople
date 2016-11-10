@@ -78,8 +78,7 @@ export class AllServicesService {
 
 	private extractData(res: Response) {
 		let body = res.json();
-		console.log("BODYYYYYYY: " + JSON.stringify(body));
-		return body.objects || {};
+		return body.objects || body || {};
 	}
 
 	private handleError (error: Response | any) {

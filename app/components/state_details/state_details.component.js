@@ -15,9 +15,7 @@ var StateDetailsComponent = (function () {
     function StateDetailsComponent(route, allServicesService) {
         this.route = route;
         this.allServicesService = allServicesService;
-        this.stateName = "Texas";
-        this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-        this.data = { "STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps" };
+        this.data = {};
     }
     StateDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;

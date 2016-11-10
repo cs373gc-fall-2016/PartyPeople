@@ -65,11 +65,15 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeState="rowData" pTemplate type="body">
-        <a routerLink="/candidates/nothing"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{fakeState.candidate}}
-        </a>
+          <ul>
+            <li *ngFor="let candidate of fakeState.candidate">
+              <a routerLink="/candidates/{{candidate.id}}"
+                  routerLinkActive="active"
+                  style="color: #0052A5;">
+                {{candidate.name}}
+              </a>
+            </li>
+          </ul>
       </template>
     </p-column>
 
@@ -78,11 +82,15 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeState="rowData" pTemplate type="body">
-        <a routerLink="/elections/nothing"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{fakeState.election_to_state}}
-        </a>
+        <ul>
+            <li *ngFor="let election of fakeState.election_to_state">
+              <a routerLink="/elections/{{election.id}}"
+                  routerLinkActive="active"
+                  style="color: #0052A5;">
+                {{election.id}}
+              </a>
+            </li>
+          </ul>
       </template>
     </p-column>
 
