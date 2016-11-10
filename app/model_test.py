@@ -2,12 +2,9 @@
 Module for testing models
 """
 # pylint: disable=invalid-name,line-too-long,no-member,locally-disabled
-# todo : test multi relationships [State(Many), Party(One), ElectoralCollege], [State(One), Politician(Many), Candidate]
-# todo : [Election(One), Party(Many), PartiesInvolved], [Election(One), Politician(Many), Candidate]
-# todo : [Politician(Many), Party(One), Candidate]
+
 import unittest
 from app.models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
-from datetime import datetime
 
 
 class ModelTest(unittest.TestCase):

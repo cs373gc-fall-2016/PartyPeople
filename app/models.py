@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 database = SQLAlchemy()
 
+
 class Candidate(database.Model):
     """ Candidate Model class """
     __tablename__ = "candidate"
@@ -41,9 +42,10 @@ class Election(database.Model):
     name = database.Column(database.String)
     date = database.Column(database.String)
     level = database.Column(database.String)
+    descriptive_name = database.Column(database.String)
 
     def __repr__(self):
-        return '{"Election" : {"name": %r, "date": %r, "level": %r}}' % (self.name, self.date, self.level)
+        return '{"Election" : {"name": %r, "date": %r, "level": %r, "descriptive_name": %r}}' % (self.name, self.date, self.level, self.descriptive_name)
 
 
 class Party(database.Model):
@@ -54,10 +56,11 @@ class Party(database.Model):
     description = database.Column(database.String)
     hq = database.Column(database.String)
     leader = database.Column(database.String)
+    abbrev = database.Column(database.String)
 
     def __repr__(self):
-        return '{Party : {"name": %r, "description": %r, "hq": %r, "leader": %r}}' \
-               % (self.name, self.description, self.hq, self.leader)
+        return '{Party : {"name": %r, "hq": %r, "leader": %r, "abbrev": %r}}' \
+               % (self.name, self.hq, self.leader, self.abbrev)
 
 
 class State(database.Model):
