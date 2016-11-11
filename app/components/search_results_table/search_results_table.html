@@ -1,0 +1,95 @@
+<h1 id="title" align="center">{{title}}</h1>
+<div class="container">
+  <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
+    <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
+    <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
+  </div>
+  <p-dataTable [value]="data"
+               [rows]="10"
+               [paginator]="true"
+               [pageLinks]="3"
+               [rowsPerPageOptions]="[5,10,20]"
+               [globalFilter]="gb">
+
+     <p-column field="name"
+              header="Candidate Name"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+        <a routerLink="/candidates/{{fakeCandidate.id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{fakeCandidate.name}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="dob"
+              header="Date of Birth"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.dob}}
+      </template>
+    </p-column>
+
+    <p-column field="party"
+              header="Party Affiliation"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+        <a routerLink="/parties/{{fakeCandidate.party_id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{fakeCandidate.party.name}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="job"
+              header="Current Position"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.job}}
+      </template>
+    </p-column>
+
+    <p-column field="poll"
+              header="Poll Numbers (favorabilty)"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.poll}}
+      </template>
+    </p-column>
+
+    <p-column field="states"
+              header="State Affiliation"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+        <a routerLink="/states/{{fakeCandidate.state_id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{fakeCandidate.states.name}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="contact"
+              header="Contact Info"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-fakeCandidate="rowData" pTemplate type="body">
+          {{fakeCandidate.contact}}
+      </template>
+    </p-column>
+    
+
+
+  </p-dataTable>
+</div>
+
+<a [routerLink]="['/candidates/3']">Candidate 3</a>
+

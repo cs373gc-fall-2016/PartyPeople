@@ -12,12 +12,11 @@
                     routerLinkActive="active"
                     style="color: #0052A5;">
     	            {{data.party?.name}}
-                    <!-- {{data.contact}} -->
     	        </a>
 	    </h3>
         <h3>Poll Numbers: {{data.poll}}</h3>
         <h3>State:
-	        <a routerLink="/states/{{data.states}}"
+	        <a routerLink="/states/{{data.state_id}}"
 	            routerLinkActive="active"
 	            style="color: #0052A5;">
 	            {{data.states?.name}}
