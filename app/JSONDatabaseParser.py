@@ -45,15 +45,18 @@ def party_parser(party_abbrev):
 
 def fill_state_table():
     """"""
-    rows = []
+    # rows = []
+    counter = 0
     for key in state_json.keys():
+        counter += 1
+        # print("State %i == %s" % (counter, key))
         temp_state = State(name=state_json[key]['name'], capital=state_json[key]['capital'],
-                           population=int(state_json[key][
-                                          'population'].replace(',', '')),
+                           population=int(state_json[key]['population'].replace(',', '')),
                            governor=state_json[key]['governor'], abbrev=key)
-        rows.append(temp_state)
-    for r in rows:
-        database.session.add(r)
+        database.session.add(temp_state)
+        # rows.append(temp_state)
+    # for r in rows:
+    #     database.session.add(r)
     database.session.commit()
 
 
@@ -122,21 +125,25 @@ def descriptive_name_parser(election_name):
 
 
 def fill_election_table():
-    rows = []
+    # rows = []
+    counter = 0
     for state_key in elections_json.keys():
         state_elections = elections_json[state_key][0]
         for key in state_elections.keys():
+            counter += 1
+            # print("Election %i == %s" % (counter, key))
             temp_election = Election(name=key, date=state_elections[key][
                                      'date'], level=state_elections[key]['type'],
                                      descriptive_name=descriptive_name_parser(key))
-            rows.append(temp_election)
-    for r in rows:
-        database.session.add(r)
+            database.session.add(temp_election)
+            # rows.append(temp_election)
+    # for r in rows:
+    #     database.session.add(r)
     database.session.commit()
 
 
 def fill_party_table():
-    rows = []
+    # rows = []
     party_ind = Party(name='Independent', leader='None',
                       hq='None', description='None', abbrev='IND')
     party_npa = Party(name='No Party Affiliation', leader='None',
@@ -146,9 +153,10 @@ def fill_party_table():
     for key in party_json.keys():
         temp_party = Party(name=party_json[key]['name'], leader=party_json[key]['leader'],
                            hq=party_json[key]['hq_address'], description=party_json[key]['description'], abbrev=key)
-        rows.append(temp_party)
-    for r in rows:
-        database.session.add(r)
+        database.session.add(temp_party)
+        # rows.append(temp_party)
+    # for r in rows:
+    #     database.session.add(r)
     database.session.commit()
 
 
@@ -174,15 +182,16 @@ def fill_candidate_table():
             temp_candidate.states = candidate_state_query
             temp_candidate.party = candidate_party_query
             temp_candidate.elections = candidate_election_query
-            rows.append(temp_candidate)
-    for r in rows:
-        database.session.add(r)
+            database.session.add(temp_candidate)
+            # rows.append(temp_candidate)
+    # for r in rows:
+    #     database.session.add(r)
     database.session.commit()
 
 
 def fill_electoral_college():
     """Use state json and look at the states controlled tag"""
-    rows = []
+    # rows = []
     for party in party_json.keys():
         party_controlled_states = party_json[party]['states']
         for state in party_controlled_states.keys():
@@ -191,9 +200,10 @@ def fill_electoral_college():
             party_query = Party.query.filter(Party.abbrev == party).first()
             temp_electoral.party = party_query
             temp_electoral.states = state_query
-            rows.append(temp_electoral)
-    for r in rows:
-        database.session.add(r)
+            database.session.add(temp_electoral)
+            # rows.append(temp_electoral)
+    # for r in rows:
+    #     database.session.add(r)
     database.session.commit()
 
 
@@ -203,45 +213,43 @@ def fill_parties_involved():
         Look at what the parties the candidates are from
         In the table create there will be multiple rows with the same election, but will have different parties
     """
-    rows = []
     for election in elections_json.keys():
-        temp_parties_involved = PartiesInvolved()
         states_elections = elections_json[election][0]
         for election_name in states_elections.keys():
             parties_involved = set()
+
             for reps in states_elections[election_name]['candidates']:
                 parties_involved.add(states_elections[election_name][
                                      'candidates'][reps][1])
             for party in parties_involved:
+                temp_parties_involved = PartiesInvolved()
                 party_query = Party.query.filter(Party.abbrev == party).first()
                 election_query = Election.query.filter(
                     Election.name == election_name).first()
                 temp_parties_involved.elections = election_query
                 temp_parties_involved.party = party_query
-                rows.append(temp_parties_involved)
-    for r in rows:
-        database.session.add(r)
+                database.session.add(temp_parties_involved)
     database.session.commit()
 
 
 def fill_elections_to_state():
     """This can be done purely with the elections json as the state names are in the election names
         Query Election and States tables
+        Right now the behaviour is not working correctly. It is only adding 100 rows instead of 486.
+        There are only two rows per each state. One with the election for the Senate, and one of the House
     """
-    rows = []
     for election in elections_json.keys():
-        temp_election_to_state = ElectionsToState()
+
         state_name = election[:election.index('-')]
         state_query = State.query.filter(State.abbrev == state_name).first()
         state_elections = elections_json[election][0]
         for key in state_elections.keys():
+            temp_election_to_state = ElectionsToState()
             election_query = Election.query.filter(
                 Election.name == key).first()
             temp_election_to_state.elections = election_query
             temp_election_to_state.states = state_query
-            rows.append(temp_election_to_state)
-    for r in rows:
-        database.session.add(r)
+            database.session.add(temp_election_to_state)
     database.session.commit()
 
 
