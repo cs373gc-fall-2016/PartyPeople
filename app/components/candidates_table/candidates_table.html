@@ -1,5 +1,5 @@
 <h1 id="title" align="center">{{title}}</h1>
-<div class="container">
+<div class="container" *ngIf="!loading">
   <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
     <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
     <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
@@ -91,5 +91,6 @@
   </p-dataTable>
 </div>
 
-<a [routerLink]="['/candidates/3']">Candidate 3</a>
-
+<div *ngIf="loading">
+  <h3 align="center">Please wait the data is loading...</h3>
+</div>

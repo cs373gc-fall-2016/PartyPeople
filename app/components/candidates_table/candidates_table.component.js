@@ -14,14 +14,17 @@ var CandidatesTableComponent = (function () {
     function CandidatesTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
         this.title = "Candidates";
+        this.loading = true;
     }
     CandidatesTableComponent.prototype.ngOnInit = function () {
         this.getAllCandidates();
     };
     CandidatesTableComponent.prototype.getAllCandidates = function () {
         var _this = this;
-        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
-        console.log("Getting all candidates.");
+        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) {
+            _this.data = allCandidates;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     CandidatesTableComponent = __decorate([
         core_1.Component({

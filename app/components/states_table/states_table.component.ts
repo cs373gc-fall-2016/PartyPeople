@@ -12,6 +12,7 @@ export class StatesTableComponent implements OnInit {
 	errorMessage: string;
 	title = "States";
 	data: any[];
+	loading = true;
 
 	constructor(private allServicesService: AllServicesService) {}
 
@@ -21,7 +22,10 @@ export class StatesTableComponent implements OnInit {
 
 	getAllStates() {
 		this.allServicesService.getAllStates().subscribe(
-			allStates => this.data = allStates,
+			allStates => {
+				this.data = allStates;
+				this.loading = false;
+			},
 			error => this.errorMessage = <any>error)
 	}
 

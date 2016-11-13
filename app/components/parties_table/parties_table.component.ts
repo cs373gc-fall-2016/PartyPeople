@@ -12,6 +12,7 @@ export class PartiesTableComponent implements OnInit {
 	errorMessage: string;
 	title = "Parties";
 	data: any[];
+	loading = true;
 
 	constructor(private allServicesService: AllServicesService) {}
 
@@ -21,7 +22,10 @@ export class PartiesTableComponent implements OnInit {
 
 	getAllParties() {
 		this.allServicesService.getAllParties().subscribe(
-			allParties => this.data = allParties,
+			allParties => {
+				this.data = allParties;
+				this.loading = false;
+			},
 			error => this.errorMessage = <any>error)
 	}
 
