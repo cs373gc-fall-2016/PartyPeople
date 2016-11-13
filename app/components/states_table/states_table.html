@@ -84,10 +84,10 @@
       <template let-fakeState="rowData" pTemplate type="body">
         <ul>
             <li *ngFor="let election of fakeState.election_to_state">
-              <a routerLink="/elections/{{election.id}}"
+              <a routerLink="/elections/{{election.elections_id}}"
                   routerLinkActive="active"
                   style="color: #0052A5;">
-                {{election.id}}
+                {{election.election_name}}
               </a>
             </li>
           </ul>

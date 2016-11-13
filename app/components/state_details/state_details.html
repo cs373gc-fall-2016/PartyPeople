@@ -22,10 +22,10 @@
         <h3>Elections:</h3>
 	        <ul>
 	            <li *ngFor="let election of data.election_to_state">
-	              <a routerLink="/states/{{election.id}}"
+	              <a routerLink="/states/{{election.election_id}}"
 	                  routerLinkActive="active"
 	                  style="color: #0052A5;">
-	                {{election.id}}
+	                {{election.election_name}}
 	              </a>
 	            </li>
 	        </ul>          

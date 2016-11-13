@@ -77,17 +77,6 @@
       </template>
     </p-column>
 
-    <p-column field="contact"
-              header="Contact Info"
-              [sortable]="true"
-              filterMatchMode="contains">
-      <template let-fakeCandidate="rowData" pTemplate type="body">
-          {{fakeCandidate.contact}}
-      </template>
-    </p-column>
-    
-
-
   </p-dataTable>
 </div>
 
