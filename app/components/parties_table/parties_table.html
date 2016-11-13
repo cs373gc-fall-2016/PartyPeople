@@ -1,5 +1,5 @@
 <h1 id="title" align="center">{{title}}</h1>
-<div class="container">
+<div class="container" *ngIf="!loading">
   <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
     <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
     <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
@@ -47,7 +47,7 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
-        <ul>
+        <!-- <ul>
           <li *ngFor="let candidate of fakeParty.candidate">
             <a routerLink="/candidates/{{candidate.id}}"
                 routerLinkActive="active"
@@ -55,7 +55,7 @@
               {{candidate.name}}
             </a>
           </li>
-        </ul>
+        </ul> -->
       </template>
     </p-column>
 
@@ -64,17 +64,21 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
-        <a routerLink="/states/nothing"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{fakeParty.electoral}}
-          nothing in electoral yet
-        </a>
+      <ul>
+          <li *ngFor="let state of fakeParty.electoral">
+            <a routerLink="/states/{{state.state_id}}"
+                routerLinkActive="active"
+                style="color: #0052A5;">
+              {{state.state_name}}
+            </a>
+          </li>
+        </ul>
       </template>
     </p-column>
 
   </p-dataTable>
 </div>
 
-<a [routerLink]="['/parties/3']">Party 3</a>
-
+<div *ngIf="loading">
+  <h3 align="center">Please wait the data is loading...</h3>
+</div>

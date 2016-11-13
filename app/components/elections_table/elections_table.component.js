@@ -14,13 +14,17 @@ var ElectionsTableComponent = (function () {
     function ElectionsTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
         this.title = "Elections";
+        this.loading = true;
     }
     ElectionsTableComponent.prototype.ngOnInit = function () {
         this.getAllElections();
     };
     ElectionsTableComponent.prototype.getAllElections = function () {
         var _this = this;
-        this.allServicesService.getAllElections().subscribe(function (allElections) { return _this.data = allElections; }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllElections().subscribe(function (allElections) {
+            _this.data = allElections;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     ElectionsTableComponent = __decorate([
         core_1.Component({

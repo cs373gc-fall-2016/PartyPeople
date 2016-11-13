@@ -14,13 +14,17 @@ var StatesTableComponent = (function () {
     function StatesTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
         this.title = "States";
+        this.loading = true;
     }
     StatesTableComponent.prototype.ngOnInit = function () {
         this.getAllStates();
     };
     StatesTableComponent.prototype.getAllStates = function () {
         var _this = this;
-        this.allServicesService.getAllStates().subscribe(function (allStates) { return _this.data = allStates; }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllStates().subscribe(function (allStates) {
+            _this.data = allStates;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     StatesTableComponent = __decorate([
         core_1.Component({

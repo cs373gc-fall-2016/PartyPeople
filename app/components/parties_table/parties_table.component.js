@@ -14,13 +14,17 @@ var PartiesTableComponent = (function () {
     function PartiesTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
         this.title = "Parties";
+        this.loading = true;
     }
     PartiesTableComponent.prototype.ngOnInit = function () {
         this.getAllParties();
     };
     PartiesTableComponent.prototype.getAllParties = function () {
         var _this = this;
-        this.allServicesService.getAllParties().subscribe(function (allParties) { return _this.data = allParties; }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllParties().subscribe(function (allParties) {
+            _this.data = allParties;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     PartiesTableComponent = __decorate([
         core_1.Component({

@@ -12,6 +12,7 @@ export class ElectionsTableComponent implements OnInit {
 	errorMessage: string;
 	title = "Elections";
 	data: any[];
+	loading =  true;
 
 	constructor(private allServicesService: AllServicesService) {}
 
@@ -21,7 +22,10 @@ export class ElectionsTableComponent implements OnInit {
 
 	getAllElections() {
 		this.allServicesService.getAllElections().subscribe(
-			allElections => this.data = allElections,
+			allElections => {
+				this.data = allElections;
+				this.loading = false;
+			},
 			error => this.errorMessage = <any>error)
 	}
 

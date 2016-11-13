@@ -23,5 +23,11 @@
 	        </a> 
       	</h3>
 	    <h3>Contact:</h3>
+        <ul>
+            <li *ngIf="data.contact?.contact_form">Contact Form: <a href="{{data.contact?.contact_form}}">{{data.contact?.contact_form}}</a></li>
+            <li *ngIf="data.contact?.rss_url">RSS Feed: <a href="{{data.contact?.rss_url}}">{{data.contact?.rss_url}}</a></li>
+            <li *ngIf="data.contact?.fax">Fax: {{data.contact?.fax}}</li>
+            <li *ngIf="data.contact?.address">Address: {{data.contact?.address}}</li>
+        </ul>
     </div>
 </div>

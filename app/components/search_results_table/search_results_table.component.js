@@ -36,4 +36,4 @@ var CandidatesTableComponent = (function () {
     return CandidatesTableComponent;
 }());
 exports.CandidatesTableComponent = CandidatesTableComponent;
-//# sourceMappingURL=candidates_table.component.js.map
+//# sourceMappingURL=search_results_table.component.js.map
