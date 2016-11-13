@@ -171,7 +171,7 @@ def fill_candidate_table():
         reps = state_json[state]['representatives']
         for rep in reps.keys():
             temp_candidate = Candidate(name=candidate_json[rep]['name'], dob=str(candidate_json[rep]['birthday']), job=candidate_json[
-                                       rep]['position'], contact=str(candidate_json[rep]['contact']), poll=candidate_json[rep]['favorability'])
+                                       rep]['position'], contact=candidate_json[rep]['contact'], poll=candidate_json[rep]['favorability'])
             candidate_state_query = State.query.filter(
                 State.name == state_json[state]['name']).first()
             candidate_election_query = Election.query.filter(
@@ -250,6 +250,7 @@ def fill_elections_to_state():
                 Election.name == key).first()
             temp_election_to_state.elections = election_query
             temp_election_to_state.states = state_query
+            temp_election_to_state.election_name_relationship = election_query
             database.session.add(temp_election_to_state)
     database.session.commit()
 

@@ -9,23 +9,17 @@ class Candidate(database.Model):
     """ Candidate Model class """
     __tablename__ = "candidate"
     id = database.Column(database.Integer, primary_key=True)
-    name = database.Column(database.String)
+    name = database.Column(database.String, unique=True)
     dob = database.Column(database.String)
     job = database.Column(database.String)
-    contact = database.Column(database.String)
+    contact = database.Column(database.PickleType)
     poll = database.Column(database.Float)
-    election_id = database.Column(
-        database.Integer, database.ForeignKey('election.id'))
-    elections = database.relationship(
-        'Election', backref='candidate_election', foreign_keys=[election_id])
-    state_id = database.Column(
-        database.Integer, database.ForeignKey('state.id'))
-    states = database.relationship(
-        'State', backref='candidate', foreign_keys=[state_id])
-    party_id = database.Column(
-        database.Integer, database.ForeignKey('party.id'))
-    party = database.relationship(
-        'Party', backref='candidate', foreign_keys=[party_id])
+    election_id = database.Column(database.Integer, database.ForeignKey('election.id'))
+    elections = database.relationship('Election', backref='candidate_election', foreign_keys=[election_id])
+    state_id = database.Column(database.Integer, database.ForeignKey('state.id'))
+    states = database.relationship('State', backref='candidate', foreign_keys=[state_id])
+    party_id = database.Column(database.Integer, database.ForeignKey('party.id'))
+    party = database.relationship('Party', backref='candidate', foreign_keys=[party_id])
 
     def __repr__(self):
         return '{"Candidate" : {"name": %r, "dob": %r, "job": %r, "poll": %r, "contact": %r, "states": %r, "party": %r, "election": %r}}' %\
@@ -39,10 +33,10 @@ class Election(database.Model):
     """ Election Model class """
     __tablename__ = "election"
     id = database.Column(database.Integer, primary_key=True)
-    name = database.Column(database.String)
+    name = database.Column(database.String, unique=True)
     date = database.Column(database.String)
     level = database.Column(database.String)
-    descriptive_name = database.Column(database.String)
+    descriptive_name = database.Column(database.String, unique=True)
 
     def __repr__(self):
         return '{"Election" : {"name": %r, "date": %r, "level": %r, "descriptive_name": %r}}' % (self.name, self.date, self.level, self.descriptive_name)
@@ -96,16 +90,12 @@ class ElectoralCollege(database.Model):
     """
     __tablename__ = 'electoral_college'
     id = database.Column(database.Integer, primary_key=True)
-    party_id = database.Column(
-        database.Integer, database.ForeignKey('party.id'))
-    party = database.relationship(
-        'Party', backref='electoral', foreign_keys=[party_id])
+    party_id = database.Column(database.Integer, database.ForeignKey('party.id'))
+    party = database.relationship('Party', backref='electoral', foreign_keys=[party_id])
     state_name = database.Column(database.String, database.ForeignKey('state.name'))
     state_name_relationship = database.relationship('State', foreign_keys=[state_name])
-    state_id = database.Column(
-        database.Integer, database.ForeignKey('state.id'))
-    states = database.relationship(
-        'State', backref='electoral', foreign_keys=[state_id])
+    state_id = database.Column(database.Integer, database.ForeignKey('state.id'))
+    states = database.relationship('State', backref='electoral', foreign_keys=[state_id])
 
     def __repr__(self):
         return '{ElectoralCollege : { "State": %r, "Party": %r}}' % (self.states, self.party)
@@ -121,14 +111,10 @@ class PartiesInvolved(database.Model):
     """
     __tablename__ = 'parties_involved'
     id = database.Column(database.Integer, primary_key=True)
-    party_id = database.Column(
-        database.Integer, database.ForeignKey('party.id'))
-    party = database.relationship(
-        'Party', backref='parties_involved', foreign_keys=[party_id])
-    election_id = database.Column(
-            database.Integer, database.ForeignKey('election.id'))
-    elections = database.relationship(
-       'Election', backref='parties_involved', foreign_keys=[election_id])
+    party_id = database.Column(database.Integer, database.ForeignKey('party.id'))
+    party = database.relationship('Party', backref='parties_involved', foreign_keys=[party_id])
+    election_id = database.Column(database.Integer, database.ForeignKey('election.id'))
+    elections = database.relationship('Election', backref='parties_involved', foreign_keys=[election_id])
 
     def __repr__(self):
         return '{"PartiesInvolved": {"Party": %r, "Election": %r}}' % (self.party, self.elections)
@@ -137,14 +123,12 @@ class PartiesInvolved(database.Model):
 class ElectionsToState(database.Model):
     __tablename__ = 'election_to_state'
     id = database.Column(database.Integer, primary_key=True)
-    election_id = database.Column(
-        database.Integer, database.ForeignKey('election.id'))
-    elections = database.relationship(
-        'Election', backref='election_to_state', foreign_keys=[election_id])
-    state_id = database.Column(
-        database.Integer, database.ForeignKey('state.id'))
-    states = database.relationship(
-        'State', backref='election_to_state', foreign_keys=[state_id])
+    election_id = database.Column(database.Integer, database.ForeignKey('election.id'))
+    election_name = database.Column(database.String, database.ForeignKey('election.descriptive_name'))
+    election_name_relationship = database.relationship('Election', foreign_keys=[election_name])
+    elections = database.relationship('Election', backref='election_to_state', foreign_keys=[election_id])
+    state_id = database.Column(database.Integer, database.ForeignKey('state.id'))
+    states = database.relationship('State', backref='election_to_state', foreign_keys=[state_id])
 
     def __repr__(self):
         return '{"ElectionsToStates" : {"elections": %r, "states":%r}}' % (self.elections, self.states)
