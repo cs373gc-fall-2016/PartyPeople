@@ -229,6 +229,7 @@ def fill_parties_involved():
                     Election.name == election_name).first()
                 temp_parties_involved.elections = election_query
                 temp_parties_involved.party = party_query
+                temp_parties_involved.party_name_relationship = party_query
                 database.session.add(temp_parties_involved)
     database.session.commit()
 
@@ -251,6 +252,7 @@ def fill_elections_to_state():
             temp_election_to_state.elections = election_query
             temp_election_to_state.states = state_query
             temp_election_to_state.election_name_relationship = election_query
+            temp_election_to_state.state_name_relationship = state_query
             database.session.add(temp_election_to_state)
     database.session.commit()
 

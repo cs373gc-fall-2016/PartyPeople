@@ -46,7 +46,7 @@ class Party(database.Model):
     """ Party Model class """
     __tablename__ = "party"
     id = database.Column(database.Integer, primary_key=True)
-    name = database.Column(database.String)
+    name = database.Column(database.String, unique=True)
     description = database.Column(database.String)
     hq = database.Column(database.String)
     leader = database.Column(database.String)
@@ -112,6 +112,8 @@ class PartiesInvolved(database.Model):
     __tablename__ = 'parties_involved'
     id = database.Column(database.Integer, primary_key=True)
     party_id = database.Column(database.Integer, database.ForeignKey('party.id'))
+    party_name = database.Column(database.String, database.ForeignKey('party.name'))
+    party_name_relationship = database.relationship('Party', foreign_keys=[party_name])
     party = database.relationship('Party', backref='parties_involved', foreign_keys=[party_id])
     election_id = database.Column(database.Integer, database.ForeignKey('election.id'))
     elections = database.relationship('Election', backref='parties_involved', foreign_keys=[election_id])
@@ -128,6 +130,8 @@ class ElectionsToState(database.Model):
     election_name_relationship = database.relationship('Election', foreign_keys=[election_name])
     elections = database.relationship('Election', backref='election_to_state', foreign_keys=[election_id])
     state_id = database.Column(database.Integer, database.ForeignKey('state.id'))
+    state_name = database.Column(database.String, database.ForeignKey('state.name'))
+    state_name_relationship = database.relationship('State', foreign_keys=[state_name])
     states = database.relationship('State', backref='election_to_state', foreign_keys=[state_id])
 
     def __repr__(self):
