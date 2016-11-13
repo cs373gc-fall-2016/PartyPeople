@@ -62,6 +62,10 @@ class Party(database.Model):
         return '{Party : {"name": %r, "hq": %r, "leader": %r, "abbrev": %r}}' \
                % (self.name, self.hq, self.leader, self.abbrev)
 
+    # @classmethod
+    # def query(cls):
+    #     return database.session.query(cls).join(ElectoralCollege, State)
+
 
 class State(database.Model):
     """ State Model class
@@ -73,7 +77,7 @@ class State(database.Model):
     """
     __tablename__ = "state"
     id = database.Column(database.Integer, primary_key=True)
-    name = database.Column(database.String)
+    name = database.Column(database.String, unique=True, nullable=False)
     capital = database.Column(database.String)
     population = database.Column(database.Integer)
     governor = database.Column(database.String)
@@ -96,6 +100,8 @@ class ElectoralCollege(database.Model):
         database.Integer, database.ForeignKey('party.id'))
     party = database.relationship(
         'Party', backref='electoral', foreign_keys=[party_id])
+    state_name = database.Column(database.String, database.ForeignKey('state.name'))
+    state_name_relationship = database.relationship('State', foreign_keys=[state_name])
     state_id = database.Column(
         database.Integer, database.ForeignKey('state.id'))
     states = database.relationship(
@@ -103,6 +109,10 @@ class ElectoralCollege(database.Model):
 
     def __repr__(self):
         return '{ElectoralCollege : { "State": %r, "Party": %r}}' % (self.states, self.party)
+
+    # @classmethod
+    # def query(cls):
+    #     return ElectoralCollege.query().join(State, Party).add_columns(State.name, Party.name)
 
 
 class PartiesInvolved(database.Model):

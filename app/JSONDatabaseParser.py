@@ -200,6 +200,7 @@ def fill_electoral_college():
             party_query = Party.query.filter(Party.abbrev == party).first()
             temp_electoral.party = party_query
             temp_electoral.states = state_query
+            temp_electoral.state_name_relationship = state_query
             database.session.add(temp_electoral)
             # rows.append(temp_electoral)
     # for r in rows:
