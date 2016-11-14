@@ -10,30 +10,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var allServices_service_1 = require('../../services/allServices.service');
-var CandidatesTableComponent = (function () {
-    function CandidatesTableComponent(allServicesService) {
+var SearchResultsTableComponent = (function () {
+    function SearchResultsTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
-        this.title = "Candidates";
+        this.title = "Search Results";
     }
-    CandidatesTableComponent.prototype.ngOnInit = function () {
-        this.getAllCandidates();
+    SearchResultsTableComponent.prototype.ngOnInit = function () {
+        this.getAllSearchResults();
     };
-    CandidatesTableComponent.prototype.getAllCandidates = function () {
+    SearchResultsTableComponent.prototype.getAllSearchResults = function () {
         var _this = this;
-        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
-        console.log("Getting all candidates.");
+        //get search terms from search box
+        //what about all other special characters
+        this.allServicesService.getAllSearchResults("Texas", "AND").subscribe(function (allSearchResults) { return _this.data = allSearchResults; }, function (error) { return _this.errorMessage = error; });
     };
-    CandidatesTableComponent = __decorate([
+    SearchResultsTableComponent = __decorate([
         core_1.Component({
-            selector: 'candidates-table',
-            templateUrl: 'app/components/candidates_table/candidates_table.html',
+            selector: 'search-results-table',
+            templateUrl: 'app/components/search_results_table/search_results_table.html',
             providers: [
                 allServices_service_1.AllServicesService
             ]
         }), 
         __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
-    ], CandidatesTableComponent);
-    return CandidatesTableComponent;
+    ], SearchResultsTableComponent);
+    return SearchResultsTableComponent;
 }());
-exports.CandidatesTableComponent = CandidatesTableComponent;
+exports.SearchResultsTableComponent = SearchResultsTableComponent;
 //# sourceMappingURL=search_results_table.component.js.map

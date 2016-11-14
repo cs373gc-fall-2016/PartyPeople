@@ -13,6 +13,8 @@ export class AllServicesService {
 	private electionsUrl = 'api/election';
 	private testOutputUrl = '';
 	private imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
+	private searchResultsAndURL = 'api/s_and?term=';
+	private searchResultsOrURL = 'api/s_or?term=';
 
 	constructor(private http: Http) {}
 
@@ -81,12 +83,21 @@ export class AllServicesService {
 				   .catch(this.handleError);
 	}
 
-	// Not implemented yet
-	getSearchResults(str: string): Observable<any> {
-		// Split str into multiple tokens
-		return this.http.get(this.testOutputUrl)
-				   .map(this.extractData)
-				   .catch(this.handleError);
+	getAllSearchResults(str: string, searchType : string): Observable<any> {
+		var replaced = str.replace('/ /g','%20');
+		var searchURL : string;
+		if(searchType === "AND"){
+			searchURL = this.searchResultsAndURL + replaced;
+			return this.http.get(searchURL)
+					   .map(this.extractData)
+					   .catch(this.handleError);
+		}
+		else{
+			searchURL = this.searchResultsOrURL + replaced;
+			return this.http.get(searchURL)
+						   .map(this.extractData)
+						   .catch(this.handleError);
+		}
 	}
 
 

@@ -23,6 +23,8 @@ var AllServicesService = (function () {
         this.electionsUrl = 'api/election';
         this.testOutputUrl = '';
         this.imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
+        this.searchResultsAndURL = 'api/s_and?term=';
+        this.searchResultsOrURL = 'api/s_or?term=';
     }
     AllServicesService.prototype.getAllStates = function () {
         return this.http.get(this.statesUrl)
@@ -79,12 +81,21 @@ var AllServicesService = (function () {
             .map(this.extractData)
             .catch(this.handleError);
     };
-    // Not implemented yet
-    AllServicesService.prototype.getSearchResults = function (str) {
-        // Split str into multiple tokens
-        return this.http.get(this.testOutputUrl)
-            .map(this.extractData)
-            .catch(this.handleError);
+    AllServicesService.prototype.getAllSearchResults = function (str, searchType) {
+        var replaced = str.replace('/ /g', '%20');
+        var searchURL;
+        if (searchType === "AND") {
+            searchURL = this.searchResultsAndURL + replaced;
+            return this.http.get(searchURL)
+                .map(this.extractData)
+                .catch(this.handleError);
+        }
+        else {
+            searchURL = this.searchResultsOrURL + replaced;
+            return this.http.get(searchURL)
+                .map(this.extractData)
+                .catch(this.handleError);
+        }
     };
     AllServicesService.prototype.extractData = function (res) {
         var body = res.json();

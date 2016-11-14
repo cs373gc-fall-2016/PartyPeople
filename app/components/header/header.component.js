@@ -12,6 +12,17 @@ var core_1 = require('@angular/core');
 var HeaderComponent = (function () {
     function HeaderComponent() {
     }
+    HeaderComponent.prototype.searchSubmit = function () {
+        var searchText = document.getElementById("headerSearchBox").value;
+        console.log(searchText);
+    };
+    HeaderComponent.prototype.updateSearchHref = function () {
+        var searchText = document.getElementById("headerSearchBox").value;
+        console.log("Search Text: " + searchText);
+        var button = document.getElementById("buttonHref");
+        button.href = '/search/' + searchText;
+        console.log("button.href: " + button.href);
+    };
     HeaderComponent = __decorate([
         core_1.Component({
             selector: 'pp-header',

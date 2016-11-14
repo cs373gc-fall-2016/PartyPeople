@@ -23,11 +23,14 @@
       <div>
       <form class="navbar-form navbar-right navbar-input-group" role="search">
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search" id="headerSearchBox" (keyup)="updateSearchHref()">
+          <!-- Hitting Enter doesn't do produce what I want -->
           <span class="input-group-btn">
-            <button type="submit" class="btn btn-default">
-              <span class="glyphicon glyphicon-search"></span>
-            </button>
+            <a href="" id="buttonHref">
+              <button type="button" class="btn btn-default" id="headerSearchSubmit" (click)="searchSubmit()" >
+                <span class="glyphicon glyphicon-search"></span>
+              </button>
+            </a>
           </span>
         </div>
       </form>

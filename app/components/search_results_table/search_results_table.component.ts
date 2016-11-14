@@ -2,28 +2,30 @@ import { Component, OnInit } from '@angular/core';
 import { AllServicesService } from '../../services/allServices.service';
 
 @Component({
-    selector: 'candidates-table',
-    templateUrl: 'app/components/candidates_table/candidates_table.html',
+    selector: 'search-results-table',
+    templateUrl: 'app/components/search_results_table/search_results_table.html',
     providers: [
     	AllServicesService
     ]
 })
-export class CandidatesTableComponent implements OnInit {
+
+export class SearchResultsTableComponent implements OnInit {
 	errorMessage: string;
-	title = "Candidates";
+	title = "Search Results";
 	data: any[];
 
 	constructor(private allServicesService: AllServicesService) {}
 
 	ngOnInit() {
-		this.getAllCandidates();
+		this.getAllSearchResults();
 	}
 
-	getAllCandidates() {
-		this.allServicesService.getAllCandidates().subscribe(
-			allCandidates => this.data = allCandidates,
+	getAllSearchResults() { 
+    //get search terms from search box
+    //what about all other special characters
+		this.allServicesService.getAllSearchResults("Texas","AND").subscribe(
+			allSearchResults => this.data = allSearchResults,
 			error => this.errorMessage = <any>error);
-		console.log("Getting all candidates.");
 	}
 
 
