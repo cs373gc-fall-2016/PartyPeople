@@ -1,5 +1,6 @@
 """ Launch the application and route to other pages """
-from flask import Flask
+from flask import Flask, request
+from app import searchdb
 
 def create_app():
     app = Flask(__name__)
@@ -15,6 +16,22 @@ def create_app():
 
     from app.views import frontend
     app.register_blueprint(frontend)
+
+    @app.route("/api/s_and")
+    def  s_and():
+        term = request.args.get("term")
+        if term:
+            return searchdb.search_and(term)
+        else:
+            return "No term available..."
+
+    @app.route("/api/s_or")
+    def  s_or():
+        term = request.args.get("term")
+        if term:
+            return searchdb.search_or(term)
+        else:
+            return "No term available..."
 
     return app
 
