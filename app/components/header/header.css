@@ -46,6 +46,26 @@ navbar-nav > li > a, .navbar-brand {
   font-family: Palatino;
 }
 
+.navbar-form{
+  padding-right: 25px;
+  padding-left: 0px;
+  display: inline;
+}
+
+.navbar-input-group {
+  font-size: 0px; /*removes whitespace between button and input*/
+}
+
+.navbar-input-group input {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.navbar-input-group .btn {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-left: 0px;
+}
+
 a{
 	color:white;
 	padding-top:8px;

@@ -10,33 +10,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var allServices_service_1 = require('../../services/allServices.service');
-var StatesTableComponent = (function () {
-    function StatesTableComponent(allServicesService) {
+var CandidatesTableComponent = (function () {
+    function CandidatesTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
-        this.title = "States";
-        this.loading = true;
+        this.title = "Candidates";
     }
-    StatesTableComponent.prototype.ngOnInit = function () {
-        this.getAllStates();
+    CandidatesTableComponent.prototype.ngOnInit = function () {
+        this.getAllCandidates();
     };
-    StatesTableComponent.prototype.getAllStates = function () {
+    CandidatesTableComponent.prototype.getAllCandidates = function () {
         var _this = this;
-        this.allServicesService.getAllStates().subscribe(function (allStates) {
-            _this.data = allStates;
-            _this.loading = false;
-        }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
+        console.log("Getting all candidates.");
     };
-    StatesTableComponent = __decorate([
+    CandidatesTableComponent = __decorate([
         core_1.Component({
-            selector: 'states-table',
-            templateUrl: 'app/components/states_table/states_table.html',
+            selector: 'candidates-table',
+            templateUrl: 'app/components/candidates_table/candidates_table.html',
             providers: [
                 allServices_service_1.AllServicesService
             ]
         }), 
         __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
-    ], StatesTableComponent);
-    return StatesTableComponent;
+    ], CandidatesTableComponent);
+    return CandidatesTableComponent;
 }());
-exports.StatesTableComponent = StatesTableComponent;
-//# sourceMappingURL=states_table.component.js.map
+exports.CandidatesTableComponent = CandidatesTableComponent;
+//# sourceMappingURL=search_results_table.component.js.map

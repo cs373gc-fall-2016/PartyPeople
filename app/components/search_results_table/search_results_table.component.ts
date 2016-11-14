@@ -12,7 +12,6 @@ export class CandidatesTableComponent implements OnInit {
 	errorMessage: string;
 	title = "Candidates";
 	data: any[];
-	loading = true;
 
 	constructor(private allServicesService: AllServicesService) {}
 
@@ -22,11 +21,9 @@ export class CandidatesTableComponent implements OnInit {
 
 	getAllCandidates() {
 		this.allServicesService.getAllCandidates().subscribe(
-			allCandidates => {
-				this.data = allCandidates;
-				this.loading = false;
-			},
+			allCandidates => this.data = allCandidates,
 			error => this.errorMessage = <any>error);
+		console.log("Getting all candidates.");
 	}
 
 

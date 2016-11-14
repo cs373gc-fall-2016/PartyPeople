@@ -14,19 +14,17 @@ var ElectionsTableComponent = (function () {
     function ElectionsTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
         this.title = "Elections";
-        this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-        this.data = [
-            { "STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps" },
-            { "STATE NAME": "Colorado", "CAPITAL": "Denver", "POPULATION": "987654", "GOVERNOR": "asdfeqwrasdf", "PARTY IN CONTROL": "dems" },
-            { "STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows" }
-        ];
+        this.loading = true;
     }
     ElectionsTableComponent.prototype.ngOnInit = function () {
         this.getAllElections();
     };
     ElectionsTableComponent.prototype.getAllElections = function () {
         var _this = this;
-        this.allServicesService.getAllElections().subscribe(function (allElections) { return _this.data = allElections; }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllElections().subscribe(function (allElections) {
+            _this.data = allElections;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     ElectionsTableComponent = __decorate([
         core_1.Component({

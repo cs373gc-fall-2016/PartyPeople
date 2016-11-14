@@ -34,7 +34,7 @@ deploy:
     branch: dev
 - provider: elasticbeanstalk
   app: partypeople
-  env: partypeople-dev
+  env: partypeople-prod
   bucket_name: partypeople-us-west-2-656991372336
   region: us-west-2
   access_key_id:

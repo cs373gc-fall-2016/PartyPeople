@@ -14,19 +14,17 @@ var PartiesTableComponent = (function () {
     function PartiesTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
         this.title = "Parties";
-        this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-        this.data = [
-            { "STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps" },
-            { "STATE NAME": "Colorado", "CAPITAL": "Denver", "POPULATION": "987654", "GOVERNOR": "asdfeqwrasdf", "PARTY IN CONTROL": "dems" },
-            { "STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows" }
-        ];
+        this.loading = true;
     }
     PartiesTableComponent.prototype.ngOnInit = function () {
         this.getAllParties();
     };
     PartiesTableComponent.prototype.getAllParties = function () {
         var _this = this;
-        this.allServicesService.getAllParties().subscribe(function (allParties) { return _this.data = allParties; }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllParties().subscribe(function (allParties) {
+            _this.data = allParties;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     PartiesTableComponent = __decorate([
         core_1.Component({

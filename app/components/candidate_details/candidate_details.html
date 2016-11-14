@@ -2,11 +2,32 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-            <h2 id="title" style="text-align: center;">{{stateName}}</h2>
+            <h2 id="title" style="text-align: center;">{{data.name}}</h2>
     </div>
     <div class="panel-body">
-        <div *ngFor="let column of columns">
-        	<h3>{{column}}: {{data[column]}}</h3>
-        </div>
+        <h3>Name: {{data.name}}</h3>
+        <h3>Job: {{data.job}}</h3>
+        <h3>Party: 
+                <a routerLink="/parties/{{data.party_id}}"
+                    routerLinkActive="active"
+                    style="color: #0052A5;">
+    	            {{data.party?.name}}
+    	        </a>
+	    </h3>
+        <h3>Poll Numbers: {{data.poll}}</h3>
+        <h3>State:
+	        <a routerLink="/states/{{data.state_id}}"
+	            routerLinkActive="active"
+	            style="color: #0052A5;">
+	            {{data.states?.name}}
+	        </a> 
+      	</h3>
+	    <h3>Contact:</h3>
+        <ul>
+            <li *ngIf="data.contact?.contact_form">Contact Form: <a href="{{data.contact?.contact_form}}">{{data.contact?.contact_form}}</a></li>
+            <li *ngIf="data.contact?.rss_url">RSS Feed: <a href="{{data.contact?.rss_url}}">{{data.contact?.rss_url}}</a></li>
+            <li *ngIf="data.contact?.fax">Fax: {{data.contact?.fax}}</li>
+            <li *ngIf="data.contact?.address">Address: {{data.contact?.address}}</li>
+        </ul>
     </div>
 </div>

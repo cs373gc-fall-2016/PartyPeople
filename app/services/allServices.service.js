@@ -72,9 +72,16 @@ var AllServicesService = (function () {
             .map(this.extractData)
             .catch(this.handleError);
     };
+    // Not implemented yet
+    AllServicesService.prototype.getSearchResults = function (str) {
+        // Split str into multiple tokens
+        return this.http.get(this.testOutputUrl)
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
     AllServicesService.prototype.extractData = function (res) {
         var body = res.json();
-        return body.data || {};
+        return body.objects || body || {};
     };
     AllServicesService.prototype.handleError = function (error) {
         var errMsg;

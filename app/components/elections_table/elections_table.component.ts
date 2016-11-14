@@ -11,12 +11,8 @@ import { AllServicesService } from '../../services/allServices.service';
 export class ElectionsTableComponent implements OnInit {
 	errorMessage: string;
 	title = "Elections";
-	columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-	data = [
-		{"STATE NAME": "Texas", "CAPITAL": "Austin", "POPULATION": "123123123", "GOVERNOR": "asdf", "PARTY IN CONTROL": "reps"},
-		{"STATE NAME": "Colorado", "CAPITAL": "Denver", "POPULATION": "987654", "GOVERNOR": "asdfeqwrasdf", "PARTY IN CONTROL": "dems"},
-		{"STATE NAME": "Arizona", "CAPITAL": "Phoenix", "POPULATION": "325478951", "GOVERNOR": "someone", "PARTY IN CONTROL": "who knows"}
-	];
+	data: any[];
+	loading =  true;
 
 	constructor(private allServicesService: AllServicesService) {}
 
@@ -26,7 +22,10 @@ export class ElectionsTableComponent implements OnInit {
 
 	getAllElections() {
 		this.allServicesService.getAllElections().subscribe(
-			allElections => this.data = allElections,
+			allElections => {
+				this.data = allElections;
+				this.loading = false;
+			},
 			error => this.errorMessage = <any>error)
 	}
 

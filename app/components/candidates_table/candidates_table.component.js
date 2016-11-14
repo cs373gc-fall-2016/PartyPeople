@@ -13,46 +13,18 @@ var allServices_service_1 = require('../../services/allServices.service');
 var CandidatesTableComponent = (function () {
     function CandidatesTableComponent(allServicesService) {
         this.allServicesService = allServicesService;
-        this.title = "Candidate";
-        this.columns = ["STATE NAME", "CAPITAL", "POPULATION", "GOVERNOR", "PARTY IN CONTROL"];
-        this.data = [
-            {
-                "contact": "candidate1@us.gov",
-                "dob": null,
-                "election_id": null,
-                "elections": null,
-                "id": 1,
-                "job": "politician",
-                "name": "Candidate_1",
-                "party": null,
-                "party_id": null,
-                "poll": 50.0,
-                "state_id": null,
-                "states": null
-            },
-            {
-                "contact": "candidate2@us.gov",
-                "dob": null,
-                "election_id": null,
-                "elections": null,
-                "id": 1,
-                "job": "politician",
-                "name": "Candidate_1",
-                "party": null,
-                "party_id": null,
-                "poll": 50.0,
-                "state_id": null,
-                "states": null
-            }
-        ];
+        this.title = "Candidates";
+        this.loading = true;
     }
     CandidatesTableComponent.prototype.ngOnInit = function () {
         this.getAllCandidates();
     };
     CandidatesTableComponent.prototype.getAllCandidates = function () {
         var _this = this;
-        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
-        console.log("Canidates Data: " + this.data);
+        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) {
+            _this.data = allCandidates;
+            _this.loading = false;
+        }, function (error) { return _this.errorMessage = error; });
     };
     CandidatesTableComponent = __decorate([
         core_1.Component({

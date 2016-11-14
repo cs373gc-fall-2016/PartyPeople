@@ -73,12 +73,19 @@ export class AllServicesService {
 				   .catch(this.handleError);
 	}
 
+	// Not implemented yet
+	getSearchResults(str: string): Observable<any> {
+		// Split str into multiple tokens
+		return this.http.get(this.testOutputUrl)
+				   .map(this.extractData)
+				   .catch(this.handleError);
+	}
 
 
 
 	private extractData(res: Response) {
 		let body = res.json();
-		return body.data || {};
+		return body.objects || body || {};
 	}
 
 	private handleError (error: Response | any) {
