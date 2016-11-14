@@ -16,13 +16,17 @@ var PartyDetailsComponent = (function () {
         this.route = route;
         this.allServicesService = allServicesService;
         this.data = {};
+        this.image = {};
     }
     PartyDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             _this.id = +params['id'];
-            _this.allServicesService.getPartyDetails(_this.id).subscribe(function (partyInfo) { return _this.data = partyInfo; }, function (error) { return _this.errorMessage = error; });
-        });
+            _this.allServicesService.getPartyDetails(_this.id).subscribe(function (partyInfo) {
+                _this.data = partyInfo,
+                    _this.allServicesService.getImageData(partyInfo.name).subscribe(function (imageData) { return _this.image = imageData; }, function (error) { return _this.errorMessage = error; });
+            });
+        }, function (error) { return _this.errorMessage = error; });
     };
     PartyDetailsComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

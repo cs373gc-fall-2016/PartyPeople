@@ -12,6 +12,7 @@ export class AllServicesService {
 	private candidatesUrl = 'api/candidate';
 	private electionsUrl = 'api/election';
 	private testOutputUrl = '';
+	private imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
 
 	constructor(private http: Http) {}
 
@@ -69,6 +70,13 @@ export class AllServicesService {
 
 	getTestOutput(): Observable<any> {
 		return this.http.get(this.testOutputUrl)
+				   .map(this.extractData)
+				   .catch(this.handleError);
+	}
+
+	getImageData(query: string):  Observable<any> {
+		var queryUrl = this.imageUrl + query;
+		return this.http.get(queryUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
