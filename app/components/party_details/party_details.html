@@ -17,6 +17,7 @@
 	                {{candidate.name}}
 	              </a>
 	            </li>
+                <li *ngIf="data.candidate?.length == 0">None</li>
 	        </ul> 
         <h3>Description:</h3> 
         <p>{{data.description}}</p>

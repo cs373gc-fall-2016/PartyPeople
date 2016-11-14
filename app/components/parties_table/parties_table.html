@@ -47,7 +47,7 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
-        <!-- <ul>
+        <ul>
           <li *ngFor="let candidate of fakeParty.candidate">
             <a routerLink="/candidates/{{candidate.id}}"
                 routerLinkActive="active"
@@ -55,7 +55,8 @@
               {{candidate.name}}
             </a>
           </li>
-        </ul> -->
+          <li *ngIf="fakeParty.candidate.length == 0">None</li>
+        </ul>
       </template>
     </p-column>
 
@@ -72,6 +73,7 @@
               {{state.state_name}}
             </a>
           </li>
+          <li *ngIf="fakeParty.electoral.length == 0">None</li>
         </ul>
       </template>
     </p-column>
