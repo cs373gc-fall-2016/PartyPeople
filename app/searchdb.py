@@ -31,16 +31,23 @@ def search_and_relation(r, term):
 	result = r.query.all()
 	d = dict()
 	if result:
+		
 		exists = False
 		for item in result:
+			
 			temp = dict()
 			for key, value in item.__dict__.items():
-				key = str(key).lower()
-				value = str(value).lower()
+				
+				key = str(key)
+				value = str(value)
+
+				tkey = key.lower()
+				tvalue = value.lower()
 				temp[key] = value
-				if term in key or term in value:
+				
+				if term in tkey or term in tvalue:
 					exists = True
-					print("term in " + str(key) + " = " + str(value))
+					print("term in " + str(tkey) + " = " + str(tvalue))
 			if exists:
 				d[str(item.id)] = temp
 				exists = False
@@ -51,16 +58,23 @@ def search_or_relation(r, term):
 	result = r.query.all()
 	d = dict()
 	if result:
+		
 		exists = False
 		# e_words = list()
 		for item in result:
+			
 			temp = dict()
 			for key, value in item.__dict__.items():
-				key = str(key).lower()
-				value = str(value).lower()
+				
+				key = str(key)
+				value = str(value)
+				
+				tkey = key.lower()
+				tvalue = value.lower()
 				temp[key] = value
+				
 				for word in words:
-					if word in key or word in value:
+					if word in tkey or word in tvalue:
 						exists = True
 						print("term in " + str(key) + " = " + str(value))
 			if exists:

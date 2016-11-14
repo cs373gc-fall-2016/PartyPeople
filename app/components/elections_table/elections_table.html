@@ -19,7 +19,7 @@
           <a routerLink="/elections/{{fakeElection.id}}"
              routerLinkActive="active"
              style="color: #0052A5;">
-            {{fakeElection.name}}
+            {{fakeElection.descriptive_name}}
           </a>
         </template>
       </p-column>
@@ -72,6 +72,7 @@
                 {{candidate.name}}
               </a>
             </li>
+            <li *ngIf="fakeElection.candidate_election.length == 0">None</li>
           </ul>
         </template>
       </p-column>
@@ -86,7 +87,7 @@
               <a routerLink="/parties/{{party.id}}"
                   routerLinkActive="active"
                   style="color: #0052A5;">
-                {{party.id}}
+                {{party.party_name}}
               </a>
             </li>
           </ul>
