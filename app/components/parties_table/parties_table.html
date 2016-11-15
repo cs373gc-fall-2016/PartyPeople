@@ -48,14 +48,15 @@
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
         <ul>
-          <li *ngFor="let candidate of fakeParty.candidate">
+          <li *ngFor="let candidate of fakeParty.candidate | slice:0:8; let i=index">
             <a routerLink="/candidates/{{candidate.id}}"
                 routerLinkActive="active"
                 style="color: #0052A5;">
               {{candidate.name}}
             </a>
           </li>
-          <li *ngIf="fakeParty.candidate.length == 0">None</li>
+          <div *ngIf="fakeParty.candidate.length > 8"><a style="color: #0052A5;" routerLink="/parties/{{fakeParty.id}}">...</a></div>
+          <div *ngIf="fakeParty.candidate.length == 0">None</div>
         </ul>
       </template>
     </p-column>
@@ -66,14 +67,15 @@
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
       <ul>
-          <li *ngFor="let state of fakeParty.electoral">
+          <li *ngFor="let state of fakeParty.electoral | slice:0:8; let i=index">
             <a routerLink="/states/{{state.state_id}}"
                 routerLinkActive="active"
                 style="color: #0052A5;">
               {{state.state_name}}
             </a>
           </li>
-          <li *ngIf="fakeParty.electoral.length == 0">None</li>
+          <div *ngIf="fakeParty.candidate.length > 8"><a style="color: #0052A5;" routerLink="/parties/{{fakeParty.id}}">...</a></div>
+          <div *ngIf="fakeParty.electoral.length == 0">None</div>
         </ul>
       </template>
     </p-column>
