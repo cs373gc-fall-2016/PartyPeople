@@ -20,18 +20,12 @@ def create_app():
     @app.route("/api/s_and")
     def  s_and():
         term = request.args.get("term")
-        if term:
-            return searchdb.search_and(term)
-        else:
-            return "No term available..."
+        return searchdb.search_and(term)
 
     @app.route("/api/s_or")
     def  s_or():
         term = request.args.get("term")
-        if term:
-            return searchdb.search_or(term)
-        else:
-            return "No term available..."
+        return searchdb.search_or(term)
 
     return app
 
