@@ -7,6 +7,7 @@ def search_and(term):
 	term = str(term).lower()
 	print(term)
 	r = dict()
+
 	r["candidates"] = search_and_relation(Candidate, term)
 	r["elections"] = search_and_relation(Election, term)
 	r["states"] = search_and_relation(State, term)
@@ -17,6 +18,7 @@ def search_and(term):
 def search_or(term):
 	term = str(term).lower()
 	r = dict()
+
 	r["candidates"] = search_or_relation(Candidate, term)
 	r["elections"] = search_or_relation(Election, term)
 	r["states"] = search_or_relation(State, term)
@@ -26,7 +28,7 @@ def search_or(term):
 
 def search_and_relation(r, term):
 	
-	d = dict()
+	d = list()
 	
 	if not term or term == "none":
 		return d
@@ -36,6 +38,7 @@ def search_and_relation(r, term):
 	if result:
 		
 		exists = False
+		c = 0
 		for item in result:
 			
 			temp = dict()
@@ -53,20 +56,20 @@ def search_and_relation(r, term):
 				if not "_sa_instance_state" in tkey and (term in tkey or term in tvalue):
 					exists = True
 					if term in tvalue:
-						context[i] = bold_word(value, term)
+						context[i] = key + " : " + bold_word(value, term)
 					else:
-						context[i] = bold_word(key, term)
+						context[i] = key + " : " + bold_word(key, term)
 					i = i + 1
 					# print("term in " + str(tkey) + " = " + str(tvalue))
 			if exists:
 				temp["context"] = context
-				d[str(item.id)] = temp
+				d += [temp]
 				exists = False
 	return d
 
 def search_or_relation(r, term):
 	
-	d = dict()
+	d = list()
 	
 	if not term or term == "none":
 		return d
@@ -100,7 +103,7 @@ def search_or_relation(r, term):
 						# print("term in " + str(key) + " = " + str(value))
 			if exists:
 				temp["context"] = context
-				d[str(item.id)] = temp
+				d += [temp]
 				exists = False
 	return d
 

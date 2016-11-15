@@ -159,7 +159,6 @@ def query_state():
 	ret["page"] = 1
 	ret["total_pages"] = 1
 	return json.dumps(ret)	
-	return 
 
 def query_candidate():
 	r = list()
@@ -226,7 +225,6 @@ def query_candidate():
 	ret["page"] = 1
 	ret["total_pages"] = 1
 	return json.dumps(ret)
-	return
 
 def query_party():
 	r = list()
@@ -294,4 +292,3 @@ def query_party():
 	ret["page"] = 1
 	ret["total_pages"] = 1
 	return json.dumps(ret)
-	return
