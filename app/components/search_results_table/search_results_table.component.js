@@ -9,14 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var allServices_service_1 = require('../../services/allServices.service');
 var SearchResultsTableComponent = (function () {
-    function SearchResultsTableComponent(allServicesService) {
+    function SearchResultsTableComponent(route, allServicesService, router2) {
+        this.route = route;
         this.allServicesService = allServicesService;
+        this.router2 = router2;
         this.title = "Search Results";
+        this.router = router2;
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.route.queryParams.map(function (params) { return params['term']; }).subscribe(function (value) { return _this.searchTerm = value; });
         this.getAllSearchResults();
+    };
+    SearchResultsTableComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
     };
     SearchResultsTableComponent.prototype.getAllSearchResults = function () {
         var _this = this;
@@ -32,7 +41,7 @@ var SearchResultsTableComponent = (function () {
                 allServices_service_1.AllServicesService
             ]
         }), 
-        __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, allServices_service_1.AllServicesService, router_1.Router])
     ], SearchResultsTableComponent);
     return SearchResultsTableComponent;
 }());

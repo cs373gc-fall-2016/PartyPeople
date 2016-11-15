@@ -9,19 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var HeaderComponent = (function () {
-    function HeaderComponent() {
+    function HeaderComponent(router2, route) {
+        this.router2 = router2;
+        this.route = route;
+        this.router = router2;
     }
     HeaderComponent.prototype.searchSubmit = function () {
         var searchText = document.getElementById("headerSearchBox").value;
+        var navigationExtras = {
+            queryParams: { 'term': searchText }
+        };
+        this.router.navigate(['search'], navigationExtras);
         console.log(searchText);
     };
     HeaderComponent.prototype.updateSearchHref = function () {
-        var searchText = document.getElementById("headerSearchBox").value;
-        console.log("Search Text: " + searchText);
-        var button = document.getElementById("buttonHref");
-        button.href = '/search/' + searchText;
-        console.log("button.href: " + button.href);
+        //        var searchText = (<HTMLInputElement>document.getElementById("headerSearchBox")).value;
+        //        console.log("Search Text: " + searchText);
+        //        var button = <HTMLAnchorElement>document.getElementById("buttonHref");
+        //        button.href = '/search?term=' + searchText;
+        //        console.log("button.href: " + button.href);
     };
     HeaderComponent = __decorate([
         core_1.Component({
@@ -29,7 +37,7 @@ var HeaderComponent = (function () {
             templateUrl: 'app/components/header/header.html',
             styleUrls: ['app/components/header/header.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute])
     ], HeaderComponent);
     return HeaderComponent;
 }());

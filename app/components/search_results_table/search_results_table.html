@@ -4,28 +4,29 @@
     <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
     <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
   </div>
-  {{data}}
-<!--   <p-dataTable [value]="data"
+  {{searchTerm}}
+  Data: {{data}}
+  <p-dataTable [value]="data"
                [rows]="10"
                [paginator]="true"
                [pageLinks]="3"
                [rowsPerPageOptions]="[5,10,20]"
                [globalFilter]="gb">
 
-     <p-column field="name"
-              header="Candidate Name"
+     <p-column field="parties"
+              header="Party"
               [sortable]="true"
               filterMatchMode="contains">
-      <template let-fakeCandidate="rowData" pTemplate type="body">
-        <a routerLink="/candidates/{{fakeCandidate.id}}"
+      <template let-partyData="rowData" pTemplate type="body">
+        <a routerLink=""
            routerLinkActive="active"
            style="color: #0052A5;">
-          {{fakeCandidate.name}}
+          {{partyData.parties.3.leader}}
         </a>
       </template>
     </p-column>
     
 
 
-  </p-dataTable> -->
+  </p-dataTable>
 </div>

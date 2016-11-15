@@ -103,6 +103,7 @@ var AllServicesService = (function () {
     };
     AllServicesService.prototype.extractData = function (res) {
         var body = res.json();
+        console.log("Body: " + body);
         return body.objects || body || {};
     };
     AllServicesService.prototype.handleError = function (error) {
