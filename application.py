@@ -1,6 +1,7 @@
 """ Launch the application and route to other pages """
 from flask import Flask, request
-from app import searchdb
+from app import searchdb, query
+from app.models import Candidate, Election, Party, State, ElectoralCollege, PartiesInvolved, ElectionsToState
 
 def create_app():
     app = Flask(__name__)
@@ -26,6 +27,23 @@ def create_app():
     def  s_or():
         term = request.args.get("term")
         return searchdb.search_or(term)
+
+    @app.route("/api/elections")
+    def elections():
+        return query.query_election()
+
+    @app.route("/api/candidates")
+    def candidates():
+        return query.query_candidate()
+
+    @app.route("/api/parties")
+    def parties():
+        return query.query_party()
+
+    @app.route("/api/states")
+    def states():
+        return query.query_state()
+
 
     return app
 

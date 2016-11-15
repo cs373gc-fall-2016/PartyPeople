@@ -7,10 +7,10 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class AllServicesService {
 	// All the API URLs
-	private statesUrl = 'api/state';
-	private partiesUrl = 'api/party';
-	private candidatesUrl = 'api/candidate';
-	private electionsUrl = 'api/election';
+	private statesUrl = 'api/states';
+	private partiesUrl = 'api/parties';
+	private candidatesUrl = 'api/candidates';
+	private electionsUrl = 'api/elections';
 	private testOutputUrl = '';
 	private imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
 	private searchResultsAndURL = 'api/s_and?term=';

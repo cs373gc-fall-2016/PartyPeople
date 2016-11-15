@@ -17,10 +17,10 @@ var AllServicesService = (function () {
     function AllServicesService(http) {
         this.http = http;
         // All the API URLs
-        this.statesUrl = 'api/state';
-        this.partiesUrl = 'api/party';
-        this.candidatesUrl = 'api/candidate';
-        this.electionsUrl = 'api/election';
+        this.statesUrl = 'api/states';
+        this.partiesUrl = 'api/parties';
+        this.candidatesUrl = 'api/candidates';
+        this.electionsUrl = 'api/elections';
         this.testOutputUrl = '';
         this.imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
         this.searchResultsAndURL = 'api/s_and?term=';
