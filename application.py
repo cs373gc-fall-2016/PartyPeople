@@ -4,27 +4,27 @@ from app import searchdb, query
 from app.models import Candidate, Election, Party, State, ElectoralCollege, PartiesInvolved, ElectionsToState
 
 def create_app():
-    app = Flask(__name__)
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://partypeople:sweatypeople@partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
+    application = Flask(__name__)
+    application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://partypeople:sweatypeople@partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ppdb'
-    app.debug = True
+    application.debug = True
 
     from app.models import database
-    database.init_app(app)
+    database.init_app(application)
 
     from app.api import create_api_endpoints
-    create_api_endpoints(app)
+    create_api_endpoints(application)
 
     from app.views import frontend
-    app.register_blueprint(frontend)
+    application.register_blueprint(frontend)
 
     @app.route("/api/s_and")
-    def  s_and():
+    def s_and():
         term = request.args.get("term")
         return searchdb.search_and(term)
 
     @app.route("/api/s_or")
-    def  s_or():
+    def s_or():
         term = request.args.get("term")
         return searchdb.search_or(term)
 
@@ -45,8 +45,8 @@ def create_app():
         return query.query_state()
 
 
-    return app
+    return application
 
 if __name__ == "__main__":
-    app = create_app()
-    app.run()
+    application = create_app()
+    application.run()
