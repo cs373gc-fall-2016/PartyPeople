@@ -11,6 +11,10 @@ export class AllServicesService {
 	private partiesUrl = 'api/parties';
 	private candidatesUrl = 'api/candidates';
 	private electionsUrl = 'api/elections';
+	private stateDetailsUrl = 'api/state';
+	private partyDetailsUrl = 'api/party';
+	private candidateDetailsUrl = 'api/candidate';
+	private electionDetailsUrl = 'api/election';
 	private testOutputUrl = '';
 	private imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
 	private searchResultsAndURL = 'api/s_and?term=';
@@ -43,28 +47,28 @@ export class AllServicesService {
 	}
 
 	getStateDetails(id: number): Observable<any> {
-		var singleStateUrl = this.statesUrl + "/" + id;
+		var singleStateUrl = this.stateDetailsUrl + "/" + id;
 		return this.http.get(singleStateUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
 
 	getPartyDetails(id: number): Observable<any> {
-		var singlePartyUrl = this.partiesUrl + "/" + id;
+		var singlePartyUrl = this.partyDetailsUrl + "/" + id;
 		return this.http.get(singlePartyUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
 
 	getCandidateDetails(id: number): Observable<any> {
-		var singleCandidateUrl = this.candidatesUrl + "/" + id;
+		var singleCandidateUrl = this.candidateDetailsUrl + "/" + id;
 		return this.http.get(singleCandidateUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
 
 	getElectionDetails(id: number): Observable<any> {
-		var singleElectionUrl = this.electionsUrl + "/" + id;
+		var singleElectionUrl = this.electionDetailsUrl + "/" + id;
 		return this.http.get(singleElectionUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);

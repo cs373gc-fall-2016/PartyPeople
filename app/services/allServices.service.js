@@ -21,6 +21,10 @@ var AllServicesService = (function () {
         this.partiesUrl = 'api/parties';
         this.candidatesUrl = 'api/candidates';
         this.electionsUrl = 'api/elections';
+        this.stateDetailsUrl = 'api/state';
+        this.partyDetailsUrl = 'api/party';
+        this.candidateDetailsUrl = 'api/candidate';
+        this.electionDetailsUrl = 'api/election';
         this.testOutputUrl = '';
         this.imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
         this.searchResultsAndURL = 'api/s_and?term=';
@@ -47,25 +51,25 @@ var AllServicesService = (function () {
             .catch(this.handleError);
     };
     AllServicesService.prototype.getStateDetails = function (id) {
-        var singleStateUrl = this.statesUrl + "/" + id;
+        var singleStateUrl = this.stateDetailsUrl + "/" + id;
         return this.http.get(singleStateUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getPartyDetails = function (id) {
-        var singlePartyUrl = this.partiesUrl + "/" + id;
+        var singlePartyUrl = this.partyDetailsUrl + "/" + id;
         return this.http.get(singlePartyUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getCandidateDetails = function (id) {
-        var singleCandidateUrl = this.candidatesUrl + "/" + id;
+        var singleCandidateUrl = this.candidateDetailsUrl + "/" + id;
         return this.http.get(singleCandidateUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getElectionDetails = function (id) {
-        var singleElectionUrl = this.electionsUrl + "/" + id;
+        var singleElectionUrl = this.electionDetailsUrl + "/" + id;
         return this.http.get(singleElectionUrl)
             .map(this.extractData)
             .catch(this.handleError);
