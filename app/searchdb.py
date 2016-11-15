@@ -52,7 +52,10 @@ def search_and_relation(r, term):
 				
 				if not "_sa_instance_state" in tkey and (term in tkey or term in tvalue):
 					exists = True
-					context[str(i)] = bold_words((key, value), term)
+					if term in tvalue:
+						context[i] = bold_word(value, term)
+					else:
+						context[i] = bold_word(key, term)
 					i = i + 1
 					# print("term in " + str(tkey) + " = " + str(tvalue))
 			if exists:
