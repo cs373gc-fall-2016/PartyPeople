@@ -16,7 +16,8 @@ var HeaderComponent = (function () {
         this.route = route;
         this.router = router2;
     }
-    HeaderComponent.prototype.searchSubmit = function () {
+    HeaderComponent.prototype.searchSubmit = function (event) {
+        event.preventDefault();
         var searchText = document.getElementById("headerSearchBox").value;
         var navigationExtras = {
             queryParams: { 'term': searchText }

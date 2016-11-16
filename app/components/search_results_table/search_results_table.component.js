@@ -19,7 +19,6 @@ var SearchResultsTableComponent = (function () {
         this.router = router;
         this.title = "Search Results";
         router.events.subscribe(function (val) {
-            console.log("route changed");
             _this.ngOnInit();
         });
     }
