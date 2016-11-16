@@ -24,7 +24,7 @@ export class HeaderComponent {
 
         this.router.navigate(['search'],navigationExtras);
 
-        console.log(searchText);
+        console.log("SEARCH: " + searchText);
     }
 
    updateSearchHref(){

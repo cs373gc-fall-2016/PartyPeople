@@ -13,20 +13,34 @@ var router_1 = require('@angular/router');
 var allServices_service_1 = require('../../services/allServices.service');
 var SearchResultsTableComponent = (function () {
     function SearchResultsTableComponent(route, allServicesService, router) {
+        var _this = this;
         this.route = route;
         this.allServicesService = allServicesService;
         this.router = router;
         this.title = "Search Results";
+        router.events.subscribe(function (val) {
+            console.log("route changed");
+            _this.ngOnInit();
+        });
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.queryParams.map(function (params) { return params['term']; }).subscribe(function (value) { return _this.searchTerm = value; });
-        this.getAllSearchResults();
+        this.getAllSearchResults("AND");
     };
-    SearchResultsTableComponent.prototype.getAllSearchResults = function () {
+    SearchResultsTableComponent.prototype.getAllSearchResults = function (searchType) {
         var _this = this;
-        // TODO: Add switch and toggle between AND and OR results
-        this.allServicesService.getAllSearchResults(this.searchTerm, "AND").subscribe(function (allSearchResults) { return _this.data = allSearchResults; }, function (error) { return _this.errorMessage = error; });
+        this.allServicesService.getAllSearchResults(this.searchTerm, searchType).subscribe(function (allSearchResults) { return _this.data = allSearchResults; }, function (error) { return _this.errorMessage = error; });
+    };
+    SearchResultsTableComponent.prototype.andClicked = function () {
+        document.getElementById("andButton").style.background = "#E0162B";
+        document.getElementById("orButton").style.background = "#0052A5";
+        this.getAllSearchResults("AND");
+    };
+    SearchResultsTableComponent.prototype.orClicked = function () {
+        document.getElementById("andButton").style.background = "#0052A5";
+        document.getElementById("orButton").style.background = "#E0162B";
+        this.getAllSearchResults("OR");
     };
     SearchResultsTableComponent = __decorate([
         core_1.Component({

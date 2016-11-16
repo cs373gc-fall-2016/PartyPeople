@@ -1,9 +1,11 @@
-<h1 id="title" align="center">{{title}}</h1>
-
-<label class="switch">
-  <input type="checkbox">
-  <div class="slider"></div>
-</label>
+<h1 id="title" align="center">{{title}}
+  <br>
+  <div class="btn-group" data-toggle="buttons">
+    <button type="button" class="btn btn-primary" id="andButton" (click)="andClicked()" style="background-color: #E0162B;">And</button>
+    <button type="button" class="btn btn-primary" id="orButton" (click)="orClicked()" style="background-color: #0052A5;">Or</button>
+  </div>
+  <br>
+</h1>
 
 <h3 align="center" style="color: #E0162B;">Candidate Search Results</h3>
 <div style="overflow: auto;">
