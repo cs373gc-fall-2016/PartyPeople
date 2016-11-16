@@ -108,7 +108,6 @@ export class AllServicesService {
 
 	private extractData(res: Response) {
 		let body = res.json();
-		console.log("Body: " + body);
 		return body.objects || body || {};
 	}
 
