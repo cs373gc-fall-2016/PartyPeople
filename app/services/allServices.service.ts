@@ -88,7 +88,10 @@ export class AllServicesService {
 	}
 
 	getAllSearchResults(str: string, searchType : string): Observable<any> {
-		var replaced = str.replace('/ /g','%20');
+		var replaced : string;
+		if(str != null){
+			replaced = str.replace('/ /g','%20');
+		}
 		var searchURL : string;
 		if(searchType === "AND"){
 			searchURL = this.searchResultsAndURL + replaced;

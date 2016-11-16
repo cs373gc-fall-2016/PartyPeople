@@ -22,7 +22,7 @@ var HeaderComponent = (function () {
             queryParams: { 'term': searchText }
         };
         this.router.navigate(['search'], navigationExtras);
-        console.log(searchText);
+        console.log("SEARCH: " + searchText);
     };
     HeaderComponent.prototype.updateSearchHref = function () {
         //        var searchText = (<HTMLInputElement>document.getElementById("headerSearchBox")).value;

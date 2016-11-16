@@ -86,7 +86,10 @@ var AllServicesService = (function () {
             .catch(this.handleError);
     };
     AllServicesService.prototype.getAllSearchResults = function (str, searchType) {
-        var replaced = str.replace('/ /g', '%20');
+        var replaced;
+        if (str != null) {
+            replaced = str.replace('/ /g', '%20');
+        }
         var searchURL;
         if (searchType === "AND") {
             searchURL = this.searchResultsAndURL + replaced;
