@@ -21,11 +21,7 @@ export class SearchResultsTableComponent implements OnInit {
     private searchTerm : string;
     private andSelected = true;
 
-    constructor(private route: ActivatedRoute, private allServicesService: AllServicesService, private router: Router) {
-        router.events.subscribe((val) => {
-            this.ngOnInit();
-        });
-    }
+    constructor(private route: ActivatedRoute, private allServicesService: AllServicesService, private router: Router) {}
 
     ngOnInit() {
         this.route.queryParams.map(params => params['term'] ).subscribe(value => this.searchTerm = value);

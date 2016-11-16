@@ -13,14 +13,13 @@ var router_1 = require('@angular/router');
 var allServices_service_1 = require('../../services/allServices.service');
 var SearchResultsTableComponent = (function () {
     function SearchResultsTableComponent(route, allServicesService, router) {
-        var _this = this;
         this.route = route;
         this.allServicesService = allServicesService;
         this.router = router;
         this.title = "Search Results";
         this.andSelected = true;
         router.events.subscribe(function (val) {
-            _this.ngOnInit();
+            //this.ngOnInit();
         });
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {

@@ -26,11 +26,9 @@
           <input type="text" class="form-control" placeholder="Search" id="headerSearchBox" (keydown.enter)="searchSubmit($event)">
           <!-- Hitting Enter doesn't do produce what I want -->
           <span class="input-group-btn">
-            <!-- <a href="" id="buttonHref"> -->
-              <button type="button" class="btn btn-default" id="headerSearchSubmit" (click)="searchSubmit($event)" >
-                <span class="glyphicon glyphicon-search"></span>
-              </button>
-            <!-- </a> -->
+            <button type="button" class="btn btn-default" id="headerSearchSubmit" (click)="searchSubmit($event)" >
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
           </span>
         </div>
       </form>

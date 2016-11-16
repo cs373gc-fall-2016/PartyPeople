@@ -24,13 +24,7 @@ var HeaderComponent = (function () {
         };
         this.router.navigate(['search'], navigationExtras);
         console.log("SEARCH: " + searchText);
-    };
-    HeaderComponent.prototype.updateSearchHref = function () {
-        //        var searchText = (<HTMLInputElement>document.getElementById("headerSearchBox")).value;
-        //        console.log("Search Text: " + searchText);
-        //        var button = <HTMLAnchorElement>document.getElementById("buttonHref");
-        //        button.href = '/search?term=' + searchText;
-        //        console.log("button.href: " + button.href);
+        location.reload();
     };
     HeaderComponent = __decorate([
         core_1.Component({

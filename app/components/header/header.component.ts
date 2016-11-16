@@ -26,14 +26,6 @@ export class HeaderComponent {
         this.router.navigate(['search'],navigationExtras);
 
         console.log("SEARCH: " + searchText);
+        location.reload();
     }
-
-   updateSearchHref(){
-//        var searchText = (<HTMLInputElement>document.getElementById("headerSearchBox")).value;
-//        console.log("Search Text: " + searchText);
-//        var button = <HTMLAnchorElement>document.getElementById("buttonHref");
-//        button.href = '/search?term=' + searchText;
-//        console.log("button.href: " + button.href);
-    }
-
 }
