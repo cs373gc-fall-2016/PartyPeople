@@ -25,7 +25,7 @@ var AllServicesService = (function () {
         this.partyDetailsUrl = 'api/party';
         this.candidateDetailsUrl = 'api/candidate';
         this.electionDetailsUrl = 'api/election';
-        this.testOutputUrl = '';
+        this.testOutputUrl = 'api/test';
         this.imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
         this.searchResultsAndURL = 'api/s_and?term=';
         this.searchResultsOrURL = 'api/s_or?term=';
@@ -76,7 +76,7 @@ var AllServicesService = (function () {
     };
     AllServicesService.prototype.getTestOutput = function () {
         return this.http.get(this.testOutputUrl)
-            .map(this.extractData)
+            .map(this.extractTestData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getImageData = function (query) {
@@ -107,6 +107,9 @@ var AllServicesService = (function () {
     AllServicesService.prototype.extractData = function (res) {
         var body = res.json();
         return body.objects || body || {};
+    };
+    AllServicesService.prototype.extractTestData = function (res) {
+        return res.text();
     };
     AllServicesService.prototype.handleError = function (error) {
         var errMsg;
