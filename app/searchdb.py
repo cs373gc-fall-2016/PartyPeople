@@ -98,7 +98,7 @@ def search_or_relation(r, term):
 				for word in words:
 					if not "_sa_instance_state" in tkey and (word in tkey or word in tvalue):
 						exists = True
-						context.append(bold_words((key, value), word))
+						context.append(bold_words((make_pretty(key), value), word))
 						i = i + 1
 						# print("term in " + str(key) + " = " + str(value))
 			if exists:
