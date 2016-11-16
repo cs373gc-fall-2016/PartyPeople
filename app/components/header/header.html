@@ -21,9 +21,9 @@
             <li><a href="/about">About</a></li>
       </ul>
       <div>
-      <form class="navbar-form navbar-right navbar-input-group" role="search">
+      <form class="navbar-form navbar-right navbar-input-group" role="search" >
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search" id="headerSearchBox" (keyup)="updateSearchHref()">
+          <input type="text" class="form-control" placeholder="Search" id="headerSearchBox" (keydown.enter)="searchSubmit()">
           <!-- Hitting Enter doesn't do produce what I want -->
           <span class="input-group-btn">
             <!-- <a href="" id="buttonHref"> -->

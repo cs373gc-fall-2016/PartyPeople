@@ -25,7 +25,7 @@ export class SearchResultsTableComponent implements OnInit {
     ngOnInit() {
         this.route.queryParams.map(params => params['term'] ).subscribe(value => this.searchTerm = value);
 
-        this.getAllSearchResults("AND");
+            this.getAllSearchResults("AND");
     }
 
 
