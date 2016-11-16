@@ -2,6 +2,9 @@
 from flask import Flask, request
 from app import searchdb, query
 from app.models import Candidate, Election, Party, State, ElectoralCollege, PartiesInvolved, ElectionsToState
+from app.api_test import APITest
+from io import StringIO
+import unittest
 
 def create_app():
     app = Flask(__name__)
@@ -43,6 +46,16 @@ def create_app():
     @app.route("/api/states")
     def states():
         return query.query_state()
+
+    @app.route('/api/test', methods=['GET'])
+    def run_tests():
+        output = StringIO()
+        suite = unittest.TestLoader().loadTestsFromTestCase(APITest)
+        unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
+        result = output.getvalue().replace('\n', '<br />')
+        output.close()
+        return result
+        return ""
 
 
     return app

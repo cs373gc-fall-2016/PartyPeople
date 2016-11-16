@@ -1,6 +1,4 @@
 from flask import Blueprint, send_from_directory
-from io import StringIO
-import unittest
 
 # from app.api_test import APITest
 
@@ -28,11 +26,3 @@ def send_app(path):
 def send_systemconfig():
     return send_from_directory('.', 'systemjs.config.js')
 
-# @frontend.route('/api/test', methods=['GET'])
-# def run_tests():
-# 	output = StringIO()
-# 	suite = unittest.TestLoader().loadTestsFromTestCase(APITest)
-# 	unittest.TextTestRunner(stream=output,verbosity=2).run(suite)
-# 	result = output.getvalue().replace('\n', '<br />')
-# 	output.close()
-# 	return result
