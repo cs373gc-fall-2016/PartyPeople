@@ -16,13 +16,17 @@ var StateDetailsComponent = (function () {
         this.route = route;
         this.allServicesService = allServicesService;
         this.data = {};
+        this.image = {};
     }
     StateDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             _this.id = +params['id'];
-            _this.allServicesService.getStateDetails(_this.id).subscribe(function (stateInfo) { return _this.data = stateInfo; }, function (error) { return _this.errorMessage = error; });
-        });
+            _this.allServicesService.getStateDetails(_this.id).subscribe(function (stateInfo) {
+                _this.data = stateInfo,
+                    _this.allServicesService.getImageData(stateInfo.name).subscribe(function (imageData) { return _this.image = imageData; }, function (error) { return _this.errorMessage = error; });
+            });
+        }, function (error) { return _this.errorMessage = error; });
     };
     StateDetailsComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

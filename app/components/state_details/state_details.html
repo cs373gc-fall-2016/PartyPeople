@@ -5,6 +5,7 @@
             <h2 id="title" style="text-align: center;">{{data.name}}</h2>
     </div>
     <div class="panel-body">
+    	<img src="{{image?.items ? image.items[0].link : null | json}}"/>
         <h3>State Name: {{data.name}}</h3>
         <h3>Capital: {{data.capital}}</h3>
         <h3>Governor: {{data.governor}}</h3>
@@ -22,7 +23,7 @@
         <h3>Elections:</h3>
 	        <ul>
 	            <li *ngFor="let election of data.election_to_state">
-	              <a routerLink="/states/{{election.election_id}}"
+	              <a routerLink="/elections/{{election.election_id}}"
 	                  routerLinkActive="active"
 	                  style="color: #0052A5;">
 	                {{election.election_name}}

@@ -1,5 +1,6 @@
 <h1 id="title" align="center">{{title}}</h1>
-<div class="container" *ngIf="!loading">
+<div style="overflow: auto;">
+<div style="min-width: 950px; overflow: auto;" class="container" *ngIf="!loading">
   <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
     <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
     <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
@@ -19,7 +20,7 @@
           <a routerLink="/elections/{{fakeElection.id}}"
              routerLinkActive="active"
              style="color: #0052A5;">
-            {{fakeElection.name}}
+            {{fakeElection.descriptive_name}}
           </a>
         </template>
       </p-column>
@@ -72,6 +73,7 @@
                 {{candidate.name}}
               </a>
             </li>
+            <li *ngIf="fakeElection.candidate_election.length == 0">None</li>
           </ul>
         </template>
       </p-column>
@@ -86,7 +88,7 @@
               <a routerLink="/parties/{{party.id}}"
                   routerLinkActive="active"
                   style="color: #0052A5;">
-                {{party.id}}
+                {{party.party_name}}
               </a>
             </li>
           </ul>
@@ -94,6 +96,7 @@
       </p-column>
 
   </p-dataTable>
+</div>
 </div>
 
 <div *ngIf="loading">

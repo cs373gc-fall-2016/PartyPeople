@@ -17,11 +17,18 @@ var AllServicesService = (function () {
     function AllServicesService(http) {
         this.http = http;
         // All the API URLs
-        this.statesUrl = 'api/state';
-        this.partiesUrl = 'api/party';
-        this.candidatesUrl = 'api/candidate';
-        this.electionsUrl = 'api/election';
+        this.statesUrl = 'api/states';
+        this.partiesUrl = 'api/parties';
+        this.candidatesUrl = 'api/candidates';
+        this.electionsUrl = 'api/elections';
+        this.stateDetailsUrl = 'api/state';
+        this.partyDetailsUrl = 'api/party';
+        this.candidateDetailsUrl = 'api/candidate';
+        this.electionDetailsUrl = 'api/election';
         this.testOutputUrl = '';
+        this.imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
+        this.searchResultsAndURL = 'api/s_and?term=';
+        this.searchResultsOrURL = 'api/s_or?term=';
     }
     AllServicesService.prototype.getAllStates = function () {
         return this.http.get(this.statesUrl)
@@ -44,25 +51,25 @@ var AllServicesService = (function () {
             .catch(this.handleError);
     };
     AllServicesService.prototype.getStateDetails = function (id) {
-        var singleStateUrl = this.statesUrl + "/" + id;
+        var singleStateUrl = this.stateDetailsUrl + "/" + id;
         return this.http.get(singleStateUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getPartyDetails = function (id) {
-        var singlePartyUrl = this.partiesUrl + "/" + id;
+        var singlePartyUrl = this.partyDetailsUrl + "/" + id;
         return this.http.get(singlePartyUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getCandidateDetails = function (id) {
-        var singleCandidateUrl = this.candidatesUrl + "/" + id;
+        var singleCandidateUrl = this.candidateDetailsUrl + "/" + id;
         return this.http.get(singleCandidateUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
     AllServicesService.prototype.getElectionDetails = function (id) {
-        var singleElectionUrl = this.electionsUrl + "/" + id;
+        var singleElectionUrl = this.electionDetailsUrl + "/" + id;
         return this.http.get(singleElectionUrl)
             .map(this.extractData)
             .catch(this.handleError);
@@ -72,12 +79,30 @@ var AllServicesService = (function () {
             .map(this.extractData)
             .catch(this.handleError);
     };
-    // Not implemented yet
-    AllServicesService.prototype.getSearchResults = function (str) {
-        // Split str into multiple tokens
-        return this.http.get(this.testOutputUrl)
+    AllServicesService.prototype.getImageData = function (query) {
+        var queryUrl = this.imageUrl + query;
+        return this.http.get(queryUrl)
             .map(this.extractData)
             .catch(this.handleError);
+    };
+    AllServicesService.prototype.getAllSearchResults = function (str, searchType) {
+        var replaced;
+        if (str != null) {
+            replaced = str.replace('/ /g', '%20');
+        }
+        var searchURL;
+        if (searchType === "AND") {
+            searchURL = this.searchResultsAndURL + replaced;
+            return this.http.get(searchURL)
+                .map(this.extractData)
+                .catch(this.handleError);
+        }
+        else {
+            searchURL = this.searchResultsOrURL + replaced;
+            return this.http.get(searchURL)
+                .map(this.extractData)
+                .catch(this.handleError);
+        }
     };
     AllServicesService.prototype.extractData = function (res) {
         var body = res.json();

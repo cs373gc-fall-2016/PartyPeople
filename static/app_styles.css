@@ -13,3 +13,30 @@ body {
   margin: 2em;
   padding-top: 115px;
 }
+
+input{
+	color:black !important;
+}
+
+.ui-widget-header{
+	color:white;
+	background:#0052A5;
+	background-color: #0052A5;
+}
+
+.ui-sortable-column{
+	color:white;
+	background:#0052A5 !important;
+	background-color: #0052A5 !important;
+}
+
+.ui-state-active{
+	color:white;
+	background:#E0162B !important;
+	background-color: #E0162B !important
+}
+
+strong {
+	font-size: 16px;
+	color: #E0162B;
+}

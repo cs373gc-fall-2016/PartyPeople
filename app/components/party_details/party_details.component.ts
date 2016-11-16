@@ -15,6 +15,7 @@ export class PartyDetailsComponent implements OnInit, OnDestroy {
 	private sub: any;
 
 	data = {};
+	image = {};
 
 	constructor(private route: ActivatedRoute, private allServicesService: AllServicesService) {}
 
@@ -23,9 +24,14 @@ export class PartyDetailsComponent implements OnInit, OnDestroy {
 	       this.id = +params['id'];
 
 	       this.allServicesService.getPartyDetails(this.id).subscribe(
-			partyInfo => this.data = partyInfo,
-			error => this.errorMessage = <any>error)
-	    });
+			partyInfo => {
+				this.data = partyInfo,
+				this.allServicesService.getImageData(partyInfo.name).subscribe(
+				imageData => this.image = imageData,
+				error => this.errorMessage = <any>error)
+	    	});
+	    },
+		error => this.errorMessage = <any>error)
 	  }
 
 	ngOnDestroy() {

@@ -9,16 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var HeaderComponent = (function () {
-    function HeaderComponent() {
+    function HeaderComponent(router2, route) {
+        this.router2 = router2;
+        this.route = route;
+        this.router = router2;
     }
+    HeaderComponent.prototype.searchSubmit = function (event) {
+        event.preventDefault();
+        var searchText = document.getElementById("headerSearchBox").value;
+        var navigationExtras = {
+            queryParams: { 'term': searchText }
+        };
+        this.router.navigate(['search'], navigationExtras);
+        console.log("SEARCH: " + searchText);
+        location.reload();
+    };
     HeaderComponent = __decorate([
         core_1.Component({
             selector: 'pp-header',
             templateUrl: 'app/components/header/header.html',
             styleUrls: ['app/components/header/header.css']
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.Router, router_1.ActivatedRoute])
     ], HeaderComponent);
     return HeaderComponent;
 }());

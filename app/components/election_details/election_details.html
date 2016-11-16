@@ -2,10 +2,11 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-            <h2 id="title" style="text-align: center;">{{data.name}}</h2>
+            <h2 id="title" style="text-align: center;">{{data.descriptive_name}}</h2>
     </div>
     <div class="panel-body">
-        <h3>Name: {{data.name}}</h3>
+    	<img src="http://www.traditionadvisers.com/sites/default/files/imagecache/featured_image_facebook/users/bch/0315_electionguide_fullsize.jpg"/>
+        <h3>Name: {{data.descriptive_name}}</h3>
         <h3>Date: {{data.date}}</h3>
         <h3>Level: {{data.level}}</h3>
         <h3>State(s):</h3>
@@ -14,7 +15,7 @@
 	              <a routerLink="/states/{{state.id}}"
 	                  routerLinkActive="active"
 	                  style="color: #0052A5;">
-	                {{state.state_id}}
+	                {{state.state_name}}
 	              </a>
 	            </li>
 	        </ul> 
@@ -27,6 +28,7 @@
 	                {{candidate.name}}
 	              </a>
 	            </li>
+                <li *ngIf="data.candidate_election?.length == 0">None</li>
 	        </ul> 
         <h3>Parties:</h3> 
         <ul>
@@ -34,7 +36,7 @@
 	              <a routerLink="/parties/{{party.party_id}}"
 	                  routerLinkActive="active"
 	                  style="color: #0052A5;">
-	                {{party.party_id}}
+	                {{party.party_name}}
 	              </a>
 	            </li>
 	        </ul> 

@@ -7,11 +7,18 @@ import 'rxjs/add/operator/catch';
 @Injectable()
 export class AllServicesService {
 	// All the API URLs
-	private statesUrl = 'api/state';
-	private partiesUrl = 'api/party';
-	private candidatesUrl = 'api/candidate';
-	private electionsUrl = 'api/election';
+	private statesUrl = 'api/states';
+	private partiesUrl = 'api/parties';
+	private candidatesUrl = 'api/candidates';
+	private electionsUrl = 'api/elections';
+	private stateDetailsUrl = 'api/state';
+	private partyDetailsUrl = 'api/party';
+	private candidateDetailsUrl = 'api/candidate';
+	private electionDetailsUrl = 'api/election';
 	private testOutputUrl = '';
+	private imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
+	private searchResultsAndURL = 'api/s_and?term=';
+	private searchResultsOrURL = 'api/s_or?term=';
 
 	constructor(private http: Http) {}
 
@@ -40,28 +47,28 @@ export class AllServicesService {
 	}
 
 	getStateDetails(id: number): Observable<any> {
-		var singleStateUrl = this.statesUrl + "/" + id;
+		var singleStateUrl = this.stateDetailsUrl + "/" + id;
 		return this.http.get(singleStateUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
 
 	getPartyDetails(id: number): Observable<any> {
-		var singlePartyUrl = this.partiesUrl + "/" + id;
+		var singlePartyUrl = this.partyDetailsUrl + "/" + id;
 		return this.http.get(singlePartyUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
 
 	getCandidateDetails(id: number): Observable<any> {
-		var singleCandidateUrl = this.candidatesUrl + "/" + id;
+		var singleCandidateUrl = this.candidateDetailsUrl + "/" + id;
 		return this.http.get(singleCandidateUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
 	}
 
 	getElectionDetails(id: number): Observable<any> {
-		var singleElectionUrl = this.electionsUrl + "/" + id;
+		var singleElectionUrl = this.electionDetailsUrl + "/" + id;
 		return this.http.get(singleElectionUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
@@ -73,12 +80,31 @@ export class AllServicesService {
 				   .catch(this.handleError);
 	}
 
-	// Not implemented yet
-	getSearchResults(str: string): Observable<any> {
-		// Split str into multiple tokens
-		return this.http.get(this.testOutputUrl)
+	getImageData(query: string):  Observable<any> {
+		var queryUrl = this.imageUrl + query;
+		return this.http.get(queryUrl)
 				   .map(this.extractData)
 				   .catch(this.handleError);
+	}
+
+	getAllSearchResults(str: string, searchType : string): Observable<any> {
+		var replaced : string;
+		if(str != null){
+			replaced = str.replace('/ /g','%20');
+		}
+		var searchURL : string;
+		if(searchType === "AND"){
+			searchURL = this.searchResultsAndURL + replaced;
+			return this.http.get(searchURL)
+					   .map(this.extractData)
+					   .catch(this.handleError);
+		}
+		else{
+			searchURL = this.searchResultsOrURL + replaced;
+			return this.http.get(searchURL)
+						   .map(this.extractData)
+						   .catch(this.handleError);
+		}
 	}
 
 

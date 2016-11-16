@@ -15,6 +15,7 @@ export class StateDetailsComponent implements OnInit, OnDestroy {
 	private sub: any;
 
 	data = {};
+	image = {};
 
 	constructor(private route: ActivatedRoute, private allServicesService: AllServicesService) {}
 
@@ -23,9 +24,14 @@ export class StateDetailsComponent implements OnInit, OnDestroy {
 	       this.id = +params['id'];
 
 	       this.allServicesService.getStateDetails(this.id).subscribe(
-			stateInfo => this.data = stateInfo,
-			error => this.errorMessage = <any>error)
-	    });
+			stateInfo => {
+				this.data = stateInfo,
+				this.allServicesService.getImageData(stateInfo.name).subscribe(
+				imageData => this.image = imageData,
+				error => this.errorMessage = <any>error)
+	    	});
+	    },
+		error => this.errorMessage = <any>error)
 	  }
 
 	ngOnDestroy() {
