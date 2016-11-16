@@ -16,7 +16,8 @@ export class HeaderComponent {
         this.router = router2;
     }
 
-    searchSubmit(){
+    searchSubmit(event: Event){
+        event.preventDefault();
         var searchText = (<HTMLInputElement>document.getElementById("headerSearchBox")).value;
         let navigationExtras={
             queryParams: {'term': searchText}
