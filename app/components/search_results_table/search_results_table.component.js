@@ -34,6 +34,9 @@ var SearchResultsTableComponent = (function () {
             templateUrl: 'app/components/search_results_table/search_results_table.html',
             providers: [
                 allServices_service_1.AllServicesService
+            ],
+            styles: [
+                'app/components/search_results_table/search_results_table.css'
             ]
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, allServices_service_1.AllServicesService, router_1.Router])

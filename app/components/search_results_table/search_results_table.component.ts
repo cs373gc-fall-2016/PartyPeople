@@ -8,6 +8,9 @@ import { Observable } from 'rxjs/Observable';
     templateUrl: 'app/components/search_results_table/search_results_table.html',
     providers: [
     	AllServicesService
+    ],
+    styles: [
+        'app/components/search_results_table/search_results_table.css'
     ]
 })
 
