@@ -1,5 +1,78 @@
 <h1 id="title" align="center">{{title}}</h1>
 
+<label class="switch">
+  <input type="checkbox">
+  <div class="slider"></div>
+</label>
+
+<h3 align="center" style="color: #E0162B;">Candidate Search Results</h3>
+<div class="container" style="padding-bottom: 36px;">
+  <p-dataTable [value]="data?.candidates"
+               [rows]="10"
+               [paginator]="true"
+               [pageLinks]="3"
+               [rowsPerPageOptions]="[5,10,20]"
+               [globalFilter]="gb">
+
+     <p-column field="name"
+              header="Candidate Name"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-candidateData="rowData" pTemplate type="body">
+        <a routerLink="/candidates/{{candidateData?.id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{candidateData?.name}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="context"
+              header="Context"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-candidateData="rowData" pTemplate type="body">
+         <div [innerHTML]=(candidateData?.context)></div>
+      </template>
+    </p-column>
+    
+  </p-dataTable>
+</div>
+
+<h3 align="center" style="color: #E0162B;">State Search Results</h3>
+<div class="container" style="padding-bottom: 36px;">
+  <p-dataTable [value]="data?.states"
+               [rows]="10"
+               [paginator]="true"
+               [pageLinks]="3"
+               [rowsPerPageOptions]="[5,10,20]"
+               [globalFilter]="gb">
+
+     <p-column field="name"
+              header="State Name"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-stateData="rowData" pTemplate type="body">
+        <a routerLink="/states/{{stateData?.id}}"
+           routerLinkActive="active"
+           style="color: #0052A5;">
+          {{stateData?.name}}
+        </a>
+      </template>
+    </p-column>
+
+    <p-column field="context"
+              header="Context"
+              [sortable]="true"
+              filterMatchMode="contains">
+      <template let-stateData="rowData" pTemplate type="body">
+         <div [innerHTML]=(stateData?.context)></div>
+      </template>
+    </p-column>
+    
+  </p-dataTable>
+</div>
+
 <h3 align="center" style="color: #E0162B;">Election Search Results</h3>
 <div class="container" style="padding-bottom: 36px;">
   <p-dataTable [value]="data?.elections"
@@ -62,74 +135,6 @@
               filterMatchMode="contains">
       <template let-partyData="rowData" pTemplate type="body">
          <div [innerHTML]=(partyData?.context)></div>
-      </template>
-    </p-column>
-    
-  </p-dataTable>
-</div>
-
-<h3 align="center" style="color: #E0162B;">State Search Results</h3>
-<div class="container" style="padding-bottom: 36px;">
-  <p-dataTable [value]="data?.states"
-               [rows]="10"
-               [paginator]="true"
-               [pageLinks]="3"
-               [rowsPerPageOptions]="[5,10,20]"
-               [globalFilter]="gb">
-
-     <p-column field="name"
-              header="State Name"
-              [sortable]="true"
-              filterMatchMode="contains">
-      <template let-stateData="rowData" pTemplate type="body">
-        <a routerLink="/states/{{stateData?.id}}"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{stateData?.name}}
-        </a>
-      </template>
-    </p-column>
-
-    <p-column field="context"
-              header="Context"
-              [sortable]="true"
-              filterMatchMode="contains">
-      <template let-stateData="rowData" pTemplate type="body">
-         <div [innerHTML]=(stateData?.context)></div>
-      </template>
-    </p-column>
-    
-  </p-dataTable>
-</div>
-
-<h3 align="center" style="color: #E0162B;">Candidate Search Results</h3>
-<div class="container" style="padding-bottom: 36px;">
-  <p-dataTable [value]="data?.candidates"
-               [rows]="10"
-               [paginator]="true"
-               [pageLinks]="3"
-               [rowsPerPageOptions]="[5,10,20]"
-               [globalFilter]="gb">
-
-     <p-column field="name"
-              header="Candidate Name"
-              [sortable]="true"
-              filterMatchMode="contains">
-      <template let-candidateData="rowData" pTemplate type="body">
-        <a routerLink="/candidates/{{candidateData?.id}}"
-           routerLinkActive="active"
-           style="color: #0052A5;">
-          {{candidateData?.name}}
-        </a>
-      </template>
-    </p-column>
-
-    <p-column field="context"
-              header="Context"
-              [sortable]="true"
-              filterMatchMode="contains">
-      <template let-candidateData="rowData" pTemplate type="body">
-         <div [innerHTML]=(candidateData?.context)></div>
       </template>
     </p-column>
     
