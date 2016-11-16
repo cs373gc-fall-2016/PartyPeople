@@ -16,13 +16,17 @@ var CandidateDetailsComponent = (function () {
         this.route = route;
         this.allServicesService = allServicesService;
         this.data = {};
+        this.image = {};
     }
     CandidateDetailsComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.sub = this.route.params.subscribe(function (params) {
             _this.id = +params['id'];
-            _this.allServicesService.getCandidateDetails(_this.id).subscribe(function (candidateInfo) { return _this.data = candidateInfo; }, function (error) { return _this.errorMessage = error; });
-        });
+            _this.allServicesService.getCandidateDetails(_this.id).subscribe(function (candidateInfo) {
+                _this.data = candidateInfo;
+                _this.allServicesService.getImageData(candidateInfo.name).subscribe(function (imageData) { return _this.image = imageData; }, function (error) { return _this.errorMessage = error; });
+            });
+        }, function (error) { return _this.errorMessage = error; });
     };
     CandidateDetailsComponent.prototype.ngOnDestroy = function () {
         this.sub.unsubscribe();

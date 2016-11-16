@@ -1,5 +1,6 @@
 <h1 id="title" align="center">{{title}}</h1>
-<div class="container" *ngIf="!loading">
+<div style="overflow: auto;">
+<div style="min-width: 950px;" class="container" *ngIf="!loading">
   <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
     <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
     <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
@@ -47,15 +48,17 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
-        <!-- <ul>
-          <li *ngFor="let candidate of fakeParty.candidate">
+        <ul>
+          <li *ngFor="let candidate of fakeParty.candidate | slice:0:8; let i=index">
             <a routerLink="/candidates/{{candidate.id}}"
                 routerLinkActive="active"
                 style="color: #0052A5;">
               {{candidate.name}}
             </a>
           </li>
-        </ul> -->
+          <div *ngIf="fakeParty.candidate.length > 8"><a style="color: #0052A5;" routerLink="/parties/{{fakeParty.id}}">...</a></div>
+          <div *ngIf="fakeParty.candidate.length == 0">None</div>
+        </ul>
       </template>
     </p-column>
 
@@ -65,18 +68,21 @@
               filterMatchMode="contains">
       <template let-fakeParty="rowData" pTemplate type="body">
       <ul>
-          <li *ngFor="let state of fakeParty.electoral">
+          <li *ngFor="let state of fakeParty.electoral | slice:0:8; let i=index">
             <a routerLink="/states/{{state.state_id}}"
                 routerLinkActive="active"
                 style="color: #0052A5;">
               {{state.state_name}}
             </a>
           </li>
+          <div *ngIf="fakeParty.candidate.length > 8"><a style="color: #0052A5;" routerLink="/parties/{{fakeParty.id}}">...</a></div>
+          <div *ngIf="fakeParty.electoral.length == 0">None</div>
         </ul>
       </template>
     </p-column>
 
   </p-dataTable>
+</div>
 </div>
 
 <div *ngIf="loading">

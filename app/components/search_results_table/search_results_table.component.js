@@ -9,31 +9,55 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
 var allServices_service_1 = require('../../services/allServices.service');
-var CandidatesTableComponent = (function () {
-    function CandidatesTableComponent(allServicesService) {
+var SearchResultsTableComponent = (function () {
+    function SearchResultsTableComponent(route, allServicesService, router) {
+        this.route = route;
         this.allServicesService = allServicesService;
-        this.title = "Candidates";
+        this.router = router;
+        this.title = "Search Results";
+        this.andSelected = true;
+        router.events.subscribe(function (val) {
+            //this.ngOnInit();
+        });
     }
-    CandidatesTableComponent.prototype.ngOnInit = function () {
-        this.getAllCandidates();
-    };
-    CandidatesTableComponent.prototype.getAllCandidates = function () {
+    SearchResultsTableComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.allServicesService.getAllCandidates().subscribe(function (allCandidates) { return _this.data = allCandidates; }, function (error) { return _this.errorMessage = error; });
-        console.log("Getting all candidates.");
+        this.route.queryParams.map(function (params) { return params['term']; }).subscribe(function (value) { return _this.searchTerm = value; });
+        (this.andSelected) ? this.andClicked() : this.orClicked();
     };
-    CandidatesTableComponent = __decorate([
+    SearchResultsTableComponent.prototype.getAllSearchResults = function (searchType) {
+        var _this = this;
+        this.data = [];
+        this.allServicesService.getAllSearchResults(this.searchTerm, searchType).subscribe(function (allSearchResults) { return _this.data = allSearchResults; }, function (error) { return _this.errorMessage = error; });
+    };
+    SearchResultsTableComponent.prototype.andClicked = function () {
+        this.andSelected = true;
+        document.getElementById("andButton").style.background = "#E0162B";
+        document.getElementById("orButton").style.background = "#0052A5";
+        this.getAllSearchResults("AND");
+    };
+    SearchResultsTableComponent.prototype.orClicked = function () {
+        this.andSelected = false;
+        document.getElementById("andButton").style.background = "#0052A5";
+        document.getElementById("orButton").style.background = "#E0162B";
+        this.getAllSearchResults("OR");
+    };
+    SearchResultsTableComponent = __decorate([
         core_1.Component({
-            selector: 'candidates-table',
-            templateUrl: 'app/components/candidates_table/candidates_table.html',
+            selector: 'search-results-table',
+            templateUrl: 'app/components/search_results_table/search_results_table.html',
             providers: [
                 allServices_service_1.AllServicesService
+            ],
+            styles: [
+                'app/components/search_results_table/search_results_table.css'
             ]
         }), 
-        __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
-    ], CandidatesTableComponent);
-    return CandidatesTableComponent;
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, allServices_service_1.AllServicesService, router_1.Router])
+    ], SearchResultsTableComponent);
+    return SearchResultsTableComponent;
 }());
-exports.CandidatesTableComponent = CandidatesTableComponent;
+exports.SearchResultsTableComponent = SearchResultsTableComponent;
 //# sourceMappingURL=search_results_table.component.js.map

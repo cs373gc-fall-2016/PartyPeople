@@ -15,6 +15,7 @@ export class CandidateDetailsComponent implements OnInit, OnDestroy {
 	private sub: any;
 
 	data = {};
+	image = {};
 
 	constructor(private route: ActivatedRoute, private allServicesService: AllServicesService) {}
 
@@ -23,9 +24,14 @@ export class CandidateDetailsComponent implements OnInit, OnDestroy {
 	       this.id = +params['id'];
 
 	       this.allServicesService.getCandidateDetails(this.id).subscribe(
-			candidateInfo => this.data = candidateInfo,
-			error => this.errorMessage = <any>error)
-	    });
+			candidateInfo => {
+				this.data = candidateInfo;
+				this.allServicesService.getImageData(candidateInfo.name).subscribe(
+				imageData => this.image = imageData,
+				error => this.errorMessage = <any>error)
+	    	});
+	    },
+		error => this.errorMessage = <any>error)
 	  }
 
 	ngOnDestroy() {

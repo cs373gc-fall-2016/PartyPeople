@@ -22,6 +22,7 @@ import { ElectionDetailsComponent } from './components/election_details/election
 import { PartiesTableComponent } from './components/parties_table/parties_table.component';
 import { PartyDetailsComponent } from './components/party_details/party_details.component';
 
+import { SearchResultsTableComponent } from './components/search_results_table/search_results_table.component';
 
 @NgModule({
   imports: [
@@ -65,6 +66,10 @@ import { PartyDetailsComponent } from './components/party_details/party_details.
         path: 'parties',
         component: PartiesTableComponent
       },
+      {
+        path: 'search',
+        component: SearchResultsTableComponent
+      },
   		{
         path: '',
         component: HomeComponent
@@ -90,7 +95,8 @@ import { PartyDetailsComponent } from './components/party_details/party_details.
     ElectionDetailsComponent,
     PartyDetailsComponent,
     StateDetailsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    SearchResultsTableComponent
   ],
   bootstrap: [ AppComponent ]
 })
