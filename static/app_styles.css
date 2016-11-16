@@ -35,3 +35,8 @@ input{
 	background:#E0162B !important;
 	background-color: #E0162B !important
 }
+
+strong {
+	font-size: 16px;
+	color: #E0162B;
+}

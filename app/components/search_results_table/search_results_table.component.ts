@@ -19,6 +19,7 @@ export class SearchResultsTableComponent implements OnInit {
 	title = "Search Results";
 	data: any[];
     private searchTerm : string;
+    private andSelected = true;
 
     constructor(private route: ActivatedRoute, private allServicesService: AllServicesService, private router: Router) {
         router.events.subscribe((val) => {
@@ -28,24 +29,26 @@ export class SearchResultsTableComponent implements OnInit {
 
     ngOnInit() {
         this.route.queryParams.map(params => params['term'] ).subscribe(value => this.searchTerm = value);
-        this.data = [];
-        this.getAllSearchResults("AND");
+        (this.andSelected) ? this.andClicked() : this.orClicked();
     }
 
 
 	getAllSearchResults(searchType: string) { 
+        this.data = [];
 		this.allServicesService.getAllSearchResults(this.searchTerm, searchType).subscribe(
 			allSearchResults => this.data = allSearchResults,
 			error => this.errorMessage = <any>error);
 	}
 
     andClicked() {
+        this.andSelected = true;
         (<HTMLButtonElement>document.getElementById("andButton")).style.background = "#E0162B";
         (<HTMLButtonElement>document.getElementById("orButton")).style.background = "#0052A5";
         this.getAllSearchResults("AND");
     }
 
      orClicked() {
+        this.andSelected = false;
         (<HTMLButtonElement>document.getElementById("andButton")).style.background = "#0052A5";
         (<HTMLButtonElement>document.getElementById("orButton")).style.background = "#E0162B";
         this.getAllSearchResults("OR");

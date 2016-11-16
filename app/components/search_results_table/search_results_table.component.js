@@ -18,6 +18,7 @@ var SearchResultsTableComponent = (function () {
         this.allServicesService = allServicesService;
         this.router = router;
         this.title = "Search Results";
+        this.andSelected = true;
         router.events.subscribe(function (val) {
             _this.ngOnInit();
         });
@@ -25,19 +26,21 @@ var SearchResultsTableComponent = (function () {
     SearchResultsTableComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.queryParams.map(function (params) { return params['term']; }).subscribe(function (value) { return _this.searchTerm = value; });
-        this.data = [];
-        this.getAllSearchResults("AND");
+        (this.andSelected) ? this.andClicked() : this.orClicked();
     };
     SearchResultsTableComponent.prototype.getAllSearchResults = function (searchType) {
         var _this = this;
+        this.data = [];
         this.allServicesService.getAllSearchResults(this.searchTerm, searchType).subscribe(function (allSearchResults) { return _this.data = allSearchResults; }, function (error) { return _this.errorMessage = error; });
     };
     SearchResultsTableComponent.prototype.andClicked = function () {
+        this.andSelected = true;
         document.getElementById("andButton").style.background = "#E0162B";
         document.getElementById("orButton").style.background = "#0052A5";
         this.getAllSearchResults("AND");
     };
     SearchResultsTableComponent.prototype.orClicked = function () {
+        this.andSelected = false;
         document.getElementById("andButton").style.background = "#0052A5";
         document.getElementById("orButton").style.background = "#E0162B";
         this.getAllSearchResults("OR");

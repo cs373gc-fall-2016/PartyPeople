@@ -128,7 +128,7 @@ def bold_word(word, term):
 	bw = ""
 	i = word.lower().find(term)
 	if i >= 0:
-		bw = word[:i] + '<span class="context"><b>' + word[i:(i+len(term))] + '</b></span>' +  word[(i+len(term)):]
+		bw = word[:i] + '<span class="context"><strong>' + word[i:(i+len(term))] + '</strong></span>' +  word[(i+len(term)):]
 	return bw
 
 def make_pretty(key):
