@@ -56,9 +56,9 @@ def search_and_relation(r, term):
 				if not "_sa_instance_state" in tkey and (term in tkey or term in tvalue):
 					exists = True
 					if term in tvalue:
-						context.append(bold_word(value, term))
+						context.append(make_pretty(key) + ": " + bold_word(value, term))
 					else:
-						context.append(bold_word(key, term))
+						context.append(make_pretty(key) + ": " + bold_word(key, term))
 					i = i + 1
 					# print("term in " + str(tkey) + " = " + str(tvalue))
 			if exists:
@@ -130,5 +130,11 @@ def bold_word(word, term):
 	if i >= 0:
 		bw = word[:i] + '<span class="context"><b>' + word[i:(i+len(term))] + '</b></span>' +  word[(i+len(term)):]
 	return bw
+
+def make_pretty(key):
+	key = key.title().replace("_", " ")
+	if key == "Descriptive Name":
+		return "Name"
+	return key
 
 

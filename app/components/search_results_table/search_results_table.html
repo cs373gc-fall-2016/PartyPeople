@@ -1,11 +1,7 @@
 <h1 id="title" align="center">{{title}}</h1>
 
-<h3 align="center" style="color: #0052A5;">Election Search Results</h3>
-<div class="container">
-  <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
-    <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
-    <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
-  </div>
+<h3 align="center" style="color: #E0162B;">Election Search Results</h3>
+<div class="container" style="padding-bottom: 36px;">
   <p-dataTable [value]="data?.elections"
                [rows]="10"
                [paginator]="true"
@@ -17,7 +13,7 @@
               header="Election Name"
               [sortable]="true"
               filterMatchMode="contains">
-      <template let-electiondata="rowData" pTemplate type="body">
+      <template let-electionData="rowData" pTemplate type="body">
         <a routerLink="/elections/{{electionData?.id}}"
            routerLinkActive="active"
            style="color: #0052A5;">
@@ -31,19 +27,15 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-electionData="rowData" pTemplate type="body">
-        {{electionData?.context}}
+        <div [innerHTML]=(electionData?.context)></div>
       </template>
     </p-column>
     
   </p-dataTable>
 </div>
 
-<h3 align="center" style="color: #0052A5;">Party Search Results</h3>
-<div class="container">
-  <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
-    <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
-    <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
-  </div>
+<h3 align="center" style="color: #E0162B;">Party Search Results</h3>
+<div class="container" style="padding-bottom: 36px;">
   <p-dataTable [value]="data?.parties"
                [rows]="10"
                [paginator]="true"
@@ -69,19 +61,15 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-partyData="rowData" pTemplate type="body">
-        {{partyData?.context}}
+         <div [innerHTML]=(partyData?.context)></div>
       </template>
     </p-column>
     
   </p-dataTable>
 </div>
 
-<h3 align="center" style="color: #0052A5;">State Search Results</h3>
-<div class="container">
-  <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
-    <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
-    <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
-  </div>
+<h3 align="center" style="color: #E0162B;">State Search Results</h3>
+<div class="container" style="padding-bottom: 36px;">
   <p-dataTable [value]="data?.states"
                [rows]="10"
                [paginator]="true"
@@ -107,19 +95,15 @@
               [sortable]="true"
               filterMatchMode="contains">
       <template let-stateData="rowData" pTemplate type="body">
-        {{candidateData?.context}}
+         <div [innerHTML]=(stateData?.context)></div>
       </template>
     </p-column>
     
   </p-dataTable>
 </div>
 
-<h3 align="center" style="color: #0052A5;">Candidate Search Results</h3>
-<div class="container">
-  <div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
-    <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
-    <input #gb type="text" pInputText size="50" style="float:left" placeholder="Search for Keywords">
-  </div>
+<h3 align="center" style="color: #E0162B;">Candidate Search Results</h3>
+<div class="container" style="padding-bottom: 36px;">
   <p-dataTable [value]="data?.candidates"
                [rows]="10"
                [paginator]="true"
@@ -144,8 +128,8 @@
               header="Context"
               [sortable]="true"
               filterMatchMode="contains">
-      <template let-stateData="rowData" pTemplate type="body">
-        {{stateData?.context}}
+      <template let-candidateData="rowData" pTemplate type="body">
+         <div [innerHTML]=(candidateData?.context)></div>
       </template>
     </p-column>
     
