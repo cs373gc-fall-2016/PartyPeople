@@ -19,13 +19,13 @@ var SearchResultsTableComponent = (function () {
         this.router = router;
         this.title = "Search Results";
         router.events.subscribe(function (val) {
-            console.log("route changed");
             _this.ngOnInit();
         });
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.queryParams.map(function (params) { return params['term']; }).subscribe(function (value) { return _this.searchTerm = value; });
+        this.data = [];
         this.getAllSearchResults("AND");
     };
     SearchResultsTableComponent.prototype.getAllSearchResults = function (searchType) {
