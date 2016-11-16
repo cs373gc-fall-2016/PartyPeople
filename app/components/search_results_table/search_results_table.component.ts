@@ -20,7 +20,11 @@ export class SearchResultsTableComponent implements OnInit {
 	data: any[];
     private searchTerm : string;
 
-    constructor(private route: ActivatedRoute, private allServicesService: AllServicesService, private router: Router) { }
+    constructor(private route: ActivatedRoute, private allServicesService: AllServicesService, private router: Router) {
+        router.events.subscribe((val) => {
+            this.ngOnInit();
+        });
+    }
 
     ngOnInit() {
         this.route.queryParams.map(params => params['term'] ).subscribe(value => this.searchTerm = value);
@@ -30,7 +34,6 @@ export class SearchResultsTableComponent implements OnInit {
 
 
 	getAllSearchResults(searchType: string) { 
-        // TODO: Add switch and toggle between AND and OR results
 		this.allServicesService.getAllSearchResults(this.searchTerm, searchType).subscribe(
 			allSearchResults => this.data = allSearchResults,
 			error => this.errorMessage = <any>error);
