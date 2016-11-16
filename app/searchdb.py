@@ -43,7 +43,7 @@ def search_and_relation(r, term):
 			
 			temp = dict()
 			i = 0
-			context = dict()
+			context = list()
 			for key, value in item.__dict__.items():
 				
 				key = str(key)
@@ -56,9 +56,9 @@ def search_and_relation(r, term):
 				if not "_sa_instance_state" in tkey and (term in tkey or term in tvalue):
 					exists = True
 					if term in tvalue:
-						context[i] = key + " : " + bold_word(value, term)
+						context.append(bold_word(value, term))
 					else:
-						context[i] = key + " : " + bold_word(key, term)
+						context.append(bold_word(key, term))
 					i = i + 1
 					# print("term in " + str(tkey) + " = " + str(tvalue))
 			if exists:
@@ -85,7 +85,7 @@ def search_or_relation(r, term):
 			
 			temp = dict()
 			i = 0
-			context = dict()
+			context = list()
 			for key, value in item.__dict__.items():
 				
 				key = str(key)
@@ -98,7 +98,7 @@ def search_or_relation(r, term):
 				for word in words:
 					if not "_sa_instance_state" in tkey and (word in tkey or word in tvalue):
 						exists = True
-						context[str(i)] = bold_words((key, value), word)
+						context.append(bold_words((key, value), word))
 						i = i + 1
 						# print("term in " + str(key) + " = " + str(value))
 			if exists:
