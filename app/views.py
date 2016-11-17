@@ -1,6 +1,5 @@
-from flask import Blueprint, send_from_directory
-
-# from app.api_test import APITest
+from flask import Blueprint, send_from_directory, request
+from app import searchdb, query
 
 frontend = Blueprint('frontend', __name__)
 
@@ -18,9 +17,36 @@ def send_nodemodules(path):
 def send_app(path):
     return send_from_directory('app', path)
 
-# @app.route('/favicon.ico')
-# def send_favicon():
-#     return send_from_directory('.', 'favicon.ico')
+@frontend.route("/api/s_and")
+def s_and():
+    term = request.args.get("term")
+    return searchdb.search_and(term)
+
+@frontend.route("/api/s_or")
+def s_or():
+    term = request.args.get("term")
+    return searchdb.search_or(term)
+
+@frontend.route("/api/elections")
+def elections():
+    return query.query_election()
+
+@frontend.route("/api/candidates")
+def candidates():
+    return query.query_candidate()
+
+@frontend.route("/api/parties")
+def parties():
+    return query.query_party()
+
+@frontend.route("/api/states")
+def states():
+    return query.query_state()
+
+@frontend.route('/api/test', methods=['GET'])
+def run_tests():
+    import app.run_tests as test_suite
+    return test_suite.run_tests()
 
 @frontend.route('/systemjs.config.js')
 def send_systemconfig():
