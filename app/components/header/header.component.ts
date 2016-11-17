@@ -10,11 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class HeaderComponent {
 
-    private router: Router;
-
-    constructor(private router2: Router, private route: ActivatedRoute){
-        this.router = router2;
-    }
+    constructor(private router: Router, private route: ActivatedRoute){}
 
     searchSubmit(event: Event){
         event.preventDefault();

@@ -11,10 +11,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var HeaderComponent = (function () {
-    function HeaderComponent(router2, route) {
-        this.router2 = router2;
+    function HeaderComponent(router, route) {
+        this.router = router;
         this.route = route;
-        this.router = router2;
     }
     HeaderComponent.prototype.searchSubmit = function (event) {
         event.preventDefault();
