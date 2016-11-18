@@ -18,9 +18,6 @@ var SearchResultsTableComponent = (function () {
         this.router = router;
         this.title = "Search Results";
         this.andSelected = true;
-        router.events.subscribe(function (val) {
-            //this.ngOnInit();
-        });
     }
     SearchResultsTableComponent.prototype.ngOnInit = function () {
         var _this = this;

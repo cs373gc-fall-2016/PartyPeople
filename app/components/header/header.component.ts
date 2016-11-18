@@ -10,11 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class HeaderComponent {
 
-    private router: Router;
-
-    constructor(private router2: Router, private route: ActivatedRoute){
-        this.router = router2;
-    }
+    constructor(private router: Router, private route: ActivatedRoute){}
 
     searchSubmit(event: Event){
         event.preventDefault();
@@ -26,6 +22,6 @@ export class HeaderComponent {
         this.router.navigate(['search'],navigationExtras);
 
         console.log("SEARCH: " + searchText);
-        location.reload();
+        location.href = "/search?term=" + searchText;
     }
 }

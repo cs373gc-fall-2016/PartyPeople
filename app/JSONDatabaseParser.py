@@ -2,6 +2,9 @@
 Module to populate the database
 """
 
+# pylint: disable=invalid-name,line-too-long,no-member,bad-continuation,superfluous-parens,too-many-return-statements
+
+
 import json
 from models import database
 from models import State, Candidate, Election, Party, ElectoralCollege, ElectionsToState, PartiesInvolved
@@ -13,20 +16,21 @@ create_app().app_context().push()
 database.drop_all()
 database.create_all()
 
-state_file = open('states.json')
-state_json = json.loads(state_file.read())
+STATE_FILE = open('states.json')
+STATE_JSON = json.loads(STATE_FILE.read())
 
-candidate_file = open('candidates.json')
-candidate_json = json.loads(candidate_file.read())
+CANDIDATE_FILE = open('candidates.json')
+CANDIDATE_JSON = json.loads(CANDIDATE_FILE.read())
 
-party_file = open('parties.json')
-party_json = json.loads(party_file.read())
+PARTY_FILE = open('parties.json')
+PARTY_JSON = json.loads(PARTY_FILE.read())
 
-election_file = open('elections.json')
-elections_json = json.loads(election_file.read())
+ELECTION_FILE = open('elections.json')
+ELECTION_JSON = json.loads(ELECTION_FILE.read())
 
 
 def party_parser(party_abbrev):
+    """IF/ELSE to give actual name of party instead of three letter abbreviation"""
     if party_abbrev == 'REP':
         return 'Republican Party'
     elif party_abbrev == 'DEM':
@@ -44,77 +48,77 @@ def party_parser(party_abbrev):
 
 
 def fill_state_table():
-    """"""
-    # rows = []
+    """
+    Fill state table with information from state.json
+    :return:
+    """
     counter = 0
-    for key in state_json.keys():
+    for key in STATE_JSON.keys():
         counter += 1
-        # print("State %i == %s" % (counter, key))
-        temp_state = State(name=state_json[key]['name'], capital=state_json[key]['capital'],
-                           population=int(state_json[key]['population'].replace(',', '')),
-                           governor=state_json[key]['governor'], abbrev=key)
+        temp_state = State(name=STATE_JSON[key]['name'], capital=STATE_JSON[key]['capital'],
+                           population=int(STATE_JSON[key][
+                                          'population'].replace(',', '')),
+                           governor=STATE_JSON[key]['governor'], abbrev=key)
         database.session.add(temp_state)
-        # rows.append(temp_state)
-    # for r in rows:
-    #     database.session.add(r)
     database.session.commit()
 
 
 def descriptive_name_parser(election_name):
-    """Election name when split gives [State, House/Senate, District]"""
+    """Election name when split gives [State, House/Senate, District]
+        Turn it into a more human readable form
+    """
     election_fields = election_name.split("-")
     states_abbrevs = {"AL": "Alabama",
                       "MT": "Montana",
                       "AK": "Alaska",
-                      "NE": "Nebraska"	,
+                      "NE": "Nebraska",
                       "AZ": "Arizona",
                       "NV": "Nevada",
-                      "AR": "Arkansas"	,
+                      "AR": "Arkansas",
                       "NH": "New Hampshire",
                       "CA": "California",
                       "NJ": "New Jersey",
-                      "CO": "Colorado"	,
-                      "NM": "New Mexico"	,
-                      "CT": "Connecticut"	,
-                      "NY": "New York"	,
-                      "DE": "Delaware"	,
-                      "NC": "North Carolina"	,
-                      "FL": "Florida"	,
-                      "ND": "North Dakota"	,
-                      "GA": "Georgia"	,
-                      "OH": "Ohio"	,
-                      "HI": "Hawaii"	,
-                      "OK": "Oklahoma"	,
-                      "ID": "Idaho"	,
-                      "OR": "Oregon"	,
-                      "IL": "Illinois"	,
-                      "PA": "Pennsylvania"	,
-                      "IN": "Indiana"	,
-                      "RI": "Rhode Island"	,
-                      "IA": "Iowa"	,
-                      "SC": "South Carolina"	,
-                      "KS": "Kansas"	,
-                      "SD": "South Dakota"	,
-                      "KY": "Kentucky"	,
-                      "TN": "Tennessee"	,
-                      "LA": "Louisiana"	,
-                      "TX": "Texas"	,
-                      "ME": "Maine"	,
-                      "UT": "Utah"	,
-                      "MD": "Maryland"	,
-                      "VT": "Vermont"	,
-                      "MA": "Massachusetts"	,
-                      "VA": "Virginia"	,
-                      "MI": "Michigan"	,
-                      "WA": "Washington"	,
-                      "MN": "Minnesota"	,
-                      "WV": "West Virginia"	,
-                      "MS": "Mississippi"	,
-                      "WI": "Wisconsin"	,
-                      "MO": "Missouri"	,
+                      "CO": "Colorado",
+                      "NM": "New Mexico",
+                      "CT": "Connecticut",
+                      "NY": "New York",
+                      "DE": "Delaware",
+                      "NC": "North Carolina",
+                      "FL": "Florida",
+                      "ND": "North Dakota",
+                      "GA": "Georgia",
+                      "OH": "Ohio",
+                      "HI": "Hawaii",
+                      "OK": "Oklahoma",
+                      "ID": "Idaho",
+                      "OR": "Oregon",
+                      "IL": "Illinois",
+                      "PA": "Pennsylvania",
+                      "IN": "Indiana",
+                      "RI": "Rhode Island",
+                      "IA": "Iowa",
+                      "SC": "South Carolina",
+                      "KS": "Kansas",
+                      "SD": "South Dakota",
+                      "KY": "Kentucky",
+                      "TN": "Tennessee",
+                      "LA": "Louisiana",
+                      "TX": "Texas",
+                      "ME": "Maine",
+                      "UT": "Utah",
+                      "MD": "Maryland",
+                      "VT": "Vermont",
+                      "MA": "Massachusetts",
+                      "VA": "Virginia",
+                      "MI": "Michigan",
+                      "WA": "Washington",
+                      "MN": "Minnesota",
+                      "WV": "West Virginia",
+                      "MS": "Mississippi",
+                      "WI": "Wisconsin",
+                      "MO": "Missouri",
                       "WY": "Wyoming"}
     state_name = states_abbrevs[election_fields[0]]
-    race = ''
     if election_fields[1] == "S":
         race = "Senate"
         return "%s, %s" % (state_name, race)
@@ -125,10 +129,13 @@ def descriptive_name_parser(election_name):
 
 
 def fill_election_table():
-    # rows = []
+    """
+    fills the election table with data from elections.json
+    :return:
+    """
     counter = 0
-    for state_key in elections_json.keys():
-        state_elections = elections_json[state_key][0]
+    for state_key in ELECTION_JSON.keys():
+        state_elections = ELECTION_JSON[state_key][0]
         for key in state_elections.keys():
             counter += 1
             # print("Election %i == %s" % (counter, key))
@@ -136,27 +143,24 @@ def fill_election_table():
                                      'date'], level=state_elections[key]['type'],
                                      descriptive_name=descriptive_name_parser(key))
             database.session.add(temp_election)
-            # rows.append(temp_election)
-    # for r in rows:
-    #     database.session.add(r)
     database.session.commit()
 
 
 def fill_party_table():
-    # rows = []
+    """
+    Fill party table with information from party.json
+    :return:
+    """
     party_ind = Party(name='Independent', leader='None',
                       hq='None', description='None', abbrev='IND')
     party_npa = Party(name='No Party Affiliation', leader='None',
                       hq='None', description='None', abbrev='NPA')
     database.session.add(party_ind)
     database.session.add(party_npa)
-    for key in party_json.keys():
-        temp_party = Party(name=party_json[key]['name'], leader=party_json[key]['leader'],
-                           hq=party_json[key]['hq_address'], description=party_json[key]['description'], abbrev=key)
+    for key in PARTY_JSON.keys():
+        temp_party = Party(name=PARTY_JSON[key]['name'], leader=PARTY_JSON[key]['leader'],
+                           hq=PARTY_JSON[key]['hq_address'], description=PARTY_JSON[key]['description'], abbrev=key)
         database.session.add(temp_party)
-        # rows.append(temp_party)
-    # for r in rows:
-    #     database.session.add(r)
     database.session.commit()
 
 
@@ -166,34 +170,31 @@ def fill_candidate_table():
         use info in candidate json to fill out the State section of the candidate,
         for the other relations, query the already created tables for the values stored in json
     """
-    rows = []
-    for state in state_json.keys():
-        reps = state_json[state]['representatives']
+    for state in STATE_JSON.keys():
+        reps = STATE_JSON[state]['representatives']
         for rep in reps.keys():
-            temp_candidate = Candidate(name=candidate_json[rep]['name'], dob=str(candidate_json[rep]['birthday']), job=candidate_json[
-                                       rep]['position'], contact=candidate_json[rep]['contact'], poll=candidate_json[rep]['favorability'])
+            temp_candidate = Candidate(name=CANDIDATE_JSON[rep]['name'], dob=str(CANDIDATE_JSON[rep]['birthday']),
+                                       job=CANDIDATE_JSON[rep][
+                                           'position'], contact=CANDIDATE_JSON[rep]['contact'],
+                                       poll=CANDIDATE_JSON[rep]['favorability'])
             candidate_state_query = State.query.filter(
-                State.name == state_json[state]['name']).first()
+                State.name == STATE_JSON[state]['name']).first()
             candidate_election_query = Election.query.filter(
-                Election.name == candidate_json[rep]['election']).first()
-            candidate_party = party_parser(candidate_json[rep]['party'])
+                Election.name == CANDIDATE_JSON[rep]['election']).first()
+            candidate_party = party_parser(CANDIDATE_JSON[rep]['party'])
             candidate_party_query = Party.query.filter(
                 Party.name == candidate_party).first()
             temp_candidate.states = candidate_state_query
             temp_candidate.party = candidate_party_query
             temp_candidate.elections = candidate_election_query
             database.session.add(temp_candidate)
-            # rows.append(temp_candidate)
-    # for r in rows:
-    #     database.session.add(r)
     database.session.commit()
 
 
 def fill_electoral_college():
     """Use state json and look at the states controlled tag"""
-    # rows = []
-    for party in party_json.keys():
-        party_controlled_states = party_json[party]['states']
+    for party in PARTY_JSON.keys():
+        party_controlled_states = PARTY_JSON[party]['states']
         for state in party_controlled_states.keys():
             temp_electoral = ElectoralCollege()
             state_query = State.query.filter(State.abbrev == state).first()
@@ -202,9 +203,6 @@ def fill_electoral_college():
             temp_electoral.states = state_query
             temp_electoral.state_name_relationship = state_query
             database.session.add(temp_electoral)
-            # rows.append(temp_electoral)
-    # for r in rows:
-    #     database.session.add(r)
     database.session.commit()
 
 
@@ -214,8 +212,8 @@ def fill_parties_involved():
         Look at what the parties the candidates are from
         In the table create there will be multiple rows with the same election, but will have different parties
     """
-    for election in elections_json.keys():
-        states_elections = elections_json[election][0]
+    for election in ELECTION_JSON.keys():
+        states_elections = ELECTION_JSON[election][0]
         for election_name in states_elections.keys():
             parties_involved = set()
 
@@ -240,11 +238,11 @@ def fill_elections_to_state():
         Right now the behaviour is not working correctly. It is only adding 100 rows instead of 486.
         There are only two rows per each state. One with the election for the Senate, and one of the House
     """
-    for election in elections_json.keys():
+    for election in ELECTION_JSON.keys():
 
         state_name = election[:election.index('-')]
         state_query = State.query.filter(State.abbrev == state_name).first()
-        state_elections = elections_json[election][0]
+        state_elections = ELECTION_JSON[election][0]
         for key in state_elections.keys():
             temp_election_to_state = ElectionsToState()
             election_query = Election.query.filter(
@@ -272,23 +270,23 @@ if __name__ == '__main__':
     fill_electoral_college()
     print("Filling Parties Involved")
     fill_parties_involved()
-    state_query = State.query.all()
-    print(state_query)
+    STATE_QUERY = State.query.all()
+    print(STATE_QUERY)
 
-    party_query = Party.query.all()
-    print(party_query)
+    PARTY_QUERY = Party.query.all()
+    print(PARTY_QUERY)
 
-    election_query = Election.query.all()
-    print(election_query)
+    ELECTION_QUERY = Election.query.all()
+    print(ELECTION_QUERY)
 
-    candidate_query = Candidate.query.all()
-    print(candidate_query)
+    CANDIDATE_QUERY = Candidate.query.all()
+    print(CANDIDATE_QUERY)
 
-    electoral_college_query = ElectoralCollege.query.all()
-    print(electoral_college_query)
+    ELECTORAL_COLLEGE_QUERY = ElectoralCollege.query.all()
+    print(ELECTORAL_COLLEGE_QUERY)
 
-    parties_involved_query = PartiesInvolved.query.all()
-    print(parties_involved_query)
+    PARTIES_INVOLVED_QUERY = PartiesInvolved.query.all()
+    print(PARTIES_INVOLVED_QUERY)
 
-    elections_to_state_query = ElectionsToState.query.all()
-    print(elections_to_state_query)
+    ELECTION_TO_STATE_QUERY = ElectionsToState.query.all()
+    print(ELECTION_TO_STATE_QUERY)

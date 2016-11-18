@@ -15,7 +15,7 @@ export class AllServicesService {
 	private partyDetailsUrl = 'api/party';
 	private candidateDetailsUrl = 'api/candidate';
 	private electionDetailsUrl = 'api/election';
-	private testOutputUrl = '';
+	private testOutputUrl = 'api/test';
 	private imageUrl = 'https://www.googleapis.com/customsearch/v1?key=AIzaSyDnOT53CCV948mcKY6rawsUNAAZqOoRKFU&cx=002168208795225832214:dup1kwhfope&searchType=image&imgSize=medium&q=';
 	private searchResultsAndURL = 'api/s_and?term=';
 	private searchResultsOrURL = 'api/s_or?term=';
@@ -76,7 +76,7 @@ export class AllServicesService {
 
 	getTestOutput(): Observable<any> {
 		return this.http.get(this.testOutputUrl)
-				   .map(this.extractData)
+				   .map(this.extractTestData)
 				   .catch(this.handleError);
 	}
 
@@ -112,6 +112,10 @@ export class AllServicesService {
 	private extractData(res: Response) {
 		let body = res.json();
 		return body.objects || body || {};
+	}
+
+	private extractTestData(res: Response) {
+		return res.text();
 	}
 
 	private handleError (error: Response | any) {
