@@ -1,11 +1,12 @@
+""" Database queries """
+# pylint: disable=line-too-long,import-error,too-many-branches
 
-from app.models import Candidate, Election, Party, State, ElectoralCollege, PartiesInvolved, ElectionsToState
 import json
+from app.models import Candidate, Election, Party, State, ElectoralCollege, PartiesInvolved, ElectionsToState
 
 
 def query_election():
     """
-
     :return: returns JSON of the table State
     """
     r_list = list()
@@ -76,7 +77,6 @@ def query_election():
 
 def query_state():
     """
-
     :return: returns JSON of the table State
     """
     r_list = list()

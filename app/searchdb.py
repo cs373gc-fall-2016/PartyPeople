@@ -1,8 +1,8 @@
-
-from app.models import Candidate, Party, Election, State
+""" AND and OR Searching """
+# pylint: disable=unneeded-not,invalid-name,import-error
 import json
 import re
-
+from app.models import Candidate, Party, Election, State
 
 def search_and(term):
     """
@@ -11,7 +11,6 @@ def search_and(term):
     :return: json of search results
     """
     term = str(term).lower()
-    print(term)
     result = dict()
 
     result["candidates"] = search_and_relation(Candidate, term)
@@ -79,7 +78,6 @@ def search_and_relation(relation, term):
                         context.append(make_pretty(key) +
                                        ": " + bold_word(key, term))
                     counter = counter + 1
-                    # print("term in " + str(tkey) + " = " + str(tvalue))
             if exists:
                 temp["context"] = context
                 list_results += [temp]
@@ -126,7 +124,6 @@ def search_or_relation(relation, term):
                         context.append(bold_words(
                             (make_pretty(key), value), word))
                         counter = counter + 1
-                        # print("term in " + str(key) + " = " + str(value))
             if exists:
                 temp["context"] = context
                 list_results += [temp]
