@@ -6,6 +6,10 @@ Module for testing models
 from unittest import TestCase
 from app.models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
 
+from application import create_app
+
+create_app().app_context().push()
+
 class ModelTest(TestCase):
     """ Class for testing models """
 
@@ -23,7 +27,8 @@ class ModelTest(TestCase):
         query = Candidate.query.first()
         self.assertEqual(query.name, 'LOUDERMILK, BARRY')
         self.assertEqual(query.dob, '1963-12-22')
-        self.assertEqual(query.job, "Representative for Georgia's 11th congressional district")
+        self.assertEqual(
+            query.job, "Representative for Georgia's 11th congressional district")
         self.assertEqual(query.contact['fax'], '202-225-2944')
         self.assertEqual(query.poll, 0.0)
 
@@ -46,8 +51,10 @@ class ModelTest(TestCase):
         query = Candidate.query.join(Party).filter_by(abbrev='DEM').first()
         self.assertEqual(query.name, 'LEWIS, JOHN R.')
         self.assertEqual(query.dob, '1940-02-21')
-        self.assertEqual(query.job, "Representative for Georgia's 5th congressional district")
-        self.assertEqual(query.contact['address'], '343 Cannon HOB; Washington DC 20515-1005')
+        self.assertEqual(
+            query.job, "Representative for Georgia's 5th congressional district")
+        self.assertEqual(query.contact['address'],
+                         '343 Cannon HOB; Washington DC 20515-1005')
         self.assertEqual(query.poll, 0.0)
 
     def test_election_attributes(self):
@@ -56,7 +63,7 @@ class ModelTest(TestCase):
         self.assertEqual(query.date, 'November 8th, 2016')
         self.assertEqual(query.level, 'State - S')
         self.assertEqual(query.descriptive_name, 'Missouri, Senate')
-        
+
         # x = Dish.query.filter(Dish.restaurants.any(name=name)).all()
 
     def test_election_relationships_1(self):
