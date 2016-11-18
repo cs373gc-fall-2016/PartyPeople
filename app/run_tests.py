@@ -7,7 +7,9 @@ from app.model_test import ModelTest
 
 
 def run_tests():
-    ''' Run the unittests '''
+    """
+    Run unit tests for models.py
+    """
     output = StringIO()
     suite = unittest.TestLoader().loadTestsFromTestCase(ModelTest)
     unittest.TextTestRunner(stream=output, verbosity=2).run(suite)

@@ -29,12 +29,10 @@ class Candidate(database.Model):
         'Party', backref='candidate', foreign_keys=[party_id])
 
     def __repr__(self):
-        return '{"Candidate" : {"name": %r, "dob": %r, "job": %r, "poll": %r, "contact": %r, "states": %r, "party": %r, "election": %r}}' %\
+        return '{"Candidate" : {"name": %r, "dob": %r, "job": %r, "poll": %r, "contact":' \
+               ' %r, "states": %r, "party": %r, "election": %r}}' %\
                (self.name, self.dob, self.job, self.poll,
                 self.contact, self.states, self.party, self.elections)
-
-    def get_state(self):
-        return self.states
 
 
 class Election(database.Model):
@@ -47,7 +45,8 @@ class Election(database.Model):
     descriptive_name = database.Column(database.String, unique=True)
 
     def __repr__(self):
-        return '{"Election" : {"name": %r, "date": %r, "level": %r, "descriptive_name": %r}}' % (self.name, self.date, self.level, self.descriptive_name)
+        return '{"Election" : {"name": %r, "date": %r, "level": %r, "descriptive_name": %r}}' \
+               % (self.name, self.date, self.level, self.descriptive_name)
 
 
 class Party(database.Model):
@@ -63,10 +62,6 @@ class Party(database.Model):
     def __repr__(self):
         return '{Party : {"name": %r, "hq": %r, "leader": %r, "abbrev": %r}}' \
                % (self.name, self.hq, self.leader, self.abbrev)
-
-    # @classmethod
-    # def query(cls):
-    #     return database.session.query(cls).join(ElectoralCollege, State)
 
 
 class State(database.Model):
@@ -113,11 +108,6 @@ class ElectoralCollege(database.Model):
 
     def __repr__(self):
         return '{ElectoralCollege : { "State": %r, "Party": %r}}' % (self.states, self.party)
-
-    # @classmethod
-    # def query(cls):
-    # return ElectoralCollege.query().join(State,
-    # Party).add_columns(State.name, Party.name)
 
 
 class PartiesInvolved(database.Model):

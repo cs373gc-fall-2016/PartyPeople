@@ -1,5 +1,5 @@
 """
-Module for testing models
+Module for testing models.py
 """
 # pylint: disable=invalid-name,line-too-long,no-member,locally-disabled
 
@@ -10,20 +10,23 @@ from application import create_app
 
 create_app().app_context().push()
 
+
 class ModelTest(TestCase):
     """ Class for testing models """
 
-    def setUp(self):
-        """Set up the database and the Models for testing
-        Will have multiple of each type of model to be placed in the tables, to test different types of relationships
+    def test_candidate_repr(self):
         """
-        pass
-
-    def tearDown(self):
-        """Drop all the tables so on subsequent tests it doesn't complain that elements already exist"""
-        pass
+        Test candidate representation
+        """
+        cand = Candidate()
+        self.assertEqual(cand.__repr__(
+        ), '{"Candidate" : {"name": None, "dob": None, "job": None, "poll": None, '
+           '"contact": None, "states": None, "party": None, "election": None}}')
 
     def test_candidate_attributes(self):
+        """
+        Test the first candidate's attributes
+        """
         query = Candidate.query.first()
         self.assertEqual(query.name, 'LOUDERMILK, BARRY')
         self.assertEqual(query.dob, '1963-12-22')
@@ -33,21 +36,33 @@ class ModelTest(TestCase):
         self.assertEqual(query.poll, 0.0)
 
     def test_candidate_relationships_1(self):
+        """
+        Test the first candidate's election backref
+        """
         query = Candidate.query.first()
         election = query.elections
         self.assertEqual(election.date, 'November 8th, 2016')
 
     def test_candidate_relationships_2(self):
+        """
+        Test the first candidate's party backref
+        """
         query = Candidate.query.first()
         party = query.party
         self.assertEqual(party.name, 'Republican Party')
 
     def test_candidate_relationships_3(self):
+        """
+        Test the first candidate's state backref
+        """
         query = Candidate.query.first()
         state = query.states
         self.assertEqual(state.name, 'Georgia')
 
     def test_candidate_by_relationship_filter(self):
+        """
+        Filter the candidate by the Democratic Party and check its attributes
+        """
         query = Candidate.query.join(Party).filter_by(abbrev='DEM').first()
         self.assertEqual(query.name, 'LEWIS, JOHN R.')
         self.assertEqual(query.dob, '1940-02-21')
@@ -57,16 +72,28 @@ class ModelTest(TestCase):
                          '343 Cannon HOB; Washington DC 20515-1005')
         self.assertEqual(query.poll, 0.0)
 
+    def test_election_repr(self):
+        """
+        Test election representation
+        """
+        elec = Election()
+        self.assertEqual(elec.__repr__(
+        ), '{"Election" : {"name": None, "date": None, "level": None, "descriptive_name": None}}')
+
     def test_election_attributes(self):
+        """
+        Test the first election attributes
+        """
         query = Election.query.first()
         self.assertEqual(query.name, 'MO-S-00')
         self.assertEqual(query.date, 'November 8th, 2016')
         self.assertEqual(query.level, 'State - S')
         self.assertEqual(query.descriptive_name, 'Missouri, Senate')
 
-        # x = Dish.query.filter(Dish.restaurants.any(name=name)).all()
-
     def test_election_relationships_1(self):
+        """
+        Test the relationship between candidates by examining the first two candidate names
+        """
         query = Election.query.first()
         candidates = query.candidate_election
         cand0 = candidates[0]
@@ -75,218 +102,228 @@ class ModelTest(TestCase):
         self.assertEqual(cand1.name, 'MCCASKILL, CLAIRE')
 
     def test_election_relationships_2(self):
+        """
+        Check the party relationship by counting the number of parties
+        """
         query = Election.query.first()
         parties = query.parties_involved
         self.assertEqual(len(parties), 2)
 
     def test_election_relationships_3(self):
+        """
+        Check the first state relation
+        """
         query = Election.query.first()
         election_state = query.election_to_state[0]
         self.assertEqual(election_state.states.name, 'Missouri')
 
-    # def test_state(self):
-    #     """ Test state model
-    #         Test if only a single file is being put in and retrieved
-    #     """
-    #     print('Running State Model Test')
-    #     state = self.state_1
-    #     # state.party_affiliation = self.party
-    #     database.session.add(state)
-    #     database.session.commit()
-    #     query = State.query.first()
-    #     print(query)
-    #     self.assertEqual(query.name, state.name)
-    #     self.assertEqual(query, state)
+    def test_party_repr(self):
+        """
+        Test party representation representation
+        """
+        party = Party()
+        self.assertEqual(party.__repr__(
+        ), '{Party : {"name": None, "hq": None, "leader": None, "abbrev": None}}')
 
-    # def test_state_2(self):
-    #     """
-    #     Test if multiple states are committed to a database, then they are all returned on a query
-    #     :return:
-    #     """
-    #     state_1 = self.state_1
-    #     state_2 = self.state_2
-    #     database.session.add(state_1)
-    #     database.session.add(state_2)
-    #     database.session.commit()
-    #     query = State.query.all()
-    #     print(State.query.all())
-    #     self.assertIn(state_1, query)
-    #     self.assertIn(state_2, query)
+    def test_party_attributes(self):
+        """
+        Examine party attributes
+        """
+        query = Party.query.first()
+        self.assertEqual(query.name, 'Independent')
+        self.assertEqual(query.hq, 'None')
+        self.assertEqual(query.leader, 'None')
+        self.assertEqual(query.abbrev, 'IND')
 
-    # def test_state_3(self):
-    #     """
-    #     Test if multiple states are added to a database, then they can be queried by one of their attributes
-    #     :return:
-    #     """
-    #     state_1 = self.state_1
-    #     state_2 = self.state_2
-    #     state_3 = self.state_3
-    #     database.session.add(state_1)
-    #     database.session.add(state_2)
-    #     database.session.add(state_3)
-    #     database.session.commit()
-    #     query = State.query.filter_by(population=1000).all()
-    #     print(query)
-    #     self.assertIn(state_1, query)
-    #     self.assertIn(state_3, query)
+    def test_party_number(self):
+        """
+        Examine the number of parties
+        """
+        query = Party.query.all()
+        self.assertEqual(len(query), 7)
 
-    # def test_election_1(self):
-    #     """ Test election model basics"""
-    #     print('Running Election Model Test')
-    #     election_1 = self.election_1
-    #     database.session.add(election_1)
-    #     database.session.commit()
-    #     query = Election.query.first()
-    #     print(query)
-    #     self.assertEqual(query.name, election_1.name)
-    #     self.assertEqual(query, election_1)
+    def test_party_relation_1(self):
+        """
+        Check the first candidate relation
+        """
+        query = Party.query.filter_by(abbrev='IND').first()
+        candidates = query.candidate
+        cand0 = candidates[0]
+        self.assertEqual(cand0.name, 'SANDERS, BERNARD')
 
-    # def test_election_2(self):
-    #     """
-    #     Test if multiple elections can be committed to a table and queried
-    #     :return:
-    #     """
-    #     election_1 = self.election_1
-    #     election_2 = self.election_2
-    #     database.session.add(election_1)
-    #     database.session.add(election_2)
-    #     database.session.commit()
-    #     query = Election.query.all()
-    #     print(query)
-    #     self.assertIn(election_1, query)
-    #     self.assertIn(election_2, query)
+    def test_party_relation_2(self):
+        """
+        Count the number of democratic and republican controlled states
+        """
+        query1 = Party.query.filter_by(name='Republican Party').first()
+        query2 = Party.query.filter_by(abbrev='DEM').first()
+        r_states_controlled = query1.electoral
+        d_states_controlled = query2.electoral
+        self.assertEqual(len(r_states_controlled), 35)
+        self.assertEqual(len(d_states_controlled), 15)
 
-    # def test_election_3(self):
-    #     """
-    #     Test if the elections can be added and queried by one of their attribures
-    #     :return:
-    #     """
-    #     election_1 = self.election_1
-    #     election_2 = self.election_2
-    #     election_3 = self.election_3
-    #     election_4 = self.election_4
-    #     database.session.add(election_1)
-    #     database.session.add(election_2)
-    #     database.session.add(election_3)
-    #     database.session.add(election_4)
-    #     database.session.commit()
-    #     query = Election.query.filter_by(level='local').all()
-    #     print(query)
-    #     self.assertIn(election_2, query)
-    #     self.assertIn(election_3, query)
+    def test_state_repr(self):
+        """
+        Test state representation representation
+        """
+        state = State()
+        self.assertEqual(state.__repr__(
+        ), '{"State" : {"name": None, "capital": None, "population": None, "governor": None, "abbrev": None}}')
 
-    # def test_party_1(self):
-    #     """ Test state model, if something can be added in and queried """
-    #     print('Running Election Model Test')
-    #     party_1 = self.party_1
-    #     database.session.add(party_1)
-    #     database.session.commit()
-    #     query = Party.query.first()
-    #     print(query)
-    #     self.assertEqual(query.name, party_1.name)
-    #     self.assertEqual(query, party_1)
+    def test_state_attributes(self):
+        """
+        Assert state attribute values
+        """
+        query = State.query.filter_by(abbrev='GA').first()
+        self.assertEqual(query.name, 'Georgia')
+        self.assertEqual(query.capital, 'Atlanta')
+        self.assertEqual(query.population, 10214860)
+        self.assertEqual(query.governor, 'Nathan Deal')
+        self.assertEqual(query.abbrev, 'GA')
 
-    # def test_party_2(self):
-    #     """
-    #     Test if multiple states are committed to a database, then they are all returned on a query
-    #     """
-    #     party_1 = self.party_1
-    #     party_2 = self.party_2
-    #     database.session.add(party_1)
-    #     database.session.add(party_2)
-    #     database.session.commit()
-    #     query = Party.query.all()
-    #     print(query)
-    #     self.assertIn(party_1, query)
-    #     self.assertIn(party_2, query)
+    def test_state_number(self):
+        """
+        Count the number of states
+        """
+        query = State.query.all()
+        self.assertEqual(len(query), 50)
 
-    # def test_party_3(self):
-    #     """
-    #     Test if the parties can be queried by attributes
-    #     :return:
-    #     """
-    #     party_1 = self.party_1
-    #     party_2 = self.party_2
-    #     party_3 = self.party_3
-    #     database.session.add(party_1)
-    #     database.session.add(party_2)
-    #     database.session.add(party_3)
-    #     database.session.commit()
-    #     query = Party.query.filter_by(hq='hq_1').all()
-    #     print(query)
-    #     self.assertIn(party_1, query)
-    #     self.assertIn(party_3, query)
+    def test_state_relation(self):
+        """
+        Test the relationship between elections using the state of Texas
+        """
+        query = State.query.filter_by(name='Texas').first()
+        elections_in_state = query.election_to_state
+        first_election = elections_in_state[0].elections
+        self.assertEqual(first_election.name, 'TX-S-00')
+        self.assertEqual(first_election.date, 'November 8th, 2016')
+        self.assertEqual(first_election.level, 'State - S')
+        self.assertEqual(first_election.descriptive_name, 'Texas, Senate')
 
-    # def test_electoral_college(self):
-    #     """
-    #     Test the intermediate table for states and the parties that control them,
-    #     this also tests the results of a join are non empty
-    #     """
-    #     print("Running the Electoral College Test")
-    #     party_1 = self.party_1
-    #     party_2 = self.party_2
-    #     party_3 = self.party_3
-    #     relation_1 = ElectoralCollege()
-    #     relation_2 = ElectoralCollege()
-    #     relation_3 = ElectoralCollege()
+    def test_electoral_college_repr(self):
+        """
+        Test electoral college representation
+        """
+        electoral_college = ElectoralCollege()
+        self.assertEqual(electoral_college.__repr__(),
+                         '{ElectoralCollege : { "State": None, "Party": None}}')
 
-    #     relation_1.party = self.party_1
-    #     relation_1.states = self.state_1
+    def test_electoral_college_1(self):
+        """
+        Test of the electoral college to see if the Name of the State and Party are the same as expected
+        """
+        query = ElectoralCollege.query.filter(
+            ElectoralCollege.state_name == "Georgia").first()
+        self.assertEqual(query.states.name, "Georgia")
+        self.assertEqual(query.party.name, "Republican Party")
 
-    #     relation_2.party = self.party_1
-    #     relation_2.states = self.state_2
+    def test_electoral_college_2(self):
+        """
+        Test to see if the attributes in the electoral college are the same as the rows in the main models
+        """
+        electoral_query = ElectoralCollege.query.filter(
+            ElectoralCollege.state_name == "Georgia").first()
+        party_query = Party.query.filter(
+            Party.name == "Republican Party").first()
+        state_query = State.query.filter(State.name == "Georgia").first()
+        self.assertEqual(electoral_query.states, state_query)
+        self.assertEqual(electoral_query.party, party_query)
 
-    #     relation_3.party = self.party_2
-    #     relation_3.states = self.state_3
+    def test_electoral_college_3(self):
+        """
+        Test to see if two different rows in the electoral college share the same row from party (Many to One)
+        """
+        electoral_query_1 = ElectoralCollege.query.filter(
+            ElectoralCollege.state_name == "Georgia").first()
+        electoral_query_2 = ElectoralCollege.query.filter(
+            ElectoralCollege.state_name == "Texas").first()
+        party_query = Party.query.filter(
+            Party.name == "Republican Party").first()
+        self.assertEqual(electoral_query_1.party, party_query)
+        self.assertEqual(electoral_query_2.party, party_query)
 
-    #     database.session.add(relation_1)
-    #     database.session.add(relation_2)
-    #     database.session.add(relation_3)
-    #     database.session.add(party_1)
-    #     database.session.add(party_2)
-    #     database.session.add(party_3)
-    #     database.session.commit()
-    #     joined_table = ElectoralCollege.query.join(Party, State).add_columns(Party.name, State.name).all()
-    #     print('Joined Table %r' % joined_table)
-    #     select = ElectoralCollege.query.filter_by(party=self.party_1).all()
-    #     print('SELECT %r' % select)
-    #     self.assertIsNotNone(joined_table)
+    def test_parties_involved_repr(self):
+        """
+        Test parties involved representation
+        """
+        parties_involved = PartiesInvolved()
+        self.assertEqual(parties_involved.__repr__(
+        ), '{"PartiesInvolved": {"Party": None, "Election": None}}')
 
-    # def test_parties_involved(self):
-    #     """
-    #     Test the intermediate table for states and the parties that control them,
-    #     this also tests the results of a join are non empty
+    def test_parties_involved_1(self):
+        """
+        Test of the Parties Involved Model to see if the Name of the Election and Party are the same as expected
+        """
+        query = PartiesInvolved.query.filter(
+            PartiesInvolved.election_id == 1).first()
+        self.assertEqual(query.party.name, "Republican Party")
+        self.assertEqual(query.elections.name, "MO-S-00")
 
-    #     :return:
-    #     """
-    #     relation_1 = PartiesInvolved(party=self.party_1, elections=self.election_1)
-    #     relation_2 = PartiesInvolved(party=self.party_2, elections=self.election_1)
-    #     relation_3 = PartiesInvolved(party=self.party_1, elections=self.election_2)
-    #     relation_4 = PartiesInvolved(party=self.party_2, elections=self.election_2)
-    #     database.session.add(relation_1)
-    #     database.session.add(relation_2)
-    #     database.session.add(relation_3)
-    #     database.session.add(relation_4)
-    #     database.session.commit()
-    #     joined_table = PartiesInvolved.query.join(Election, Party).add_columns(Election.name, Party.name).all()
-    #     print("JOINED TABLE %r" % joined_table)
-    #     self.assertIsNotNone(joined_table)
+    def test_parties_involved_2(self):
+        """
+        Test to see if the attributes in the Parties Involved Model are the same as the rows in the main models
+        """
+        involved_query = PartiesInvolved.query.filter(
+            PartiesInvolved.election_id == 1).first()
+        party_query = Party.query.filter(
+            Party.name == "Republican Party").first()
+        election_query = Election.query.filter(
+            Election.name == "MO-S-00").first()
+        self.assertEqual(involved_query.elections, election_query)
+        self.assertEqual(involved_query.party, party_query)
 
-    # def test_elections_to_states(self):
-    #     """
-    #     Test the intermediate table for elections and the states they are held in
-    #     this also tests the results of a join are non empty
-    #     :return:
-    #     """
-    #     relation_1 = ElectionsToState(elections=self.election_1, states=self.state_1)
-    #     relation_2 = ElectionsToState(elections=self.election_2, states=self.state_2)
-    #     relation_3 = ElectionsToState(elections=self.election_1, states=self.state_2)
-    #     relation_4 = ElectionsToState(elections=self.election_1, states=self.state_3)
-    #     database.session.add(relation_1)
-    #     database.session.add(relation_2)
-    #     database.session.add(relation_3)
-    #     database.session.add(relation_4)
-    #     database.session.commit()
-    #     joined_table = ElectionsToState().query.join(Election, State).add_columns(Election.name, State.name).all()
-    #     print("JOINED TABLE : ElectionsToStates %r" % joined_table)
-    #     self.assertIsNotNone(joined_table)
+    def test_parties_involved_3(self):
+        """
+        Test to see if two different rows in the Parties Involved Model share the same row from party (Many to One)
+        """
+        involved_query_1 = PartiesInvolved.query.filter(
+            PartiesInvolved.election_id == 1).first()
+        involved_query_2 = PartiesInvolved.query.filter(
+            PartiesInvolved.election_id == 3).first()
+        party_query = Party.query.filter(
+            Party.name == "Republican Party").first()
+        self.assertEqual(involved_query_1.party, party_query)
+        self.assertEqual(involved_query_2.party, party_query)
+
+    def test_elections_to_state_repr(self):
+        """
+        Test election to state representation
+        """
+        elections_to_state = ElectionsToState()
+        self.assertEqual(elections_to_state.__repr__(
+        ), '{"ElectionsToStates" : {"elections": None, "states":None}}')
+
+    def test_elections_to_state_1(self):
+        """
+        Test of the Elections to State Model to see if the Name of the Election and Party are the same as expected
+        """
+        query = ElectionsToState.query.filter(
+            ElectionsToState.election_id == 1).first()
+        self.assertEqual(query.state_name, "Missouri")
+        self.assertEqual(query.elections.name, "MO-S-00")
+
+    def test_elections_to_state_2(self):
+        """
+        Test to see if the attributes in the Elections to State Model are the same as the rows in the main models
+        """
+        elections_to_state_query = ElectionsToState.query.filter(
+            ElectionsToState.election_id == 1).first()
+        state_query = State.query.filter(State.name == "Missouri").first()
+        election_query = Election.query.filter(
+            Election.name == "MO-S-00").first()
+        self.assertEqual(elections_to_state_query.elections, election_query)
+        self.assertEqual(elections_to_state_query.states, state_query)
+
+    def test_elections_to_state_3(self):
+        """
+        Test to see if two different rows in the Elections To State Model share the same row from party (Many to One)
+        """
+        elections_to_states_1 = ElectionsToState.query.filter(
+            ElectionsToState.election_id == 1).first()
+        # print(elections_to_states_1)
+        elections_to_states_2 = ElectionsToState.query.filter(
+            ElectionsToState.election_id == 330).first()
+        # print(elections_to_states_2)
+        state_query = State.query.filter(State.name == "Missouri").first()
+        self.assertEqual(elections_to_states_1.states, state_query)
+        self.assertEqual(elections_to_states_2.states, state_query)
