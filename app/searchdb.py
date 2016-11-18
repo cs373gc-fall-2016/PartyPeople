@@ -4,6 +4,7 @@ import json
 import re
 from app.models import Candidate, Party, Election, State
 
+
 def search_and(term):
     """
     Searches for 'and' results for all models

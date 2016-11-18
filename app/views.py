@@ -6,6 +6,7 @@ from app import searchdb, query
 
 frontend = Blueprint('frontend', __name__)
 
+
 @frontend.route('/')
 @frontend.route('/<path:path>')
 def index():

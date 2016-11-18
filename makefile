@@ -32,7 +32,7 @@ html:
 	find . -type f \( -name "*.py" \) | xargs $(PYDOC) -w
 
 log:
-	git log > IDB1.log
+	git log > IDB3.log
 
 format:
 	find . -type f \( -name "*.py" \) | xargs $(AUTOPEP8) -i

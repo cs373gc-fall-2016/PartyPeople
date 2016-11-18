@@ -1,7 +1,8 @@
 """
 Module for testing models.py
 """
-# pylint: disable=invalid-name,line-too-long,no-member,locally-disabled,import-error,too-many-public-methods
+# pylint:
+# disable=invalid-name,line-too-long,no-member,locally-disabled,import-error,too-many-public-methods
 
 from unittest import TestCase
 from app.models import State, Party, Candidate, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
@@ -9,6 +10,7 @@ from app.models import State, Party, Candidate, Election, ElectoralCollege, Part
 from application import create_app
 
 create_app().app_context().push()
+
 
 class ModelTest(TestCase):
     """ Class for testing models """

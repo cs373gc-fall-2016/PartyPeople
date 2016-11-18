@@ -3,6 +3,7 @@ from flask import Flask
 
 # pylint: disable=import-error,invalid-name,line-too-long
 
+
 def create_app():
     """
     Create an application instance

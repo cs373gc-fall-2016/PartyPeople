@@ -1,5 +1,6 @@
 """ Models """
-# pylint: disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
+# pylint:
+# disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
 from flask_sqlalchemy import SQLAlchemy
 
 database = SQLAlchemy()
