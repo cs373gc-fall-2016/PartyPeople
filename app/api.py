@@ -1,6 +1,7 @@
+""" API routes for individual model access """
 # https://flask-restless.readthedocs.io/en/stable/customizing.html
 from flask_restless import APIManager
-
+# pylint: disable=import-error
 import app.models as models
 
 
@@ -11,6 +12,9 @@ def create_api_endpoints(app):
     manager.create_api(models.Party, results_per_page=0)
     manager.create_api(models.Candidate, results_per_page=0)
     manager.create_api(models.Election, results_per_page=0)
-    manager.create_api(models.ElectoralCollege, results_per_page=0, collection_name='electoralcollege')
-    manager.create_api(models.PartiesInvolved, results_per_page=0, collection_name='partiesinvolved')
-    manager.create_api(models.ElectionsToState, results_per_page=0, collection_name='electionstostate')
+    manager.create_api(models.ElectoralCollege,
+                       results_per_page=0, collection_name='electoralcollege')
+    manager.create_api(models.PartiesInvolved,
+                       results_per_page=0, collection_name='partiesinvolved')
+    manager.create_api(models.ElectionsToState,
+                       results_per_page=0, collection_name='electionstostate')

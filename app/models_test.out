@@ -1,0 +1,42 @@
+test_candidate_attributes (app.model_test.ModelTest) ... ok
+test_candidate_by_relationship_filter (app.model_test.ModelTest) ... ok
+test_candidate_relationships_1 (app.model_test.ModelTest) ... ok
+test_candidate_relationships_2 (app.model_test.ModelTest) ... ok
+test_candidate_relationships_3 (app.model_test.ModelTest) ... ok
+test_candidate_repr (app.model_test.ModelTest) ... ok
+test_election_attributes (app.model_test.ModelTest) ... ok
+test_election_relationships_1 (app.model_test.ModelTest) ... ok
+test_election_relationships_2 (app.model_test.ModelTest) ... ok
+test_election_relationships_3 (app.model_test.ModelTest) ... ok
+test_election_repr (app.model_test.ModelTest) ... ok
+test_elections_to_state_1 (app.model_test.ModelTest) ... ok
+test_elections_to_state_2 (app.model_test.ModelTest) ... ok
+test_elections_to_state_3 (app.model_test.ModelTest) ... ok
+test_elections_to_state_repr (app.model_test.ModelTest) ... ok
+test_electoral_college_1 (app.model_test.ModelTest) ... ok
+test_electoral_college_2 (app.model_test.ModelTest) ... ok
+test_electoral_college_3 (app.model_test.ModelTest) ... ok
+test_electoral_college_repr (app.model_test.ModelTest) ... ok
+test_parties_involved_1 (app.model_test.ModelTest) ... ok
+test_parties_involved_2 (app.model_test.ModelTest) ... ok
+test_parties_involved_3 (app.model_test.ModelTest) ... ok
+test_parties_involved_repr (app.model_test.ModelTest) ... ok
+test_party_attributes (app.model_test.ModelTest) ... ok
+test_party_number (app.model_test.ModelTest) ... ok
+test_party_relation_1 (app.model_test.ModelTest) ... ok
+test_party_relation_2 (app.model_test.ModelTest) ... ok
+test_party_repr (app.model_test.ModelTest) ... ok
+test_state_attributes (app.model_test.ModelTest) ... ok
+test_state_number (app.model_test.ModelTest) ... ok
+test_state_relation (app.model_test.ModelTest) ... ok
+test_state_repr (app.model_test.ModelTest) ... ok
+
+----------------------------------------------------------------------
+Ran 32 tests in 3.814s
+
+OK
+Name            Stmts   Miss Branch BrPart  Cover   Missing
+-----------------------------------------------------------
+app/models.py      82      7      0      0    91%   25, 39, 53, 73, 93, 110, 126
+
+# NOTE ON COVERAGE: We have created 7 tests for the model repr method however coverage is not recognizing them.

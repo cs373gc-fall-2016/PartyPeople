@@ -9,21 +9,32 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var allServices_service_1 = require('../../services/allServices.service');
 var AboutComponent = (function () {
-    function AboutComponent() {
+    function AboutComponent(allServicesService) {
+        this.allServicesService = allServicesService;
+        this.output = "";
     }
     AboutComponent.prototype.runUnitTests = function () {
+        var _this = this;
         console.log("Running Unit Tests!");
         var div = document.getElementById('runTestsDiv');
+        this.allServicesService.getTestOutput().subscribe(function (testOutput) {
+            _this.output = testOutput;
+            div.innerHTML = _this.output;
+        });
         div.innerHTML = "Running Unit Tests!";
     };
     AboutComponent = __decorate([
         core_1.Component({
             selector: 'about',
             templateUrl: 'app/components/about/about.html',
-            styleUrls: ['app/components/about/about.css']
+            styleUrls: ['app/components/about/about.css'],
+            providers: [
+                allServices_service_1.AllServicesService
+            ]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [allServices_service_1.AllServicesService])
     ], AboutComponent);
     return AboutComponent;
 }());
