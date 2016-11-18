@@ -5,47 +5,61 @@ import re
 
 
 def search_and(term):
+    """
+    Searches for 'and' results for all models
+    :param term: search term
+    :return: json of search results
+    """
     term = str(term).lower()
     print(term)
-    r = dict()
+    result = dict()
 
-    r["candidates"] = search_and_relation(Candidate, term)
-    r["elections"] = search_and_relation(Election, term)
-    r["states"] = search_and_relation(State, term)
-    r["parties"] = search_and_relation(Party, term)
+    result["candidates"] = search_and_relation(Candidate, term)
+    result["elections"] = search_and_relation(Election, term)
+    result["states"] = search_and_relation(State, term)
+    result["parties"] = search_and_relation(Party, term)
 
-    return json.dumps(r, ensure_ascii=False)
+    return json.dumps(result, ensure_ascii=False)
 
 
 def search_or(term):
+    """
+    Searches for 'or' results for all models
+    :param term: search term
+    :return: json of search results
+    """
     term = str(term).lower()
-    r = dict()
+    result = dict()
 
-    r["candidates"] = search_or_relation(Candidate, term)
-    r["elections"] = search_or_relation(Election, term)
-    r["states"] = search_or_relation(State, term)
-    r["parties"] = search_or_relation(Party, term)
+    result["candidates"] = search_or_relation(Candidate, term)
+    result["elections"] = search_or_relation(Election, term)
+    result["states"] = search_or_relation(State, term)
+    result["parties"] = search_or_relation(Party, term)
 
-    return json.dumps(r, ensure_ascii=False)
+    return json.dumps(result, ensure_ascii=False)
 
 
-def search_and_relation(r, term):
-
-    d = list()
+def search_and_relation(relation, term):
+    """
+    Search 'and' results
+    :param relation: The model
+    :param term: search term
+    :return: list of rows in models that contain term
+    """
+    list_results = list()
 
     if not term or term == "none":
-        return d
+        return list_results
 
-    result = r.query.all()
+    result = relation.query.all()
 
     if result:
 
         exists = False
-        c = 0
         for item in result:
 
             temp = dict()
-            i = 0
+            counter = 0
             context = list()
             for key, value in item.__dict__.items():
 
@@ -64,24 +78,29 @@ def search_and_relation(r, term):
                     else:
                         context.append(make_pretty(key) +
                                        ": " + bold_word(key, term))
-                    i = i + 1
+                    counter = counter + 1
                     # print("term in " + str(tkey) + " = " + str(tvalue))
             if exists:
                 temp["context"] = context
-                d += [temp]
+                list_results += [temp]
                 exists = False
-    return d
+    return list_results
 
 
-def search_or_relation(r, term):
-
-    d = list()
+def search_or_relation(relation, term):
+    """
+    Search 'or' results
+    :param relation: The model
+    :param term: search term
+    :return: list of rows in models that contain term
+    """
+    list_results = list()
 
     if not term or term == "none":
-        return d
+        return list_results
 
     words = re.split(' ', term)
-    result = r.query.all()
+    result = relation.query.all()
 
     if result:
 
@@ -90,7 +109,7 @@ def search_or_relation(r, term):
         for item in result:
 
             temp = dict()
-            i = 0
+            counter = 0
             context = list()
             for key, value in item.__dict__.items():
 
@@ -106,21 +125,27 @@ def search_or_relation(r, term):
                         exists = True
                         context.append(bold_words(
                             (make_pretty(key), value), word))
-                        i = i + 1
+                        counter = counter + 1
                         # print("term in " + str(key) + " = " + str(value))
             if exists:
                 temp["context"] = context
-                d += [temp]
+                list_results += [temp]
                 exists = False
-    return d
+    return list_results
 
 
-def bold_words(t, term):
+def bold_words(tup, term):
+    """
+    Bolding multiple words
+    :param tup: contains key, value of attribute of model and value for that attribute
+    :param term: search term
+    :return: Bolded String
+    """
     context = ""
     words = tuple()
 
-    if term in t[1].lower():
-        words = re.split(' ', t[1])
+    if term in tup[1].lower():
+        words = re.split(' ', tup[1])
 
         for word in words:
             if term in word.lower():
@@ -128,21 +153,31 @@ def bold_words(t, term):
             else:
                 context = context + " " + word
     else:
-        context = bold_word(t[0], term)
-    return t[0] + " : " + context
+        context = bold_word(tup[0], term)
+    return tup[0] + " : " + context
 
 
 def bold_word(word, term):
+    """
+    Bolding term inside of word
+    :param word: String that contains term
+    :param term: word to be bolded
+    :return: Return position of the search term
+    """
     bw = ""
-    i = word.lower().find(term)
-    if i >= 0:
-        bw = word[:i] + '<span class="context"><strong>' + \
-            word[i:(i + len(term))] + '</strong></span>' + \
-            word[(i + len(term)):]
+    word_location = word.lower().find(term)
+    if word_location >= 0:
+        bw = word[:word_location] + '<span class="context"><strong>' + \
+            word[word_location:(word_location + len(term))] + '</strong></span>' + \
+            word[(word_location + len(term)):]
     return bw
 
 
 def make_pretty(key):
+    """
+    :param key: String to make pretty
+    :return: pretty string
+    """
     key = key.title().replace("_", " ")
     if key == "Descriptive Name":
         return "Name"

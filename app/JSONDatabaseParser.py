@@ -175,7 +175,8 @@ def fill_candidate_table():
         reps = STATE_JSON[state]['representatives']
         for rep in reps.keys():
             temp_candidate = Candidate(name=CANDIDATE_JSON[rep]['name'], dob=str(CANDIDATE_JSON[rep]['birthday']),
-                                       job=CANDIDATE_JSON[rep]['position'], contact=CANDIDATE_JSON[rep]['contact'],
+                                       job=CANDIDATE_JSON[rep][
+                                           'position'], contact=CANDIDATE_JSON[rep]['contact'],
                                        poll=CANDIDATE_JSON[rep]['favorability'])
             candidate_state_query = State.query.filter(
                 State.name == STATE_JSON[state]['name']).first()

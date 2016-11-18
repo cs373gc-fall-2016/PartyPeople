@@ -3,32 +3,12 @@ from app.models import Candidate, Election, Party, State, ElectoralCollege, Part
 import json
 
 
-def query_state_by_name(state_name):
-    return State.query.filter_by(State.name == state_name).all()
-
-
-def query_state_by_party():
-    pass
-
-
-def query_candidate_by_party(candidate_party):
-    return Candidate.query.filter_by(Candidate.party == candidate_party).all()
-
-
-def query_candidate_by_name(candidate_name):
-    return Candidate.query.filter_by(Candidate.name == candidate_name).all()
-
-
-def query_election_by_name(election_name):
-    return Election.query.filter_by(Election.name == election_name).all()
-
-
-def query_election_by_level(level):
-    return Election.query.filter_by(Election.level == level).all()
-
-
 def query_election():
-    r = list()
+    """
+
+    :return: returns JSON of the table State
+    """
+    r_list = list()
     result = Election.query.all()
 
     candidates = dict()
@@ -67,9 +47,9 @@ def query_election():
         # print(str(item.election_id))
         parties[item.election_id] += [temp]
 
-    c = 0
+    counter = 0
     for item in result:
-        c = c + 1
+        counter = counter + 1
         temp = dict()
         for key, value in item.__dict__.items():
             if not "_sa_instance_state" in key:
@@ -84,18 +64,22 @@ def query_election():
         temp["candidate_election"] = candidates.get(item.id)
         temp["election_to_state"] = states.get(item.id)
         temp["parties_involved"] = parties.get(item.id)
-        r += [temp]
+        r_list += [temp]
 
     ret = dict()
-    ret["num_results"] = c
-    ret["objects"] = r
+    ret["num_results"] = counter
+    ret["objects"] = r_list
     ret["page"] = 1
     ret["total_pages"] = 1
     return json.dumps(ret)
 
 
 def query_state():
-    r = list()
+    """
+
+    :return: returns JSON of the table State
+    """
+    r_list = list()
     result = State.query.all()
 
     candidates = dict()
@@ -134,9 +118,9 @@ def query_state():
         # print(str(item.election_id))
         parties[item.state_id] += [temp]
 
-    c = 0
+    counter = 0
     for item in result:
-        c = c + 1
+        counter = counter + 1
         temp = dict()
         for key, value in item.__dict__.items():
             if not "_sa_instance_state" in key:
@@ -151,18 +135,21 @@ def query_state():
         temp["candidate"] = candidates.get(item.id)
         temp["election_to_state"] = elections.get(item.id)
         temp["electoral"] = parties.get(item.id)
-        r += [temp]
+        r_list += [temp]
 
     ret = dict()
-    ret["num_results"] = c
-    ret["objects"] = r
+    ret["num_results"] = counter
+    ret["objects"] = r_list
     ret["page"] = 1
     ret["total_pages"] = 1
     return json.dumps(ret)
 
 
 def query_candidate():
-    r = list()
+    """
+    :return: returns JSON of the table Candidate
+    """
+    r_list = list()
     result = Candidate.query.all()
 
     elections = dict()
@@ -201,9 +188,9 @@ def query_candidate():
         # print(str(item.election_id))
         states[item.id] = temp
 
-    c = 0
+    counter = 0
     for item in result:
-        c = c + 1
+        counter = counter + 1
         temp = dict()
         for key, value in item.__dict__.items():
             if not "_sa_instance_state" in key:
@@ -218,18 +205,21 @@ def query_candidate():
         temp["elections"] = elections.get(item.election_id)
         temp["party"] = parties.get(item.party_id)
         temp["states"] = states.get(item.state_id)
-        r += [temp]
+        r_list += [temp]
 
     ret = dict()
-    ret["num_results"] = c
-    ret["objects"] = r
+    ret["num_results"] = counter
+    ret["objects"] = r_list
     ret["page"] = 1
     ret["total_pages"] = 1
     return json.dumps(ret)
 
 
 def query_party():
-    r = list()
+    """
+    :return: returns JSON of the table Party
+    """
+    r_list = list()
     result = Party.query.all()
 
     candidates = dict()
@@ -268,9 +258,9 @@ def query_party():
         # print(str(item.election_id))
         elections[item.party_id] += [temp]
 
-    c = 0
+    counter = 0
     for item in result:
-        c = c + 1
+        counter = counter + 1
         temp = dict()
         for key, value in item.__dict__.items():
             if not "_sa_instance_state" in key:
@@ -285,11 +275,11 @@ def query_party():
         temp["candidate"] = candidates.get(item.id)
         temp["electoral"] = states.get(item.id)
         temp["parties_involved"] = elections.get(item.id)
-        r += [temp]
+        r_list += [temp]
 
     ret = dict()
-    ret["num_results"] = c
-    ret["objects"] = r
+    ret["num_results"] = counter
+    ret["objects"] = r_list
     ret["page"] = 1
     ret["total_pages"] = 1
     return json.dumps(ret)
