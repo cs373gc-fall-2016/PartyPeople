@@ -25,9 +25,6 @@ class Candidate(database.Model):
         return '{"Candidate" : {"name": %r, "dob": %r, "job": %r, "poll": %r, "contact": %r, "states": %r, "party": %r, "election": %r}}' %\
                (self.name, self.dob, self.job, self.poll, self.contact, self.states, self.party, self.elections)
 
-    def get_state(self):
-        return self.states
-
 
 class Election(database.Model):
     """ Election Model class """
@@ -55,11 +52,6 @@ class Party(database.Model):
     def __repr__(self):
         return '{Party : {"name": %r, "hq": %r, "leader": %r, "abbrev": %r}}' \
                % (self.name, self.hq, self.leader, self.abbrev)
-
-    # @classmethod
-    # def query(cls):
-    #     return database.session.query(cls).join(ElectoralCollege, State)
-
 
 class State(database.Model):
     """ State Model class
@@ -99,10 +91,6 @@ class ElectoralCollege(database.Model):
 
     def __repr__(self):
         return '{ElectoralCollege : { "State": %r, "Party": %r}}' % (self.states, self.party)
-
-    # @classmethod
-    # def query(cls):
-    #     return ElectoralCollege.query().join(State, Party).add_columns(State.name, Party.name)
 
 
 class PartiesInvolved(database.Model):
