@@ -22,6 +22,6 @@ export class HeaderComponent {
         this.router.navigate(['search'],navigationExtras);
 
         console.log("SEARCH: " + searchText);
-        location.reload();
+        location.href = "/search?term=" + searchText;
     }
 }

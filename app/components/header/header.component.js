@@ -23,7 +23,7 @@ var HeaderComponent = (function () {
         };
         this.router.navigate(['search'], navigationExtras);
         console.log("SEARCH: " + searchText);
-        location.reload();
+        location.href = "/search?term=" + searchText;
     };
     HeaderComponent = __decorate([
         core_1.Component({
