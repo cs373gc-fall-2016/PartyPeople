@@ -1,6 +1,7 @@
+""" API routes for individual model access """
 # https://flask-restless.readthedocs.io/en/stable/customizing.html
 from flask_restless import APIManager
-
+# pylint: disable=import-error
 import app.models as models
 
 

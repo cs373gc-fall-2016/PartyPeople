@@ -1,6 +1,5 @@
 """ Models """
-# pylint:
-# disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
+# pylint: disable=invalid-name,line-too-long,no-member,too-few-public-methods,locally-disabled
 from flask_sqlalchemy import SQLAlchemy
 
 database = SQLAlchemy()
@@ -134,6 +133,9 @@ class PartiesInvolved(database.Model):
 
 
 class ElectionsToState(database.Model):
+    """
+    Relation (Election, State) many elections to one state
+    """
     __tablename__ = 'election_to_state'
     id = database.Column(database.Integer, primary_key=True)
     election_id = database.Column(

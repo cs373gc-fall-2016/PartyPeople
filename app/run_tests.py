@@ -2,7 +2,7 @@
 
 import unittest
 from io import StringIO
-
+# pylint: disable=import-error
 from app.model_test import ModelTest
 
 

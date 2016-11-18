@@ -1,15 +1,14 @@
 """
 Module for testing models.py
 """
-# pylint: disable=invalid-name,line-too-long,no-member,locally-disabled
+# pylint: disable=invalid-name,line-too-long,no-member,locally-disabled,import-error,too-many-public-methods
 
 from unittest import TestCase
-from app.models import State, Party, Candidate, database, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
+from app.models import State, Party, Candidate, Election, ElectoralCollege, PartiesInvolved, ElectionsToState
 
 from application import create_app
 
 create_app().app_context().push()
-
 
 class ModelTest(TestCase):
     """ Class for testing models """
@@ -320,10 +319,8 @@ class ModelTest(TestCase):
         """
         elections_to_states_1 = ElectionsToState.query.filter(
             ElectionsToState.election_id == 1).first()
-        # print(elections_to_states_1)
         elections_to_states_2 = ElectionsToState.query.filter(
             ElectionsToState.election_id == 330).first()
-        # print(elections_to_states_2)
         state_query = State.query.filter(State.name == "Missouri").first()
         self.assertEqual(elections_to_states_1.states, state_query)
         self.assertEqual(elections_to_states_2.states, state_query)

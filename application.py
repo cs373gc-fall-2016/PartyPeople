@@ -1,7 +1,12 @@
 """ Launch the application and route to other pages """
 from flask import Flask
 
+# pylint: disable=import-error,invalid-name,line-too-long
+
 def create_app():
+    """
+    Create an application instance
+    """
     app = Flask(__name__)
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://partypeople:sweatypeople@partypeople-postgresql.cldmkovirzyt.us-west-2.rds.amazonaws.com:5432/partypeople_database'
     # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://ppdb'
