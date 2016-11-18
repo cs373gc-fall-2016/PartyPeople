@@ -1,3 +1,16 @@
+commit bb127158a48dacc7d84b1110a2b280a78776c7d5
+Merge: 368b047 ea1c859
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:24:44 2016 -0600
+
+    Merge
+
+commit 368b047f7bfb81d54239af68f75f09445d78d8d3
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:24:02 2016 -0600
+
+    Add git log
+
 commit 30ea270258515791644caf6a2c88cb0584cc3051
 Author: Phoenix Bishea <phoenixb@utexas.edu>
 Date:   Thu Nov 17 21:23:17 2016 -0600
@@ -9,6 +22,12 @@ Author: Phoenix Bishea <phoenixb@utexas.edu>
 Date:   Thu Nov 17 21:19:08 2016 -0600
 
     Update .travis.yml deployment
+
+commit ea1c859714d4c16f1b76960fdbc9214f84870e0e
+Author: Jason Vila <jasonvila@live.com>
+Date:   Thu Nov 17 21:13:22 2016 -0600
+
+    fixed search issue with firefox
 
 commit 934c271574f102e526f1851c5c4ef4bdbeaabbdc
 Author: Phoenix Bishea <phoenixb@utexas.edu>
