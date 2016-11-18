@@ -2,8 +2,7 @@
 Module to populate the database
 """
 
-# pylint:
-# disable=invalid-name,line-too-long,no-member
+# pylint: disable=invalid-name,line-too-long,no-member
 
 
 import json
