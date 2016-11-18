@@ -1,0 +1,1533 @@
+commit 30ea270258515791644caf6a2c88cb0584cc3051
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:23:17 2016 -0600
+
+    Update about.html
+
+commit b0a3ded18f745dd0a41f9a2b2a207d08df9174e2
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:19:08 2016 -0600
+
+    Update .travis.yml deployment
+
+commit 934c271574f102e526f1851c5c4ef4bdbeaabbdc
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:09:39 2016 -0600
+
+    Make pylint happy again
+
+commit 2c1e8a6805d121c755853692a226db5766423dd5
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:01:25 2016 -0600
+
+    Add html that was forgotten in last commit
+
+commit 9833c2d406a8f9660612bd7d824ff66cf8c52140
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 21:01:04 2016 -0600
+
+    Update makefile and create html for models.py
+
+commit d7fb85b109ae64c2f537b78d95c669a5fe95dbf5
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 20:56:09 2016 -0600
+
+    run autopep8
+
+commit 64b684d38b14259554bbd30dbb295f0b54360756
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 20:51:25 2016 -0600
+
+    Finish removing pylint warnings
+
+commit 60c1452e99816098331e7f4950c3b42e178ccd76
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 17 20:44:18 2016 -0600
+
+    Clean up the code
+
+commit 5f41696d771ab2c16f033f6066162ae09be9d57d
+Merge: 490d99a 115cd6d
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 17 20:41:54 2016 -0600
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 115cd6db5756b4f84f331ea7d00edcdb0f01b091
+Merge: 0049cb4 767b6d4
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 20:40:45 2016 -0600
+
+    Merge pylint happying with nathan's changes
+
+commit 490d99a1027847e351c5399359c6fec7593d2b68
+Merge: de9cb28 767b6d4
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 17 20:38:55 2016 -0600
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit de9cb281eccee4a3cca754ea24aa0aaff66e3977
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 17 20:38:50 2016 -0600
+
+    Make the code more compliant with pep8 and pylint
+
+commit 0049cb4ed9eeadbad234aa774f0547cea60529bd
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 20:29:16 2016 -0600
+
+    Make pylint happy
+
+commit 767b6d465984b9636eabb02a7260d14e92b0fb13
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Thu Nov 17 20:25:37 2016 -0600
+
+    Partial update of about page, just need commits per person, as well as overall commits.
+
+commit ee895703e2cad450942b51eb90ab601427512237
+Merge: 63b41a6 3c7bd49
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 17 19:50:56 2016 -0600
+
+    resolve merge conflicts
+
+commit 63b41a621b1d72e092efaa06652e275a5c9d6241
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 17 19:39:44 2016 -0600
+
+    Refactoring the code to comply with pep8 and pylint
+
+commit 3c7bd4911c27271c8548598ac3231394c6917ac5
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 19:36:30 2016 -0600
+
+    Add overage output
+
+commit ffb3d8d0df99dc041a238eddd1f679b836160374
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 19:34:44 2016 -0600
+
+    Remove unneeded methods
+
+commit 13688e332f58674ce7bb229fe47a69d542f4784f
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 19:34:17 2016 -0600
+
+    Update module docstring
+
+commit 4dac3c31b2fa792c4f6d272d04fa30f57fd4940c
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 19:34:00 2016 -0600
+
+    Add nathan's tests, repr tests, and module docstrings
+
+commit 427d5d68e2a8ad3b4758e83757ce575e80bac901
+Merge: c412bd7 ae1c3cf
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 17:23:28 2016 -0600
+
+    Merge backend changes
+
+commit c412bd70af896c14f17c99ba828d2614ab1f991d
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 17:21:54 2016 -0600
+
+    Update the models tests
+
+commit fbfb1b77b1d2c3f5ae0c185f86daa7834be43e99
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 17:21:29 2016 -0600
+
+    Move routes from application.py to views.py
+
+commit 214ab1fb366cec40ea5c1c41c04c2cf344c1128c
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 17 17:21:03 2016 -0600
+
+    Remove unneeded test files
+
+commit ae1c3cf4cb0722411e3d50d88cd9cac3073f8a62
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Thu Nov 17 17:11:51 2016 -0600
+
+    rename IDB2.pdf to IDB3.pdf
+
+commit 3b597871b947c2b80ba8627b5dd2be28d7f1a058
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Thu Nov 17 16:46:27 2016 -0600
+
+    got rid of code not being used
+
+commit cb10c098a18577154aa640f62da0cdc1d8c1397c
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 17:23:31 2016 -0600
+
+    Add route so that unit tests display on about page
+
+commit 68ea0574d3c53d61a78f7105a5b41d1607d60bda
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 16:55:26 2016 -0600
+
+    Fix repeated search when searching on search page
+
+commit bab5da0e13cc100ccc8462dd47b17efe5227c31a
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 15:44:28 2016 -0600
+
+    Made the bolded search results more obvious. Tried to fix bug where if you search one thing, and then search one thing with more terms, only the data from one thing is loaded initially. Caching problem? Unresolved.
+
+commit e1f18daadf47ae359783ca1776360613cb781eab
+Merge: fcf5b68 19a10e7
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 15:15:43 2016 -0600
+
+    Had to merge tables.map.js file for some reason
+
+commit 19a10e7a50841373df67c0289c981bca4a3f5e56
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 16 15:10:01 2016 -0600
+
+    search enter key working
+
+commit fcf5b685a818af750e377822a33e6e9f9d9885e3
+Merge: 841cdab 77baa9b
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 14:59:45 2016 -0600
+
+    Merging search tables conflict.
+
+commit 841cdab110755aff5d87d8b0e36fc63b2466f48e
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 14:58:51 2016 -0600
+
+    Possible fix to bug where if you searched something, and then tacked on more search terms, the data wouldn't reload. Need to commit to be able to pull other changes.
+
+commit 77baa9bbe11e3df7b908c8b10660d35f3678bf08
+Merge: 2c5efc6 213ce74
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 16 14:52:42 2016 -0600
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-DEV into dev
+
+commit 213ce74c423b80d95f72fdf6f81d1ac84ce39487
+Merge: e985f2c 54afc54
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Nov 16 14:50:38 2016 -0600
+
+    merge conflict fix
+
+commit e985f2c6a4f3074daf8fa2dd04904568bedc2c5e
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Nov 16 14:49:10 2016 -0600
+
+    beginning of enter bug fix
+
+commit 54afc54d91a2ec254058dabaf630a00346b39efd
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 14:44:57 2016 -0600
+
+    fix bug where searching didn't work on search results page
+
+commit c26c0d773530e3610b9ec72a6a5f415c429d3570
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 14:30:45 2016 -0600
+
+    fix bug where or results had a lowercase key
+
+commit d4ab55cb8abb4ef1dc0eb2a2ed8c79b82c100dba
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 16 14:24:14 2016 -0600
+
+    Add toggle functionality to search table
+
+commit 2c5efc6fa63e95bb3de56008f68e4c09fd1407d1
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Tue Nov 15 21:24:37 2016 -0600
+
+    fixed bug so tables scroll on search page
+
+commit 86f3bc78fcd03475a1fed67ae53185eaa91ea0fb
+Merge: 578e7a1 8a58932
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Tue Nov 15 21:01:27 2016 -0600
+
+    resolved merge conflicts
+
+commit 578e7a12ab8008396c96f54429cfa2909aa4603b
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Tue Nov 15 20:58:57 2016 -0600
+
+    tables on mobile now scrollable to view all data
+
+commit 8a58932545ebfb21bd9fbab2f96d3ba255f5b5e0
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Nov 15 20:38:31 2016 -0600
+
+    More progress on the search tables.
+
+commit 328e28e09a9649fbf36572dc972b45766398c7c7
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Nov 15 20:05:30 2016 -0600
+
+    SEARCH TABLES ARE DOOOONE. Going to fix some styling problems.
+
+commit 015d6777f9b7a5179bba44b120ecd42caa8d2276
+Merge: 772ec1f 545e321
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Nov 15 19:28:41 2016 -0600
+
+    Merging JSON updates for search tables.
+
+commit 772ec1f7f90ec8fed6bc335330a35b2a1cac3383
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Nov 15 19:27:13 2016 -0600
+
+    More work on the search results tables. Pushing to get JSON update.
+
+commit 545e3210f533b81439f534fce0aca70f27b38ae5
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Tue Nov 15 19:15:58 2016 -0600
+
+    Change context from a dictionary to list
+
+commit d4d541063bdfdeef5bd2bd7a9174dc948d575222
+Author: Jason Vila <jasonvila@live.com>
+Date:   Tue Nov 15 18:36:23 2016 -0600
+
+    tests run and fixed search frontend error
+
+commit 49fba6c1dbc5dc8534eaee4c8a89a92d5215533e
+Author: Jason Vila <jasonvila@live.com>
+Date:   Tue Nov 15 17:55:05 2016 -0600
+
+    fixed some of the search json formatting
+
+commit 6a390ee236c89e41bec921ca313ea2e5a8c4f3c9
+Merge: fc20584 e8843c1
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Nov 15 17:49:00 2016 -0600
+
+    Merge branch 'dev' of github.com:JulieM13/PartyPeople-DEV into dev
+
+commit fc20584fa8126eaf9f23e5896c38ab3534b99c43
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Nov 15 17:48:48 2016 -0600
+
+    Searching makes it to the search table components. Working on getting data in the table. Need to pull JSON changes.
+
+commit e8843c14715a0fdf07111d274215d2530d20e59d
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Tue Nov 15 16:42:06 2016 -0600
+
+    minor text fixes
+
+commit dda120799be8013153a6ec726d2c4f098a064da8
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Tue Nov 15 16:31:40 2016 -0600
+
+    making the tables pretties
+
+commit fd948a584a8bcb562e5ef2867e0422d2c54d6476
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Nov 15 13:34:53 2016 -0600
+
+    Fixed the details showing up on individual pages
+
+commit 5ec26123e3b4bd80b5eae5bd93435d8204351b2d
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Nov 15 12:42:00 2016 -0600
+
+    Trying to resolver error Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application' by moving the setter of application outside of main
+
+commit 935d61f361576c4965809e0798159c23dd34c57e
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Nov 15 12:39:40 2016 -0600
+
+    Trying to resolver error Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application' by moving the setter of application outside of main
+
+commit 6f37e899dd55f4f74e2fc05f61734b0d929caef6
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Nov 15 12:35:22 2016 -0600
+
+    Attempting to get code to run on AWS by changing name from app to application as per SO
+
+commit 34bdc286723331f1661b6ebbbc10aec9652101e2
+Author: Jason Vila <jasonvila@live.com>
+Date:   Tue Nov 15 12:17:48 2016 -0600
+
+    reduced load time for all pages to below 7 seconds
+
+commit c290242d9c6e108a7e7990dd0c75c5b9432b8439
+Author: Jason Vila <jasonvila@live.com>
+Date:   Tue Nov 15 00:43:23 2016 -0600
+
+    Updated bolding for multiword searches in s_and
+
+commit e62c571486c5a3c0998c24171465bf6955d08db0
+Author: Jason Vila <jasonvila@live.com>
+Date:   Tue Nov 15 00:25:47 2016 -0600
+
+    Added bolding and data on context of search.
+
+commit 43f5c9654da54e0b40f61d1043175da7ffc29fc3
+Author: Itoro <esiere.i@gmail.com>
+Date:   Mon Nov 14 17:57:21 2016 -0600
+
+    Started on search compoment, please don't search yet
+
+commit 5923493ede7e9a9c9b4c7af95849788225163f7e
+Merge: d487493 15f9da0
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Mon Nov 14 16:00:00 2016 -0600
+
+    Add images to details pages
+
+commit d4874935a71da7715682609ec6803f4bb9319619
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Mon Nov 14 15:58:50 2016 -0600
+
+    Add image links to all detail pages
+
+commit 15f9da07b83b5580cc0449432bfc0d690972a5bd
+Merge: 7ffbbb7 02307ce
+Author: Itoro <esiere.i@gmail.com>
+Date:   Mon Nov 14 15:50:50 2016 -0600
+
+    Merge branch 'dev' of github.com:JulieM13/PartyPeople-DEV into dev
+
+commit 7ffbbb7efd48008b2072156b6a32d84e9c6a5449
+Author: Itoro <esiere.i@gmail.com>
+Date:   Mon Nov 14 15:50:45 2016 -0600
+
+    Final update to tables, update to date with IDB4
+
+commit 02307cec347ef9e8a6322c73f5c056cc80ae266f
+Author: Jason Vila <jasonvila@live.com>
+Date:   Mon Nov 14 15:15:37 2016 -0600
+
+    fixed lowercase misusage.
+
+commit 21934e25a9e5789577172618a3fbf47f60df2bce
+Author: Jason Vila <jasonvila@live.com>
+Date:   Mon Nov 14 01:54:22 2016 -0600
+
+    closes #57. closes #58.
+
+commit f3efafb15f2aeec77cd8585921559d504215bfbb
+Merge: 0248f1e cd92e3a
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Sun Nov 13 17:44:39 2016 -0600
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 0248f1e2eccee4b40ca3fdfab292474de2b0f228
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Sun Nov 13 17:44:13 2016 -0600
+
+    Added in names for parties as well as states  instead of just having the id
+
+commit cd92e3a7f2879271c4b223aeb1a152dc0de8b13d
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Sun Nov 13 17:30:56 2016 -0600
+
+    Updated a few tables and details pages to reflect actual names instead of ids. Pushing to get more updates.
+
+commit 02046ba4c7c1fae5f0f2016d89c319bb2f85582d
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Sun Nov 13 16:22:55 2016 -0600
+
+    Added loading message for tables
+
+commit 0a4f62e1d550ba40174a2512b682d9de3339d262
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Sun Nov 13 15:41:34 2016 -0600
+
+    Turned contact from string to json object, and added descriptive election name to the election to state relation
+
+commit 796b0adb61b2aa1eef3c1f4d0b69223389c1610e
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Sat Nov 12 19:42:50 2016 -0600
+
+    Got party controlled states names to show, in addition to the id. Also api path to the intermediate tables has been fixed. Solution for rest of missig names is to make the name of party/state/etc unique, and add it as a foreign key into the intermediate tables
+
+commit 50ec7f55f737a918f07a0c365ab24e6dc5b69b17
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Sat Nov 12 16:16:39 2016 -0600
+
+    Fixed the issue with missing data, and optimized the loading of data into the database
+
+commit 108a642869451341154f2655afa3b34d8a0579a8
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Fri Nov 11 12:30:47 2016 -0600
+
+    Disabled pagination on the API results
+
+commit f61b65277cc0e716529bfe77b5440592fa47540f
+Merge: 732a713 b22a42c
+Author: Itoro <esiere.i@gmail.com>
+Date:   Thu Nov 10 18:28:27 2016 -0600
+
+    fixed candidate details bug
+
+commit 732a713c5be769cee43bcd7e37c21b9933333005
+Author: Itoro <esiere.i@gmail.com>
+Date:   Thu Nov 10 18:25:46 2016 -0600
+
+    fixed candidate details bug
+
+commit b22a42cd7a8560c07f88cbc4280923b8df7d27a4
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Thu Nov 10 16:54:42 2016 -0600
+
+    fix linking on candidate details page. Add getSearchResults service that's not implemented yet. Create a copy of candidate table but name to search_results_table
+
+commit 24bf542aa2005b08a9bfaa3d17e0ae837883d5f5
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Thu Nov 10 15:58:49 2016 -0600
+
+    minor CSS fix
+
+commit 2af632170a7507653498736591883296bf3b72b6
+Merge: c406aa4 b94c058
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Thu Nov 10 00:25:49 2016 -0600
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-DEV into dev
+
+commit c406aa48544ee179ab7d93c1b402d81d8fdded09
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Thu Nov 10 00:24:22 2016 -0600
+
+    added search bar to header
+
+commit b94c058e7d7d7b40c0be3ec56ea5ba3279cf9cf4
+Merge: d6c39a4 c76a609
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 9 22:04:40 2016 -0600
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit d6c39a4ca08a8aa81b363ba163f0dce97645e2e2
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 9 22:04:19 2016 -0600
+
+    Fixed the way in which data was being loaded into the database so that it actually gets all the data, and added some new fields
+
+commit c76a609b83dd22a5c83891d0c3e33b387a3f34d7
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 9 17:06:15 2016 -0600
+
+    filled out details pages, bug on candidates-detail page
+
+commit 56db8f2bbd67160f116ccad042a2c865a6584a6f
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Nov 9 15:37:57 2016 -0600
+
+    add more data to tables
+
+commit 9081c1e662dcb2d6a0712c7d99941ea21f8b45fb
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Tue Nov 8 18:22:24 2016 -0600
+
+    API data partially in pillar tables
+
+commit 8400b2628cb057ebdb0d5b26bb18c3e77dc3e044
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Tue Nov 8 16:50:48 2016 -0600
+
+    initially load data from api into tables
+
+commit 4b8aed076cc9676c5a19864872fb9fb2e6447133
+Merge: 681244d 88f4040
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Mon Nov 7 14:46:43 2016 -0600
+
+    merging master into dev
+
+commit 88f40409c783b8a8172b497971756515b0cd96b8
+Author: Itoro <esiere.i@gmail.com>
+Date:   Fri Nov 4 20:13:32 2016 -0500
+
+    changed to 'from io import StringIO' python 3.5.2 bugs out otherwise
+
+commit 8c13931fa47d4cae6b13efa379243ffaa2de5ee7
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Fri Nov 4 17:57:17 2016 -0500
+
+    Restructure the application
+
+commit eac7e1d5454c08f17ab32be63d6cfd9093c27470
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Fri Nov 4 17:56:53 2016 -0500
+
+    Comment out all of the api tests for now
+
+commit 165762276ff388385a7d2880de124ecf6b085547
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Fri Nov 4 17:56:13 2016 -0500
+
+    Only deploy to 'partypeople-prod' our development webpage
+
+commit d96046f0cb942d806ffbbd684f3f8b63809694ac
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Fri Nov 4 17:44:00 2016 -0500
+
+    remove unneeded files and update .gitignore
+
+commit 1f1970d5ab6434f5e73dfa3f8c92a431caa11ab4
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Fri Nov 4 17:41:35 2016 -0500
+
+    Remove unneeded flask folder
+
+commit 681244d205e05ca79f27424d233d802a433f678a
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 21:46:42 2016 -0500
+
+    adding output for the model tests
+
+commit db86ffae66dd4972132d241af167ea5eba6302f1
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 21:44:41 2016 -0500
+
+    Working on reading/writing objects in the database
+
+commit c7dfdfd4aa387f9371621d6f81efb7c3ac560231
+Merge: 5c92ead 29693b2
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 21:25:50 2016 -0500
+
+    Working on reading/writing objects in the database
+
+commit 5c92ead4e14023ea40968e0e4358561565ba3444
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 21:22:13 2016 -0500
+
+    Working on the models, and reading/writing to the aws database
+
+commit 29693b29a654a29123c02bac50c14adee96aa159
+Merge: ad2a247 1aaa2d7
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 3 21:21:38 2016 -0500
+
+    merge
+
+commit ad2a2475a0f6e89922510fd32e2e146b0c81bc9b
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 3 21:21:09 2016 -0500
+
+    remove api import
+
+commit ef8952967dd5b972fede42296dbb7fff1bda5ac4
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 21:20:48 2016 -0500
+
+    app/JSONDatabaseParser.py
+
+commit 1f50285bc294d4418be001fd9eb4408b892072dc
+Merge: 1aaa2d7 e810ae4
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 20:33:33 2016 -0500
+
+    Merge branch 'master' of https://github.com/JulieM13/PartyPeople-Phase1
+
+commit 1aaa2d76f3bf63a3cea3ce66d1817b79131ad24b
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 20:32:53 2016 -0500
+
+    might have candidates table.
+
+commit 8179abcf6cee1a05a42374588d39156084906597
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 20:19:43 2016 -0500
+
+    hi phoenix
+
+commit 0a8e4e09969e6616171d60baf7b5183076e33736
+Merge: 4e4ca55 688bf3a
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 3 20:18:56 2016 -0500
+
+    merge with julie
+
+commit 4e4ca55ecf5859aec04b39a30016eca82a194283
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 3 20:18:27 2016 -0500
+
+    Update db pointer, makefile, and api tests
+
+commit 688bf3add04507d9bb916d70cc8ece92305f29e1
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 20:13:45 2016 -0500
+
+    Commiting so that I can move to a pc with a local db.
+
+commit 547e5f3f16de1034e630599cb4a3c4d71a7f5b3f
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Nov 3 19:40:04 2016 -0500
+
+    Update requirements.txt and .gitignore. Add api and api tests. Add a way for the website to query the test results using hte api
+
+commit 223b71c713cd5349f2db9960649432e2d8e9fc02
+Merge: afb2eda ac3f96c
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 18:40:37 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit afb2eda502ed47c1a05398d71f74f0b6e2047f21
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 18:40:06 2016 -0500
+
+    Successfully loaded data into the DB in the CLOUD
+
+commit ac3f96c889b494a1542c16cffe1d97b94dc55049
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 17:49:27 2016 -0500
+
+    Added div so that so that test output can just be inserted there on about page.
+
+commit 1aa9751853a9b96759b9b7e6243eb81ac4786848
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 17:33:57 2016 -0500
+
+    Updated the about page to have the correct number of issues. Still need to do commits.
+
+commit cec6f4dbd8b0d80c2a39fafd2fd5c0e49478a9cd
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 17:29:31 2016 -0500
+
+    Played around with linking things, waiting on data.
+
+commit f0bc86b42cbecc8895611ec65a5f6b1e37d29a74
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 16:17:55 2016 -0500
+
+    Prepped the details components for api usage.
+
+commit 67681eee006bbeb29f7ab05e556996d7d6169af7
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 16:04:48 2016 -0500
+
+    Added a service to be able to get api data. Prepped all table componenets to use this service.
+
+commit 62f2243d6386804f36ca8f4c39fb47d121cb1c10
+Merge: d3915e9 84dcbc3
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 14:11:15 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit d3915e9e7801a030fb1945919b7277297df92a81
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Nov 3 14:10:57 2016 -0500
+
+    Updated the about page to have information about how data was collected. Also updated the frontend section to include info about angular2.
+
+commit 84dcbc38ed7e431d3a51ddf4e923523a523a89b5
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Nov 3 14:08:39 2016 -0500
+
+    Updated Script that loads everything into the database, fixed bugs were relation wasn't being saved
+
+commit e810ae41872089ad67f0e867712e4f362cf9e9dc
+Author: Justin Tran <justintran@utexas.edu>
+Date:   Wed Nov 2 18:21:14 2016 -0500
+
+    Add IDB2 (updated UML)
+
+commit 89a596750ca6f860770052270a996d2ddc420c60
+Author: Justin Tran <justintran@utexas.edu>
+Date:   Wed Nov 2 18:20:47 2016 -0500
+
+    Delete IDB1.pdf
+
+commit 066f069a2962dbec168c12680bd3b70ebc203758
+Merge: 1a3ecdc 298ebb8
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 2 17:41:42 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 1a3ecdc60d42fc0a9cf4a048f7df972ca5822df1
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 2 17:40:56 2016 -0500
+
+    Adding script that fills the database
+
+commit 298ebb81660c79de5023ee2e887ed48ddff76616
+Merge: 519a7dc 1b5ae1c
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 17:30:10 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 519a7dcdb410a28a46fc9b12a268f9ced1cae90e
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 17:29:52 2016 -0500
+
+    Updated each person's responsibilities for Phase 2
+
+commit 1b5ae1c3195b92aacc94a86e8068114f0753a8c6
+Merge: 06f90b9 b532336
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Nov 2 16:43:27 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 06f90b9eb6e3ee5a608a2a82aabc1b5f97d581cb
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 16:32:18 2016 -0500
+
+    Added a search bar to each table.
+
+commit fb40e8596bf608673fe90ee67bdb149121078f7b
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 16:24:27 2016 -0500
+
+    Prepped About page to run unit tests.
+
+commit 5f148e45033b3479d3001a2195374e00ba13194a
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:50:03 2016 -0500
+
+    Hopefully updated the travis yml file for partypeople-DEV repo.
+
+commit 40a9e3132a8eedce84526ad0e6f496a235c0fc9d
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Nov 2 16:39:09 2016 -0500
+
+    fixes about to work on small screens
+
+commit 9cba925d0ae1891eeb9cb1c90d382f054d717937
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Nov 2 16:26:20 2016 -0500
+
+    added favicon
+
+commit 84d5d3c6f39ae470ac00b16b1524372907cba795
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Nov 2 15:49:15 2016 -0500
+
+    fixed details title display
+
+commit c49dd2a8c511673378f7e3fcad582ee0fc5350dc
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:40:05 2016 -0500
+
+    Removed outdated python models files.
+
+commit 471849e97255489fab99decf60e76f76ed0a1f78
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:39:01 2016 -0500
+
+    Cleaned up the files in the directory.
+
+commit b53233632d715231abb3cc73df9954828ed0da46
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 16:32:18 2016 -0500
+
+    Added a search bar to each table.
+
+commit c80673da5e07498d1f4ddca2fd2194136a2509f6
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 16:24:27 2016 -0500
+
+    Prepped About page to run unit tests.
+
+commit 3f0a718a04d4f02546404823eebaabc6fbb2b6a8
+Merge: 55ebd8f 4349e9e
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:50:21 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 55ebd8f11559b5268e82eba1e3fe4e467351486d
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:50:03 2016 -0500
+
+    Hopefully updated the travis yml file for partypeople-DEV repo.
+
+commit 4349e9e19239624b18c6c6663ae4dba00f1ff810
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Nov 2 15:49:15 2016 -0500
+
+    fixed details title display
+
+commit 151b332361a8e0a83d50f353dd015a169c4786cb
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:40:05 2016 -0500
+
+    Removed outdated python models files.
+
+commit 8d81b24e8d22b070a82d44cb314676e2d1157b2e
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:39:01 2016 -0500
+
+    Cleaned up the files in the directory.
+
+commit eb74c0d7ebb1d2247185084cca21fcf400687e43
+Merge: c60408b d8f4efa
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:24:22 2016 -0500
+
+    Merging dev into master to I can do a pull request into the GitHub Classroom and make sure partypeople.me will run the angular site.
+
+commit d8f4efa8f18b5b08e08d2512249d8bdb931dc505
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:21:46 2016 -0500
+
+    Updated all the tables so they are sortable with pagination.
+
+commit d58158f06b27031e589bf606b340bda57971d398
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:12:49 2016 -0500
+
+    Added pagination to sorted tables.
+
+commit 85c06b50f3bbffafd264c5dd847b77924799616b
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 15:10:04 2016 -0500
+
+    Have a sample table for states.
+
+commit 3db90569ffeef1be9ba1be3ab46dd3982d150e73
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Nov 2 14:53:07 2016 -0500
+
+    HAVE A FREAKING SORTING TABLE. Basics of one, at least.
+
+commit c1fea3a88916ed047eaa96f6946758dd8fec4474
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 2 10:54:45 2016 -0500
+
+    Models being merged with the Angular code
+
+commit 3992534d5e20309d1afc117d7c29495863986942
+Merge: fb7a9f2 ce12ddf
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 2 10:52:59 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit fb7a9f2c6c2a210dbe169a653fa400a322de0e4f
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Nov 2 10:52:25 2016 -0500
+
+    Updated models, init file, and unit tests. Trying to look into API and Queries
+
+commit ce12ddf7aa2166bf65b145fa07512d15c0b31006
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 2 03:05:14 2016 -0500
+
+    changed color of hover for site name in header
+
+commit c6d7f9e1d13af703a1bee287571dfb30e1ef5019
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 2 03:03:14 2016 -0500
+
+    put back some CSS I actually needed
+
+commit f2a194ea13a250822119aacb636a362c95d9f218
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 2 03:00:59 2016 -0500
+
+    removed some unused CSS
+
+commit 7ddb082ac6e306c8e613f88f97c6ba9e5446277c
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 2 02:42:31 2016 -0500
+
+    cleaned up details pages
+
+commit 5f6aeb21398c5323caafd046d73154a8561356cc
+Author: Rachael Metcalf <rem10@sbcglobal.net>
+Date:   Wed Nov 2 01:52:06 2016 -0500
+
+    clean up homepage and header
+
+commit c2ac1c51530e28a504811c7d52f495f02450c8db
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 17:59:34 2016 -0500
+
+    Attempted to fix sorting tables, did not suceed.
+
+commit 26cf0ff843c8a1a9ba348fc757f5a7d4984334fd
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 17:35:17 2016 -0500
+
+    Added the other table and details components for each model. Ready for the data!
+
+commit 6d9a1b91db54cfcb38a03a9a1095c9c3b1fff402
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 17:03:32 2016 -0500
+
+    Removing unneeded files.
+
+commit 9a1dcc057ce06df056480a58298d326e4388cb91
+Merge: adfced1 fcb6009
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 17:01:10 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit adfced1fa1416b6b3a9ee2c931ba729c796eabae
+Merge: 1184f45 744f06d
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 16:57:38 2016 -0500
+
+    Merging angular (with flask and angular working together) into dev. Angular branch will be killed.
+
+commit c60408bf21447687af7c5d6dac8652e351cd1692
+Merge: 16e8015 1184f45
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 16:53:20 2016 -0500
+
+    Merging dev into master so I can put angular into dev.
+
+commit 744f06d74a50ac3113345327cb0d10fb7cce1197
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 16:42:00 2016 -0500
+
+    Fixed a few stylesheet linking errors when integrating Angular2 and Flask.
+
+commit 992e151a10ea5ab027b3f5f763c7eb492d4dbb38
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 15:44:42 2016 -0500
+
+    I think I integrated Angualr2 and Flask?
+
+commit fcb60097aca81a1eb1a221e04226f0b5f8682268
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Nov 1 14:42:03 2016 -0500
+
+    updated models, and better tests for those models, starting to write the queries
+
+commit 35308e07a25a8eefdfd72dbb65033ac7d593dbf3
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Nov 1 12:25:11 2016 -0500
+
+    Finished basic table and details page for states. Still need to figure out how to make tables sortable.
+
+commit 54dbf0bce5c2dc8162dde1b03b89bda8c89d68db
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Mon Oct 31 17:11:45 2016 -0500
+
+    Pushing terrible code so people can help me debug. Known bugs: states/id isn't working, and table isn't sortable.
+
+commit cf8cebf94c0be73178130a5643f2f5dce24a31b7
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Fri Oct 28 12:47:53 2016 -0500
+
+    Create a basic dynamic table component. Fixed the bug where exceeded maximum stack calls. Should prefix everything with pp- to avoid later errors.
+
+commit b560390bba9e5e4254481c6d3f9c904bcaf6a846
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Fri Oct 28 11:22:05 2016 -0500
+
+    Have basic angular app. Have header, home, about components. Started table component, but it's not cooperating. Run npm start to see app.
+
+commit 1184f45b8c6bdd8cc1494a94d9494350d3ea54a9
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 27 13:51:30 2016 -0500
+
+    Starting to add more unit tests for each model. Three tests for states have been written, others still need more tests
+
+commit 1a5a3fe398dd7cb757f710de3fd7a79f412bb06c
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Oct 26 18:54:13 2016 -0500
+
+    better model representation with multiple and intermediate tables. Relationships are cleaner and no circular relationships, tests that are written now testing insertion into the table all pass on my local machine, more tests still needed to verify that the relationships work properly
+
+commit efd848b88c78bac8992987fe9d1d53588666466f
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Oct 25 13:58:42 2016 -0500
+
+    Reworking the models, starting with State, adding in single relationship between states and candidates, will start to add the other dependancies
+
+commit 16e8015015568a8bfe56ade7be8baf50c136a2f5
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 21:50:25 2016 -0500
+
+    Github master travis yml
+
+commit 3456d88704bbf0a9c542f07c5dd4e8eb9fe85093
+Merge: 96a239a 127eda7
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 21:46:10 2016 -0500
+
+    Merged dev into master.
+
+commit 127eda78de3676e1d1d2e7b453e37adc7416f2a1
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 20 21:44:20 2016 -0500
+
+    Adding the log
+
+commit 97fc6647c73e02b4ab173988adca608250b5d2a2
+Merge: 89114fa 4f82ae8
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 20 21:43:38 2016 -0500
+
+    Worked on the models and added tests
+
+commit 89114fa915d86866b80450915e1f35bc70035258
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 20 21:33:56 2016 -0500
+
+    Worked on implementing the Models and their relationships
+
+commit 4f82ae8bf51ebd5e5e35cd47d79f94b3f3889990
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 21:07:34 2016 -0500
+
+    Add html for the application
+
+commit 28f7018b89b5bdf9604828b6d4314c7c0dd829d5
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 21:03:45 2016 -0500
+
+    Add third application.py test and remove pylint from main test target
+
+commit d39a5fc20d26b789572c40dd2dcc21bbfb116b4e
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 20:51:39 2016 -0500
+
+    Remove trailing space
+
+commit ff56625ea53a795fe772fd0e0bdfa84f0bc1048a
+Merge: 2f461c5 ccd8d1c
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 20:50:09 2016 -0500
+
+    Merging with dev
+
+commit 2f461c599494beb2eed047a76aaab02d22e1e4c9
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 20:49:30 2016 -0500
+
+    Add two tests for all application.py functions and remove unused data_summary.html
+
+commit a6ecd9d00127d508568f353100d3683774ddc8dc
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 20:47:45 2016 -0500
+
+    Set debug to false
+
+commit ccd8d1c780b89fd79a585875ab1e3d85b7f36ece
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 19:41:53 2016 -0500
+
+    Fixed some typos on the about page.
+
+commit 5f7c1f94f101af67dafa5c6c27c4fd6cc9132d09
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 19:22:59 2016 -0500
+
+    Update .travis.yml so only master updates partypeople.me on forked partypeople repo
+
+commit 96a239a00b7b928db3ea3a46ccb4ebcc4869d8b4
+Merge: 517383d b19d960
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 18:49:29 2016 -0500
+
+    Merging dev into master so I can create a pull request into the master of github classroom (the repo that's being graded).
+
+commit b19d9608656d0b29cc2348a1e8a69b756e6eec06
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 18:44:03 2016 -0500
+
+    Added a title tag to each page.
+
+commit 3387ebaba9e1e3c77638a17b561311868dd8d12d
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 18:37:46 2016 -0500
+
+    Updated the about page to have number of commits, issues, and unit tests for each person and globally.
+
+commit 596f17d91dfe5f74a2d5ebbaae90ee98ddc5a35c
+Merge: 024a8e2 ff2279c
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 18:12:38 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit ff2279c81bfbb9eb96e44c1f0ed174e4a0fbfd82
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 17:25:42 2016 -0500
+
+    Run autopep8 on .py files
+
+commit 5f264c88749347a9186935b4736518a07c583e9b
+Merge: aa47e2d ac95a35
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 17:24:47 2016 -0500
+
+    Merge with dev. Move all models to one file.
+
+commit aa47e2d860d4a74620118a9494215cec01f4494b
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 16:52:53 2016 -0500
+
+    Move models into single models.py file, update the makefile, add module docstrings, and format *.py files
+
+commit ac95a3560e6cf1d35d07b90ab284d5e093c12741
+Author: Jason Vila <jasonvila@live.com>
+Date:   Thu Oct 20 16:45:36 2016 -0500
+
+    Fixed typos, added related links to alaska and texas election static pages
+
+commit 3935c30dba3207c207ee6335d2a941f9d3185c38
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Thu Oct 20 16:32:41 2016 -0500
+
+    fixed website name displaying small
+
+commit 3e7c3be94a4c14c5c83abacb75ca1ea869c82373
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Thu Oct 20 16:29:53 2016 -0500
+
+    added header to every file
+
+commit 517383d6ce2ea40056a65d8f071628c8e3d231c5
+Merge: 006a816 024a8e2
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 15:52:23 2016 -0500
+
+    Merging files from dev branch.
+
+commit 024a8e22c6cca1ee87f9c4693609969a29bf9289
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Thu Oct 20 15:46:30 2016 -0500
+
+    Committing to clean local repo and merge branches.
+
+commit 2707fc84a6fdd3074ac8075b2b0fdcf52685ae1d
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Thu Oct 20 15:40:03 2016 -0500
+
+    fixed carousel navigation
+
+commit 9719e41dacb154a953c64ebac0662fa955696f83
+Merge: c25dc7d b983226
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 20 12:41:40 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit c25dc7d426d10ea81eedea8687a168ece979892d
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 20 12:41:16 2016 -0500
+
+    Updated models and beginning of test framework for models
+
+commit 42422d0875b629518faeeddc1e8053691a604846
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Thu Oct 20 12:39:43 2016 -0500
+
+    Updated models
+
+commit 191034e09b92d384b0a49f58ec783f851d7c1482
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Thu Oct 20 10:25:27 2016 -0500
+
+    Add module docstrings to application.py
+
+commit b983226192c54a9a3d12f6be09a422084a1663e1
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Oct 19 20:45:35 2016 -0500
+
+    UML pdf
+
+commit 21ad802946dc5cf76a306b566a407560dfd3aae8
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Oct 19 15:05:02 2016 -0500
+
+    added about links on homepage
+
+commit c80c931094579028faec2dbe59f0ba804bb51712
+Merge: d903650 a80a921
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Oct 19 14:55:50 2016 -0500
+
+    Merge branch 'dev' of github.com:JulieM13/PartyPeople-Phase1 into dev
+
+commit d9036503b51810754e327ff5db0b54e92ff69469
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Oct 19 14:54:53 2016 -0500
+
+    Typo fix
+
+commit a80a92183cd853796a40b977a6f5652b9635d49e
+Merge: 7bc5abc 35f8fec
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Oct 19 14:52:15 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 7bc5abcb9bd0925c320eb4afa803af3d60323b48
+Merge: 039a503 7deef31
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Oct 19 14:52:08 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 35f8fecc6999424c6f8d3474d7e9d7af57c539de
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Wed Oct 19 14:51:55 2016 -0500
+
+    Finished up the About page. Need to add final stats once we have them.
+
+commit 7deef318293353028e90621dea9ee7a54286b0ff
+Merge: 9862051 1f24218
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Oct 19 14:50:42 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 986205189540e9b10034c1b26124e9a0106ca5d5
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Oct 19 14:50:37 2016 -0500
+
+    clean up formatting of states and elections pages
+
+commit 039a50343e54ac62bf47053b57477cbb3015b804
+Merge: db9f334 1f24218
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Oct 19 14:46:41 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit db9f334ab5d68e530f259309c62d6dcb8033e45e
+Author: rachael Metcalf <rmetcalf@cs.utexas.edu>
+Date:   Wed Oct 19 14:46:37 2016 -0500
+
+    added home page
+
+commit 1f24218916a353c06ff7b78ae34e83eccc47f074
+Merge: 847c836 76efacb
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Wed Oct 19 14:24:30 2016 -0500
+
+    Merge template changes with makefile changes
+
+commit 847c83618435271add29edbfa7a688d693580a38
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Wed Oct 19 14:23:41 2016 -0500
+
+    Add preliminary makefile and update packages installed by .travis.yml
+
+commit 76efacb4f1f200cb6710466e7623ea6964d42fb5
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Wed Oct 19 13:50:56 2016 -0500
+
+    enlarge and center text on models tables pages
+
+commit edf485e98e77e93ec29ab1932b274b2a08840571
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Oct 19 13:45:26 2016 -0500
+
+    Bootstrap added to Parties and Candidates Static pages
+
+commit afd14ad2ac0fbfec857982be1a67d09b9c1924b3
+Author: Itoro <esiere.i@gmail.com>
+Date:   Wed Oct 19 13:26:08 2016 -0500
+
+    model template update
+
+commit b9a4bd20c7a4e47d1dd826049a8b006fc1f7dbfd
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Wed Oct 19 12:56:17 2016 -0500
+
+    Exclude __pycache__ folders with .gitignore
+
+commit b13b6d1707901b71c7c274a44f708b184e4febe3
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Wed Oct 19 12:55:04 2016 -0500
+
+    remove unneeded pycache folder
+
+commit 515758852acbf9eee89148e4621008aa2d6bb613
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Wed Oct 19 12:44:25 2016 -0500
+
+    Remove .idea IDE folder
+
+commit f1118072f744e04738b4eb86dd91998f0d22fa9c
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Wed Oct 19 12:39:31 2016 -0500
+
+    added line in gitignore to ignore ide files, minor changes to other two files
+
+commit 9cb7c96e53bfd3a2f793c827504c27f522df22f2
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Tue Oct 18 19:24:20 2016 -0500
+
+    tables now sortable
+
+commit 97eec1fd0ef056c9eb2c1606afb5c520d8489352
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Oct 18 18:23:48 2016 -0500
+
+    Started on the about page. Still awaiting information from team members and need input on data and tools used.
+
+commit 6254166d718c9c401ee684204430cd97358d9923
+Merge: 9bc0e7c bf3502a
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Oct 18 18:04:28 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit 9bc0e7c1d94f3c891309f951b7118c14e1b305a9
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Tue Oct 18 18:04:19 2016 -0500
+
+    Started writing the schema classes for the pillars as well as writing the class for unit testing. Further investigation is needed into how to work with SQLAlchemy and postgresql. The two unit tests that have been written will work for this phase of the project and can be extrapolated to other pages easily, but will need to be revisited for later phases of the project
+
+commit bf3502a061aae55323d16bf065c9b440233fd49b
+Author: Justin <tran.d.justin@gmail.com>
+Date:   Tue Oct 18 17:40:21 2016 -0500
+
+    Add model pages with clickable links
+
+commit b2c57058e2ce9a22f6d5c8dab23f327416d9d23b
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Oct 18 17:29:47 2016 -0500
+
+    fix broken links
+
+commit bbd3ea42a5cd16daed220bdb51520c49b7d98422
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Oct 18 17:27:33 2016 -0500
+
+    fixed broken links
+
+commit 38d54beb460b5fc21c969864c8f54f5cb0c09b1b
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Oct 18 17:22:21 2016 -0500
+
+    route change
+
+commit a588d7ec7027e4c4ca586b7f5f5851476573d2ee
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Oct 18 16:45:21 2016 -0500
+
+    candidate and party static pages
+
+commit 8efd713876368e7ee94a25f3ff44f464712ed24d
+Author: Jason Vila <Jason Vila>
+Date:   Tue Oct 18 13:34:01 2016 -0500
+
+    Skeleton static pages for States and Elections.
+
+commit e33dea4e390531a6f62000d663ee866e937f61fa
+Author: Itoro <esiere.i@gmail.com>
+Date:   Tue Oct 18 12:14:02 2016 -0500
+
+    Candidate static pages
+
+commit f9c68f156662a1f9dbc5c22d8cdf08fb34519cb7
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Oct 18 12:06:58 2016 -0500
+
+    Added routes to about and models page, with dummy html files.
+
+commit ba5883bdb14def4e9871f716735d21c2b4d73818
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Oct 18 12:01:50 2016 -0500
+
+    Created routes for all the static pages and they go to dummy html pages.
+
+commit 006a816b9a4eb9c660c611b364c4c183d9117f10
+Author: Julie Muzy <jmuzy@cs.utexas.edu>
+Date:   Tue Oct 18 11:53:54 2016 -0500
+
+    Added the routing to all the static pages plus dummy webpages for all of them. People now just need to overwrite the dummy html files with the correct files.
+
+commit 69e7d60da0f62eef477e56d243a2d90c5d47bae5
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 21:33:01 2016 -0500
+
+    Attempt to fix .travis.yml formatting
+
+commit e0013efddbb0f86a3c24bc72f7bc40b980373bb4
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 21:29:52 2016 -0500
+
+    Trigger build to test deployment
+
+commit c30599e8296e16cc94bfd59f1f3b7a404c15a04a
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 21:25:53 2016 -0500
+
+    Try splitting deployment into dev and master branch
+
+commit c67401549aba663472014523a7ad334a9995b076
+Merge: 5ef73af 95bcba2
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 21:17:44 2016 -0500
+
+    Attempt to fix encryption key again
+
+commit 5ef73af7896f26881ff11665e732eaff98eda891
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 21:15:08 2016 -0500
+
+    Try fixing encryption keys again
+
+commit 95bcba23839fdd870aa76fbd4724e127493cdac2
+Merge: f6d3b7b 4f61316
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Mon Oct 17 21:11:48 2016 -0500
+
+    Merge branch 'dev' of https://github.com/JulieM13/PartyPeople-Phase1 into dev
+
+commit f6d3b7bf649df5c430774e344a74d53058a110aa
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Mon Oct 17 21:09:39 2016 -0500
+
+    Adding Bootstrap to the directory
+
+commit 4f61316ceabaac4ead6f368d2ccdb49640e451fc
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 21:07:20 2016 -0500
+
+    Update encryption keys
+
+commit 4c89aadd5cddb0b86e29c08b3ee077f6ee5dbe7a
+Merge: 116f07d 5f547d8
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 20:49:46 2016 -0500
+
+    merge files
+
+commit 116f07da3aa09d0fa71e0277699516f577be3169
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 20:47:20 2016 -0500
+
+    Add .travis.yml file
+
+commit 4044a69201f8f8cfa1042bc0abb76c9a74d53715
+Author: Phoenix Bishea <phoenixb@utexas.edu>
+Date:   Mon Oct 17 20:46:48 2016 -0500
+
+    Rearrange files, add .travis.yml that builds on push, cleanup existing files, and update .gitignore
+
+commit 5f547d822df1e0bcaa72230b914efc0473055dc0
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Mon Oct 17 20:40:35 2016 -0500
+
+    removed the folder containing the virtual env as it is unecessary
+
+commit 19375e02bc27955530a928c6562b60f8ff724d5e
+Author: GreatImNate <nathan.seegmiller@utexas.edu>
+Date:   Mon Oct 17 16:16:08 2016 -0500
+
+    Hello world starting point
+
+commit 36af96a3fb9eb4d3ed7c822ea51dae3cf6505735
+Author: Julie Muzy <julie.m.muzy@gmail.com>
+Date:   Sun Oct 16 18:09:42 2016 -0500
+
+    Initial commit
