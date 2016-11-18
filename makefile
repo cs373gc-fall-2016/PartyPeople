@@ -29,7 +29,7 @@ COVERAGE_FILES := application.py
 	$(PYLINT) --disable=locally-disabled,no-member,too-few-public-methods --reports=no --generate-rcfile > $@
 
 html:
-	find . -type f \( -name "*.py" \) | xargs $(PYDOC) -w
+	$(PYDOC) -w ./app/models.py
 
 log:
 	git log > IDB3.log
