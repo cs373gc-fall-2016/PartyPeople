@@ -1,5 +1,5 @@
 """ Frontend application routes """
-# pylint: disable=import-error, invalid-name
+# pylint: disable=import-error,invalid-name,unused-argument
 
 from flask import Blueprint, send_from_directory, request
 from app import searchdb, query
@@ -9,7 +9,7 @@ frontend = Blueprint('frontend', __name__)
 
 @frontend.route('/')
 @frontend.route('/<path:path>')
-def index():
+def index(path=""):
     """
     Returns the home page
     """
